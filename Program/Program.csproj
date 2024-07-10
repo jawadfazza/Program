@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9996DEEC-0559-41B5-A93F-7307D61DE8BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Program</RootNamespace>
+    <AssemblyName>Program</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\AlShmel\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>ar</TargetCulture>
+    <ProductName>الشامل للمحاسبة و المستودعات</ProductName>
+    <PublisherName>الشامل للمحاسبة و المستودعات</PublisherName>
+    <SuiteName>الشامل للمحاسبة و المستودعات</SuiteName>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Program.Program1</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Program.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Program.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>strong_box_money.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C8509189E785E56C509FAC3D9B4BE2EEB66967E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Program_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlServerCe_unofficial.4.0.8482.1\lib\net20\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BlanceSheetDataSet.cs">
+      <DependentUpon>BlanceSheetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BlanceSheetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlanceSheetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BondDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BondDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BoxDataSet.cs">
+      <DependentUpon>BoxDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BoxDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Connection\Connect.cs" />
+    <Compile Include="CustomerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Assets_Liability\NewLiability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Assets_Liability\NewLiability.Designer.cs">
+      <DependentUpon>NewLiability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Assets_Liability\NewAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Assets_Liability\NewAssets.Designer.cs">
+      <DependentUpon>NewAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\BankTransfare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\BankTransfare.Designer.cs">
+      <DependentUpon>BankTransfare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\BankAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\BankAccounting.Designer.cs">
+      <DependentUpon>BankAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\ReciveCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\ReciveCheck.Designer.cs">
+      <DependentUpon>ReciveCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\PayCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\report\PayCheck.Designer.cs">
+      <DependentUpon>PayCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bonds\BlanceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bonds\BlanceSheet.Designer.cs">
+      <DependentUpon>BlanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bonds\BondList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bonds\BondList.Designer.cs">
+      <DependentUpon>BondList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bonds\TradeAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bonds\TradeAccount.Designer.cs">
+      <DependentUpon>TradeAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bonds\WritBonds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bonds\WritBonds.Designer.cs">
+      <DependentUpon>WritBonds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Box\BoxTransfare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Box\BoxTransfare.Designer.cs">
+      <DependentUpon>BoxTransfare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Box\NewBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Box\NewBox.Designer.cs">
+      <DependentUpon>NewBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Box\report\BoxAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Box\report\BoxAccounting.Designer.cs">
+      <DependentUpon>BoxAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Box\report\ReceiveBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Box\report\ReceiveBills.Designer.cs">
+      <DependentUpon>ReceiveBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\FastSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\FastSale.Designer.cs">
+      <DependentUpon>FastSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\ReceiveTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\ReceiveTime.Designer.cs">
+      <DependentUpon>ReceiveTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\ReturnSaleBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\ReturnSaleBills.Designer.cs">
+      <DependentUpon>ReturnSaleBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\CustomerAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\CustomerAccounting.Designer.cs">
+      <DependentUpon>CustomerAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\CustomerSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\CustomerSale.Designer.cs">
+      <DependentUpon>CustomerSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SaleBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SaleBills.Designer.cs">
+      <DependentUpon>SaleBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SaleReport.Designer.cs">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\ReturnSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\ReturnSale.Designer.cs">
+      <DependentUpon>ReturnSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\CustomerPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\CustomerPayment.Designer.cs">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\Sale.Designer.cs">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\NewBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\NewBank.Designer.cs">
+      <DependentUpon>NewBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Bank\NewBankAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Bank\NewBankAccounting.Designer.cs">
+      <DependentUpon>NewBankAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SallesReportDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\report\SallesReportDateTime.Designer.cs">
+      <DependentUpon>SallesReportDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\FileData\BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\FileData\BackUp.Designer.cs">
+      <DependentUpon>BackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\FileData\ImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\FileData\ImportData.Designer.cs">
+      <DependentUpon>ImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\FileData\NewCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\FileData\NewCompany.Designer.cs">
+      <DependentUpon>NewCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\customer\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\customer\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\FileData\NewYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\FileData\NewYear.Designer.cs">
+      <DependentUpon>NewYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\FileData\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\FileData\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\NewMaterialMakerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\NewMaterialMakerList.Designer.cs">
+      <DependentUpon>NewMaterialMakerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\NewMaterialMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\NewMaterialMaker.Designer.cs">
+      <DependentUpon>NewMaterialMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\MaterialMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\MaterialMaker\MaterialMaker.Designer.cs">
+      <DependentUpon>MaterialMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Material\MaterialInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Material\MaterialInventory.Designer.cs">
+      <DependentUpon>MaterialInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Material\MaterialTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Material\MaterialTree.Designer.cs">
+      <DependentUpon>MaterialTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Material\NewMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Material\NewMaterial.Designer.cs">
+      <DependentUpon>NewMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Material\report\MaterialCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Material\report\MaterialCard.Designer.cs">
+      <DependentUpon>MaterialCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\PaperPay\PaperPayPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\PaperPay\PaperPayPayment.Designer.cs">
+      <DependentUpon>PaperPayPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\PaperPay\Report\PaperPayReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\PaperPay\Report\PaperPayReport.Designer.cs">
+      <DependentUpon>PaperPayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\PaperReceives\PaperReceivesPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\PaperReceives\PaperReceivesPayment.Designer.cs">
+      <DependentUpon>PaperReceivesPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\PaperReceives\Report\PaperReceivesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\PaperReceives\Report\PaperReceivesReport.Designer.cs">
+      <DependentUpon>PaperReceivesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\BuyFast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\BuyFast.Designer.cs">
+      <DependentUpon>BuyFast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\BuyBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\BuyBills.Designer.cs">
+      <DependentUpon>BuyBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Box\report\PayBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Box\report\PayBills.Designer.cs">
+      <DependentUpon>PayBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\ReturnBuyBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\ReturnBuyBills.Designer.cs">
+      <DependentUpon>ReturnBuyBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\BuyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\BuyReport.Designer.cs">
+      <DependentUpon>BuyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\SupplierAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\SupplierAccounting.Designer.cs">
+      <DependentUpon>SupplierAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\SupplierBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Report\SupplierBuy.Designer.cs">
+      <DependentUpon>SupplierBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\ReturnBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\ReturnBuy.Designer.cs">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\SupplierPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\SupplierPayment.Designer.cs">
+      <DependentUpon>SupplierPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\NewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\NewSupplier.Designer.cs">
+      <DependentUpon>NewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entityForm\Supplier\Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\AssetControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\BankControllar.cs">
+      <DependentUpon>BankControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\BankControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\Bond.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bond.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\BondControllar.cs" />
+    <Compile Include="entity\controllar\BoxControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\CompanyControllar.cs">
+      <DependentUpon>CompanyControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\CompanyControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\CountryControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CountryControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\CustomerControllar.cs">
+      <DependentUpon>CustomerControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\CustomerControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\ErrorControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\LiabilityControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiabilityControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\MaterialControllar.cs">
+      <DependentUpon>MaterialControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\MaterialControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\MaterialMakerControllar.cs">
+      <DependentUpon>MaterialMakerControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\MaterialMakerControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialMakerControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\OldReportControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OldReportControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\PaperPayControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaperPayControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\PaperReceiveControllar.cs">
+      <DependentUpon>PaperReceiveControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\PaperReceiveControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaperReceiveControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\SupplierControllar.cs">
+      <DependentUpon>SupplierControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\SupplierControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\UserControllar.cs">
+      <DependentUpon>UserControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\UserControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\controllar\UserLogeControllar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLogeControllar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entity\cUPCA.cs" />
+    <Compile Include="entity\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Num2Wrd.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaperPayDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaperPayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaperRecieveDataSet.cs">
+      <DependentUpon>PaperRecieveDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaperRecieveDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaperRecieveDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMC\SMC_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMC\SMC_Main.Designer.cs">
+      <DependentUpon>SMC_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierDataSet.cs">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseServerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarehouseServerDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="entityForm\Assets_Liability\NewLiability.resx">
+      <DependentUpon>NewLiability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Assets_Liability\NewAssets.resx">
+      <DependentUpon>NewAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\BankTransfare.resx">
+      <DependentUpon>BankTransfare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\report\BankAccounting.rdlc" />
+    <EmbeddedResource Include="entityForm\Bank\report\BankAccounting.resx">
+      <DependentUpon>BankAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\report\ReciveCheck.rdlc" />
+    <EmbeddedResource Include="entityForm\Bank\report\ReciveCheck.resx">
+      <DependentUpon>ReciveCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\report\PayCheck.resx">
+      <DependentUpon>PayCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\report\PayCheck.rdlc" />
+    <EmbeddedResource Include="entityForm\Bonds\BlanceSheet.resx">
+      <DependentUpon>BlanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bonds\BondList.resx">
+      <DependentUpon>BondList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bonds\report\BlanceSheet.rdlc" />
+    <EmbeddedResource Include="entityForm\Bonds\report\TradeAccount.rdlc" />
+    <EmbeddedResource Include="entityForm\Bonds\TradeAccount.resx">
+      <DependentUpon>TradeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bonds\report\BondList.rdlc" />
+    <EmbeddedResource Include="entityForm\Bonds\WritBonds.resx">
+      <DependentUpon>WritBonds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Box\BoxTransfare.resx">
+      <DependentUpon>BoxTransfare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Box\NewBox.resx">
+      <DependentUpon>NewBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Box\report\BoxAccounting.rdlc" />
+    <EmbeddedResource Include="entityForm\Box\report\BoxAccounting.resx">
+      <DependentUpon>BoxAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Box\report\BoxAccounting2.rdlc" />
+    <EmbeddedResource Include="entityForm\Box\report\ReceiveBills.rdlc" />
+    <EmbeddedResource Include="entityForm\Box\report\ReceiveBills.resx">
+      <DependentUpon>ReceiveBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\FastSale.resx">
+      <DependentUpon>FastSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\ReceiveTime.resx">
+      <DependentUpon>ReceiveTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\ReturnSaleBills.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\ReturnSaleBills.resx">
+      <DependentUpon>ReturnSaleBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\CustomerAccount.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\CustomerAccounting.resx">
+      <DependentUpon>CustomerAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\CustomerSale.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\CustomerSale.resx">
+      <DependentUpon>CustomerSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\SaleBills.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\SaleBills.resx">
+      <DependentUpon>SaleBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\SaleReport.resx">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\report\SalesDetailsReport.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\SalesReport.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\SalesReportChart.rdlc" />
+    <EmbeddedResource Include="entityForm\customer\report\SallesReportDateTime.resx">
+      <DependentUpon>SallesReportDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\ReturnSale.resx">
+      <DependentUpon>ReturnSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\CustomerPayment.resx">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\Sale.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\NewBank.resx">
+      <DependentUpon>NewBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Bank\NewBankAccounting.resx">
+      <DependentUpon>NewBankAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\BackUp.resx">
+      <DependentUpon>BackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\ImportData.resx">
+      <DependentUpon>ImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\NewCompany.resx">
+      <DependentUpon>NewCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\customer\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\NewYear.resx">
+      <DependentUpon>NewYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\MaterialMaker\NewMaterialMakerList.resx">
+      <DependentUpon>NewMaterialMakerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\MaterialMaker\NewMaterialMaker.resx">
+      <DependentUpon>NewMaterialMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\MaterialMaker\MaterialMaker.resx">
+      <DependentUpon>MaterialMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Material\MaterialInventory.resx">
+      <DependentUpon>MaterialInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Material\MaterialTree.resx">
+      <DependentUpon>MaterialTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Material\NewMaterial.resx">
+      <DependentUpon>NewMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Material\report\MaterialCard.rdlc" />
+    <EmbeddedResource Include="entityForm\Material\report\MaterialCard.resx">
+      <DependentUpon>MaterialCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\PaperPay\PaperPayPayment.resx">
+      <DependentUpon>PaperPayPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\PaperPay\Report\PaperPayReport..rdlc" />
+    <EmbeddedResource Include="entityForm\PaperPay\Report\PaperPayReport.resx">
+      <DependentUpon>PaperPayReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\PaperReceives\PaperReceivesPayment.resx">
+      <DependentUpon>PaperReceivesPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\PaperReceives\Report\PaperReceivesReport.resx">
+      <DependentUpon>PaperReceivesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\PaperReceives\Report\PaperReceivesReport..rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\BuyFast.resx">
+      <DependentUpon>BuyFast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Report\BuyBills.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\BuyBills.resx">
+      <DependentUpon>BuyBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Box\report\PayBills.rdlc" />
+    <EmbeddedResource Include="entityForm\Box\report\PayBills.resx">
+      <DependentUpon>PayBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Report\ReturnBuyBills.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\ReturnBuyBills.resx">
+      <DependentUpon>ReturnBuyBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Report\BuyReport.resx">
+      <DependentUpon>BuyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Report\BuyReport.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\BuyReportChart.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\SupplierAccounting.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\SupplierAccounting.resx">
+      <DependentUpon>SupplierAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Report\SupplierBuy.rdlc" />
+    <EmbeddedResource Include="entityForm\Supplier\Report\SupplierBuy.resx">
+      <DependentUpon>SupplierBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\ReturnBuy.resx">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\SupplierPayment.resx">
+      <DependentUpon>SupplierPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\NewSupplier.resx">
+      <DependentUpon>NewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\Supplier\Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SMC\SMC_Main.resx">
+      <DependentUpon>SMC_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BankDataSet.xsc">
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BankDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BankDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BankDataSet.xss">
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BlanceSheetDataSet.xsc">
+      <DependentUpon>BlanceSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BlanceSheetDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="BlanceSheetDataSet.xss">
+      <DependentUpon>BlanceSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BondDataSet.xsc">
+      <DependentUpon>BondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BondDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BondDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BondDataSet.xss">
+      <DependentUpon>BondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BoxDataSet.xsc">
+      <DependentUpon>BoxDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BoxDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BoxDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BoxDataSet.xss">
+      <DependentUpon>BoxDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDataSet.xsc">
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CompanyDataSet.xss">
+      <DependentUpon>CompanyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataSet.xsc">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerDataSet.xss">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\AssetControllar.xsc">
+      <DependentUpon>AssetControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\AssetControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssetControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\AssetControllar.xss">
+      <DependentUpon>AssetControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\BankControllar.xsc">
+      <DependentUpon>BankControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\BankControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BankControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\BankControllar.xss">
+      <DependentUpon>BankControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\Bond.xsc">
+      <DependentUpon>Bond.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\Bond.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bond.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\Bond.xss">
+      <DependentUpon>Bond.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\BoxControllar.xsc">
+      <DependentUpon>BoxControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\BoxControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BoxControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\BoxControllar.xss">
+      <DependentUpon>BoxControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CompanyControllar.xsc">
+      <DependentUpon>CompanyControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CompanyControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\CompanyControllar.xss">
+      <DependentUpon>CompanyControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CountryControllar.xsc">
+      <DependentUpon>CountryControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CountryControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CountryControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\CountryControllar.xss">
+      <DependentUpon>CountryControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CustomerControllar.xsc">
+      <DependentUpon>CustomerControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\CustomerControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\CustomerControllar.xss">
+      <DependentUpon>CustomerControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\ErrorControllar.xsc">
+      <DependentUpon>ErrorControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\ErrorControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ErrorControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\ErrorControllar.xss">
+      <DependentUpon>ErrorControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\LiabilityControllar.xsc">
+      <DependentUpon>LiabilityControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\LiabilityControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiabilityControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\LiabilityControllar.xss">
+      <DependentUpon>LiabilityControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\MaterialControllar.xsc">
+      <DependentUpon>MaterialControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\MaterialControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\MaterialControllar.xss">
+      <DependentUpon>MaterialControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\MaterialMakerControllar.xsc">
+      <DependentUpon>MaterialMakerControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\MaterialMakerControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialMakerControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\MaterialMakerControllar.xss">
+      <DependentUpon>MaterialMakerControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\OldReportControllar.xsc">
+      <DependentUpon>OldReportControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\OldReportControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OldReportControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\OldReportControllar.xss">
+      <DependentUpon>OldReportControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\PaperPayControllar.xsc">
+      <DependentUpon>PaperPayControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\PaperPayControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaperPayControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\PaperPayControllar.xss">
+      <DependentUpon>PaperPayControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\PaperReceiveControllar.xsc">
+      <DependentUpon>PaperReceiveControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\PaperReceiveControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaperReceiveControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\PaperReceiveControllar.xss">
+      <DependentUpon>PaperReceiveControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\SupplierControllar.xsc">
+      <DependentUpon>SupplierControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\SupplierControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\SupplierControllar.xss">
+      <DependentUpon>SupplierControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\UserControllar.xsc">
+      <DependentUpon>UserControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\UserControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\UserControllar.xss">
+      <DependentUpon>UserControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\UserLogeControllar.xsc">
+      <DependentUpon>UserLogeControllar.xsd</DependentUpon>
+    </None>
+    <None Include="entity\controllar\UserLogeControllar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserLogeControllar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entity\controllar\UserLogeControllar.xss">
+      <DependentUpon>UserLogeControllar.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MaterialDataSet.xsc">
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MaterialDataSet.xss">
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PaperPayDataSet.xsc">
+      <DependentUpon>PaperPayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaperPayDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaperPayDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PaperPayDataSet.xss">
+      <DependentUpon>PaperPayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaperRecieveDataSet.xsc">
+      <DependentUpon>PaperRecieveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaperRecieveDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaperRecieveDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PaperRecieveDataSet.xss">
+      <DependentUpon>PaperRecieveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Program_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Program.entity.WarehouseEntities.datasource" />
+    <None Include="Properties\DataSources\Program.entity.WarehouseServerEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SupplierDataSet.xsc">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SupplierDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SupplierDataSet.xss">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseServerDataSet.xsc">
+      <DependentUpon>WarehouseServerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseServerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WarehouseServerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WarehouseServerDataSet.xss">
+      <DependentUpon>WarehouseServerDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1352142251_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1352240457_company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="entityForm\Assets_Liability\Report\" />
+    <Folder Include="Image\Customer\" />
+    <Folder Include="Image\Logo\" />
+    <Folder Include="Image\Material\" />
+    <Folder Include="Image\Supplier\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1352587091_HP-Pictures-Folder-Dock-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1352240457_company1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1352992224_system-software-update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353000626_adept_update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353172927_Users_Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353173427_Customer_Male_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353173973_Administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353174121_piggy_bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353174326_Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353174596_materials.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353174970_gnome-mime-application-vnd.lotus-1-2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353173427_Customer_Male_Light1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353371341_cog_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353695237_appointment-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353695710_materials.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows Close Program.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354380474_resultset_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354380473_resultset_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_Bank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354561043_Business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354561007_safety_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354871547_plus_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354872607_sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354887031_button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strong_box_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticker_black_sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_3_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblem_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my_reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353174954_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1353371323_TextEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_explore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asset_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generic_folder_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_new_year_s_eve_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorful_chart.png" />
+    <None Include="Resources\toolbar_documents.png" />
+    <None Include="Resources\cost.png" />
+    <None Include="Resources\report_check.png" />
+    <None Include="Resources\customers.png" />
+    <None Include="Resources\notifications.png" />
+    <None Include="Resources\document_attach.png" />
+    <None Include="Resources\report_edit.png" />
+    <None Include="Resources\accessories_calculator.png" />
+    <None Include="Resources\gnome_accessories_calculator.png" />
+    <Content Include="BD_SMC.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Quary\ReCreateDatabase.sql" />
+    <Content Include="Quary\Table.sql" />
+    <None Include="Resources\make.png" />
+    <None Include="Resources\hp_folder_backup.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\forward.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\last.png" />
+    <None Include="Resources\First.png" />
+    <None Include="Resources\view_tree.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <Content Include="strong_box_money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Program.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

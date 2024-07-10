@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BlanceSheetDataSet" targetNamespace="http://tempuri.org/BlanceSheetDataSet.xsd" xmlns:mstns="http://tempuri.org/BlanceSheetDataSet.xsd" xmlns="http://tempuri.org/BlanceSheetDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bank_accountBlanceSheetTableAdapter" GeneratorDataComponentClassName="bank_accountBlanceSheetTableAdapter" Name="bank_accountBlanceSheet" UserDataComponentName="bank_accountBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.bank_account" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, اسم_الحساب, رقم_الحساب, نوع_الحساب, الرصيد, الرصيد_كتابة, تاريخ, bank_id, تعليق
+FROM            bank_account</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="اسم_الحساب" DataSetColumn="اسم_الحساب" />
+              <Mapping SourceColumn="رقم_الحساب" DataSetColumn="رقم_الحساب" />
+              <Mapping SourceColumn="نوع_الحساب" DataSetColumn="نوع_الحساب" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="bank_id" DataSetColumn="bank_id" />
+              <Mapping SourceColumn="تعليق" DataSetColumn="تعليق" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="boxBlanceSheetTableAdapter" GeneratorDataComponentClassName="boxBlanceSheetTableAdapter" Name="boxBlanceSheet" UserDataComponentName="boxBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة, تاريخ
+FROM            box</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="اسم_الصندوق" DataSetColumn="اسم_الصندوق" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="customerBlanceSheetTableAdapter" GeneratorDataComponentClassName="customerBlanceSheetTableAdapter" Name="customerBlanceSheet" UserDataComponentName="customerBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, عنوان_الربون, هاتف, الموبايل, البريد_الالكتروني, الموقع_الالكتروني, تاريخ, وصف_الربون, صورة
+FROM            customer</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="اسم_الربون" DataSetColumn="اسم_الربون" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="عنوان_الربون" DataSetColumn="عنوان_الربون" />
+              <Mapping SourceColumn="هاتف" DataSetColumn="هاتف" />
+              <Mapping SourceColumn="الموبايل" DataSetColumn="الموبايل" />
+              <Mapping SourceColumn="البريد_الالكتروني" DataSetColumn="البريد_الالكتروني" />
+              <Mapping SourceColumn="الموقع_الالكتروني" DataSetColumn="الموقع_الالكتروني" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="وصف_الربون" DataSetColumn="وصف_الربون" />
+              <Mapping SourceColumn="صورة" DataSetColumn="صورة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="materialBlanceSheetTableAdapter" GeneratorDataComponentClassName="materialBlanceSheetTableAdapter" Name="materialBlanceSheet" UserDataComponentName="materialBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم_الفني, اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, المستودع, سعر_الشراء, سعر_البيع
+FROM            material</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم_الفني" DataSetColumn="الرقم_الفني" />
+              <Mapping SourceColumn="اسم_المادة" DataSetColumn="اسم_المادة" />
+              <Mapping SourceColumn="تواجد_المادة" DataSetColumn="تواجد_المادة" />
+              <Mapping SourceColumn="الوحدة" DataSetColumn="الوحدة" />
+              <Mapping SourceColumn="كمية" DataSetColumn="كمية" />
+              <Mapping SourceColumn="سعر" DataSetColumn="سعر" />
+              <Mapping SourceColumn="رمز_الطراز" DataSetColumn="رمز_الطراز" />
+              <Mapping SourceColumn="المجموعة" DataSetColumn="المجموعة" />
+              <Mapping SourceColumn="الصانع" DataSetColumn="الصانع" />
+              <Mapping SourceColumn="المستودع" DataSetColumn="المستودع" />
+              <Mapping SourceColumn="سعر_الشراء" DataSetColumn="سعر_الشراء" />
+              <Mapping SourceColumn="سعر_البيع" DataSetColumn="سعر_البيع" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="paper_payBlanceSheetTableAdapter" GeneratorDataComponentClassName="paper_payBlanceSheetTableAdapter" Name="paper_payBlanceSheet" UserDataComponentName="paper_payBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.paper_pay" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ_الإستحقاق, الساحب, المسحوب_عليه
+FROM            paper_pay</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="تاريخ_الإستحقاق" DataSetColumn="تاريخ_الإستحقاق" />
+              <Mapping SourceColumn="الساحب" DataSetColumn="الساحب" />
+              <Mapping SourceColumn="المسحوب_عليه" DataSetColumn="المسحوب_عليه" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="paper_receiveBlanceSheetTableAdapter" GeneratorDataComponentClassName="paper_receiveBlanceSheetTableAdapter" Name="paper_receiveBlanceSheet" UserDataComponentName="paper_receiveBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.paper_receive" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ_الإستحقاق, الساحب, المسحوب_عليه
+FROM            paper_receive</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="تاريخ_الإستحقاق" DataSetColumn="تاريخ_الإستحقاق" />
+              <Mapping SourceColumn="الساحب" DataSetColumn="الساحب" />
+              <Mapping SourceColumn="المسحوب_عليه" DataSetColumn="المسحوب_عليه" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="supplierBlanceSheetTableAdapter" GeneratorDataComponentClassName="supplierBlanceSheetTableAdapter" Name="supplierBlanceSheet" UserDataComponentName="supplierBlanceSheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, اسم_المورد, الرصيد, الرصيد_كتابة, عنوان_المورد, هاتف, الموبايل, البريد_الالكتروني, الموقع_الالكتروني, تاريخ, وصف_المورد
+FROM            supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="اسم_المورد" DataSetColumn="اسم_المورد" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="عنوان_المورد" DataSetColumn="عنوان_المورد" />
+              <Mapping SourceColumn="هاتف" DataSetColumn="هاتف" />
+              <Mapping SourceColumn="الموبايل" DataSetColumn="الموبايل" />
+              <Mapping SourceColumn="البريد_الالكتروني" DataSetColumn="البريد_الالكتروني" />
+              <Mapping SourceColumn="الموقع_الالكتروني" DataSetColumn="الموقع_الالكتروني" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="وصف_المورد" DataSetColumn="وصف_المورد" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="assetTableAdapter" GeneratorDataComponentClassName="assetTableAdapter" Name="asset" UserDataComponentName="assetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.asset" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        الرقم, اسم_الأصل, الرصيد, الرصيد_كتابة, تاريخ, نوع_الأصل, نسبة_الأهتلاك, قيمة_النفاية, مجمع_الإهتلاك
+FROM            asset</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الرقم" DataSetColumn="الرقم" />
+              <Mapping SourceColumn="اسم_الأصل" DataSetColumn="اسم_الأصل" />
+              <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
+              <Mapping SourceColumn="الرصيد_كتابة" DataSetColumn="الرصيد_كتابة" />
+              <Mapping SourceColumn="تاريخ" DataSetColumn="تاريخ" />
+              <Mapping SourceColumn="نوع_الأصل" DataSetColumn="نوع_الأصل" />
+              <Mapping SourceColumn="نسبة_الأهتلاك" DataSetColumn="نسبة_الأهتلاك" />
+              <Mapping SourceColumn="قيمة_النفاية" DataSetColumn="قيمة_النفاية" />
+              <Mapping SourceColumn="مجمع_الإهتلاك" DataSetColumn="مجمع_الإهتلاك" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BlanceSheetDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BlanceSheetDataSet" msprop:Generator_UserDSName="BlanceSheetDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bank_accountBlanceSheet" msprop:Generator_TableClassName="bank_accountBlanceSheetDataTable" msprop:Generator_TableVarName="tablebank_accountBlanceSheet" msprop:Generator_TablePropName="bank_accountBlanceSheet" msprop:Generator_RowDeletingName="bank_accountBlanceSheetRowDeleting" msprop:Generator_UserTableName="bank_accountBlanceSheet" msprop:Generator_RowChangingName="bank_accountBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="bank_accountBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="bank_accountBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="bank_accountBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="bank_accountBlanceSheetRowChanged" msprop:Generator_RowClassName="bank_accountBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_الحساب" msprop:Generator_ColumnVarNameInTable="columnاسم_الحساب" msprop:Generator_ColumnPropNameInRow="اسم_الحساب" msprop:Generator_ColumnPropNameInTable="اسم_الحسابColumn" msprop:Generator_UserColumnName="اسم_الحساب">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رقم_الحساب" msprop:Generator_ColumnVarNameInTable="columnرقم_الحساب" msprop:Generator_ColumnPropNameInRow="رقم_الحساب" msprop:Generator_ColumnPropNameInTable="رقم_الحسابColumn" msprop:Generator_UserColumnName="رقم_الحساب">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="نوع_الحساب" msprop:Generator_ColumnVarNameInTable="columnنوع_الحساب" msprop:Generator_ColumnPropNameInRow="نوع_الحساب" msprop:Generator_ColumnPropNameInTable="نوع_الحسابColumn" msprop:Generator_UserColumnName="نوع_الحساب">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" />
+              <xs:element name="bank_id" msprop:Generator_ColumnVarNameInTable="columnbank_id" msprop:Generator_ColumnPropNameInRow="bank_id" msprop:Generator_ColumnPropNameInTable="bank_idColumn" msprop:Generator_UserColumnName="bank_id" type="xs:int" minOccurs="0" />
+              <xs:element name="تعليق" msprop:Generator_ColumnVarNameInTable="columnتعليق" msprop:Generator_ColumnPropNameInRow="تعليق" msprop:Generator_ColumnPropNameInTable="تعليقColumn" msprop:Generator_UserColumnName="تعليق" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="boxBlanceSheet" msprop:Generator_TableClassName="boxBlanceSheetDataTable" msprop:Generator_TableVarName="tableboxBlanceSheet" msprop:Generator_TablePropName="boxBlanceSheet" msprop:Generator_RowDeletingName="boxBlanceSheetRowDeleting" msprop:Generator_UserTableName="boxBlanceSheet" msprop:Generator_RowChangingName="boxBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="boxBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="boxBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="boxBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="boxBlanceSheetRowChanged" msprop:Generator_RowClassName="boxBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_الصندوق" msprop:Generator_ColumnVarNameInTable="columnاسم_الصندوق" msprop:Generator_ColumnPropNameInRow="اسم_الصندوق" msprop:Generator_ColumnPropNameInTable="اسم_الصندوقColumn" msprop:Generator_UserColumnName="اسم_الصندوق">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="customerBlanceSheet" msprop:Generator_TableClassName="customerBlanceSheetDataTable" msprop:Generator_TableVarName="tablecustomerBlanceSheet" msprop:Generator_TablePropName="customerBlanceSheet" msprop:Generator_RowDeletingName="customerBlanceSheetRowDeleting" msprop:Generator_UserTableName="customerBlanceSheet" msprop:Generator_RowChangingName="customerBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="customerBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="customerBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="customerBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="customerBlanceSheetRowChanged" msprop:Generator_RowClassName="customerBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_الربون" msprop:Generator_ColumnVarNameInTable="columnاسم_الربون" msprop:Generator_ColumnPropNameInRow="اسم_الربون" msprop:Generator_ColumnPropNameInTable="اسم_الربونColumn" msprop:Generator_UserColumnName="اسم_الربون">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="عنوان_الربون" msprop:Generator_ColumnVarNameInTable="columnعنوان_الربون" msprop:Generator_ColumnPropNameInRow="عنوان_الربون" msprop:Generator_ColumnPropNameInTable="عنوان_الربونColumn" msprop:Generator_UserColumnName="عنوان_الربون" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="هاتف" msprop:Generator_ColumnVarNameInTable="columnهاتف" msprop:Generator_ColumnPropNameInRow="هاتف" msprop:Generator_ColumnPropNameInTable="هاتفColumn" msprop:Generator_UserColumnName="هاتف" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الموبايل" msprop:Generator_ColumnVarNameInTable="columnالموبايل" msprop:Generator_ColumnPropNameInRow="الموبايل" msprop:Generator_ColumnPropNameInTable="الموبايلColumn" msprop:Generator_UserColumnName="الموبايل" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="البريد_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالبريد_الالكتروني" msprop:Generator_ColumnPropNameInRow="البريد_الالكتروني" msprop:Generator_ColumnPropNameInTable="البريد_الالكترونيColumn" msprop:Generator_UserColumnName="البريد_الالكتروني" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الموقع_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالموقع_الالكتروني" msprop:Generator_ColumnPropNameInRow="الموقع_الالكتروني" msprop:Generator_ColumnPropNameInTable="الموقع_الالكترونيColumn" msprop:Generator_UserColumnName="الموقع_الالكتروني" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="وصف_الربون" msprop:Generator_ColumnVarNameInTable="columnوصف_الربون" msprop:Generator_ColumnPropNameInRow="وصف_الربون" msprop:Generator_ColumnPropNameInTable="وصف_الربونColumn" msprop:Generator_UserColumnName="وصف_الربون" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="صورة" msprop:Generator_ColumnVarNameInTable="columnصورة" msprop:Generator_ColumnPropNameInRow="صورة" msprop:Generator_ColumnPropNameInTable="صورةColumn" msprop:Generator_UserColumnName="صورة" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="materialBlanceSheet" msprop:Generator_TableClassName="materialBlanceSheetDataTable" msprop:Generator_TableVarName="tablematerialBlanceSheet" msprop:Generator_TablePropName="materialBlanceSheet" msprop:Generator_RowDeletingName="materialBlanceSheetRowDeleting" msprop:Generator_UserTableName="materialBlanceSheet" msprop:Generator_RowChangingName="materialBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="materialBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="materialBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="materialBlanceSheetRowChanged" msprop:Generator_RowClassName="materialBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم_الفني" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم_الفني" msprop:Generator_ColumnPropNameInRow="الرقم_الفني" msprop:Generator_ColumnPropNameInTable="الرقم_الفنيColumn" msprop:Generator_UserColumnName="الرقم_الفني" type="xs:int" />
+              <xs:element name="اسم_المادة" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_UserColumnName="اسم_المادة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تواجد_المادة" msprop:Generator_ColumnVarNameInTable="columnتواجد_المادة" msprop:Generator_ColumnPropNameInRow="تواجد_المادة" msprop:Generator_ColumnPropNameInTable="تواجد_المادةColumn" msprop:Generator_UserColumnName="تواجد_المادة" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الوحدة" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_UserColumnName="الوحدة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="كمية" msprop:Generator_ColumnVarNameInTable="columnكمية" msprop:Generator_ColumnPropNameInRow="كمية" msprop:Generator_ColumnPropNameInTable="كميةColumn" msprop:Generator_UserColumnName="كمية" type="xs:int" />
+              <xs:element name="سعر" msprop:Generator_ColumnVarNameInTable="columnسعر" msprop:Generator_ColumnPropNameInRow="سعر" msprop:Generator_ColumnPropNameInTable="سعرColumn" msprop:Generator_UserColumnName="سعر" type="xs:double" />
+              <xs:element name="رمز_الطراز" msprop:Generator_ColumnVarNameInTable="columnرمز_الطراز" msprop:Generator_ColumnPropNameInRow="رمز_الطراز" msprop:Generator_ColumnPropNameInTable="رمز_الطرازColumn" msprop:Generator_UserColumnName="رمز_الطراز" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="المجموعة" msprop:Generator_ColumnVarNameInTable="columnالمجموعة" msprop:Generator_ColumnPropNameInRow="المجموعة" msprop:Generator_ColumnPropNameInTable="المجموعةColumn" msprop:Generator_UserColumnName="المجموعة" type="xs:int" minOccurs="0" />
+              <xs:element name="الصانع" msprop:Generator_ColumnVarNameInTable="columnالصانع" msprop:Generator_ColumnPropNameInRow="الصانع" msprop:Generator_ColumnPropNameInTable="الصانعColumn" msprop:Generator_UserColumnName="الصانع" type="xs:int" minOccurs="0" />
+              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
+              <xs:element name="سعر_الشراء" msprop:Generator_ColumnVarNameInTable="columnسعر_الشراء" msprop:Generator_ColumnPropNameInRow="سعر_الشراء" msprop:Generator_ColumnPropNameInTable="سعر_الشراءColumn" msprop:Generator_UserColumnName="سعر_الشراء" type="xs:int" minOccurs="0" />
+              <xs:element name="سعر_البيع" msprop:Generator_ColumnVarNameInTable="columnسعر_البيع" msprop:Generator_ColumnPropNameInRow="سعر_البيع" msprop:Generator_ColumnPropNameInTable="سعر_البيعColumn" msprop:Generator_UserColumnName="سعر_البيع" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="paper_payBlanceSheet" msprop:Generator_TableClassName="paper_payBlanceSheetDataTable" msprop:Generator_TableVarName="tablepaper_payBlanceSheet" msprop:Generator_TablePropName="paper_payBlanceSheet" msprop:Generator_RowDeletingName="paper_payBlanceSheetRowDeleting" msprop:Generator_UserTableName="paper_payBlanceSheet" msprop:Generator_RowChangingName="paper_payBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="paper_payBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="paper_payBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="paper_payBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="paper_payBlanceSheetRowChanged" msprop:Generator_RowClassName="paper_payBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="تاريخ_الإستحقاق" msprop:Generator_ColumnVarNameInTable="columnتاريخ_الإستحقاق" msprop:Generator_ColumnPropNameInRow="تاريخ_الإستحقاق" msprop:Generator_ColumnPropNameInTable="تاريخ_الإستحقاقColumn" msprop:Generator_UserColumnName="تاريخ_الإستحقاق" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="الساحب" msprop:Generator_ColumnVarNameInTable="columnالساحب" msprop:Generator_ColumnPropNameInRow="الساحب" msprop:Generator_ColumnPropNameInTable="الساحبColumn" msprop:Generator_UserColumnName="الساحب" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="المسحوب_عليه" msprop:Generator_ColumnVarNameInTable="columnالمسحوب_عليه" msprop:Generator_ColumnPropNameInRow="المسحوب_عليه" msprop:Generator_ColumnPropNameInTable="المسحوب_عليهColumn" msprop:Generator_UserColumnName="المسحوب_عليه" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="paper_receiveBlanceSheet" msprop:Generator_TableClassName="paper_receiveBlanceSheetDataTable" msprop:Generator_TableVarName="tablepaper_receiveBlanceSheet" msprop:Generator_TablePropName="paper_receiveBlanceSheet" msprop:Generator_RowDeletingName="paper_receiveBlanceSheetRowDeleting" msprop:Generator_UserTableName="paper_receiveBlanceSheet" msprop:Generator_RowChangingName="paper_receiveBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="paper_receiveBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="paper_receiveBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="paper_receiveBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="paper_receiveBlanceSheetRowChanged" msprop:Generator_RowClassName="paper_receiveBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="تاريخ_الإستحقاق" msprop:Generator_ColumnVarNameInTable="columnتاريخ_الإستحقاق" msprop:Generator_ColumnPropNameInRow="تاريخ_الإستحقاق" msprop:Generator_ColumnPropNameInTable="تاريخ_الإستحقاقColumn" msprop:Generator_UserColumnName="تاريخ_الإستحقاق" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="الساحب" msprop:Generator_ColumnVarNameInTable="columnالساحب" msprop:Generator_ColumnPropNameInRow="الساحب" msprop:Generator_ColumnPropNameInTable="الساحبColumn" msprop:Generator_UserColumnName="الساحب" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="المسحوب_عليه" msprop:Generator_ColumnVarNameInTable="columnالمسحوب_عليه" msprop:Generator_ColumnPropNameInRow="المسحوب_عليه" msprop:Generator_ColumnPropNameInTable="المسحوب_عليهColumn" msprop:Generator_UserColumnName="المسحوب_عليه" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="supplierBlanceSheet" msprop:Generator_TableClassName="supplierBlanceSheetDataTable" msprop:Generator_TableVarName="tablesupplierBlanceSheet" msprop:Generator_TablePropName="supplierBlanceSheet" msprop:Generator_RowDeletingName="supplierBlanceSheetRowDeleting" msprop:Generator_UserTableName="supplierBlanceSheet" msprop:Generator_RowChangingName="supplierBlanceSheetRowChanging" msprop:Generator_RowEvHandlerName="supplierBlanceSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="supplierBlanceSheetRowDeleted" msprop:Generator_RowEvArgName="supplierBlanceSheetRowChangeEvent" msprop:Generator_RowChangedName="supplierBlanceSheetRowChanged" msprop:Generator_RowClassName="supplierBlanceSheetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_المورد" msprop:Generator_ColumnVarNameInTable="columnاسم_المورد" msprop:Generator_ColumnPropNameInRow="اسم_المورد" msprop:Generator_ColumnPropNameInTable="اسم_الموردColumn" msprop:Generator_UserColumnName="اسم_المورد">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="عنوان_المورد" msprop:Generator_ColumnVarNameInTable="columnعنوان_المورد" msprop:Generator_ColumnPropNameInRow="عنوان_المورد" msprop:Generator_ColumnPropNameInTable="عنوان_الموردColumn" msprop:Generator_UserColumnName="عنوان_المورد" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="هاتف" msprop:Generator_ColumnVarNameInTable="columnهاتف" msprop:Generator_ColumnPropNameInRow="هاتف" msprop:Generator_ColumnPropNameInTable="هاتفColumn" msprop:Generator_UserColumnName="هاتف" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الموبايل" msprop:Generator_ColumnVarNameInTable="columnالموبايل" msprop:Generator_ColumnPropNameInRow="الموبايل" msprop:Generator_ColumnPropNameInTable="الموبايلColumn" msprop:Generator_UserColumnName="الموبايل" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="البريد_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالبريد_الالكتروني" msprop:Generator_ColumnPropNameInRow="البريد_الالكتروني" msprop:Generator_ColumnPropNameInTable="البريد_الالكترونيColumn" msprop:Generator_UserColumnName="البريد_الالكتروني" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الموقع_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالموقع_الالكتروني" msprop:Generator_ColumnPropNameInRow="الموقع_الالكتروني" msprop:Generator_ColumnPropNameInTable="الموقع_الالكترونيColumn" msprop:Generator_UserColumnName="الموقع_الالكتروني" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="وصف_المورد" msprop:Generator_ColumnVarNameInTable="columnوصف_المورد" msprop:Generator_ColumnPropNameInRow="وصف_المورد" msprop:Generator_ColumnPropNameInTable="وصف_الموردColumn" msprop:Generator_UserColumnName="وصف_المورد" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="asset" msprop:Generator_TableClassName="assetDataTable" msprop:Generator_TableVarName="tableasset" msprop:Generator_TablePropName="asset" msprop:Generator_RowDeletingName="assetRowDeleting" msprop:Generator_UserTableName="asset" msprop:Generator_RowChangingName="assetRowChanging" msprop:Generator_RowEvHandlerName="assetRowChangeEventHandler" msprop:Generator_RowDeletedName="assetRowDeleted" msprop:Generator_RowEvArgName="assetRowChangeEvent" msprop:Generator_RowChangedName="assetRowChanged" msprop:Generator_RowClassName="assetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_الأصل" msprop:Generator_ColumnVarNameInTable="columnاسم_الأصل" msprop:Generator_ColumnPropNameInRow="اسم_الأصل" msprop:Generator_ColumnPropNameInTable="اسم_الأصلColumn" msprop:Generator_UserColumnName="اسم_الأصل">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" />
+              <xs:element name="نوع_الأصل" msprop:Generator_ColumnVarNameInTable="columnنوع_الأصل" msprop:Generator_ColumnPropNameInRow="نوع_الأصل" msprop:Generator_ColumnPropNameInTable="نوع_الأصلColumn" msprop:Generator_UserColumnName="نوع_الأصل" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="نسبة_الأهتلاك" msprop:Generator_ColumnVarNameInTable="columnنسبة_الأهتلاك" msprop:Generator_ColumnPropNameInRow="نسبة_الأهتلاك" msprop:Generator_ColumnPropNameInTable="نسبة_الأهتلاكColumn" msprop:Generator_UserColumnName="نسبة_الأهتلاك" type="xs:int" minOccurs="0" />
+              <xs:element name="قيمة_النفاية" msprop:Generator_ColumnVarNameInTable="columnقيمة_النفاية" msprop:Generator_ColumnPropNameInRow="قيمة_النفاية" msprop:Generator_ColumnPropNameInTable="قيمة_النفايةColumn" msprop:Generator_UserColumnName="قيمة_النفاية" type="xs:int" minOccurs="0" />
+              <xs:element name="مجمع_الإهتلاك" msprop:Generator_ColumnVarNameInTable="columnمجمع_الإهتلاك" msprop:Generator_ColumnPropNameInRow="مجمع_الإهتلاك" msprop:Generator_ColumnPropNameInTable="مجمع_الإهتلاكColumn" msprop:Generator_UserColumnName="مجمع_الإهتلاك" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bank_accountBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="boxBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:boxBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="customerBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:customerBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="materialBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:materialBlanceSheet" />
+      <xs:field xpath="mstns:الرقم_الفني" />
+    </xs:unique>
+    <xs:unique name="paper_payBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:paper_payBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="paper_receiveBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:paper_receiveBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="supplierBlanceSheet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:supplierBlanceSheet" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+    <xs:unique name="asset_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:asset" />
+      <xs:field xpath="mstns:الرقم" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
