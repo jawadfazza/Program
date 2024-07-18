@@ -44,7 +44,7 @@ namespace Program.entityForm.FileData
                 discountAssetsTrash();
                 lStatus.Text = "Reset Tables";
                 Connect c = new Connect();
-                c.resetTable();
+                c.ResetTable();
                 lStatus.Text = "Opeartion Complete";
             }
         }
@@ -285,11 +285,11 @@ namespace Program.entityForm.FileData
         private void execDatabase()
         {
             Connect c = new Connect();
-            c.createDatabase("Company" + (DateTime.Now.Year - 1).ToString());
+            c.CreateDatabase("Company" + (DateTime.Now.Year - 1).ToString());
             txtSql.LoadFile("..\\..\\Quary\\Table.sql",
                         RichTextBoxStreamType.PlainText);
 
-            c.createTables(txtSql.Text, (DateTime.Now.Year - 1).ToString() );
+            c.CreateTables(txtSql.Text, (DateTime.Now.Year - 1).ToString() );
         }
 
         static DataRowCollection assetsRow;

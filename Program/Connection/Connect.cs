@@ -8,8 +8,8 @@ namespace Program.Connection
 {
     internal class Connect
     {
-        private readonly string _connectionString = "Data Source=Localhost;Initial Catalog=master;User ID=sa;Password=sqladmin";
-        private readonly string _connectionStringCompany = "Data Source=Localhost;Initial Catalog=Warehouse;User ID=sa;Password=sqladmin";
+        private readonly string _connectionString = "Data Source=Localhost;Initial Catalog=master;User ID=CMSUser;Password=KjP4~7R`FbTjXbWiKo:Z";
+        private readonly string _connectionStringCompany = "Data Source=10.244.8.12;Initial Catalog=Warehouse;User ID=CMSUser;Password=KjP4~7R`FbTjXbWiKo:Z";
 
         public bool TestConnection()
         {

@@ -139,7 +139,7 @@ namespace Program
                 txtSql.LoadFile("..\\..\\Quary\\Table.sql",
                         RichTextBoxStreamType.PlainText);
                 Connect c = new Connect();
-                c.createTables(txtSql.Text,"");
+                c.CreateTables(txtSql.Text,"");
 
                 companyTableAdapter cta = new companyTableAdapter();
                 int companyCount = Convert.ToInt32(cta.getCompanyCount());
@@ -171,7 +171,7 @@ namespace Program
         private void createDataBase()
         {
             Connect c = new Connect();
-            c.createDatabase("Company");
+            c.CreateDatabase("Company");
         }
 
         private void txtName_Validating(object sender, CancelEventArgs e)

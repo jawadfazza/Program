@@ -46,7 +46,7 @@ namespace Program.entityForm.FileData
                 if (txtFile.Text != "")
                 {
                     Connect c = new Connect();
-                    c.BackUp(txtFile.Text, Convert.ToInt32(txtNumber.Value));
+                    c.Backup(txtFile.Text, Convert.ToInt32(txtNumber.Value));
                 }
                 else
                 {

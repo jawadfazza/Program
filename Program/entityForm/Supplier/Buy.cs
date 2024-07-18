@@ -47,12 +47,12 @@ namespace Program.entityForm.customer
             // can be sent through the constructor of the SerialPort class
             // PortName = "COM1", Baud Rate = 19200, Parity = None, 
             // Data Bits = 8, Stop Bits = One, Handshake = None
-            _serialPort = new SerialPort("COM1", 19200, Parity.None, 8, StopBits.One);
-            _serialPort.Handshake = Handshake.None;
-            _serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
-            _serialPort.ReadTimeout = 500;
-            _serialPort.WriteTimeout = 500;
-            _serialPort.Open();
+            //_serialPort = new SerialPort("COM1", 19200, Parity.None, 8, StopBits.One);
+            //_serialPort.Handshake = Handshake.None;
+            //_serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
+            //_serialPort.ReadTimeout = 500;
+            //_serialPort.WriteTimeout = 500;
+            //_serialPort.Open();
         }
 
         private void getReportId()
