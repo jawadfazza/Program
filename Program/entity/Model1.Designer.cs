@@ -1702,7 +1702,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1721,7 +1721,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -1746,7 +1746,7 @@ namespace Program.entity
             {
                 OnusernameChanging(value);
                 ReportPropertyChanging("username");
-                _username = StructuralObject.SetValidValue(value, false);
+                _username = StructuralObject.SetValidValue(value, false, "username");
                 ReportPropertyChanged("username");
                 OnusernameChanged();
             }
@@ -1770,7 +1770,7 @@ namespace Program.entity
             {
                 OnpasswordChanging(value);
                 ReportPropertyChanging("password");
-                _password = StructuralObject.SetValidValue(value, false);
+                _password = StructuralObject.SetValidValue(value, false, "password");
                 ReportPropertyChanged("password");
                 OnpasswordChanged();
             }
@@ -1794,7 +1794,7 @@ namespace Program.entity
             {
                 Onuser_typeChanging(value);
                 ReportPropertyChanging("user_type");
-                _user_type = StructuralObject.SetValidValue(value, true);
+                _user_type = StructuralObject.SetValidValue(value, true, "user_type");
                 ReportPropertyChanged("user_type");
                 Onuser_typeChanged();
             }
@@ -1805,7 +1805,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -1839,7 +1838,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1858,7 +1857,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -1883,7 +1882,7 @@ namespace Program.entity
             {
                 Onاسم_الأصلChanging(value);
                 ReportPropertyChanging("اسم_الأصل");
-                _اسم_الأصل = StructuralObject.SetValidValue(value, false);
+                _اسم_الأصل = StructuralObject.SetValidValue(value, false, "اسم_الأصل");
                 ReportPropertyChanged("اسم_الأصل");
                 Onاسم_الأصلChanged();
             }
@@ -1907,7 +1906,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -1931,7 +1930,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -1955,7 +1954,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -1979,7 +1978,7 @@ namespace Program.entity
             {
                 Onنوع_الأصلChanging(value);
                 ReportPropertyChanging("نوع_الأصل");
-                _نوع_الأصل = StructuralObject.SetValidValue(value, true);
+                _نوع_الأصل = StructuralObject.SetValidValue(value, true, "نوع_الأصل");
                 ReportPropertyChanged("نوع_الأصل");
                 Onنوع_الأصلChanged();
             }
@@ -2003,7 +2002,7 @@ namespace Program.entity
             {
                 Onنسبة_الأهتلاكChanging(value);
                 ReportPropertyChanging("نسبة_الأهتلاك");
-                _نسبة_الأهتلاك = StructuralObject.SetValidValue(value);
+                _نسبة_الأهتلاك = StructuralObject.SetValidValue(value, "نسبة_الأهتلاك");
                 ReportPropertyChanged("نسبة_الأهتلاك");
                 Onنسبة_الأهتلاكChanged();
             }
@@ -2027,7 +2026,7 @@ namespace Program.entity
             {
                 Onقيمة_النفايةChanging(value);
                 ReportPropertyChanging("قيمة_النفاية");
-                _قيمة_النفاية = StructuralObject.SetValidValue(value);
+                _قيمة_النفاية = StructuralObject.SetValidValue(value, "قيمة_النفاية");
                 ReportPropertyChanged("قيمة_النفاية");
                 Onقيمة_النفايةChanged();
             }
@@ -2051,7 +2050,7 @@ namespace Program.entity
             {
                 Onمجمع_الإهتلاكChanging(value);
                 ReportPropertyChanging("مجمع_الإهتلاك");
-                _مجمع_الإهتلاك = StructuralObject.SetValidValue(value);
+                _مجمع_الإهتلاك = StructuralObject.SetValidValue(value, "مجمع_الإهتلاك");
                 ReportPropertyChanged("مجمع_الإهتلاك");
                 Onمجمع_الإهتلاكChanged();
             }
@@ -2062,7 +2061,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2140,7 +2138,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2159,7 +2157,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -2184,7 +2182,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -2208,7 +2206,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -2232,7 +2230,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -2256,7 +2254,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -2280,7 +2278,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -2304,7 +2302,7 @@ namespace Program.entity
             {
                 Onasset_idChanging(value);
                 ReportPropertyChanging("asset_id");
-                _asset_id = StructuralObject.SetValidValue(value);
+                _asset_id = StructuralObject.SetValidValue(value, "asset_id");
                 ReportPropertyChanged("asset_id");
                 Onasset_idChanged();
             }
@@ -2315,7 +2313,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2387,7 +2384,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2406,7 +2403,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -2431,7 +2428,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -2455,7 +2452,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -2479,7 +2476,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -2503,7 +2500,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -2527,7 +2524,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -2551,7 +2548,7 @@ namespace Program.entity
             {
                 Onasset_idChanging(value);
                 ReportPropertyChanging("asset_id");
-                _asset_id = StructuralObject.SetValidValue(value);
+                _asset_id = StructuralObject.SetValidValue(value, "asset_id");
                 ReportPropertyChanged("asset_id");
                 Onasset_idChanged();
             }
@@ -2562,7 +2559,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2642,7 +2638,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2661,7 +2657,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -2686,7 +2682,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, false);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, false, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -2710,7 +2706,7 @@ namespace Program.entity
             {
                 Onرقم_الحسابChanging(value);
                 ReportPropertyChanging("رقم_الحساب");
-                _رقم_الحساب = StructuralObject.SetValidValue(value, false);
+                _رقم_الحساب = StructuralObject.SetValidValue(value, false, "رقم_الحساب");
                 ReportPropertyChanged("رقم_الحساب");
                 Onرقم_الحسابChanged();
             }
@@ -2734,7 +2730,7 @@ namespace Program.entity
             {
                 Onنوع_الحسابChanging(value);
                 ReportPropertyChanging("نوع_الحساب");
-                _نوع_الحساب = StructuralObject.SetValidValue(value, false);
+                _نوع_الحساب = StructuralObject.SetValidValue(value, false, "نوع_الحساب");
                 ReportPropertyChanged("نوع_الحساب");
                 Onنوع_الحسابChanged();
             }
@@ -2758,7 +2754,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -2782,7 +2778,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -2806,7 +2802,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -2830,7 +2826,7 @@ namespace Program.entity
             {
                 Onbank_idChanging(value);
                 ReportPropertyChanging("bank_id");
-                _bank_id = StructuralObject.SetValidValue(value);
+                _bank_id = StructuralObject.SetValidValue(value, "bank_id");
                 ReportPropertyChanged("bank_id");
                 Onbank_idChanged();
             }
@@ -2854,7 +2850,7 @@ namespace Program.entity
             {
                 OnتعليقChanging(value);
                 ReportPropertyChanging("تعليق");
-                _تعليق = StructuralObject.SetValidValue(value, true);
+                _تعليق = StructuralObject.SetValidValue(value, true, "تعليق");
                 ReportPropertyChanged("تعليق");
                 OnتعليقChanged();
             }
@@ -2865,7 +2861,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2981,7 +2976,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3000,7 +2995,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -3025,7 +3020,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -3049,7 +3044,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -3073,7 +3068,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -3097,7 +3092,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -3121,7 +3116,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -3145,7 +3140,7 @@ namespace Program.entity
             {
                 Onbank_idChanging(value);
                 ReportPropertyChanging("bank_id");
-                _bank_id = StructuralObject.SetValidValue(value);
+                _bank_id = StructuralObject.SetValidValue(value, "bank_id");
                 ReportPropertyChanged("bank_id");
                 Onbank_idChanged();
             }
@@ -3156,7 +3151,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -3228,7 +3222,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3247,7 +3241,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -3272,7 +3266,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -3296,7 +3290,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -3320,7 +3314,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -3344,7 +3338,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -3368,7 +3362,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -3392,7 +3386,7 @@ namespace Program.entity
             {
                 Onbank_idChanging(value);
                 ReportPropertyChanging("bank_id");
-                _bank_id = StructuralObject.SetValidValue(value);
+                _bank_id = StructuralObject.SetValidValue(value, "bank_id");
                 ReportPropertyChanged("bank_id");
                 Onbank_idChanged();
             }
@@ -3403,7 +3397,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -3473,7 +3466,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3492,7 +3485,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -3517,7 +3510,7 @@ namespace Program.entity
             {
                 Onاسم_البنكChanging(value);
                 ReportPropertyChanging("اسم_البنك");
-                _اسم_البنك = StructuralObject.SetValidValue(value, false);
+                _اسم_البنك = StructuralObject.SetValidValue(value, false, "اسم_البنك");
                 ReportPropertyChanged("اسم_البنك");
                 Onاسم_البنكChanged();
             }
@@ -3541,7 +3534,7 @@ namespace Program.entity
             {
                 Onعنوان_البنكChanging(value);
                 ReportPropertyChanging("عنوان_البنك");
-                _عنوان_البنك = StructuralObject.SetValidValue(value, true);
+                _عنوان_البنك = StructuralObject.SetValidValue(value, true, "عنوان_البنك");
                 ReportPropertyChanged("عنوان_البنك");
                 Onعنوان_البنكChanged();
             }
@@ -3565,7 +3558,7 @@ namespace Program.entity
             {
                 OnهاتفChanging(value);
                 ReportPropertyChanging("هاتف");
-                _هاتف = StructuralObject.SetValidValue(value, true);
+                _هاتف = StructuralObject.SetValidValue(value, true, "هاتف");
                 ReportPropertyChanged("هاتف");
                 OnهاتفChanged();
             }
@@ -3589,7 +3582,7 @@ namespace Program.entity
             {
                 OnالموبايلChanging(value);
                 ReportPropertyChanging("الموبايل");
-                _الموبايل = StructuralObject.SetValidValue(value, true);
+                _الموبايل = StructuralObject.SetValidValue(value, true, "الموبايل");
                 ReportPropertyChanged("الموبايل");
                 OnالموبايلChanged();
             }
@@ -3613,7 +3606,7 @@ namespace Program.entity
             {
                 Onالبريد_الالكترونيChanging(value);
                 ReportPropertyChanging("البريد_الالكتروني");
-                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true, "البريد_الالكتروني");
                 ReportPropertyChanged("البريد_الالكتروني");
                 Onالبريد_الالكترونيChanged();
             }
@@ -3637,7 +3630,7 @@ namespace Program.entity
             {
                 Onالموقع_الالكترونيChanging(value);
                 ReportPropertyChanging("الموقع_الالكتروني");
-                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true, "الموقع_الالكتروني");
                 ReportPropertyChanged("الموقع_الالكتروني");
                 Onالموقع_الالكترونيChanged();
             }
@@ -3661,7 +3654,7 @@ namespace Program.entity
             {
                 OnتعليقChanging(value);
                 ReportPropertyChanging("تعليق");
-                _تعليق = StructuralObject.SetValidValue(value, true);
+                _تعليق = StructuralObject.SetValidValue(value, true, "تعليق");
                 ReportPropertyChanged("تعليق");
                 OnتعليقChanged();
             }
@@ -3672,7 +3665,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -3728,7 +3720,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3747,7 +3739,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -3772,7 +3764,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -3796,7 +3788,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -3820,7 +3812,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -3844,7 +3836,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -3868,7 +3860,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -3892,7 +3884,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -3916,7 +3908,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -3927,7 +3919,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -3961,7 +3952,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3980,7 +3971,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -4005,7 +3996,7 @@ namespace Program.entity
             {
                 Onاسم_الصندوقChanging(value);
                 ReportPropertyChanging("اسم_الصندوق");
-                _اسم_الصندوق = StructuralObject.SetValidValue(value, false);
+                _اسم_الصندوق = StructuralObject.SetValidValue(value, false, "اسم_الصندوق");
                 ReportPropertyChanged("اسم_الصندوق");
                 Onاسم_الصندوقChanged();
             }
@@ -4029,7 +4020,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -4053,7 +4044,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -4077,7 +4068,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -4088,7 +4079,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -4166,7 +4156,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4185,7 +4175,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -4210,7 +4200,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -4234,7 +4224,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -4258,7 +4248,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -4282,7 +4272,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -4306,7 +4296,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -4330,7 +4320,7 @@ namespace Program.entity
             {
                 Onbox_idChanging(value);
                 ReportPropertyChanging("box_id");
-                _box_id = StructuralObject.SetValidValue(value);
+                _box_id = StructuralObject.SetValidValue(value, "box_id");
                 ReportPropertyChanged("box_id");
                 Onbox_idChanged();
             }
@@ -4341,7 +4331,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -4413,7 +4402,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4432,7 +4421,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -4457,7 +4446,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -4481,7 +4470,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -4505,7 +4494,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -4529,7 +4518,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -4553,7 +4542,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -4577,7 +4566,7 @@ namespace Program.entity
             {
                 Onbox_idChanging(value);
                 ReportPropertyChanging("box_id");
-                _box_id = StructuralObject.SetValidValue(value);
+                _box_id = StructuralObject.SetValidValue(value, "box_id");
                 ReportPropertyChanged("box_id");
                 Onbox_idChanged();
             }
@@ -4588,7 +4577,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -4670,7 +4658,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4689,7 +4677,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -4714,7 +4702,7 @@ namespace Program.entity
             {
                 OnnameChanging(value);
                 ReportPropertyChanging("name");
-                _name = StructuralObject.SetValidValue(value, false);
+                _name = StructuralObject.SetValidValue(value, false, "name");
                 ReportPropertyChanged("name");
                 OnnameChanged();
             }
@@ -4738,7 +4726,7 @@ namespace Program.entity
             {
                 OnstreetChanging(value);
                 ReportPropertyChanging("street");
-                _street = StructuralObject.SetValidValue(value, false);
+                _street = StructuralObject.SetValidValue(value, false, "street");
                 ReportPropertyChanged("street");
                 OnstreetChanged();
             }
@@ -4762,7 +4750,7 @@ namespace Program.entity
             {
                 OncityChanging(value);
                 ReportPropertyChanging("city");
-                _city = StructuralObject.SetValidValue(value, false);
+                _city = StructuralObject.SetValidValue(value, false, "city");
                 ReportPropertyChanged("city");
                 OncityChanged();
             }
@@ -4786,7 +4774,7 @@ namespace Program.entity
             {
                 OncountryChanging(value);
                 ReportPropertyChanging("country");
-                _country = StructuralObject.SetValidValue(value, false);
+                _country = StructuralObject.SetValidValue(value, false, "country");
                 ReportPropertyChanged("country");
                 OncountryChanged();
             }
@@ -4810,7 +4798,7 @@ namespace Program.entity
             {
                 OnphoneChanging(value);
                 ReportPropertyChanging("phone");
-                _phone = StructuralObject.SetValidValue(value, false);
+                _phone = StructuralObject.SetValidValue(value, false, "phone");
                 ReportPropertyChanged("phone");
                 OnphoneChanged();
             }
@@ -4834,7 +4822,7 @@ namespace Program.entity
             {
                 OnemailChanging(value);
                 ReportPropertyChanging("email");
-                _email = StructuralObject.SetValidValue(value, false);
+                _email = StructuralObject.SetValidValue(value, false, "email");
                 ReportPropertyChanged("email");
                 OnemailChanged();
             }
@@ -4858,7 +4846,7 @@ namespace Program.entity
             {
                 Onweb_siteChanging(value);
                 ReportPropertyChanging("web_site");
-                _web_site = StructuralObject.SetValidValue(value, false);
+                _web_site = StructuralObject.SetValidValue(value, false, "web_site");
                 ReportPropertyChanged("web_site");
                 Onweb_siteChanged();
             }
@@ -4882,7 +4870,7 @@ namespace Program.entity
             {
                 OnlogoChanging(value);
                 ReportPropertyChanging("logo");
-                _logo = StructuralObject.SetValidValue(value, true);
+                _logo = StructuralObject.SetValidValue(value, true, "logo");
                 ReportPropertyChanged("logo");
                 OnlogoChanged();
             }
@@ -4906,7 +4894,7 @@ namespace Program.entity
             {
                 OnactiveChanging(value);
                 ReportPropertyChanging("active");
-                _active = StructuralObject.SetValidValue(value, true);
+                _active = StructuralObject.SetValidValue(value, true, "active");
                 ReportPropertyChanged("active");
                 OnactiveChanged();
             }
@@ -4930,7 +4918,7 @@ namespace Program.entity
             {
                 OnBlock_DateChanging(value);
                 ReportPropertyChanging("Block_Date");
-                _Block_Date = StructuralObject.SetValidValue(value);
+                _Block_Date = StructuralObject.SetValidValue(value, "Block_Date");
                 ReportPropertyChanged("Block_Date");
                 OnBlock_DateChanged();
             }
@@ -4954,7 +4942,7 @@ namespace Program.entity
             {
                 Onblock_Date1Changing(value);
                 ReportPropertyChanging("block_Date1");
-                _block_Date1 = StructuralObject.SetValidValue(value);
+                _block_Date1 = StructuralObject.SetValidValue(value, "block_Date1");
                 ReportPropertyChanged("block_Date1");
                 Onblock_Date1Changed();
             }
@@ -4965,7 +4953,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -4993,7 +4980,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5012,7 +4999,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -5037,7 +5024,7 @@ namespace Program.entity
             {
                 OnnameChanging(value);
                 ReportPropertyChanging("name");
-                _name = StructuralObject.SetValidValue(value, false);
+                _name = StructuralObject.SetValidValue(value, false, "name");
                 ReportPropertyChanged("name");
                 OnnameChanged();
             }
@@ -5048,7 +5035,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -5080,7 +5066,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5099,7 +5085,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -5124,7 +5110,7 @@ namespace Program.entity
             {
                 Onاسم_الربونChanging(value);
                 ReportPropertyChanging("اسم_الربون");
-                _اسم_الربون = StructuralObject.SetValidValue(value, false);
+                _اسم_الربون = StructuralObject.SetValidValue(value, false, "اسم_الربون");
                 ReportPropertyChanged("اسم_الربون");
                 Onاسم_الربونChanged();
             }
@@ -5148,7 +5134,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -5172,7 +5158,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -5196,7 +5182,7 @@ namespace Program.entity
             {
                 Onعنوان_الربونChanging(value);
                 ReportPropertyChanging("عنوان_الربون");
-                _عنوان_الربون = StructuralObject.SetValidValue(value, true);
+                _عنوان_الربون = StructuralObject.SetValidValue(value, true, "عنوان_الربون");
                 ReportPropertyChanged("عنوان_الربون");
                 Onعنوان_الربونChanged();
             }
@@ -5220,7 +5206,7 @@ namespace Program.entity
             {
                 OnهاتفChanging(value);
                 ReportPropertyChanging("هاتف");
-                _هاتف = StructuralObject.SetValidValue(value, true);
+                _هاتف = StructuralObject.SetValidValue(value, true, "هاتف");
                 ReportPropertyChanged("هاتف");
                 OnهاتفChanged();
             }
@@ -5244,7 +5230,7 @@ namespace Program.entity
             {
                 OnالموبايلChanging(value);
                 ReportPropertyChanging("الموبايل");
-                _الموبايل = StructuralObject.SetValidValue(value, true);
+                _الموبايل = StructuralObject.SetValidValue(value, true, "الموبايل");
                 ReportPropertyChanged("الموبايل");
                 OnالموبايلChanged();
             }
@@ -5268,7 +5254,7 @@ namespace Program.entity
             {
                 Onالبريد_الالكترونيChanging(value);
                 ReportPropertyChanging("البريد_الالكتروني");
-                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true, "البريد_الالكتروني");
                 ReportPropertyChanged("البريد_الالكتروني");
                 Onالبريد_الالكترونيChanged();
             }
@@ -5292,7 +5278,7 @@ namespace Program.entity
             {
                 Onالموقع_الالكترونيChanging(value);
                 ReportPropertyChanging("الموقع_الالكتروني");
-                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true, "الموقع_الالكتروني");
                 ReportPropertyChanged("الموقع_الالكتروني");
                 Onالموقع_الالكترونيChanged();
             }
@@ -5316,7 +5302,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -5340,7 +5326,7 @@ namespace Program.entity
             {
                 Onوصف_الربونChanging(value);
                 ReportPropertyChanging("وصف_الربون");
-                _وصف_الربون = StructuralObject.SetValidValue(value, true);
+                _وصف_الربون = StructuralObject.SetValidValue(value, true, "وصف_الربون");
                 ReportPropertyChanged("وصف_الربون");
                 Onوصف_الربونChanged();
             }
@@ -5364,7 +5350,7 @@ namespace Program.entity
             {
                 OnصورةChanging(value);
                 ReportPropertyChanging("صورة");
-                _صورة = StructuralObject.SetValidValue(value, true);
+                _صورة = StructuralObject.SetValidValue(value, true, "صورة");
                 ReportPropertyChanged("صورة");
                 OnصورةChanged();
             }
@@ -5375,7 +5361,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -5563,7 +5548,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5582,7 +5567,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -5607,7 +5592,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -5631,7 +5616,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -5655,7 +5640,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -5679,7 +5664,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -5703,7 +5688,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -5727,7 +5712,7 @@ namespace Program.entity
             {
                 Oncustomer_idChanging(value);
                 ReportPropertyChanging("customer_id");
-                _customer_id = StructuralObject.SetValidValue(value);
+                _customer_id = StructuralObject.SetValidValue(value, "customer_id");
                 ReportPropertyChanged("customer_id");
                 Oncustomer_idChanged();
             }
@@ -5738,7 +5723,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -5810,7 +5794,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5829,7 +5813,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -5854,7 +5838,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -5878,7 +5862,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -5902,7 +5886,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -5926,7 +5910,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -5950,7 +5934,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -5974,7 +5958,7 @@ namespace Program.entity
             {
                 Oncustomer_idChanging(value);
                 ReportPropertyChanging("customer_id");
-                _customer_id = StructuralObject.SetValidValue(value);
+                _customer_id = StructuralObject.SetValidValue(value, "customer_id");
                 ReportPropertyChanged("customer_id");
                 Oncustomer_idChanged();
             }
@@ -5985,7 +5969,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6057,7 +6040,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6076,7 +6059,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -6101,7 +6084,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -6125,7 +6108,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -6149,7 +6132,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -6173,7 +6156,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -6197,7 +6180,7 @@ namespace Program.entity
             {
                 Oncustomer_idChanging(value);
                 ReportPropertyChanging("customer_id");
-                _customer_id = StructuralObject.SetValidValue(value);
+                _customer_id = StructuralObject.SetValidValue(value, "customer_id");
                 ReportPropertyChanged("customer_id");
                 Oncustomer_idChanged();
             }
@@ -6221,7 +6204,7 @@ namespace Program.entity
             {
                 Onتم_الدفعChanging(value);
                 ReportPropertyChanging("تم_الدفع");
-                _تم_الدفع = StructuralObject.SetValidValue(value, true);
+                _تم_الدفع = StructuralObject.SetValidValue(value, true, "تم_الدفع");
                 ReportPropertyChanged("تم_الدفع");
                 Onتم_الدفعChanged();
             }
@@ -6232,7 +6215,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6300,7 +6282,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6319,7 +6301,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -6344,7 +6326,7 @@ namespace Program.entity
             {
                 OnclassChanging(value);
                 ReportPropertyChanging("class");
-                _class = StructuralObject.SetValidValue(value, true);
+                _class = StructuralObject.SetValidValue(value, true, "class");
                 ReportPropertyChanged("class");
                 OnclassChanged();
             }
@@ -6368,7 +6350,7 @@ namespace Program.entity
             {
                 Onerror_msChanging(value);
                 ReportPropertyChanging("error_ms");
-                _error_ms = StructuralObject.SetValidValue(value, true);
+                _error_ms = StructuralObject.SetValidValue(value, true, "error_ms");
                 ReportPropertyChanged("error_ms");
                 Onerror_msChanged();
             }
@@ -6392,7 +6374,7 @@ namespace Program.entity
             {
                 Onerror_rowChanging(value);
                 ReportPropertyChanging("error_row");
-                _error_row = StructuralObject.SetValidValue(value);
+                _error_row = StructuralObject.SetValidValue(value, "error_row");
                 ReportPropertyChanged("error_row");
                 Onerror_rowChanged();
             }
@@ -6403,7 +6385,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -6437,7 +6418,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6456,7 +6437,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -6481,7 +6462,7 @@ namespace Program.entity
             {
                 OnالإلتزامChanging(value);
                 ReportPropertyChanging("الإلتزام");
-                _الإلتزام = StructuralObject.SetValidValue(value, false);
+                _الإلتزام = StructuralObject.SetValidValue(value, false, "الإلتزام");
                 ReportPropertyChanged("الإلتزام");
                 OnالإلتزامChanged();
             }
@@ -6505,7 +6486,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -6529,7 +6510,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -6553,7 +6534,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -6577,7 +6558,7 @@ namespace Program.entity
             {
                 Onنوع_الإلتزامChanging(value);
                 ReportPropertyChanging("نوع_الإلتزام");
-                _نوع_الإلتزام = StructuralObject.SetValidValue(value, true);
+                _نوع_الإلتزام = StructuralObject.SetValidValue(value, true, "نوع_الإلتزام");
                 ReportPropertyChanged("نوع_الإلتزام");
                 Onنوع_الإلتزامChanged();
             }
@@ -6601,7 +6582,7 @@ namespace Program.entity
             {
                 Onنسبة_الفائدةChanging(value);
                 ReportPropertyChanging("نسبة_الفائدة");
-                _نسبة_الفائدة = StructuralObject.SetValidValue(value);
+                _نسبة_الفائدة = StructuralObject.SetValidValue(value, "نسبة_الفائدة");
                 ReportPropertyChanged("نسبة_الفائدة");
                 Onنسبة_الفائدةChanged();
             }
@@ -6612,7 +6593,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6690,7 +6670,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6709,7 +6689,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -6734,7 +6714,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -6758,7 +6738,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -6782,7 +6762,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -6806,7 +6786,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -6830,7 +6810,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -6854,7 +6834,7 @@ namespace Program.entity
             {
                 Onliability_idChanging(value);
                 ReportPropertyChanging("liability_id");
-                _liability_id = StructuralObject.SetValidValue(value);
+                _liability_id = StructuralObject.SetValidValue(value, "liability_id");
                 ReportPropertyChanged("liability_id");
                 Onliability_idChanged();
             }
@@ -6865,7 +6845,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6937,7 +6916,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6956,7 +6935,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -6981,7 +6960,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -7005,7 +6984,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -7029,7 +7008,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -7053,7 +7032,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -7077,7 +7056,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -7101,7 +7080,7 @@ namespace Program.entity
             {
                 Onliability_idChanging(value);
                 ReportPropertyChanging("liability_id");
-                _liability_id = StructuralObject.SetValidValue(value);
+                _liability_id = StructuralObject.SetValidValue(value, "liability_id");
                 ReportPropertyChanged("liability_id");
                 Onliability_idChanged();
             }
@@ -7112,7 +7091,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -7188,7 +7166,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7207,7 +7185,7 @@ namespace Program.entity
                 {
                     Onالرقم_الفنيChanging(value);
                     ReportPropertyChanging("الرقم_الفني");
-                    _الرقم_الفني = StructuralObject.SetValidValue(value);
+                    _الرقم_الفني = StructuralObject.SetValidValue(value, "الرقم_الفني");
                     ReportPropertyChanged("الرقم_الفني");
                     Onالرقم_الفنيChanged();
                 }
@@ -7232,7 +7210,7 @@ namespace Program.entity
             {
                 Onاسم_المادةChanging(value);
                 ReportPropertyChanging("اسم_المادة");
-                _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                 ReportPropertyChanged("اسم_المادة");
                 Onاسم_المادةChanged();
             }
@@ -7256,7 +7234,7 @@ namespace Program.entity
             {
                 Onتواجد_المادةChanging(value);
                 ReportPropertyChanging("تواجد_المادة");
-                _تواجد_المادة = StructuralObject.SetValidValue(value, true);
+                _تواجد_المادة = StructuralObject.SetValidValue(value, true, "تواجد_المادة");
                 ReportPropertyChanged("تواجد_المادة");
                 Onتواجد_المادةChanged();
             }
@@ -7280,7 +7258,7 @@ namespace Program.entity
             {
                 OnالوحدةChanging(value);
                 ReportPropertyChanging("الوحدة");
-                _الوحدة = StructuralObject.SetValidValue(value, false);
+                _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                 ReportPropertyChanged("الوحدة");
                 OnالوحدةChanged();
             }
@@ -7304,7 +7282,7 @@ namespace Program.entity
             {
                 OnكميةChanging(value);
                 ReportPropertyChanging("كمية");
-                _كمية = StructuralObject.SetValidValue(value);
+                _كمية = StructuralObject.SetValidValue(value, "كمية");
                 ReportPropertyChanged("كمية");
                 OnكميةChanged();
             }
@@ -7328,7 +7306,7 @@ namespace Program.entity
             {
                 OnسعرChanging(value);
                 ReportPropertyChanging("سعر");
-                _سعر = StructuralObject.SetValidValue(value);
+                _سعر = StructuralObject.SetValidValue(value, "سعر");
                 ReportPropertyChanged("سعر");
                 OnسعرChanged();
             }
@@ -7352,7 +7330,7 @@ namespace Program.entity
             {
                 Onرمز_الطرازChanging(value);
                 ReportPropertyChanging("رمز_الطراز");
-                _رمز_الطراز = StructuralObject.SetValidValue(value, true);
+                _رمز_الطراز = StructuralObject.SetValidValue(value, true, "رمز_الطراز");
                 ReportPropertyChanged("رمز_الطراز");
                 Onرمز_الطرازChanged();
             }
@@ -7376,7 +7354,7 @@ namespace Program.entity
             {
                 OnالمجموعةChanging(value);
                 ReportPropertyChanging("المجموعة");
-                _المجموعة = StructuralObject.SetValidValue(value);
+                _المجموعة = StructuralObject.SetValidValue(value, "المجموعة");
                 ReportPropertyChanged("المجموعة");
                 OnالمجموعةChanged();
             }
@@ -7400,7 +7378,7 @@ namespace Program.entity
             {
                 OnالصانعChanging(value);
                 ReportPropertyChanging("الصانع");
-                _الصانع = StructuralObject.SetValidValue(value);
+                _الصانع = StructuralObject.SetValidValue(value, "الصانع");
                 ReportPropertyChanged("الصانع");
                 OnالصانعChanged();
             }
@@ -7424,7 +7402,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -7448,7 +7426,7 @@ namespace Program.entity
             {
                 OnبالةChanging(value);
                 ReportPropertyChanging("بالة");
-                _بالة = StructuralObject.SetValidValue(value, true);
+                _بالة = StructuralObject.SetValidValue(value, true, "بالة");
                 ReportPropertyChanged("بالة");
                 OnبالةChanged();
             }
@@ -7472,7 +7450,7 @@ namespace Program.entity
             {
                 Onوصف_المادةChanging(value);
                 ReportPropertyChanging("وصف_المادة");
-                _وصف_المادة = StructuralObject.SetValidValue(value, true);
+                _وصف_المادة = StructuralObject.SetValidValue(value, true, "وصف_المادة");
                 ReportPropertyChanged("وصف_المادة");
                 Onوصف_المادةChanged();
             }
@@ -7496,7 +7474,7 @@ namespace Program.entity
             {
                 OnصورةChanging(value);
                 ReportPropertyChanging("صورة");
-                _صورة = StructuralObject.SetValidValue(value, true);
+                _صورة = StructuralObject.SetValidValue(value, true, "صورة");
                 ReportPropertyChanged("صورة");
                 OnصورةChanged();
             }
@@ -7520,7 +7498,7 @@ namespace Program.entity
             {
                 Onفرق_السعرChanging(value);
                 ReportPropertyChanging("فرق_السعر");
-                _فرق_السعر = StructuralObject.SetValidValue(value);
+                _فرق_السعر = StructuralObject.SetValidValue(value, "فرق_السعر");
                 ReportPropertyChanged("فرق_السعر");
                 Onفرق_السعرChanged();
             }
@@ -7544,7 +7522,7 @@ namespace Program.entity
             {
                 Onفرق_الكميةChanging(value);
                 ReportPropertyChanging("فرق_الكمية");
-                _فرق_الكمية = StructuralObject.SetValidValue(value);
+                _فرق_الكمية = StructuralObject.SetValidValue(value, "فرق_الكمية");
                 ReportPropertyChanged("فرق_الكمية");
                 Onفرق_الكميةChanged();
             }
@@ -7568,7 +7546,7 @@ namespace Program.entity
             {
                 Onسعر_الشراءChanging(value);
                 ReportPropertyChanging("سعر_الشراء");
-                _سعر_الشراء = StructuralObject.SetValidValue(value);
+                _سعر_الشراء = StructuralObject.SetValidValue(value, "سعر_الشراء");
                 ReportPropertyChanged("سعر_الشراء");
                 Onسعر_الشراءChanged();
             }
@@ -7592,7 +7570,7 @@ namespace Program.entity
             {
                 Onسعر_البيعChanging(value);
                 ReportPropertyChanging("سعر_البيع");
-                _سعر_البيع = StructuralObject.SetValidValue(value);
+                _سعر_البيع = StructuralObject.SetValidValue(value, "سعر_البيع");
                 ReportPropertyChanged("سعر_البيع");
                 Onسعر_البيعChanged();
             }
@@ -7616,7 +7594,7 @@ namespace Program.entity
             {
                 Onكود_المادةChanging(value);
                 ReportPropertyChanging("كود_المادة");
-                _كود_المادة = StructuralObject.SetValidValue(value, true);
+                _كود_المادة = StructuralObject.SetValidValue(value, true, "كود_المادة");
                 ReportPropertyChanged("كود_المادة");
                 Onكود_المادةChanged();
             }
@@ -7640,7 +7618,7 @@ namespace Program.entity
             {
                 Onطريقة_حساب_الكلفةChanging(value);
                 ReportPropertyChanging("طريقة_حساب_الكلفة");
-                _طريقة_حساب_الكلفة = StructuralObject.SetValidValue(value, true);
+                _طريقة_حساب_الكلفة = StructuralObject.SetValidValue(value, true, "طريقة_حساب_الكلفة");
                 ReportPropertyChanged("طريقة_حساب_الكلفة");
                 Onطريقة_حساب_الكلفةChanged();
             }
@@ -7651,7 +7629,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -8039,7 +8016,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8056,7 +8033,7 @@ namespace Program.entity
             {
                 OnالمادةChanging(value);
                 ReportPropertyChanging("المادة");
-                _المادة = StructuralObject.SetValidValue(value);
+                _المادة = StructuralObject.SetValidValue(value, "المادة");
                 ReportPropertyChanged("المادة");
                 OnالمادةChanged();
             }
@@ -8082,7 +8059,7 @@ namespace Program.entity
                 {
                     Onسعر_الشراءChanging(value);
                     ReportPropertyChanging("سعر_الشراء");
-                    _سعر_الشراء = StructuralObject.SetValidValue(value);
+                    _سعر_الشراء = StructuralObject.SetValidValue(value, "سعر_الشراء");
                     ReportPropertyChanged("سعر_الشراء");
                     Onسعر_الشراءChanged();
                 }
@@ -8109,7 +8086,7 @@ namespace Program.entity
                 {
                     OnكميةChanging(value);
                     ReportPropertyChanging("كمية");
-                    _كمية = StructuralObject.SetValidValue(value);
+                    _كمية = StructuralObject.SetValidValue(value, "كمية");
                     ReportPropertyChanged("كمية");
                     OnكميةChanged();
                 }
@@ -8134,7 +8111,7 @@ namespace Program.entity
             {
                 OnالتاريخChanging(value);
                 ReportPropertyChanging("التاريخ");
-                _التاريخ = StructuralObject.SetValidValue(value);
+                _التاريخ = StructuralObject.SetValidValue(value, "التاريخ");
                 ReportPropertyChanged("التاريخ");
                 OnالتاريخChanged();
             }
@@ -8158,7 +8135,7 @@ namespace Program.entity
             {
                 Onرقم_فاتورة_الشراءChanging(value);
                 ReportPropertyChanging("رقم_فاتورة_الشراء");
-                _رقم_فاتورة_الشراء = StructuralObject.SetValidValue(value);
+                _رقم_فاتورة_الشراء = StructuralObject.SetValidValue(value, "رقم_فاتورة_الشراء");
                 ReportPropertyChanged("رقم_فاتورة_الشراء");
                 Onرقم_فاتورة_الشراءChanged();
             }
@@ -8169,7 +8146,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -8247,7 +8223,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8266,7 +8242,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -8291,7 +8267,7 @@ namespace Program.entity
             {
                 Onتاريخ_البيعChanging(value);
                 ReportPropertyChanging("تاريخ_البيع");
-                _تاريخ_البيع = StructuralObject.SetValidValue(value);
+                _تاريخ_البيع = StructuralObject.SetValidValue(value, "تاريخ_البيع");
                 ReportPropertyChanged("تاريخ_البيع");
                 Onتاريخ_البيعChanged();
             }
@@ -8315,7 +8291,7 @@ namespace Program.entity
             {
                 Onتاريخ_التسليمChanging(value);
                 ReportPropertyChanging("تاريخ_التسليم");
-                _تاريخ_التسليم = StructuralObject.SetValidValue(value);
+                _تاريخ_التسليم = StructuralObject.SetValidValue(value, "تاريخ_التسليم");
                 ReportPropertyChanged("تاريخ_التسليم");
                 Onتاريخ_التسليمChanged();
             }
@@ -8339,7 +8315,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -8363,7 +8339,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -8387,7 +8363,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -8411,7 +8387,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -8435,7 +8411,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -8459,7 +8435,7 @@ namespace Program.entity
             {
                 OnالعميلChanging(value);
                 ReportPropertyChanging("العميل");
-                _العميل = StructuralObject.SetValidValue(value);
+                _العميل = StructuralObject.SetValidValue(value, "العميل");
                 ReportPropertyChanged("العميل");
                 OnالعميلChanged();
             }
@@ -8483,7 +8459,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -8507,7 +8483,7 @@ namespace Program.entity
             {
                 OnبالةChanging(value);
                 ReportPropertyChanging("بالة");
-                _بالة = StructuralObject.SetValidValue(value, true);
+                _بالة = StructuralObject.SetValidValue(value, true, "بالة");
                 ReportPropertyChanged("بالة");
                 OnبالةChanged();
             }
@@ -8531,7 +8507,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -8555,7 +8531,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -8579,7 +8555,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -8603,7 +8579,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -8627,7 +8603,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -8651,7 +8627,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -8675,7 +8651,7 @@ namespace Program.entity
             {
                 Onسند_القبضChanging(value);
                 ReportPropertyChanging("سند_القبض");
-                _سند_القبض = StructuralObject.SetValidValue(value);
+                _سند_القبض = StructuralObject.SetValidValue(value, "سند_القبض");
                 ReportPropertyChanged("سند_القبض");
                 Onسند_القبضChanged();
             }
@@ -8699,7 +8675,7 @@ namespace Program.entity
             {
                 OnالفائدةChanging(value);
                 ReportPropertyChanging("الفائدة");
-                _الفائدة = StructuralObject.SetValidValue(value);
+                _الفائدة = StructuralObject.SetValidValue(value, "الفائدة");
                 ReportPropertyChanged("الفائدة");
                 OnالفائدةChanged();
             }
@@ -8723,7 +8699,7 @@ namespace Program.entity
             {
                 Onالدفع_كلChanging(value);
                 ReportPropertyChanging("الدفع_كل");
-                _الدفع_كل = StructuralObject.SetValidValue(value);
+                _الدفع_كل = StructuralObject.SetValidValue(value, "الدفع_كل");
                 ReportPropertyChanged("الدفع_كل");
                 Onالدفع_كلChanged();
             }
@@ -8747,7 +8723,7 @@ namespace Program.entity
             {
                 Onعدد_الأقساطChanging(value);
                 ReportPropertyChanging("عدد_الأقساط");
-                _عدد_الأقساط = StructuralObject.SetValidValue(value);
+                _عدد_الأقساط = StructuralObject.SetValidValue(value, "عدد_الأقساط");
                 ReportPropertyChanged("عدد_الأقساط");
                 Onعدد_الأقساطChanged();
             }
@@ -8771,7 +8747,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -8782,7 +8758,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -8906,7 +8881,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8925,7 +8900,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -8952,7 +8927,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -8979,7 +8954,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -9006,7 +8981,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -9033,7 +9008,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -9060,7 +9035,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -9087,7 +9062,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -9112,7 +9087,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -9136,7 +9111,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -9160,7 +9135,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -9184,7 +9159,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -9208,7 +9183,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -9232,7 +9207,7 @@ namespace Program.entity
             {
                 Onسعر_الشراءChanging(value);
                 ReportPropertyChanging("سعر_الشراء");
-                _سعر_الشراء = StructuralObject.SetValidValue(value);
+                _سعر_الشراء = StructuralObject.SetValidValue(value, "سعر_الشراء");
                 ReportPropertyChanged("سعر_الشراء");
                 Onسعر_الشراءChanged();
             }
@@ -9256,7 +9231,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -9267,7 +9242,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -9385,7 +9359,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9404,7 +9378,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -9431,7 +9405,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value, false);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, false, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -9458,7 +9432,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -9485,7 +9459,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -9512,7 +9486,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -9539,7 +9513,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -9566,7 +9540,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -9591,7 +9565,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -9615,7 +9589,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -9639,7 +9613,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -9663,7 +9637,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -9687,7 +9661,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -9711,7 +9685,7 @@ namespace Program.entity
             {
                 Onسعر_الشراءChanging(value);
                 ReportPropertyChanging("سعر_الشراء");
-                _سعر_الشراء = StructuralObject.SetValidValue(value);
+                _سعر_الشراء = StructuralObject.SetValidValue(value, "سعر_الشراء");
                 ReportPropertyChanged("سعر_الشراء");
                 Onسعر_الشراءChanged();
             }
@@ -9735,7 +9709,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -9746,7 +9720,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -9864,7 +9837,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9883,7 +9856,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -9910,7 +9883,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -9937,7 +9910,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -9964,7 +9937,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -9991,7 +9964,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -10018,7 +9991,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -10045,7 +10018,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -10070,7 +10043,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -10094,7 +10067,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -10118,7 +10091,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -10142,7 +10115,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -10166,7 +10139,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -10177,7 +10150,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10295,7 +10267,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10314,7 +10286,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -10341,7 +10313,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value, false);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, false, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -10368,7 +10340,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -10395,7 +10367,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -10422,7 +10394,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -10449,7 +10421,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -10476,7 +10448,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -10501,7 +10473,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -10525,7 +10497,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -10549,7 +10521,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -10573,7 +10545,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -10597,7 +10569,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -10608,7 +10580,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10724,7 +10695,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10743,7 +10714,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value, false);
+                    _الرقم = StructuralObject.SetValidValue(value, false, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -10768,7 +10739,7 @@ namespace Program.entity
             {
                 Onتاريخ_البيعChanging(value);
                 ReportPropertyChanging("تاريخ_البيع");
-                _تاريخ_البيع = StructuralObject.SetValidValue(value);
+                _تاريخ_البيع = StructuralObject.SetValidValue(value, "تاريخ_البيع");
                 ReportPropertyChanged("تاريخ_البيع");
                 Onتاريخ_البيعChanged();
             }
@@ -10792,7 +10763,7 @@ namespace Program.entity
             {
                 Onتاريخ_التسليمChanging(value);
                 ReportPropertyChanging("تاريخ_التسليم");
-                _تاريخ_التسليم = StructuralObject.SetValidValue(value);
+                _تاريخ_التسليم = StructuralObject.SetValidValue(value, "تاريخ_التسليم");
                 ReportPropertyChanged("تاريخ_التسليم");
                 Onتاريخ_التسليمChanged();
             }
@@ -10816,7 +10787,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -10840,7 +10811,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -10864,7 +10835,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -10888,7 +10859,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -10912,7 +10883,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -10936,7 +10907,7 @@ namespace Program.entity
             {
                 OnالعميلChanging(value);
                 ReportPropertyChanging("العميل");
-                _العميل = StructuralObject.SetValidValue(value);
+                _العميل = StructuralObject.SetValidValue(value, "العميل");
                 ReportPropertyChanged("العميل");
                 OnالعميلChanged();
             }
@@ -10960,7 +10931,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -10984,7 +10955,7 @@ namespace Program.entity
             {
                 OnبالةChanging(value);
                 ReportPropertyChanging("بالة");
-                _بالة = StructuralObject.SetValidValue(value, true);
+                _بالة = StructuralObject.SetValidValue(value, true, "بالة");
                 ReportPropertyChanged("بالة");
                 OnبالةChanged();
             }
@@ -11008,7 +10979,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -11032,7 +11003,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -11056,7 +11027,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -11080,7 +11051,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -11104,7 +11075,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -11128,7 +11099,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -11152,7 +11123,7 @@ namespace Program.entity
             {
                 Onسند_القبضChanging(value);
                 ReportPropertyChanging("سند_القبض");
-                _سند_القبض = StructuralObject.SetValidValue(value);
+                _سند_القبض = StructuralObject.SetValidValue(value, "سند_القبض");
                 ReportPropertyChanged("سند_القبض");
                 Onسند_القبضChanged();
             }
@@ -11176,7 +11147,7 @@ namespace Program.entity
             {
                 OnالفائدةChanging(value);
                 ReportPropertyChanging("الفائدة");
-                _الفائدة = StructuralObject.SetValidValue(value);
+                _الفائدة = StructuralObject.SetValidValue(value, "الفائدة");
                 ReportPropertyChanged("الفائدة");
                 OnالفائدةChanged();
             }
@@ -11200,7 +11171,7 @@ namespace Program.entity
             {
                 Onالدفع_كلChanging(value);
                 ReportPropertyChanging("الدفع_كل");
-                _الدفع_كل = StructuralObject.SetValidValue(value);
+                _الدفع_كل = StructuralObject.SetValidValue(value, "الدفع_كل");
                 ReportPropertyChanged("الدفع_كل");
                 Onالدفع_كلChanged();
             }
@@ -11224,7 +11195,7 @@ namespace Program.entity
             {
                 Onعدد_الأقساطChanging(value);
                 ReportPropertyChanging("عدد_الأقساط");
-                _عدد_الأقساط = StructuralObject.SetValidValue(value);
+                _عدد_الأقساط = StructuralObject.SetValidValue(value, "عدد_الأقساط");
                 ReportPropertyChanged("عدد_الأقساط");
                 Onعدد_الأقساطChanged();
             }
@@ -11248,7 +11219,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -11259,7 +11230,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -11357,7 +11327,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11376,7 +11346,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -11403,7 +11373,7 @@ namespace Program.entity
                 {
                     OnالفائدةChanging(value);
                     ReportPropertyChanging("الفائدة");
-                    _الفائدة = StructuralObject.SetValidValue(value);
+                    _الفائدة = StructuralObject.SetValidValue(value, "الفائدة");
                     ReportPropertyChanged("الفائدة");
                     OnالفائدةChanged();
                 }
@@ -11430,7 +11400,7 @@ namespace Program.entity
                 {
                     Onنسبة_الفائدةChanging(value);
                     ReportPropertyChanging("نسبة_الفائدة");
-                    _نسبة_الفائدة = StructuralObject.SetValidValue(value);
+                    _نسبة_الفائدة = StructuralObject.SetValidValue(value, "نسبة_الفائدة");
                     ReportPropertyChanged("نسبة_الفائدة");
                     Onنسبة_الفائدةChanged();
                 }
@@ -11457,7 +11427,7 @@ namespace Program.entity
                 {
                     Onالدفع_كلChanging(value);
                     ReportPropertyChanging("الدفع_كل");
-                    _الدفع_كل = StructuralObject.SetValidValue(value);
+                    _الدفع_كل = StructuralObject.SetValidValue(value, "الدفع_كل");
                     ReportPropertyChanged("الدفع_كل");
                     Onالدفع_كلChanged();
                 }
@@ -11484,7 +11454,7 @@ namespace Program.entity
                 {
                     Onعدد_الأقساطChanging(value);
                     ReportPropertyChanging("عدد_الأقساط");
-                    _عدد_الأقساط = StructuralObject.SetValidValue(value);
+                    _عدد_الأقساط = StructuralObject.SetValidValue(value, "عدد_الأقساط");
                     ReportPropertyChanged("عدد_الأقساط");
                     Onعدد_الأقساطChanged();
                 }
@@ -11509,7 +11479,7 @@ namespace Program.entity
             {
                 OnالرعبونChanging(value);
                 ReportPropertyChanging("الرعبون");
-                _الرعبون = StructuralObject.SetValidValue(value);
+                _الرعبون = StructuralObject.SetValidValue(value, "الرعبون");
                 ReportPropertyChanged("الرعبون");
                 OnالرعبونChanged();
             }
@@ -11520,7 +11490,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -11598,7 +11567,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11617,7 +11586,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -11642,7 +11611,7 @@ namespace Program.entity
             {
                 Onتاريخ_البيعChanging(value);
                 ReportPropertyChanging("تاريخ_البيع");
-                _تاريخ_البيع = StructuralObject.SetValidValue(value);
+                _تاريخ_البيع = StructuralObject.SetValidValue(value, "تاريخ_البيع");
                 ReportPropertyChanged("تاريخ_البيع");
                 Onتاريخ_البيعChanged();
             }
@@ -11666,7 +11635,7 @@ namespace Program.entity
             {
                 Onتاريخ_التسليمChanging(value);
                 ReportPropertyChanging("تاريخ_التسليم");
-                _تاريخ_التسليم = StructuralObject.SetValidValue(value);
+                _تاريخ_التسليم = StructuralObject.SetValidValue(value, "تاريخ_التسليم");
                 ReportPropertyChanged("تاريخ_التسليم");
                 Onتاريخ_التسليمChanged();
             }
@@ -11690,7 +11659,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -11714,7 +11683,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -11738,7 +11707,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -11762,7 +11731,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -11786,7 +11755,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -11810,7 +11779,7 @@ namespace Program.entity
             {
                 OnالموردChanging(value);
                 ReportPropertyChanging("المورد");
-                _المورد = StructuralObject.SetValidValue(value);
+                _المورد = StructuralObject.SetValidValue(value, "المورد");
                 ReportPropertyChanged("المورد");
                 OnالموردChanged();
             }
@@ -11834,7 +11803,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -11858,7 +11827,7 @@ namespace Program.entity
             {
                 OnبالةChanging(value);
                 ReportPropertyChanging("بالة");
-                _بالة = StructuralObject.SetValidValue(value, true);
+                _بالة = StructuralObject.SetValidValue(value, true, "بالة");
                 ReportPropertyChanged("بالة");
                 OnبالةChanged();
             }
@@ -11882,7 +11851,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -11906,7 +11875,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -11930,7 +11899,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -11954,7 +11923,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -11978,7 +11947,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -12002,7 +11971,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -12013,7 +11982,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -12113,7 +12081,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12132,7 +12100,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value, false);
+                    _الرقم = StructuralObject.SetValidValue(value, false, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -12157,7 +12125,7 @@ namespace Program.entity
             {
                 Onتاريخ_البيعChanging(value);
                 ReportPropertyChanging("تاريخ_البيع");
-                _تاريخ_البيع = StructuralObject.SetValidValue(value);
+                _تاريخ_البيع = StructuralObject.SetValidValue(value, "تاريخ_البيع");
                 ReportPropertyChanged("تاريخ_البيع");
                 Onتاريخ_البيعChanged();
             }
@@ -12181,7 +12149,7 @@ namespace Program.entity
             {
                 Onتاريخ_التسليمChanging(value);
                 ReportPropertyChanging("تاريخ_التسليم");
-                _تاريخ_التسليم = StructuralObject.SetValidValue(value);
+                _تاريخ_التسليم = StructuralObject.SetValidValue(value, "تاريخ_التسليم");
                 ReportPropertyChanged("تاريخ_التسليم");
                 Onتاريخ_التسليمChanged();
             }
@@ -12205,7 +12173,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -12229,7 +12197,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -12253,7 +12221,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -12277,7 +12245,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -12301,7 +12269,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -12325,7 +12293,7 @@ namespace Program.entity
             {
                 OnالموردChanging(value);
                 ReportPropertyChanging("المورد");
-                _المورد = StructuralObject.SetValidValue(value);
+                _المورد = StructuralObject.SetValidValue(value, "المورد");
                 ReportPropertyChanged("المورد");
                 OnالموردChanged();
             }
@@ -12349,7 +12317,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -12373,7 +12341,7 @@ namespace Program.entity
             {
                 OnبالةChanging(value);
                 ReportPropertyChanging("بالة");
-                _بالة = StructuralObject.SetValidValue(value, true);
+                _بالة = StructuralObject.SetValidValue(value, true, "بالة");
                 ReportPropertyChanged("بالة");
                 OnبالةChanged();
             }
@@ -12397,7 +12365,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -12421,7 +12389,7 @@ namespace Program.entity
             {
                 Onحسم_ممنوحChanging(value);
                 ReportPropertyChanging("حسم_ممنوح");
-                _حسم_ممنوح = StructuralObject.SetValidValue(value);
+                _حسم_ممنوح = StructuralObject.SetValidValue(value, "حسم_ممنوح");
                 ReportPropertyChanged("حسم_ممنوح");
                 Onحسم_ممنوحChanged();
             }
@@ -12445,7 +12413,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -12469,7 +12437,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -12493,7 +12461,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -12517,7 +12485,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -12528,7 +12496,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -12626,7 +12593,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12645,7 +12612,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -12670,7 +12637,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -12694,7 +12661,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -12718,7 +12685,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -12742,7 +12709,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -12766,7 +12733,7 @@ namespace Program.entity
             {
                 Onرقم_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("رقم_فاتورة_المصدر");
-                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value, "رقم_فاتورة_المصدر");
                 ReportPropertyChanged("رقم_فاتورة_المصدر");
                 Onرقم_فاتورة_المصدرChanged();
             }
@@ -12790,7 +12757,7 @@ namespace Program.entity
             {
                 Onتاريخ_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("تاريخ_فاتورة_المصدر");
-                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value, "تاريخ_فاتورة_المصدر");
                 ReportPropertyChanged("تاريخ_فاتورة_المصدر");
                 Onتاريخ_فاتورة_المصدرChanged();
             }
@@ -12814,7 +12781,7 @@ namespace Program.entity
             {
                 OnالمصدرChanging(value);
                 ReportPropertyChanging("المصدر");
-                _المصدر = StructuralObject.SetValidValue(value, true);
+                _المصدر = StructuralObject.SetValidValue(value, true, "المصدر");
                 ReportPropertyChanged("المصدر");
                 OnالمصدرChanged();
             }
@@ -12838,7 +12805,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -12862,7 +12829,7 @@ namespace Program.entity
             {
                 OnالموردChanging(value);
                 ReportPropertyChanging("المورد");
-                _المورد = StructuralObject.SetValidValue(value);
+                _المورد = StructuralObject.SetValidValue(value, "المورد");
                 ReportPropertyChanged("المورد");
                 OnالموردChanged();
             }
@@ -12886,7 +12853,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -12910,7 +12877,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -12934,7 +12901,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -12958,7 +12925,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -12982,7 +12949,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -13006,7 +12973,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -13030,7 +12997,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -13054,7 +13021,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -13078,7 +13045,7 @@ namespace Program.entity
             {
                 Onسند_الدفعChanging(value);
                 ReportPropertyChanging("سند_الدفع");
-                _سند_الدفع = StructuralObject.SetValidValue(value);
+                _سند_الدفع = StructuralObject.SetValidValue(value, "سند_الدفع");
                 ReportPropertyChanged("سند_الدفع");
                 Onسند_الدفعChanged();
             }
@@ -13089,7 +13056,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -13213,7 +13179,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13232,7 +13198,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -13259,7 +13225,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -13286,7 +13252,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -13313,7 +13279,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -13340,7 +13306,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -13367,7 +13333,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -13394,7 +13360,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -13419,7 +13385,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -13443,7 +13409,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -13467,7 +13433,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -13491,7 +13457,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -13515,7 +13481,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -13526,7 +13492,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -13644,7 +13609,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13663,7 +13628,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -13690,7 +13655,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value, false);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, false, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -13717,7 +13682,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -13744,7 +13709,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -13771,7 +13736,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -13798,7 +13763,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -13825,7 +13790,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -13850,7 +13815,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -13874,7 +13839,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -13898,7 +13863,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -13922,7 +13887,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -13946,7 +13911,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -13957,7 +13922,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -14075,7 +14039,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14094,7 +14058,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -14121,7 +14085,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -14148,7 +14112,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -14175,7 +14139,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -14202,7 +14166,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -14229,7 +14193,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -14256,7 +14220,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -14281,7 +14245,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -14305,7 +14269,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -14329,7 +14293,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -14353,7 +14317,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -14377,7 +14341,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -14388,7 +14352,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -14506,7 +14469,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14525,7 +14488,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -14552,7 +14515,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value, false);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, false, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -14579,7 +14542,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -14606,7 +14569,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -14633,7 +14596,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -14660,7 +14623,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -14687,7 +14650,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -14712,7 +14675,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -14736,7 +14699,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -14760,7 +14723,7 @@ namespace Program.entity
             {
                 Onالكمية_كتابةChanging(value);
                 ReportPropertyChanging("الكمية_كتابة");
-                _الكمية_كتابة = StructuralObject.SetValidValue(value, true);
+                _الكمية_كتابة = StructuralObject.SetValidValue(value, true, "الكمية_كتابة");
                 ReportPropertyChanged("الكمية_كتابة");
                 Onالكمية_كتابةChanged();
             }
@@ -14784,7 +14747,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -14808,7 +14771,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -14819,7 +14782,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -14933,7 +14895,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14952,7 +14914,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value, false);
+                    _الرقم = StructuralObject.SetValidValue(value, false, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -14977,7 +14939,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -15001,7 +14963,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -15025,7 +14987,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -15049,7 +15011,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -15073,7 +15035,7 @@ namespace Program.entity
             {
                 Onرقم_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("رقم_فاتورة_المصدر");
-                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value, "رقم_فاتورة_المصدر");
                 ReportPropertyChanged("رقم_فاتورة_المصدر");
                 Onرقم_فاتورة_المصدرChanged();
             }
@@ -15097,7 +15059,7 @@ namespace Program.entity
             {
                 Onتاريخ_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("تاريخ_فاتورة_المصدر");
-                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value, "تاريخ_فاتورة_المصدر");
                 ReportPropertyChanged("تاريخ_فاتورة_المصدر");
                 Onتاريخ_فاتورة_المصدرChanged();
             }
@@ -15121,7 +15083,7 @@ namespace Program.entity
             {
                 OnالمصدرChanging(value);
                 ReportPropertyChanging("المصدر");
-                _المصدر = StructuralObject.SetValidValue(value, true);
+                _المصدر = StructuralObject.SetValidValue(value, true, "المصدر");
                 ReportPropertyChanged("المصدر");
                 OnالمصدرChanged();
             }
@@ -15145,7 +15107,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -15169,7 +15131,7 @@ namespace Program.entity
             {
                 OnالموردChanging(value);
                 ReportPropertyChanging("المورد");
-                _المورد = StructuralObject.SetValidValue(value);
+                _المورد = StructuralObject.SetValidValue(value, "المورد");
                 ReportPropertyChanged("المورد");
                 OnالموردChanged();
             }
@@ -15193,7 +15155,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -15217,7 +15179,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -15241,7 +15203,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -15265,7 +15227,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -15289,7 +15251,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -15313,7 +15275,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -15337,7 +15299,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -15361,7 +15323,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -15385,7 +15347,7 @@ namespace Program.entity
             {
                 Onسند_الدفعChanging(value);
                 ReportPropertyChanging("سند_الدفع");
-                _سند_الدفع = StructuralObject.SetValidValue(value);
+                _سند_الدفع = StructuralObject.SetValidValue(value, "سند_الدفع");
                 ReportPropertyChanged("سند_الدفع");
                 Onسند_الدفعChanged();
             }
@@ -15396,7 +15358,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -15494,7 +15455,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -15513,7 +15474,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -15540,7 +15501,7 @@ namespace Program.entity
                 {
                     OnالفائدةChanging(value);
                     ReportPropertyChanging("الفائدة");
-                    _الفائدة = StructuralObject.SetValidValue(value);
+                    _الفائدة = StructuralObject.SetValidValue(value, "الفائدة");
                     ReportPropertyChanged("الفائدة");
                     OnالفائدةChanged();
                 }
@@ -15567,7 +15528,7 @@ namespace Program.entity
                 {
                     Onنسبة_الفائدةChanging(value);
                     ReportPropertyChanging("نسبة_الفائدة");
-                    _نسبة_الفائدة = StructuralObject.SetValidValue(value);
+                    _نسبة_الفائدة = StructuralObject.SetValidValue(value, "نسبة_الفائدة");
                     ReportPropertyChanged("نسبة_الفائدة");
                     Onنسبة_الفائدةChanged();
                 }
@@ -15594,7 +15555,7 @@ namespace Program.entity
                 {
                     Onالدفع_كلChanging(value);
                     ReportPropertyChanging("الدفع_كل");
-                    _الدفع_كل = StructuralObject.SetValidValue(value);
+                    _الدفع_كل = StructuralObject.SetValidValue(value, "الدفع_كل");
                     ReportPropertyChanged("الدفع_كل");
                     Onالدفع_كلChanged();
                 }
@@ -15621,7 +15582,7 @@ namespace Program.entity
                 {
                     Onعدد_الأقساطChanging(value);
                     ReportPropertyChanging("عدد_الأقساط");
-                    _عدد_الأقساط = StructuralObject.SetValidValue(value);
+                    _عدد_الأقساط = StructuralObject.SetValidValue(value, "عدد_الأقساط");
                     ReportPropertyChanged("عدد_الأقساط");
                     Onعدد_الأقساطChanged();
                 }
@@ -15646,7 +15607,7 @@ namespace Program.entity
             {
                 OnالرعبونChanging(value);
                 ReportPropertyChanging("الرعبون");
-                _الرعبون = StructuralObject.SetValidValue(value);
+                _الرعبون = StructuralObject.SetValidValue(value, "الرعبون");
                 ReportPropertyChanged("الرعبون");
                 OnالرعبونChanged();
             }
@@ -15657,7 +15618,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -15733,7 +15693,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -15752,7 +15712,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -15777,7 +15737,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -15801,7 +15761,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -15825,7 +15785,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -15849,7 +15809,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -15873,7 +15833,7 @@ namespace Program.entity
             {
                 Onرقم_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("رقم_فاتورة_المصدر");
-                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value, "رقم_فاتورة_المصدر");
                 ReportPropertyChanged("رقم_فاتورة_المصدر");
                 Onرقم_فاتورة_المصدرChanged();
             }
@@ -15897,7 +15857,7 @@ namespace Program.entity
             {
                 Onتاريخ_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("تاريخ_فاتورة_المصدر");
-                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value, "تاريخ_فاتورة_المصدر");
                 ReportPropertyChanged("تاريخ_فاتورة_المصدر");
                 Onتاريخ_فاتورة_المصدرChanged();
             }
@@ -15921,7 +15881,7 @@ namespace Program.entity
             {
                 OnالمصدرChanging(value);
                 ReportPropertyChanging("المصدر");
-                _المصدر = StructuralObject.SetValidValue(value, true);
+                _المصدر = StructuralObject.SetValidValue(value, true, "المصدر");
                 ReportPropertyChanged("المصدر");
                 OnالمصدرChanged();
             }
@@ -15945,7 +15905,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -15969,7 +15929,7 @@ namespace Program.entity
             {
                 OnالعميلChanging(value);
                 ReportPropertyChanging("العميل");
-                _العميل = StructuralObject.SetValidValue(value);
+                _العميل = StructuralObject.SetValidValue(value, "العميل");
                 ReportPropertyChanged("العميل");
                 OnالعميلChanged();
             }
@@ -15993,7 +15953,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -16017,7 +15977,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -16041,7 +16001,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -16065,7 +16025,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -16089,7 +16049,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -16113,7 +16073,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -16137,7 +16097,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -16161,7 +16121,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -16172,7 +16132,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -16270,7 +16229,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -16289,7 +16248,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value, false);
+                    _الرقم = StructuralObject.SetValidValue(value, false, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -16314,7 +16273,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -16338,7 +16297,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -16362,7 +16321,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -16386,7 +16345,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -16410,7 +16369,7 @@ namespace Program.entity
             {
                 Onرقم_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("رقم_فاتورة_المصدر");
-                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _رقم_فاتورة_المصدر = StructuralObject.SetValidValue(value, "رقم_فاتورة_المصدر");
                 ReportPropertyChanged("رقم_فاتورة_المصدر");
                 Onرقم_فاتورة_المصدرChanged();
             }
@@ -16434,7 +16393,7 @@ namespace Program.entity
             {
                 Onتاريخ_فاتورة_المصدرChanging(value);
                 ReportPropertyChanging("تاريخ_فاتورة_المصدر");
-                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value);
+                _تاريخ_فاتورة_المصدر = StructuralObject.SetValidValue(value, "تاريخ_فاتورة_المصدر");
                 ReportPropertyChanged("تاريخ_فاتورة_المصدر");
                 Onتاريخ_فاتورة_المصدرChanged();
             }
@@ -16458,7 +16417,7 @@ namespace Program.entity
             {
                 OnالمصدرChanging(value);
                 ReportPropertyChanging("المصدر");
-                _المصدر = StructuralObject.SetValidValue(value, true);
+                _المصدر = StructuralObject.SetValidValue(value, true, "المصدر");
                 ReportPropertyChanged("المصدر");
                 OnالمصدرChanged();
             }
@@ -16482,7 +16441,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -16506,7 +16465,7 @@ namespace Program.entity
             {
                 OnالعميلChanging(value);
                 ReportPropertyChanging("العميل");
-                _العميل = StructuralObject.SetValidValue(value);
+                _العميل = StructuralObject.SetValidValue(value, "العميل");
                 ReportPropertyChanged("العميل");
                 OnالعميلChanged();
             }
@@ -16530,7 +16489,7 @@ namespace Program.entity
             {
                 OnحذفةChanging(value);
                 ReportPropertyChanging("حذفة");
-                _حذفة = StructuralObject.SetValidValue(value, true);
+                _حذفة = StructuralObject.SetValidValue(value, true, "حذفة");
                 ReportPropertyChanged("حذفة");
                 OnحذفةChanged();
             }
@@ -16554,7 +16513,7 @@ namespace Program.entity
             {
                 Onنوع_العمليةChanging(value);
                 ReportPropertyChanging("نوع_العملية");
-                _نوع_العملية = StructuralObject.SetValidValue(value, true);
+                _نوع_العملية = StructuralObject.SetValidValue(value, true, "نوع_العملية");
                 ReportPropertyChanged("نوع_العملية");
                 Onنوع_العمليةChanged();
             }
@@ -16578,7 +16537,7 @@ namespace Program.entity
             {
                 Onحسم_مكتسبChanging(value);
                 ReportPropertyChanging("حسم_مكتسب");
-                _حسم_مكتسب = StructuralObject.SetValidValue(value);
+                _حسم_مكتسب = StructuralObject.SetValidValue(value, "حسم_مكتسب");
                 ReportPropertyChanged("حسم_مكتسب");
                 Onحسم_مكتسبChanged();
             }
@@ -16602,7 +16561,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -16626,7 +16585,7 @@ namespace Program.entity
             {
                 Onمصاريف_على_حسابChanging(value);
                 ReportPropertyChanging("مصاريف_على_حساب");
-                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true);
+                _مصاريف_على_حساب = StructuralObject.SetValidValue(value, true, "مصاريف_على_حساب");
                 ReportPropertyChanged("مصاريف_على_حساب");
                 Onمصاريف_على_حسابChanged();
             }
@@ -16650,7 +16609,7 @@ namespace Program.entity
             {
                 OnمرحلChanging(value);
                 ReportPropertyChanging("مرحل");
-                _مرحل = StructuralObject.SetValidValue(value, true);
+                _مرحل = StructuralObject.SetValidValue(value, true, "مرحل");
                 ReportPropertyChanged("مرحل");
                 OnمرحلChanged();
             }
@@ -16674,7 +16633,7 @@ namespace Program.entity
             {
                 Onطريقة_الدفعChanging(value);
                 ReportPropertyChanging("طريقة_الدفع");
-                _طريقة_الدفع = StructuralObject.SetValidValue(value, true);
+                _طريقة_الدفع = StructuralObject.SetValidValue(value, true, "طريقة_الدفع");
                 ReportPropertyChanged("طريقة_الدفع");
                 Onطريقة_الدفعChanged();
             }
@@ -16698,7 +16657,7 @@ namespace Program.entity
             {
                 Onاسم_الحسابChanging(value);
                 ReportPropertyChanging("اسم_الحساب");
-                _اسم_الحساب = StructuralObject.SetValidValue(value, true);
+                _اسم_الحساب = StructuralObject.SetValidValue(value, true, "اسم_الحساب");
                 ReportPropertyChanged("اسم_الحساب");
                 Onاسم_الحسابChanged();
             }
@@ -16709,7 +16668,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -16801,7 +16759,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -16820,7 +16778,7 @@ namespace Program.entity
                 {
                     Onرقم_المجموعةChanging(value);
                     ReportPropertyChanging("رقم_المجموعة");
-                    _رقم_المجموعة = StructuralObject.SetValidValue(value);
+                    _رقم_المجموعة = StructuralObject.SetValidValue(value, "رقم_المجموعة");
                     ReportPropertyChanged("رقم_المجموعة");
                     Onرقم_المجموعةChanged();
                 }
@@ -16845,7 +16803,7 @@ namespace Program.entity
             {
                 Onاسم_المجموعةChanging(value);
                 ReportPropertyChanging("اسم_المجموعة");
-                _اسم_المجموعة = StructuralObject.SetValidValue(value, false);
+                _اسم_المجموعة = StructuralObject.SetValidValue(value, false, "اسم_المجموعة");
                 ReportPropertyChanged("اسم_المجموعة");
                 Onاسم_المجموعةChanged();
             }
@@ -16856,7 +16814,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -16940,7 +16897,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -16959,7 +16916,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -16984,7 +16941,7 @@ namespace Program.entity
             {
                 Onاسم_المادةChanging(value);
                 ReportPropertyChanging("اسم_المادة");
-                _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                 ReportPropertyChanged("اسم_المادة");
                 Onاسم_المادةChanged();
             }
@@ -17008,7 +16965,7 @@ namespace Program.entity
             {
                 OnالوحدةChanging(value);
                 ReportPropertyChanging("الوحدة");
-                _الوحدة = StructuralObject.SetValidValue(value, false);
+                _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                 ReportPropertyChanged("الوحدة");
                 OnالوحدةChanged();
             }
@@ -17032,7 +16989,7 @@ namespace Program.entity
             {
                 OnكميةChanging(value);
                 ReportPropertyChanging("كمية");
-                _كمية = StructuralObject.SetValidValue(value);
+                _كمية = StructuralObject.SetValidValue(value, "كمية");
                 ReportPropertyChanged("كمية");
                 OnكميةChanged();
             }
@@ -17056,7 +17013,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -17080,7 +17037,7 @@ namespace Program.entity
             {
                 Onسعر_البيعChanging(value);
                 ReportPropertyChanging("سعر_البيع");
-                _سعر_البيع = StructuralObject.SetValidValue(value);
+                _سعر_البيع = StructuralObject.SetValidValue(value, "سعر_البيع");
                 ReportPropertyChanged("سعر_البيع");
                 Onسعر_البيعChanged();
             }
@@ -17104,7 +17061,7 @@ namespace Program.entity
             {
                 OnالمجموعةChanging(value);
                 ReportPropertyChanging("المجموعة");
-                _المجموعة = StructuralObject.SetValidValue(value);
+                _المجموعة = StructuralObject.SetValidValue(value, "المجموعة");
                 ReportPropertyChanged("المجموعة");
                 OnالمجموعةChanged();
             }
@@ -17128,7 +17085,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -17139,7 +17096,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -17283,7 +17239,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -17302,7 +17258,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -17329,7 +17285,7 @@ namespace Program.entity
                 {
                     Onرقم_المصنعChanging(value);
                     ReportPropertyChanging("رقم_المصنع");
-                    _رقم_المصنع = StructuralObject.SetValidValue(value);
+                    _رقم_المصنع = StructuralObject.SetValidValue(value, "رقم_المصنع");
                     ReportPropertyChanged("رقم_المصنع");
                     Onرقم_المصنعChanged();
                 }
@@ -17356,7 +17312,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -17383,7 +17339,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -17410,7 +17366,7 @@ namespace Program.entity
                 {
                     OnكميةChanging(value);
                     ReportPropertyChanging("كمية");
-                    _كمية = StructuralObject.SetValidValue(value);
+                    _كمية = StructuralObject.SetValidValue(value, "كمية");
                     ReportPropertyChanged("كمية");
                     OnكميةChanged();
                 }
@@ -17437,7 +17393,7 @@ namespace Program.entity
                 {
                     Onسعر_الشراءChanging(value);
                     ReportPropertyChanging("سعر_الشراء");
-                    _سعر_الشراء = StructuralObject.SetValidValue(value);
+                    _سعر_الشراء = StructuralObject.SetValidValue(value, "سعر_الشراء");
                     ReportPropertyChanged("سعر_الشراء");
                     Onسعر_الشراءChanged();
                 }
@@ -17464,7 +17420,7 @@ namespace Program.entity
                 {
                     Onنسبة_الهدرChanging(value);
                     ReportPropertyChanging("نسبة_الهدر");
-                    _نسبة_الهدر = StructuralObject.SetValidValue(value);
+                    _نسبة_الهدر = StructuralObject.SetValidValue(value, "نسبة_الهدر");
                     ReportPropertyChanged("نسبة_الهدر");
                     Onنسبة_الهدرChanged();
                 }
@@ -17491,7 +17447,7 @@ namespace Program.entity
                 {
                     Onكلفة_المادةChanging(value);
                     ReportPropertyChanging("كلفة_المادة");
-                    _كلفة_المادة = StructuralObject.SetValidValue(value);
+                    _كلفة_المادة = StructuralObject.SetValidValue(value, "كلفة_المادة");
                     ReportPropertyChanged("كلفة_المادة");
                     Onكلفة_المادةChanged();
                 }
@@ -17518,7 +17474,7 @@ namespace Program.entity
                 {
                     OnملاحظاتChanging(value);
                     ReportPropertyChanging("ملاحظات");
-                    _ملاحظات = StructuralObject.SetValidValue(value, false);
+                    _ملاحظات = StructuralObject.SetValidValue(value, false, "ملاحظات");
                     ReportPropertyChanged("ملاحظات");
                     OnملاحظاتChanged();
                 }
@@ -17530,7 +17486,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -17644,7 +17599,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -17663,7 +17618,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -17688,7 +17643,7 @@ namespace Program.entity
             {
                 Onتاريخ_بداية_التصنيعChanging(value);
                 ReportPropertyChanging("تاريخ_بداية_التصنيع");
-                _تاريخ_بداية_التصنيع = StructuralObject.SetValidValue(value);
+                _تاريخ_بداية_التصنيع = StructuralObject.SetValidValue(value, "تاريخ_بداية_التصنيع");
                 ReportPropertyChanged("تاريخ_بداية_التصنيع");
                 Onتاريخ_بداية_التصنيعChanged();
             }
@@ -17712,7 +17667,7 @@ namespace Program.entity
             {
                 Onتاريخ_نهاية_التصنيعChanging(value);
                 ReportPropertyChanging("تاريخ_نهاية_التصنيع");
-                _تاريخ_نهاية_التصنيع = StructuralObject.SetValidValue(value);
+                _تاريخ_نهاية_التصنيع = StructuralObject.SetValidValue(value, "تاريخ_نهاية_التصنيع");
                 ReportPropertyChanged("تاريخ_نهاية_التصنيع");
                 Onتاريخ_نهاية_التصنيعChanged();
             }
@@ -17736,7 +17691,7 @@ namespace Program.entity
             {
                 OnالكلفةChanging(value);
                 ReportPropertyChanging("الكلفة");
-                _الكلفة = StructuralObject.SetValidValue(value);
+                _الكلفة = StructuralObject.SetValidValue(value, "الكلفة");
                 ReportPropertyChanged("الكلفة");
                 OnالكلفةChanged();
             }
@@ -17760,7 +17715,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -17784,7 +17739,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -17808,7 +17763,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value, true);
+                _المستودع = StructuralObject.SetValidValue(value, true, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -17832,7 +17787,7 @@ namespace Program.entity
             {
                 OnهدرChanging(value);
                 ReportPropertyChanging("هدر");
-                _هدر = StructuralObject.SetValidValue(value);
+                _هدر = StructuralObject.SetValidValue(value, "هدر");
                 ReportPropertyChanged("هدر");
                 OnهدرChanged();
             }
@@ -17856,7 +17811,7 @@ namespace Program.entity
             {
                 Onمصاريف_مضافةChanging(value);
                 ReportPropertyChanging("مصاريف_مضافة");
-                _مصاريف_مضافة = StructuralObject.SetValidValue(value);
+                _مصاريف_مضافة = StructuralObject.SetValidValue(value, "مصاريف_مضافة");
                 ReportPropertyChanged("مصاريف_مضافة");
                 Onمصاريف_مضافةChanged();
             }
@@ -17880,7 +17835,7 @@ namespace Program.entity
             {
                 Onكمية_الإنتاجChanging(value);
                 ReportPropertyChanging("كمية_الإنتاج");
-                _كمية_الإنتاج = StructuralObject.SetValidValue(value);
+                _كمية_الإنتاج = StructuralObject.SetValidValue(value, "كمية_الإنتاج");
                 ReportPropertyChanged("كمية_الإنتاج");
                 Onكمية_الإنتاجChanged();
             }
@@ -17891,7 +17846,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -17955,7 +17909,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -17974,7 +17928,7 @@ namespace Program.entity
                 {
                     Onرقم_المادةChanging(value);
                     ReportPropertyChanging("رقم_المادة");
-                    _رقم_المادة = StructuralObject.SetValidValue(value);
+                    _رقم_المادة = StructuralObject.SetValidValue(value, "رقم_المادة");
                     ReportPropertyChanged("رقم_المادة");
                     Onرقم_المادةChanged();
                 }
@@ -18001,7 +17955,7 @@ namespace Program.entity
                 {
                     Onرقم_التقريرChanging(value);
                     ReportPropertyChanging("رقم_التقرير");
-                    _رقم_التقرير = StructuralObject.SetValidValue(value);
+                    _رقم_التقرير = StructuralObject.SetValidValue(value, "رقم_التقرير");
                     ReportPropertyChanged("رقم_التقرير");
                     Onرقم_التقريرChanged();
                 }
@@ -18028,7 +17982,7 @@ namespace Program.entity
                 {
                     Onاسم_المادةChanging(value);
                     ReportPropertyChanging("اسم_المادة");
-                    _اسم_المادة = StructuralObject.SetValidValue(value, false);
+                    _اسم_المادة = StructuralObject.SetValidValue(value, false, "اسم_المادة");
                     ReportPropertyChanged("اسم_المادة");
                     Onاسم_المادةChanged();
                 }
@@ -18055,7 +18009,7 @@ namespace Program.entity
                 {
                     OnالوحدةChanging(value);
                     ReportPropertyChanging("الوحدة");
-                    _الوحدة = StructuralObject.SetValidValue(value, false);
+                    _الوحدة = StructuralObject.SetValidValue(value, false, "الوحدة");
                     ReportPropertyChanged("الوحدة");
                     OnالوحدةChanged();
                 }
@@ -18082,7 +18036,7 @@ namespace Program.entity
                 {
                     OnالكميةChanging(value);
                     ReportPropertyChanging("الكمية");
-                    _الكمية = StructuralObject.SetValidValue(value);
+                    _الكمية = StructuralObject.SetValidValue(value, "الكمية");
                     ReportPropertyChanged("الكمية");
                     OnالكميةChanged();
                 }
@@ -18109,7 +18063,7 @@ namespace Program.entity
                 {
                     OnالسعرChanging(value);
                     ReportPropertyChanging("السعر");
-                    _السعر = StructuralObject.SetValidValue(value);
+                    _السعر = StructuralObject.SetValidValue(value, "السعر");
                     ReportPropertyChanged("السعر");
                     OnالسعرChanged();
                 }
@@ -18136,7 +18090,7 @@ namespace Program.entity
                 {
                     Onالسعر_الجماليChanging(value);
                     ReportPropertyChanging("السعر_الجمالي");
-                    _السعر_الجمالي = StructuralObject.SetValidValue(value);
+                    _السعر_الجمالي = StructuralObject.SetValidValue(value, "السعر_الجمالي");
                     ReportPropertyChanged("السعر_الجمالي");
                     Onالسعر_الجماليChanged();
                 }
@@ -18161,7 +18115,7 @@ namespace Program.entity
             {
                 OnملاحظاتChanging(value);
                 ReportPropertyChanging("ملاحظات");
-                _ملاحظات = StructuralObject.SetValidValue(value, true);
+                _ملاحظات = StructuralObject.SetValidValue(value, true, "ملاحظات");
                 ReportPropertyChanged("ملاحظات");
                 OnملاحظاتChanged();
             }
@@ -18185,7 +18139,7 @@ namespace Program.entity
             {
                 OnالمستودعChanging(value);
                 ReportPropertyChanging("المستودع");
-                _المستودع = StructuralObject.SetValidValue(value);
+                _المستودع = StructuralObject.SetValidValue(value, "المستودع");
                 ReportPropertyChanged("المستودع");
                 OnالمستودعChanged();
             }
@@ -18209,7 +18163,7 @@ namespace Program.entity
             {
                 OnالهدرChanging(value);
                 ReportPropertyChanging("الهدر");
-                _الهدر = StructuralObject.SetValidValue(value);
+                _الهدر = StructuralObject.SetValidValue(value, "الهدر");
                 ReportPropertyChanged("الهدر");
                 OnالهدرChanged();
             }
@@ -18220,7 +18174,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -18330,7 +18283,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -18349,7 +18302,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -18374,7 +18327,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -18398,7 +18351,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -18422,7 +18375,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -18446,7 +18399,7 @@ namespace Program.entity
             {
                 Onتاريخ_الإستحقاقChanging(value);
                 ReportPropertyChanging("تاريخ_الإستحقاق");
-                _تاريخ_الإستحقاق = StructuralObject.SetValidValue(value);
+                _تاريخ_الإستحقاق = StructuralObject.SetValidValue(value, "تاريخ_الإستحقاق");
                 ReportPropertyChanged("تاريخ_الإستحقاق");
                 Onتاريخ_الإستحقاقChanged();
             }
@@ -18470,7 +18423,7 @@ namespace Program.entity
             {
                 OnالساحبChanging(value);
                 ReportPropertyChanging("الساحب");
-                _الساحب = StructuralObject.SetValidValue(value, true);
+                _الساحب = StructuralObject.SetValidValue(value, true, "الساحب");
                 ReportPropertyChanged("الساحب");
                 OnالساحبChanged();
             }
@@ -18494,7 +18447,7 @@ namespace Program.entity
             {
                 Onالمسحوب_عليهChanging(value);
                 ReportPropertyChanging("المسحوب_عليه");
-                _المسحوب_عليه = StructuralObject.SetValidValue(value, true);
+                _المسحوب_عليه = StructuralObject.SetValidValue(value, true, "المسحوب_عليه");
                 ReportPropertyChanged("المسحوب_عليه");
                 Onالمسحوب_عليهChanged();
             }
@@ -18505,7 +18458,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -18583,7 +18535,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -18602,7 +18554,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -18627,7 +18579,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -18651,7 +18603,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -18675,7 +18627,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -18699,7 +18651,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -18723,7 +18675,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -18747,7 +18699,7 @@ namespace Program.entity
             {
                 Onpaper_receive_idChanging(value);
                 ReportPropertyChanging("paper_receive_id");
-                _paper_receive_id = StructuralObject.SetValidValue(value);
+                _paper_receive_id = StructuralObject.SetValidValue(value, "paper_receive_id");
                 ReportPropertyChanged("paper_receive_id");
                 Onpaper_receive_idChanged();
             }
@@ -18758,7 +18710,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -18830,7 +18781,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -18849,7 +18800,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -18874,7 +18825,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -18898,7 +18849,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -18922,7 +18873,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -18946,7 +18897,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -18970,7 +18921,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -18994,7 +18945,7 @@ namespace Program.entity
             {
                 Onpaper_receive_idChanging(value);
                 ReportPropertyChanging("paper_receive_id");
-                _paper_receive_id = StructuralObject.SetValidValue(value);
+                _paper_receive_id = StructuralObject.SetValidValue(value, "paper_receive_id");
                 ReportPropertyChanged("paper_receive_id");
                 Onpaper_receive_idChanged();
             }
@@ -19005,7 +18956,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -19077,7 +19027,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -19096,7 +19046,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -19121,7 +19071,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -19145,7 +19095,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -19169,7 +19119,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -19193,7 +19143,7 @@ namespace Program.entity
             {
                 Onتاريخ_الإستحقاقChanging(value);
                 ReportPropertyChanging("تاريخ_الإستحقاق");
-                _تاريخ_الإستحقاق = StructuralObject.SetValidValue(value);
+                _تاريخ_الإستحقاق = StructuralObject.SetValidValue(value, "تاريخ_الإستحقاق");
                 ReportPropertyChanged("تاريخ_الإستحقاق");
                 Onتاريخ_الإستحقاقChanged();
             }
@@ -19217,7 +19167,7 @@ namespace Program.entity
             {
                 OnالساحبChanging(value);
                 ReportPropertyChanging("الساحب");
-                _الساحب = StructuralObject.SetValidValue(value, true);
+                _الساحب = StructuralObject.SetValidValue(value, true, "الساحب");
                 ReportPropertyChanged("الساحب");
                 OnالساحبChanged();
             }
@@ -19241,7 +19191,7 @@ namespace Program.entity
             {
                 Onالمسحوب_عليهChanging(value);
                 ReportPropertyChanging("المسحوب_عليه");
-                _المسحوب_عليه = StructuralObject.SetValidValue(value, true);
+                _المسحوب_عليه = StructuralObject.SetValidValue(value, true, "المسحوب_عليه");
                 ReportPropertyChanged("المسحوب_عليه");
                 Onالمسحوب_عليهChanged();
             }
@@ -19252,7 +19202,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -19330,7 +19279,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -19349,7 +19298,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -19374,7 +19323,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -19398,7 +19347,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -19422,7 +19371,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -19446,7 +19395,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -19470,7 +19419,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -19494,7 +19443,7 @@ namespace Program.entity
             {
                 Onpaper_receive_idChanging(value);
                 ReportPropertyChanging("paper_receive_id");
-                _paper_receive_id = StructuralObject.SetValidValue(value);
+                _paper_receive_id = StructuralObject.SetValidValue(value, "paper_receive_id");
                 ReportPropertyChanged("paper_receive_id");
                 Onpaper_receive_idChanged();
             }
@@ -19505,7 +19454,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -19577,7 +19525,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -19596,7 +19544,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -19621,7 +19569,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -19645,7 +19593,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -19669,7 +19617,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -19693,7 +19641,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -19717,7 +19665,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -19741,7 +19689,7 @@ namespace Program.entity
             {
                 Onpaper_receive_idChanging(value);
                 ReportPropertyChanging("paper_receive_id");
-                _paper_receive_id = StructuralObject.SetValidValue(value);
+                _paper_receive_id = StructuralObject.SetValidValue(value, "paper_receive_id");
                 ReportPropertyChanged("paper_receive_id");
                 Onpaper_receive_idChanged();
             }
@@ -19752,7 +19700,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -19824,7 +19771,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -19843,7 +19790,7 @@ namespace Program.entity
                 {
                     Onرقم_الصانعChanging(value);
                     ReportPropertyChanging("رقم_الصانع");
-                    _رقم_الصانع = StructuralObject.SetValidValue(value);
+                    _رقم_الصانع = StructuralObject.SetValidValue(value, "رقم_الصانع");
                     ReportPropertyChanged("رقم_الصانع");
                     Onرقم_الصانعChanged();
                 }
@@ -19868,7 +19815,7 @@ namespace Program.entity
             {
                 Onاسم_الصانعChanging(value);
                 ReportPropertyChanging("اسم_الصانع");
-                _اسم_الصانع = StructuralObject.SetValidValue(value, false);
+                _اسم_الصانع = StructuralObject.SetValidValue(value, false, "اسم_الصانع");
                 ReportPropertyChanged("اسم_الصانع");
                 Onاسم_الصانعChanged();
             }
@@ -19892,7 +19839,7 @@ namespace Program.entity
             {
                 Onرمز_النوعChanging(value);
                 ReportPropertyChanging("رمز_النوع");
-                _رمز_النوع = StructuralObject.SetValidValue(value, false);
+                _رمز_النوع = StructuralObject.SetValidValue(value, false, "رمز_النوع");
                 ReportPropertyChanged("رمز_النوع");
                 Onرمز_النوعChanged();
             }
@@ -19903,7 +19850,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -19961,7 +19907,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -19980,7 +19926,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -20005,7 +19951,7 @@ namespace Program.entity
             {
                 Onاسم_الموردChanging(value);
                 ReportPropertyChanging("اسم_المورد");
-                _اسم_المورد = StructuralObject.SetValidValue(value, false);
+                _اسم_المورد = StructuralObject.SetValidValue(value, false, "اسم_المورد");
                 ReportPropertyChanged("اسم_المورد");
                 Onاسم_الموردChanged();
             }
@@ -20029,7 +19975,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -20053,7 +19999,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -20077,7 +20023,7 @@ namespace Program.entity
             {
                 Onعنوان_الموردChanging(value);
                 ReportPropertyChanging("عنوان_المورد");
-                _عنوان_المورد = StructuralObject.SetValidValue(value, true);
+                _عنوان_المورد = StructuralObject.SetValidValue(value, true, "عنوان_المورد");
                 ReportPropertyChanged("عنوان_المورد");
                 Onعنوان_الموردChanged();
             }
@@ -20101,7 +20047,7 @@ namespace Program.entity
             {
                 OnهاتفChanging(value);
                 ReportPropertyChanging("هاتف");
-                _هاتف = StructuralObject.SetValidValue(value, true);
+                _هاتف = StructuralObject.SetValidValue(value, true, "هاتف");
                 ReportPropertyChanged("هاتف");
                 OnهاتفChanged();
             }
@@ -20125,7 +20071,7 @@ namespace Program.entity
             {
                 OnالموبايلChanging(value);
                 ReportPropertyChanging("الموبايل");
-                _الموبايل = StructuralObject.SetValidValue(value, true);
+                _الموبايل = StructuralObject.SetValidValue(value, true, "الموبايل");
                 ReportPropertyChanged("الموبايل");
                 OnالموبايلChanged();
             }
@@ -20149,7 +20095,7 @@ namespace Program.entity
             {
                 Onالبريد_الالكترونيChanging(value);
                 ReportPropertyChanging("البريد_الالكتروني");
-                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _البريد_الالكتروني = StructuralObject.SetValidValue(value, true, "البريد_الالكتروني");
                 ReportPropertyChanged("البريد_الالكتروني");
                 Onالبريد_الالكترونيChanged();
             }
@@ -20173,7 +20119,7 @@ namespace Program.entity
             {
                 Onالموقع_الالكترونيChanging(value);
                 ReportPropertyChanging("الموقع_الالكتروني");
-                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true);
+                _الموقع_الالكتروني = StructuralObject.SetValidValue(value, true, "الموقع_الالكتروني");
                 ReportPropertyChanged("الموقع_الالكتروني");
                 Onالموقع_الالكترونيChanged();
             }
@@ -20197,7 +20143,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -20221,7 +20167,7 @@ namespace Program.entity
             {
                 Onوصف_الموردChanging(value);
                 ReportPropertyChanging("وصف_المورد");
-                _وصف_المورد = StructuralObject.SetValidValue(value, true);
+                _وصف_المورد = StructuralObject.SetValidValue(value, true, "وصف_المورد");
                 ReportPropertyChanged("وصف_المورد");
                 Onوصف_الموردChanged();
             }
@@ -20245,7 +20191,7 @@ namespace Program.entity
             {
                 OnصورةChanging(value);
                 ReportPropertyChanging("صورة");
-                _صورة = StructuralObject.SetValidValue(value, true);
+                _صورة = StructuralObject.SetValidValue(value, true, "صورة");
                 ReportPropertyChanged("صورة");
                 OnصورةChanged();
             }
@@ -20256,7 +20202,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -20444,7 +20389,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -20463,7 +20408,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -20488,7 +20433,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -20512,7 +20457,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -20536,7 +20481,7 @@ namespace Program.entity
             {
                 OnإلىChanging(value);
                 ReportPropertyChanging("إلى");
-                _إلى = StructuralObject.SetValidValue(value, true);
+                _إلى = StructuralObject.SetValidValue(value, true, "إلى");
                 ReportPropertyChanged("إلى");
                 OnإلىChanged();
             }
@@ -20560,7 +20505,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -20584,7 +20529,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -20608,7 +20553,7 @@ namespace Program.entity
             {
                 OnSupplier_idChanging(value);
                 ReportPropertyChanging("Supplier_id");
-                _Supplier_id = StructuralObject.SetValidValue(value);
+                _Supplier_id = StructuralObject.SetValidValue(value, "Supplier_id");
                 ReportPropertyChanged("Supplier_id");
                 OnSupplier_idChanged();
             }
@@ -20619,7 +20564,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -20691,7 +20635,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -20710,7 +20654,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -20735,7 +20679,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -20759,7 +20703,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -20783,7 +20727,7 @@ namespace Program.entity
             {
                 OnمنChanging(value);
                 ReportPropertyChanging("من");
-                _من = StructuralObject.SetValidValue(value, true);
+                _من = StructuralObject.SetValidValue(value, true, "من");
                 ReportPropertyChanged("من");
                 OnمنChanged();
             }
@@ -20807,7 +20751,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -20831,7 +20775,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -20855,7 +20799,7 @@ namespace Program.entity
             {
                 OnSupplier_idChanging(value);
                 ReportPropertyChanging("Supplier_id");
-                _Supplier_id = StructuralObject.SetValidValue(value);
+                _Supplier_id = StructuralObject.SetValidValue(value, "Supplier_id");
                 ReportPropertyChanged("Supplier_id");
                 OnSupplier_idChanged();
             }
@@ -20866,7 +20810,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -20938,7 +20881,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -20957,7 +20900,7 @@ namespace Program.entity
                 {
                     OnالرقمChanging(value);
                     ReportPropertyChanging("الرقم");
-                    _الرقم = StructuralObject.SetValidValue(value);
+                    _الرقم = StructuralObject.SetValidValue(value, "الرقم");
                     ReportPropertyChanged("الرقم");
                     OnالرقمChanged();
                 }
@@ -20982,7 +20925,7 @@ namespace Program.entity
             {
                 OnالرصيدChanging(value);
                 ReportPropertyChanging("الرصيد");
-                _الرصيد = StructuralObject.SetValidValue(value);
+                _الرصيد = StructuralObject.SetValidValue(value, "الرصيد");
                 ReportPropertyChanged("الرصيد");
                 OnالرصيدChanged();
             }
@@ -21006,7 +20949,7 @@ namespace Program.entity
             {
                 Onالرصيد_كتابةChanging(value);
                 ReportPropertyChanging("الرصيد_كتابة");
-                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false);
+                _الرصيد_كتابة = StructuralObject.SetValidValue(value, false, "الرصيد_كتابة");
                 ReportPropertyChanged("الرصيد_كتابة");
                 Onالرصيد_كتابةChanged();
             }
@@ -21030,7 +20973,7 @@ namespace Program.entity
             {
                 OnملاحطاتChanging(value);
                 ReportPropertyChanging("ملاحطات");
-                _ملاحطات = StructuralObject.SetValidValue(value, true);
+                _ملاحطات = StructuralObject.SetValidValue(value, true, "ملاحطات");
                 ReportPropertyChanged("ملاحطات");
                 OnملاحطاتChanged();
             }
@@ -21054,7 +20997,7 @@ namespace Program.entity
             {
                 OnتاريخChanging(value);
                 ReportPropertyChanging("تاريخ");
-                _تاريخ = StructuralObject.SetValidValue(value);
+                _تاريخ = StructuralObject.SetValidValue(value, "تاريخ");
                 ReportPropertyChanged("تاريخ");
                 OnتاريخChanged();
             }
@@ -21078,7 +21021,7 @@ namespace Program.entity
             {
                 OnSupplier_idChanging(value);
                 ReportPropertyChanging("Supplier_id");
-                _Supplier_id = StructuralObject.SetValidValue(value);
+                _Supplier_id = StructuralObject.SetValidValue(value, "Supplier_id");
                 ReportPropertyChanged("Supplier_id");
                 OnSupplier_idChanged();
             }
@@ -21102,7 +21045,7 @@ namespace Program.entity
             {
                 Onتم_الدفعChanging(value);
                 ReportPropertyChanging("تم_الدفع");
-                _تم_الدفع = StructuralObject.SetValidValue(value, true);
+                _تم_الدفع = StructuralObject.SetValidValue(value, true, "تم_الدفع");
                 ReportPropertyChanged("تم_الدفع");
                 Onتم_الدفعChanged();
             }
@@ -21113,7 +21056,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -21185,7 +21127,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21202,7 +21144,7 @@ namespace Program.entity
             {
                 OnnameChanging(value);
                 ReportPropertyChanging("name");
-                _name = StructuralObject.SetValidValue(value, false);
+                _name = StructuralObject.SetValidValue(value, false, "name");
                 ReportPropertyChanged("name");
                 OnnameChanged();
             }
@@ -21226,7 +21168,7 @@ namespace Program.entity
             {
                 Onprincipal_idChanging(value);
                 ReportPropertyChanging("principal_id");
-                _principal_id = StructuralObject.SetValidValue(value);
+                _principal_id = StructuralObject.SetValidValue(value, "principal_id");
                 ReportPropertyChanged("principal_id");
                 Onprincipal_idChanged();
             }
@@ -21252,7 +21194,7 @@ namespace Program.entity
                 {
                     Ondiagram_idChanging(value);
                     ReportPropertyChanging("diagram_id");
-                    _diagram_id = StructuralObject.SetValidValue(value);
+                    _diagram_id = StructuralObject.SetValidValue(value, "diagram_id");
                     ReportPropertyChanged("diagram_id");
                     Ondiagram_idChanged();
                 }
@@ -21277,7 +21219,7 @@ namespace Program.entity
             {
                 OnversionChanging(value);
                 ReportPropertyChanging("version");
-                _version = StructuralObject.SetValidValue(value);
+                _version = StructuralObject.SetValidValue(value, "version");
                 ReportPropertyChanged("version");
                 OnversionChanged();
             }
@@ -21301,7 +21243,7 @@ namespace Program.entity
             {
                 OndefinitionChanging(value);
                 ReportPropertyChanging("definition");
-                _definition = StructuralObject.SetValidValue(value, true);
+                _definition = StructuralObject.SetValidValue(value, true, "definition");
                 ReportPropertyChanged("definition");
                 OndefinitionChanged();
             }
@@ -21312,7 +21254,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -21340,7 +21281,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21359,7 +21300,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -21384,7 +21325,7 @@ namespace Program.entity
             {
                 OnopreationChanging(value);
                 ReportPropertyChanging("opreation");
-                _opreation = StructuralObject.SetValidValue(value, false);
+                _opreation = StructuralObject.SetValidValue(value, false, "opreation");
                 ReportPropertyChanged("opreation");
                 OnopreationChanged();
             }
@@ -21395,7 +21336,6 @@ namespace Program.entity
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -21425,7 +21365,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21444,7 +21384,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -21469,7 +21409,7 @@ namespace Program.entity
             {
                 OnusernameChanging(value);
                 ReportPropertyChanging("username");
-                _username = StructuralObject.SetValidValue(value, false);
+                _username = StructuralObject.SetValidValue(value, false, "username");
                 ReportPropertyChanged("username");
                 OnusernameChanged();
             }
@@ -21493,7 +21433,7 @@ namespace Program.entity
             {
                 OnpasswordChanging(value);
                 ReportPropertyChanging("password");
-                _password = StructuralObject.SetValidValue(value, false);
+                _password = StructuralObject.SetValidValue(value, false, "password");
                 ReportPropertyChanged("password");
                 OnpasswordChanged();
             }
@@ -21517,7 +21457,7 @@ namespace Program.entity
             {
                 Onuser_typeChanging(value);
                 ReportPropertyChanging("user_type");
-                _user_type = StructuralObject.SetValidValue(value, true);
+                _user_type = StructuralObject.SetValidValue(value, true, "user_type");
                 ReportPropertyChanged("user_type");
                 Onuser_typeChanged();
             }
@@ -21541,7 +21481,7 @@ namespace Program.entity
             {
                 Onenable_deleteChanging(value);
                 ReportPropertyChanging("enable_delete");
-                _enable_delete = StructuralObject.SetValidValue(value, true);
+                _enable_delete = StructuralObject.SetValidValue(value, true, "enable_delete");
                 ReportPropertyChanged("enable_delete");
                 Onenable_deleteChanged();
             }
@@ -21565,7 +21505,7 @@ namespace Program.entity
             {
                 OnremamberChanging(value);
                 ReportPropertyChanging("remamber");
-                _remamber = StructuralObject.SetValidValue(value, true);
+                _remamber = StructuralObject.SetValidValue(value, true, "remamber");
                 ReportPropertyChanged("remamber");
                 OnremamberChanged();
             }
@@ -21576,7 +21516,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -21654,7 +21593,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21673,7 +21612,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -21698,7 +21637,7 @@ namespace Program.entity
             {
                 Onloge_date_inChanging(value);
                 ReportPropertyChanging("loge_date_in");
-                _loge_date_in = StructuralObject.SetValidValue(value);
+                _loge_date_in = StructuralObject.SetValidValue(value, "loge_date_in");
                 ReportPropertyChanged("loge_date_in");
                 Onloge_date_inChanged();
             }
@@ -21722,7 +21661,7 @@ namespace Program.entity
             {
                 Onuser_id_Changing(value);
                 ReportPropertyChanging("user_id_");
-                _user_id_ = StructuralObject.SetValidValue(value);
+                _user_id_ = StructuralObject.SetValidValue(value, "user_id_");
                 ReportPropertyChanged("user_id_");
                 Onuser_id_Changed();
             }
@@ -21733,7 +21672,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -21805,7 +21743,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21824,7 +21762,7 @@ namespace Program.entity
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
+                    _id = StructuralObject.SetValidValue(value, "id");
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -21849,7 +21787,7 @@ namespace Program.entity
             {
                 OnopreationChanging(value);
                 ReportPropertyChanging("opreation");
-                _opreation = StructuralObject.SetValidValue(value, false);
+                _opreation = StructuralObject.SetValidValue(value, false, "opreation");
                 ReportPropertyChanged("opreation");
                 OnopreationChanged();
             }
@@ -21873,7 +21811,7 @@ namespace Program.entity
             {
                 Onactive_opreationChanging(value);
                 ReportPropertyChanging("active_opreation");
-                _active_opreation = StructuralObject.SetValidValue(value, true);
+                _active_opreation = StructuralObject.SetValidValue(value, true, "active_opreation");
                 ReportPropertyChanged("active_opreation");
                 Onactive_opreationChanged();
             }
@@ -21897,7 +21835,7 @@ namespace Program.entity
             {
                 Onuser_id_Changing(value);
                 ReportPropertyChanging("user_id_");
-                _user_id_ = StructuralObject.SetValidValue(value);
+                _user_id_ = StructuralObject.SetValidValue(value, "user_id_");
                 ReportPropertyChanged("user_id_");
                 Onuser_id_Changed();
             }
@@ -21908,7 +21846,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -21978,7 +21915,7 @@ namespace Program.entity
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -21997,7 +21934,7 @@ namespace Program.entity
                 {
                     Onرقم_المستودعChanging(value);
                     ReportPropertyChanging("رقم_المستودع");
-                    _رقم_المستودع = StructuralObject.SetValidValue(value);
+                    _رقم_المستودع = StructuralObject.SetValidValue(value, "رقم_المستودع");
                     ReportPropertyChanged("رقم_المستودع");
                     Onرقم_المستودعChanged();
                 }
@@ -22022,7 +21959,7 @@ namespace Program.entity
             {
                 Onاسم_المستودعChanging(value);
                 ReportPropertyChanging("اسم_المستودع");
-                _اسم_المستودع = StructuralObject.SetValidValue(value, false);
+                _اسم_المستودع = StructuralObject.SetValidValue(value, false, "اسم_المستودع");
                 ReportPropertyChanged("اسم_المستودع");
                 Onاسم_المستودعChanged();
             }
@@ -22033,7 +21970,6 @@ namespace Program.entity
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -22086,5 +22022,4 @@ namespace Program.entity
 
     #endregion
 
-    
 }

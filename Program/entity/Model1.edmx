@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="WarehouseServerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="WarehouseServerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="WarehouseServerModelStoreContainer">
-          <EntitySet Name="admin_" EntityType="WarehouseServerModel.Store.admin_" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="asset" EntityType="WarehouseServerModel.Store.asset" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="asset_credit" EntityType="WarehouseServerModel.Store.asset_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="asset_debit" EntityType="WarehouseServerModel.Store.asset_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="bank_account" EntityType="WarehouseServerModel.Store.bank_account" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="bank_credit" EntityType="WarehouseServerModel.Store.bank_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="bank_debit" EntityType="WarehouseServerModel.Store.bank_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="bank_details" EntityType="WarehouseServerModel.Store.bank_details" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="bonds" EntityType="WarehouseServerModel.Store.bonds" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="box" EntityType="WarehouseServerModel.Store.box" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="box_credit" EntityType="WarehouseServerModel.Store.box_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="box_debit" EntityType="WarehouseServerModel.Store.box_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="company" EntityType="WarehouseServerModel.Store.company" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Country" EntityType="WarehouseServerModel.Store.Country" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="customer" EntityType="WarehouseServerModel.Store.customer" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="customer_credit" EntityType="WarehouseServerModel.Store.customer_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="customer_debit" EntityType="WarehouseServerModel.Store.customer_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="customer_ReveiveTime" EntityType="WarehouseServerModel.Store.customer_ReveiveTime" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="error" EntityType="WarehouseServerModel.Store.error" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="liability" EntityType="WarehouseServerModel.Store.liability" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="liability_credit" EntityType="WarehouseServerModel.Store.liability_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="liability_debit" EntityType="WarehouseServerModel.Store.liability_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material" EntityType="WarehouseServerModel.Store.material" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_cost" EntityType="WarehouseServerModel.Store.material_cost" store:Type="Tables" store:Schema="dbo" store:Name="material_cost">
+          <EntitySet Name="admin_" EntityType="WarehouseServerModel.Store.admin_" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="asset" EntityType="WarehouseServerModel.Store.asset" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="asset_credit" EntityType="WarehouseServerModel.Store.asset_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="asset_debit" EntityType="WarehouseServerModel.Store.asset_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="bank_account" EntityType="WarehouseServerModel.Store.bank_account" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="bank_credit" EntityType="WarehouseServerModel.Store.bank_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="bank_debit" EntityType="WarehouseServerModel.Store.bank_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="bank_details" EntityType="WarehouseServerModel.Store.bank_details" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="bonds" EntityType="WarehouseServerModel.Store.bonds" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="box" EntityType="WarehouseServerModel.Store.box" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="box_credit" EntityType="WarehouseServerModel.Store.box_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="box_debit" EntityType="WarehouseServerModel.Store.box_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="company" EntityType="WarehouseServerModel.Store.company" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Country" EntityType="WarehouseServerModel.Store.Country" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="customer" EntityType="WarehouseServerModel.Store.customer" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="customer_credit" EntityType="WarehouseServerModel.Store.customer_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="customer_debit" EntityType="WarehouseServerModel.Store.customer_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="customer_ReveiveTime" EntityType="WarehouseServerModel.Store.customer_ReveiveTime" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="error" EntityType="WarehouseServerModel.Store.error" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="liability" EntityType="WarehouseServerModel.Store.liability" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="liability_credit" EntityType="WarehouseServerModel.Store.liability_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="liability_debit" EntityType="WarehouseServerModel.Store.liability_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material" EntityType="WarehouseServerModel.Store.material" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_cost" EntityType="WarehouseServerModel.Store.material_cost" store:Type="Tables" store:Schema="dbo" store:Name="material_cost" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_cost].[المادة] AS [المادة], 
       [material_cost].[سعر_الشراء] AS [سعر_الشراء], 
@@ -38,8 +38,8 @@
       [material_cost].[رقم_فاتورة_الشراء] AS [رقم_فاتورة_الشراء]
       FROM [dbo].[material_cost] AS [material_cost]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit" EntityType="WarehouseServerModel.Store.material_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_credit_list" EntityType="WarehouseServerModel.Store.material_credit_list" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list">
+          <EntitySet Name="material_credit" EntityType="WarehouseServerModel.Store.material_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_credit_list" EntityType="WarehouseServerModel.Store.material_credit_list" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_credit_list].[رقم_المادة] AS [رقم_المادة], 
       [material_credit_list].[رقم_التقرير] AS [رقم_التقرير], 
@@ -57,7 +57,7 @@
       [material_credit_list].[الكلفة] AS [الكلفة]
       FROM [dbo].[material_credit_list] AS [material_credit_list]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit_list_old" EntityType="WarehouseServerModel.Store.material_credit_list_old" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_old">
+          <EntitySet Name="material_credit_list_old" EntityType="WarehouseServerModel.Store.material_credit_list_old" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_old" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_credit_list_old].[رقم_المادة] AS [رقم_المادة], 
       [material_credit_list_old].[رقم_التقرير] AS [رقم_التقرير], 
@@ -75,7 +75,7 @@
       [material_credit_list_old].[الكلفة] AS [الكلفة]
       FROM [dbo].[material_credit_list_old] AS [material_credit_list_old]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit_list_return" EntityType="WarehouseServerModel.Store.material_credit_list_return" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_return">
+          <EntitySet Name="material_credit_list_return" EntityType="WarehouseServerModel.Store.material_credit_list_return" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_return" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_credit_list_return].[رقم_المادة] AS [رقم_المادة], 
       [material_credit_list_return].[رقم_التقرير] AS [رقم_التقرير], 
@@ -91,7 +91,7 @@
       [material_credit_list_return].[حسم_ممنوح] AS [حسم_ممنوح]
       FROM [dbo].[material_credit_list_return] AS [material_credit_list_return]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit_list_return_old" EntityType="WarehouseServerModel.Store.material_credit_list_return_old" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_return_old">
+          <EntitySet Name="material_credit_list_return_old" EntityType="WarehouseServerModel.Store.material_credit_list_return_old" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_list_return_old" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_credit_list_return_old].[رقم_المادة] AS [رقم_المادة], 
       [material_credit_list_return_old].[رقم_التقرير] AS [رقم_التقرير], 
@@ -107,8 +107,8 @@
       [material_credit_list_return_old].[حسم_ممنوح] AS [حسم_ممنوح]
       FROM [dbo].[material_credit_list_return_old] AS [material_credit_list_return_old]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit_old" EntityType="WarehouseServerModel.Store.material_credit_old" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_credit_penfit_payment" EntityType="WarehouseServerModel.Store.material_credit_penfit_payment" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_penfit_payment">
+          <EntitySet Name="material_credit_old" EntityType="WarehouseServerModel.Store.material_credit_old" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_credit_penfit_payment" EntityType="WarehouseServerModel.Store.material_credit_penfit_payment" store:Type="Tables" store:Schema="dbo" store:Name="material_credit_penfit_payment" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_credit_penfit_payment].[رقم_التقرير] AS [رقم_التقرير], 
       [material_credit_penfit_payment].[الفائدة] AS [الفائدة], 
@@ -118,10 +118,10 @@
       [material_credit_penfit_payment].[الرعبون] AS [الرعبون]
       FROM [dbo].[material_credit_penfit_payment] AS [material_credit_penfit_payment]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_credit_return" EntityType="WarehouseServerModel.Store.material_credit_return" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_credit_return_old" EntityType="WarehouseServerModel.Store.material_credit_return_old" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_debit" EntityType="WarehouseServerModel.Store.material_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_debit_list" EntityType="WarehouseServerModel.Store.material_debit_list" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list">
+          <EntitySet Name="material_credit_return" EntityType="WarehouseServerModel.Store.material_credit_return" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_credit_return_old" EntityType="WarehouseServerModel.Store.material_credit_return_old" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_debit" EntityType="WarehouseServerModel.Store.material_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_debit_list" EntityType="WarehouseServerModel.Store.material_debit_list" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_debit_list].[رقم_المادة] AS [رقم_المادة], 
       [material_debit_list].[رقم_التقرير] AS [رقم_التقرير], 
@@ -137,7 +137,7 @@
       [material_debit_list].[حسم_مكتسب] AS [حسم_مكتسب]
       FROM [dbo].[material_debit_list] AS [material_debit_list]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_debit_list_old" EntityType="WarehouseServerModel.Store.material_debit_list_old" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_old">
+          <EntitySet Name="material_debit_list_old" EntityType="WarehouseServerModel.Store.material_debit_list_old" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_old" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_debit_list_old].[رقم_المادة] AS [رقم_المادة], 
       [material_debit_list_old].[رقم_التقرير] AS [رقم_التقرير], 
@@ -153,7 +153,7 @@
       [material_debit_list_old].[حسم_مكتسب] AS [حسم_مكتسب]
       FROM [dbo].[material_debit_list_old] AS [material_debit_list_old]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_debit_list_return" EntityType="WarehouseServerModel.Store.material_debit_list_return" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_return">
+          <EntitySet Name="material_debit_list_return" EntityType="WarehouseServerModel.Store.material_debit_list_return" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_return" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_debit_list_return].[رقم_المادة] AS [رقم_المادة], 
       [material_debit_list_return].[رقم_التقرير] AS [رقم_التقرير], 
@@ -169,7 +169,7 @@
       [material_debit_list_return].[حسم_مكتسب] AS [حسم_مكتسب]
       FROM [dbo].[material_debit_list_return] AS [material_debit_list_return]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_debit_list_return_old" EntityType="WarehouseServerModel.Store.material_debit_list_return_old" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_return_old">
+          <EntitySet Name="material_debit_list_return_old" EntityType="WarehouseServerModel.Store.material_debit_list_return_old" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_list_return_old" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_debit_list_return_old].[رقم_المادة] AS [رقم_المادة], 
       [material_debit_list_return_old].[رقم_التقرير] AS [رقم_التقرير], 
@@ -185,8 +185,8 @@
       [material_debit_list_return_old].[حسم_مكتسب] AS [حسم_مكتسب]
       FROM [dbo].[material_debit_list_return_old] AS [material_debit_list_return_old]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_debit_old" EntityType="WarehouseServerModel.Store.material_debit_old" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_debit_penfit_payment" EntityType="WarehouseServerModel.Store.material_debit_penfit_payment" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_penfit_payment">
+          <EntitySet Name="material_debit_old" EntityType="WarehouseServerModel.Store.material_debit_old" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_debit_penfit_payment" EntityType="WarehouseServerModel.Store.material_debit_penfit_payment" store:Type="Tables" store:Schema="dbo" store:Name="material_debit_penfit_payment" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_debit_penfit_payment].[رقم_التقرير] AS [رقم_التقرير], 
       [material_debit_penfit_payment].[الفائدة] AS [الفائدة], 
@@ -196,11 +196,11 @@
       [material_debit_penfit_payment].[الرعبون] AS [الرعبون]
       FROM [dbo].[material_debit_penfit_payment] AS [material_debit_penfit_payment]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="material_debit_return" EntityType="WarehouseServerModel.Store.material_debit_return" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_debit_return_old" EntityType="WarehouseServerModel.Store.material_debit_return_old" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_group" EntityType="WarehouseServerModel.Store.material_group" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_maker" EntityType="WarehouseServerModel.Store.material_maker" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="material_maker_list" EntityType="WarehouseServerModel.Store.material_maker_list" store:Type="Tables" store:Schema="dbo" store:Name="material_maker_list">
+          <EntitySet Name="material_debit_return" EntityType="WarehouseServerModel.Store.material_debit_return" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_debit_return_old" EntityType="WarehouseServerModel.Store.material_debit_return_old" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_group" EntityType="WarehouseServerModel.Store.material_group" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_maker" EntityType="WarehouseServerModel.Store.material_maker" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="material_maker_list" EntityType="WarehouseServerModel.Store.material_maker_list" store:Type="Tables" store:Schema="dbo" store:Name="material_maker_list" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [material_maker_list].[رقم_المادة] AS [رقم_المادة], 
       [material_maker_list].[رقم_المصنع] AS [رقم_المصنع], 
@@ -213,8 +213,8 @@
       [material_maker_list].[ملاحظات] AS [ملاحظات]
       FROM [dbo].[material_maker_list] AS [material_maker_list]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="materialMaker_credit" EntityType="WarehouseServerModel.Store.materialMaker_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="materialMaker_credit_list" EntityType="WarehouseServerModel.Store.materialMaker_credit_list" store:Type="Tables" store:Schema="dbo" store:Name="materialMaker_credit_list">
+          <EntitySet Name="materialMaker_credit" EntityType="WarehouseServerModel.Store.materialMaker_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="materialMaker_credit_list" EntityType="WarehouseServerModel.Store.materialMaker_credit_list" store:Type="Tables" store:Schema="dbo" store:Name="materialMaker_credit_list" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       [materialMaker_credit_list].[رقم_المادة] AS [رقم_المادة], 
       [materialMaker_credit_list].[رقم_التقرير] AS [رقم_التقرير], 
@@ -228,23 +228,23 @@
       [materialMaker_credit_list].[الهدر] AS [الهدر]
       FROM [dbo].[materialMaker_credit_list] AS [materialMaker_credit_list]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="paper_pay" EntityType="WarehouseServerModel.Store.paper_pay" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="paper_pay_credit" EntityType="WarehouseServerModel.Store.paper_pay_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="paper_pay_debit" EntityType="WarehouseServerModel.Store.paper_pay_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="paper_receive" EntityType="WarehouseServerModel.Store.paper_receive" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="paper_receive_credit" EntityType="WarehouseServerModel.Store.paper_receive_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="paper_receive_debit" EntityType="WarehouseServerModel.Store.paper_receive_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="producer" EntityType="WarehouseServerModel.Store.producer" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="supplier" EntityType="WarehouseServerModel.Store.supplier" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="supplier_credit" EntityType="WarehouseServerModel.Store.supplier_credit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="supplier_debit" EntityType="WarehouseServerModel.Store.supplier_debit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="supplier_PayTime" EntityType="WarehouseServerModel.Store.supplier_PayTime" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="sysdiagrams" EntityType="WarehouseServerModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="task" EntityType="WarehouseServerModel.Store.task" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="user_loge" EntityType="WarehouseServerModel.Store.user_loge" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="user_loge_date" EntityType="WarehouseServerModel.Store.user_loge_date" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="user_task" EntityType="WarehouseServerModel.Store.user_task" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="WareHouse" EntityType="WarehouseServerModel.Store.WareHouse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="paper_pay" EntityType="WarehouseServerModel.Store.paper_pay" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="paper_pay_credit" EntityType="WarehouseServerModel.Store.paper_pay_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="paper_pay_debit" EntityType="WarehouseServerModel.Store.paper_pay_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="paper_receive" EntityType="WarehouseServerModel.Store.paper_receive" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="paper_receive_credit" EntityType="WarehouseServerModel.Store.paper_receive_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="paper_receive_debit" EntityType="WarehouseServerModel.Store.paper_receive_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="producer" EntityType="WarehouseServerModel.Store.producer" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="supplier" EntityType="WarehouseServerModel.Store.supplier" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="supplier_credit" EntityType="WarehouseServerModel.Store.supplier_credit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="supplier_debit" EntityType="WarehouseServerModel.Store.supplier_debit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="supplier_PayTime" EntityType="WarehouseServerModel.Store.supplier_PayTime" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="sysdiagrams" EntityType="WarehouseServerModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="task" EntityType="WarehouseServerModel.Store.task" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="user_loge" EntityType="WarehouseServerModel.Store.user_loge" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="user_loge_date" EntityType="WarehouseServerModel.Store.user_loge_date" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="user_task" EntityType="WarehouseServerModel.Store.user_task" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="WareHouse" EntityType="WarehouseServerModel.Store.WareHouse" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK__asset_cre__asset__24285DB4" Association="WarehouseServerModel.Store.FK__asset_cre__asset__24285DB4">
             <End Role="asset" EntitySet="asset" />
             <End Role="asset_credit" EntitySet="asset_credit" />
@@ -2175,8 +2175,8 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WarehouseServerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="WarehouseServerEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="WarehouseServerModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="WarehouseServerEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="material" EntityType="WarehouseServerModel.material" />
           <EntitySet Name="admin_" EntityType="WarehouseServerModel.admin_" />
           <EntitySet Name="asset" EntityType="WarehouseServerModel.asset" />
@@ -2474,7 +2474,7 @@
           <Key>
             <PropertyRef Name="الرقم_الفني" />
           </Key>
-          <Property Name="الرقم_الفني" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="الرقم_الفني" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="اسم_المادة" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="تواجد_المادة" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="الوحدة" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
@@ -2512,7 +2512,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="user_type" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -2521,7 +2521,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_الأصل" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -2537,7 +2537,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2550,7 +2550,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2563,7 +2563,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_الحساب" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="رقم_الحساب" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="نوع_الحساب" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
@@ -2580,7 +2580,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2593,7 +2593,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2606,7 +2606,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_البنك" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="عنوان_البنك" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="هاتف" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -2620,7 +2620,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2633,7 +2633,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_الصندوق" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -2645,7 +2645,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2658,7 +2658,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2671,7 +2671,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="name" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="street" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="city" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -2688,14 +2688,14 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="customer">
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_الربون" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -2719,7 +2719,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2732,7 +2732,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2745,7 +2745,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="ملاحطات" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -2758,7 +2758,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="class" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="error_ms" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="error_row" />
@@ -2767,7 +2767,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="الإلتزام" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -2781,7 +2781,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2794,7 +2794,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2819,7 +2819,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="تاريخ_البيع" Nullable="false" />
           <Property Type="DateTime" Name="تاريخ_التسليم" Nullable="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
@@ -2998,7 +2998,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="تاريخ_البيع" Nullable="false" />
           <Property Type="DateTime" Name="تاريخ_التسليم" Nullable="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
@@ -3046,7 +3046,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="تاريخ" Nullable="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3215,7 +3215,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="تاريخ" Nullable="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3274,7 +3274,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_المادة" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="الوحدة" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="كمية" Nullable="false" />
@@ -3314,7 +3314,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="تاريخ_بداية_التصنيع" Nullable="false" />
           <Property Type="DateTime" Name="تاريخ_نهاية_التصنيع" Nullable="false" />
           <Property Type="Double" Name="الكلفة" Nullable="false" />
@@ -3353,7 +3353,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="تاريخ" />
@@ -3367,7 +3367,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3380,7 +3380,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3393,7 +3393,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="تاريخ" />
@@ -3407,7 +3407,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3420,7 +3420,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3442,7 +3442,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="اسم_المورد" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -3466,7 +3466,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="إلى" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3479,7 +3479,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="من" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3492,7 +3492,7 @@
           <Key>
             <PropertyRef Name="الرقم" />
           </Key>
-          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="الرقم" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Double" Name="الرصيد" Nullable="false" />
           <Property Type="String" Name="الرصيد_كتابة" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="ملاحطات" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -3507,7 +3507,7 @@
           </Key>
           <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="principal_id" Nullable="false" />
-          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="version" />
           <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
         </EntityType>
@@ -3515,14 +3515,14 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="opreation" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="user_loge">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="user_type" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -3535,7 +3535,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="DateTime" Name="loge_date_in" Nullable="false" />
           <Property Type="Int32" Name="user_id_" Nullable="false" />
           <NavigationProperty Name="user_loge" Relationship="WarehouseServerModel.FK__user_loge__user___1FCDBCEB" FromRole="user_loge_date" ToRole="user_loge" />
@@ -3544,7 +3544,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="opreation" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="active_opreation" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="user_id_" Nullable="false" />
@@ -4247,7 +4247,7 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="WarehouseServerModelStoreContainer" CdmEntityContainer="WarehouseServerEntities">
           <EntitySetMapping Name="material"><EntityTypeMapping TypeName="WarehouseServerModel.material"><MappingFragment StoreEntitySet="material">
             <ScalarProperty Name="طريقة_حساب_الكلفة" ColumnName="طريقة_حساب_الكلفة" />
@@ -5218,499 +5218,499 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="Model1" ZoomLevel="80">
-        <EntityTypeShape EntityType="WarehouseServerModel.material" Width="1.5" PointX="0.5" PointY="0.5" Height="7.3647265624999978" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehouseServerModel.admin_" Width="1.5" PointX="2.625" PointY="20.125" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.asset" Width="1.5" PointX="25.625" PointY="6.875" Height="3.1340950520833335" />
-        <EntityTypeShape EntityType="WarehouseServerModel.asset_credit" Width="1.5" PointX="27.875" PointY="5.5" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="WarehouseServerModel.asset_debit" Width="1.5" PointX="27.875" PointY="8.75" Height="2.5571907552083317" />
-        <EntityTypeShape EntityType="WarehouseServerModel.bank_account" Width="1.5" PointX="14.875" PointY="6.75" Height="3.3263964843749987" />
-        <EntityTypeShape EntityType="WarehouseServerModel.bank_credit" Width="1.5" PointX="17.125" PointY="5.5" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="WarehouseServerModel.bank_debit" Width="1.5" PointX="17.125" PointY="8.75" Height="2.5571907552083317" />
-        <EntityTypeShape EntityType="WarehouseServerModel.bank_details" Width="1.5" PointX="12.625" PointY="7" Height="2.7494921874999987" />
-        <EntityTypeShape EntityType="WarehouseServerModel.bonds" Width="1.5" PointX="19.625" PointY="18.125" Height="2.5571907552083353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.box" Width="1.5" PointX="22.625" PointY="28.25" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.box_credit" Width="1.5" PointX="24.875" PointY="26.5" Height="2.5571907552083317" />
-        <EntityTypeShape EntityType="WarehouseServerModel.box_debit" Width="1.5" PointX="24.875" PointY="29.75" Height="2.5571907552083353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.company" Width="1.5" PointX="2.625" PointY="23.125" Height="3.3263964843750031" />
-        <EntityTypeShape EntityType="WarehouseServerModel.Country" Width="1.5" PointX="12.625" PointY="17.125" Height="1.4033821614583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.customer" Width="1.5" PointX="12.625" PointY="34" Height="4.67250651041666" />
-        <EntityTypeShape EntityType="WarehouseServerModel.customer_credit" Width="1.5" PointX="14.875" PointY="19.625" Height="2.5571907552083388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.customer_debit" Width="1.5" PointX="14.875" PointY="23" Height="2.5571907552083388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.customer_ReveiveTime" Width="1.5" PointX="14.875" PointY="26.25" Height="2.5571907552083388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.error" Width="1.5" PointX="10.625" PointY="21.125" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.liability" Width="1.5" PointX="22.625" PointY="21" Height="2.7494921875000031" />
-        <EntityTypeShape EntityType="WarehouseServerModel.liability_credit" Width="1.5" PointX="24.875" PointY="19.5" Height="2.5571907552083282" />
-        <EntityTypeShape EntityType="WarehouseServerModel.liability_debit" Width="1.5" PointX="24.875" PointY="22.75" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_cost" Width="1.5" PointX="5.25" PointY="7.75" Height="2.172587890624996" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit" Width="1.5" PointX="14.875" PointY="29.5" Height="5.8263151041666639" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_list" Width="1.5" PointX="17.125" PointY="18.25" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_old" Width="1.5" PointX="17.125" PointY="23.375" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_return" Width="1.5" PointX="10.125" PointY="7" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_return_old" Width="1.5" PointX="10.125" PointY="11.625" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_old" Width="1.5" PointX="14.875" PointY="36.125" Height="5.63401367187501" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_penfit_payment" Width="1.5" PointX="17.125" PointY="36.125" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_return" Width="1.5" PointX="7.875" PointY="7.625" Height="4.6725065104166683" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_credit_return_old" Width="1.5" PointX="7.875" PointY="13.125" Height="4.6725065104166674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit" Width="1.5" PointX="7.875" PointY="18.5" Height="5.2494108072916674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_list" Width="1.5" PointX="13.125" PointY="12.625" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_old" Width="1.5" PointX="10.125" PointY="16.5" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_return" Width="1.5" PointX="20.125" PointY="24.375" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_return_old" Width="1.5" PointX="17.125" PointY="29.25" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_old" Width="1.5" PointX="7.875" PointY="24.5" Height="5.05710937500001" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_penfit_payment" Width="1.5" PointX="10.125" PointY="24.375" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_return" Width="1.5" PointX="14.875" PointY="42.5" Height="4.8648079427083246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_debit_return_old" Width="1.5" PointX="14.875" PointY="48.125" Height="4.8648079427083246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_group" Width="1.5" PointX="0.75" PointY="7.875" Height="1.7879850260416532" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_maker" Width="1.5" PointX="3" PointY="0.75" Height="3.1340950520833246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.material_maker_list" Width="1.5" PointX="5.25" PointY="3.25" Height="3.1340950520833246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.materialMaker_credit" Width="1.5" PointX="3" PointY="16.25" Height="3.134095052083353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.materialMaker_credit_list" Width="1.5" PointX="5.25" PointY="11.125" Height="3.3263964843749818" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_pay" Width="1.5" PointX="20.625" PointY="14" Height="2.7494921874999818" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_pay_credit" Width="1.5" PointX="22.875" PointY="12.5" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_pay_debit" Width="1.5" PointX="22.875" PointY="15.75" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_receive" Width="1.5" PointX="20.625" PointY="7" Height="2.7494921874999809" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_receive_credit" Width="1.5" PointX="22.875" PointY="5.5" Height="2.5571907552083522" />
-        <EntityTypeShape EntityType="WarehouseServerModel.paper_receive_debit" Width="1.5" PointX="22.875" PointY="8.75" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.producer" Width="1.5" PointX="3" PointY="13.5" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.supplier" Width="1.5" PointX="5.625" PointY="21.25" Height="4.6725065104166674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.supplier_credit" Width="1.5" PointX="7.875" PointY="30.375" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.supplier_debit" Width="1.5" PointX="7.875" PointY="33.625" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.supplier_PayTime" Width="1.5" PointX="7.875" PointY="36.875" Height="2.557190755208353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.sysdiagrams" Width="1.5" PointX="4.625" PointY="27.125" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.task" Width="1.5" PointX="19.625" PointY="22.125" Height="1.4033821614583246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.user_loge" Width="1.5" PointX="15.625" PointY="13.375" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="WarehouseServerModel.user_loge_date" Width="1.5" PointX="17.875" PointY="12.375" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="WarehouseServerModel.user_task" Width="1.5" PointX="17.875" PointY="15" Height="1.980286458333353" />
-        <EntityTypeShape EntityType="WarehouseServerModel.WareHouse" Width="1.5" PointX="7.75" PointY="3.5" Height="1.7879850260416674" />
-        <AssociationConnector Association="WarehouseServerModel.FK__asset_cre__asset__24285DB4" >
-          <ConnectorPoint PointX="27.125" PointY="7.4660953776041659" />
-          <ConnectorPoint PointX="27.875" PointY="7.4660953776041659" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__asset_deb__asset__1C873BEC" >
-          <ConnectorPoint PointX="27.125" PointY="9.3795475260416659" />
-          <ConnectorPoint PointX="27.875" PointY="9.3795475260416659" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__bank_acco__bank___756D6ECB" >
-          <ConnectorPoint PointX="14.125" PointY="8.37474609375" />
-          <ConnectorPoint PointX="14.260416666666666" PointY="8.37474609375" />
-          <ConnectorPoint PointX="14.427083333333334" PointY="8.37474609375" />
-          <ConnectorPoint PointX="14.541666666666666" PointY="8.37474609375" />
-          <ConnectorPoint PointX="14.739583333333334" PointY="8.37474609375" />
-          <ConnectorPoint PointX="14.875" PointY="8.37474609375" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__bank_cred__bank___04AFB25B" >
-          <ConnectorPoint PointX="16.375" PointY="7.4035953776041659" />
-          <ConnectorPoint PointX="16.729166666666668" PointY="7.403595377604165" />
-          <ConnectorPoint PointX="16.958333333333332" PointY="7.4035953776041659" />
-          <ConnectorPoint PointX="17.125" PointY="7.4035953776041659" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__bank_debi__bank___7D0E9093" >
-          <ConnectorPoint PointX="16.375" PointY="9.4131982421875" />
-          <ConnectorPoint PointX="16.791666666666668" PointY="9.4131982421875" />
-          <ConnectorPoint PointX="16.958333333333332" PointY="9.4131982421875" />
-          <ConnectorPoint PointX="17.125" PointY="9.4131982421875" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__box_credi__box_i__6AEFE058" >
-          <ConnectorPoint PointX="24.125" PointY="28.653595377604166" />
-          <ConnectorPoint PointX="24.875" PointY="28.653595377604166" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__box_debit__box_i__634EBE90" >
-          <ConnectorPoint PointX="24.125" PointY="30.182444661458334" />
-          <ConnectorPoint PointX="24.875" PointY="30.182444661458334" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__customer___custo__1332DBDC" >
-          <ConnectorPoint PointX="13.375" PointY="34" />
-          <ConnectorPoint PointX="13.375" PointY="24.278595377604169" />
-          <ConnectorPoint PointX="13.697919166666667" PointY="24.278595377604169" />
-          <ConnectorPoint PointX="13.864585833333335" PointY="24.278595377604169" />
-          <ConnectorPoint PointX="14.875" PointY="24.278595377604169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__customer___custo__1AD3FDA4" >
-          <ConnectorPoint PointX="13.7812525" PointY="34" />
-          <ConnectorPoint PointX="13.7812525" PointY="20.903595377604169" />
-          <ConnectorPoint PointX="14.322916666666666" PointY="20.903595377604169" />
-          <ConnectorPoint PointX="14.489583333333334" PointY="20.903595377604169" />
-          <ConnectorPoint PointX="14.875" PointY="20.903595377604169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__customer___custo__2180FB33" >
-          <ConnectorPoint PointX="12.9687475" PointY="34" />
-          <ConnectorPoint PointX="12.9687475" PointY="27.528595377604169" />
-          <ConnectorPoint PointX="13.291666666666666" PointY="27.528595377604169" />
-          <ConnectorPoint PointX="13.458333333333334" PointY="27.528595377604169" />
-          <ConnectorPoint PointX="13.697919166666667" PointY="27.528595377604169" />
-          <ConnectorPoint PointX="13.864585833333335" PointY="27.528595377604169" />
-          <ConnectorPoint PointX="14.875" PointY="27.528595377604169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___العمي__12C8C788" >
-          <ConnectorPoint PointX="13.375" PointY="38.67250651041666" />
-          <ConnectorPoint PointX="13.375" PointY="50.557403971354162" />
-          <ConnectorPoint PointX="14.875" PointY="50.557403971354162" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___العمي__2116E6DF" >
-          <ConnectorPoint PointX="14.125" PointY="37.398753255208334" />
-          <ConnectorPoint PointX="14.875" PointY="37.398753255208334" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___العمي__282DF8C2" >
-          <ConnectorPoint PointX="13.7812525" PointY="38.67250651041666" />
-          <ConnectorPoint PointX="13.7812525" PointY="44.932403971354162" />
-          <ConnectorPoint PointX="14.875" PointY="44.932403971354162" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___العمي__367C1819" >
-          <ConnectorPoint PointX="14.125" PointY="34.663157552083334" />
-          <ConnectorPoint PointX="14.875" PointY="34.663157552083334" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__liability__liabi__5C6CB6D7" >
-          <ConnectorPoint PointX="24.125" PointY="23.24974609375" />
-          <ConnectorPoint PointX="24.875" PointY="23.24974609375" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__liability__liabi__640DD89F" >
-          <ConnectorPoint PointX="24.125" PointY="21.528595377604162" />
-          <ConnectorPoint PointX="24.875" PointY="21.528595377604162" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___الماد__07220AB2" >
-          <ConnectorPoint PointX="0.59375" PointY="7.8647265624999978" />
-          <ConnectorPoint PointX="0.59375" PointY="9.8240364583333246" />
-          <ConnectorPoint PointX="5.25" PointY="9.8240364583333246" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__0A338187" >
-          <ConnectorPoint PointX="2" PointY="4.9397762630208311" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="4.93977626302083" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="4.9397762630208311" />
-          <ConnectorPoint PointX="4.666666666666667" PointY="4.93977626302083" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="4.9397762630208311" />
-          <ConnectorPoint PointX="5" PointY="4.9397762630208311" />
-          <ConnectorPoint PointX="5" PointY="7" />
-          <ConnectorPoint PointX="5.166666666666667" PointY="6.9999999999999991" />
-          <ConnectorPoint PointX="5.333333333333333" PointY="7" />
-          <ConnectorPoint PointX="9.875" PointY="7" />
-          <ConnectorPoint PointX="9.875" PointY="16.125" />
-          <ConnectorPoint PointX="10.875" PointY="16.125" />
-          <ConnectorPoint PointX="10.875" PointY="16.5" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__1881A0DE" >
-          <ConnectorPoint PointX="2" PointY="4.3795475260416623" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="4.3795475260416614" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="4.3795475260416623" />
-          <ConnectorPoint PointX="4.9375" PointY="4.3795475260416623" />
-          <ConnectorPoint PointX="4.9375" PointY="6.5090950520833246" />
-          <ConnectorPoint PointX="7.416666666666667" PointY="6.5090950520833237" />
-          <ConnectorPoint PointX="7.583333333333333" PointY="6.5090950520833246" />
-          <ConnectorPoint PointX="7.666666666666667" PointY="6.5090950520833237" />
-          <ConnectorPoint PointX="7.864583333333333" PointY="6.5090950520833246" />
-          <ConnectorPoint PointX="14.260416666666666" PointY="6.5090950520833237" />
-          <ConnectorPoint PointX="14.427083333333334" PointY="6.5090950520833246" />
-          <ConnectorPoint PointX="14.625" PointY="6.5090950520833246" />
-          <ConnectorPoint PointX="14.625" PointY="12.125" />
-          <ConnectorPoint PointX="16.791666666666668" PointY="12.125" />
-          <ConnectorPoint PointX="16.958333333333332" PointY="12.125" />
-          <ConnectorPoint PointX="17.625" PointY="12.125" />
-          <ConnectorPoint PointX="17.625" PointY="18" />
-          <ConnectorPoint PointX="17.458333333333332" PointY="18" />
-          <ConnectorPoint PointX="17.291666666666668" PointY="18" />
-          <ConnectorPoint PointX="16.875" PointY="18" />
-          <ConnectorPoint PointX="16.875" PointY="28.875" />
-          <ConnectorPoint PointX="17.875" PointY="28.875" />
-          <ConnectorPoint PointX="17.875" PointY="29.25" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2B947552" >
-          <ConnectorPoint PointX="2" PointY="5.7556881575520773" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="5.7556881575520764" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="5.7556881575520773" />
-          <ConnectorPoint PointX="4.8125" PointY="5.7556881575520773" />
-          <ConnectorPoint PointX="4.8125" PointY="6.6340950520833246" />
-          <ConnectorPoint PointX="4.916666666666667" PointY="6.6340950520833237" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="6.6340950520833246" />
-          <ConnectorPoint PointX="7.5" PointY="6.6340950520833246" />
-          <ConnectorPoint PointX="7.5" PointY="5.5379850260416674" />
-          <ConnectorPoint PointX="7.697916666666667" PointY="5.5379850260416665" />
-          <ConnectorPoint PointX="7.864583333333333" PointY="5.5379850260416674" />
-          <ConnectorPoint PointX="14.260416666666666" PointY="5.5379850260416665" />
-          <ConnectorPoint PointX="14.427083333333334" PointY="5.5379850260416674" />
-          <ConnectorPoint PointX="16.875" PointY="5.5379850260416674" />
-          <ConnectorPoint PointX="16.875" PointY="13.125" />
-          <ConnectorPoint PointX="17.375" PointY="13.125" />
-          <ConnectorPoint PointX="17.375" PointY="18.125" />
-          <ConnectorPoint PointX="16.8125" PointY="18.125" />
-          <ConnectorPoint PointX="16.8125" PointY="23" />
-          <ConnectorPoint PointX="17.875" PointY="23" />
-          <ConnectorPoint PointX="17.875" PointY="23.375" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2DE6D218" >
-          <ConnectorPoint PointX="2" PointY="7.4948627812499993" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="7.4948627812499984" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="7.4948627812499993" />
-          <ConnectorPoint PointX="5.25" PointY="7.4948627812499993" />
-          <ConnectorPoint PointX="5.25" PointY="6.6965950520833246" />
-          <ConnectorPoint PointX="7.75" PointY="6.6965950520833246" />
-          <ConnectorPoint PointX="7.75" PointY="5.7879850260416674" />
-          <ConnectorPoint PointX="14.260416666666666" PointY="5.7879850260416665" />
-          <ConnectorPoint PointX="14.427083333333334" PointY="5.7879850260416674" />
-          <ConnectorPoint PointX="16.8125" PointY="5.7879850260416674" />
-          <ConnectorPoint PointX="16.8125" PointY="8.3071907552083317" />
-          <ConnectorPoint PointX="20.375" PointY="8.3071907552083317" />
-          <ConnectorPoint PointX="20.375" PointY="17.875" />
-          <ConnectorPoint PointX="21.375" PointY="17.875" />
-          <ConnectorPoint PointX="21.375" PointY="24" />
-          <ConnectorPoint PointX="20.875" PointY="24" />
-          <ConnectorPoint PointX="20.875" PointY="24.375" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__3AD6B8E2" >
-          <ConnectorPoint PointX="2" PointY="4.6596618945312471" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="4.6596618945312462" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="4.6596618945312471" />
-          <ConnectorPoint PointX="4.75" PointY="4.6596618945312471" />
-          <ConnectorPoint PointX="4.75" PointY="7.125" />
-          <ConnectorPoint PointX="5.166666666666667" PointY="7.1249999999999991" />
-          <ConnectorPoint PointX="5.333333333333333" PointY="7.125" />
-          <ConnectorPoint PointX="9.8125" PointY="7.125" />
-          <ConnectorPoint PointX="9.8125" PointY="11.25" />
-          <ConnectorPoint PointX="10.875" PointY="11.25" />
-          <ConnectorPoint PointX="10.875" PointY="11.625" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__40F9A68C" >
-          <ConnectorPoint PointX="2" PointY="4.1318187890624936" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="4.1318187890624927" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="4.1318187890624936" />
-          <ConnectorPoint PointX="4.875" PointY="4.1318187890624936" />
-          <ConnectorPoint PointX="4.875" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="4.916666666666667" PointY="6.8215950520833237" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="5.166666666666667" PointY="6.8215950520833237" />
-          <ConnectorPoint PointX="5.333333333333333" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="7.697916666666667" PointY="6.8215950520833237" />
-          <ConnectorPoint PointX="7.864583333333333" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="14.260416666666666" PointY="6.8215950520833237" />
-          <ConnectorPoint PointX="14.427083333333334" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="14.65625" PointY="6.8215950520833246" />
-          <ConnectorPoint PointX="14.65625" PointY="12.25" />
-          <ConnectorPoint PointX="16.791666666666668" PointY="12.25" />
-          <ConnectorPoint PointX="16.958333333333332" PointY="12.25" />
-          <ConnectorPoint PointX="17.5" PointY="12.25" />
-          <ConnectorPoint PointX="17.5" PointY="17.875" />
-          <ConnectorPoint PointX="17.541666666666668" PointY="17.875" />
-          <ConnectorPoint PointX="17.708333333333332" PointY="17.875" />
-          <ConnectorPoint PointX="18.1249995" PointY="17.875" />
-          <ConnectorPoint PointX="18.1249995" PointY="18.25" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__531856C7" >
-          <ConnectorPoint PointX="2" PointY="7.309931390625" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="7.3099313906249987" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="7.309931390625" />
-          <ConnectorPoint PointX="5.166666666666667" PointY="7.3099313906249987" />
-          <ConnectorPoint PointX="5.333333333333333" PointY="7.309931390625" />
-          <ConnectorPoint PointX="9.7291666666666661" PointY="7.3099313906249987" />
-          <ConnectorPoint PointX="9.9583333333333339" PointY="7.309931390625" />
-          <ConnectorPoint PointX="10.125" PointY="7.309931390625" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__595B4002" >
-          <ConnectorPoint PointX="2" PointY="5.3477322102864537" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="5.3477322102864528" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="5.3477322102864537" />
-          <ConnectorPoint PointX="4.666666666666667" PointY="5.347732210286452" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="5.3477322102864537" />
-          <ConnectorPoint PointX="5.25" PointY="5.3477322102864537" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__778AC167" >
-          <ConnectorPoint PointX="2" PointY="0.59375" />
-          <ConnectorPoint PointX="14.34375" PointY="0.59375" />
-          <ConnectorPoint PointX="14.34375" PointY="12.625" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material__الصانع__3B75D760" >
-          <ConnectorPoint PointX="3" PointY="14.393992513020834" />
-          <ConnectorPoint PointX="0.62500249999999991" PointY="14.393992513020834" />
-          <ConnectorPoint PointX="0.62500249999999991" PointY="7.8647265624999978" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material__المجمو__398D8EEE" >
-          <ConnectorPoint PointX="1.375" PointY="7.875" />
-          <ConnectorPoint PointX="1.375" PointY="7.8647265624999978" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material__المستو__3D5E1FD2" >
-          <ConnectorPoint PointX="7.78125" PointY="5.2879850260416674" />
-          <ConnectorPoint PointX="7.78125" PointY="6.9107975260416623" />
-          <ConnectorPoint PointX="5.333333333333333" PointY="6.9107975260416614" />
-          <ConnectorPoint PointX="5.166666666666667" PointY="6.9107975260416623" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="6.9107975260416614" />
-          <ConnectorPoint PointX="4.916666666666667" PointY="6.9107975260416623" />
-          <ConnectorPoint PointX="4.833333333333333" PointY="6.9107975260416614" />
-          <ConnectorPoint PointX="4.666666666666667" PointY="6.9107975260416623" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="6.9107975260416614" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="6.9107975260416623" />
-          <ConnectorPoint PointX="2" PointY="6.9107975260416623" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__materialM__رقم_ا__7D98A078" >
-          <ConnectorPoint PointX="0.56249750000000009" PointY="7.8647265624999978" />
-          <ConnectorPoint PointX="0.56249750000000009" PointY="12.28125" />
-          <ConnectorPoint PointX="5.25" PointY="12.28125" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__41EDCAC5" >
-          <ConnectorPoint PointX="16.375" PointY="29.5" />
-          <ConnectorPoint PointX="16.75" PointY="29.125" />
-          <ConnectorPoint PointX="16.75" PointY="20.297801106770834" />
-          <ConnectorPoint PointX="16.791666666666668" PointY="20.297801106770834" />
-          <ConnectorPoint PointX="16.958333333333332" PointY="20.297801106770834" />
-          <ConnectorPoint PointX="17.125" PointY="20.297801106770834" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__45BE5BA9" >
-          <ConnectorPoint PointX="16.375" PointY="35.325160258012822" />
-          <ConnectorPoint PointX="16.75" PointY="35.700160258012822" />
-          <ConnectorPoint PointX="16.75" PointY="37.307444661458334" />
-          <ConnectorPoint PointX="16.822916666666668" PointY="37.307444661458334" />
-          <ConnectorPoint PointX="16.989583333333332" PointY="37.307444661458334" />
-          <ConnectorPoint PointX="17.125" PointY="37.307444661458334" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2C88998B" >
-          <ConnectorPoint PointX="16.375" PointY="36.187306692307693" />
-          <ConnectorPoint PointX="16.691074434901122" PointY="35.871232257406575" />
-          <ConnectorPoint PointX="16.808925565098878" PointY="35.753381127208812" />
-          <ConnectorPoint PointX="16.8125" PointY="35.749806692307693" />
-          <ConnectorPoint PointX="16.8125" PointY="25.422801106770834" />
-          <ConnectorPoint PointX="17.125" PointY="25.422801106770834" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__540C7B00" >
-          <ConnectorPoint PointX="9.375" PointY="9.16799967447917" />
-          <ConnectorPoint PointX="9.7291666666666661" PointY="9.16799967447917" />
-          <ConnectorPoint PointX="9.9583333333333339" PointY="9.16799967447917" />
-          <ConnectorPoint PointX="10.125" PointY="9.16799967447917" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__3BCADD1B" >
-          <ConnectorPoint PointX="9.375" PointY="14.230499674479169" />
-          <ConnectorPoint PointX="9.7916666666666661" PointY="14.230499674479169" />
-          <ConnectorPoint PointX="9.9583333333333339" PointY="14.230499674479169" />
-          <ConnectorPoint PointX="10.125" PointY="14.230499674479169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المور__4C6B5938" >
-          <ConnectorPoint PointX="6.96875" PointY="21.25" />
-          <ConnectorPoint PointX="6.96875" PointY="10.523793945312498" />
-          <ConnectorPoint PointX="7.875" PointY="10.523793945312498" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المور__3429BB53" >
-          <ConnectorPoint PointX="7.0781275" PointY="21.25" />
-          <ConnectorPoint PointX="7.0781275" PointY="16.155701497395825" />
-          <ConnectorPoint PointX="7.875" PointY="16.155701497395825" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المور__70DDC3D8" >
-          <ConnectorPoint PointX="7.125" PointY="22.499705403645834" />
-          <ConnectorPoint PointX="7.875" PointY="22.499705403645834" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__787EE5A0" >
-          <ConnectorPoint PointX="9.375" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="9.8541666666666661" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="10.020833333333334" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="13.697919166666667" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="13.864585833333335" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="14.40625" PointY="23.362447916666667" />
-          <ConnectorPoint PointX="14.40625" PointY="16.335999348958339" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__7C4F7684" >
-          <ConnectorPoint PointX="9.375" PointY="23.749410807291667" />
-          <ConnectorPoint PointX="9.75" PointY="24.124410807291667" />
-          <ConnectorPoint PointX="9.75" PointY="24" />
-          <ConnectorPoint PointX="9.7847277810549667" PointY="24.034727781054965" />
-          <ConnectorPoint PointX="9.9025789112527232" PointY="24.152578911252721" />
-          <ConnectorPoint PointX="10.125" PointY="24.375" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__0B27A5C0" >
-          <ConnectorPoint PointX="9.375" PointY="24.56230669230769" />
-          <ConnectorPoint PointX="9.9375" PointY="23.999806692307686" />
-          <ConnectorPoint PointX="9.9375" PointY="18.355499674479169" />
-          <ConnectorPoint PointX="10.125" PointY="18.355499674479169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2EDAF651" >
-          <ConnectorPoint PointX="16.375" PointY="44.932403971354162" />
-          <ConnectorPoint PointX="16.822916666666668" PointY="44.932403971354162" />
-          <ConnectorPoint PointX="16.989583333333332" PointY="44.932403971354162" />
-          <ConnectorPoint PointX="20.875" PointY="44.932403971354162" />
-          <ConnectorPoint PointX="20.875" PointY="28.085999348958339" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__1975C517" >
-          <ConnectorPoint PointX="16.375" PointY="48.156152846153844" />
-          <ConnectorPoint PointX="16.90625" PointY="47.624902846153844" />
-          <ConnectorPoint PointX="16.90625" PointY="31.105499674479169" />
-          <ConnectorPoint PointX="17.125" PointY="31.105499674479169" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المور__038683F8" >
-          <ConnectorPoint PointX="7.125" PointY="25.211253255208334" />
-          <ConnectorPoint PointX="7.875" PointY="25.211253255208334" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المجم__4DE98D56" >
-          <ConnectorPoint PointX="2.25" PointY="8.7689925130208266" />
-          <ConnectorPoint PointX="3.75" PointY="8.7689925130208266" />
-          <ConnectorPoint PointX="3.75" PointY="3.8840950520833246" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___المست__4FD1D5C8" >
-          <ConnectorPoint PointX="8.5" PointY="3.5" />
-          <ConnectorPoint PointX="8.5" PointY="1.96875" />
-          <ConnectorPoint PointX="4.5" PointY="1.96875" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__5A4F643B" >
-          <ConnectorPoint PointX="4.5" PointY="3.5670475260416623" />
-          <ConnectorPoint PointX="5.25" PointY="3.5670475260416623" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__materialM__رقم_ا__7E8CC4B1" >
-          <ConnectorPoint PointX="4.5" PointY="17.817047526041677" />
-          <ConnectorPoint PointX="6" PointY="17.817047526041677" />
-          <ConnectorPoint PointX="6" PointY="14.451396484374982" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__paper_pay__paper__467D75B8" >
-          <ConnectorPoint PointX="22.125" PointY="16.249746093749991" />
-          <ConnectorPoint PointX="22.875" PointY="16.249746093749991" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__paper_pay__paper__4E1E9780" >
-          <ConnectorPoint PointX="22.125" PointY="14.528595377604177" />
-          <ConnectorPoint PointX="22.875" PointY="14.528595377604177" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__paper_rec__paper__318258D2" >
-          <ConnectorPoint PointX="22.125" PointY="9.2497460937499909" />
-          <ConnectorPoint PointX="22.875" PointY="9.2497460937499909" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__paper_rec__paper__39237A9A" >
-          <ConnectorPoint PointX="22.125" PointY="7.5285953776041765" />
-          <ConnectorPoint PointX="22.875" PointY="7.5285953776041765" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__5BE2A6F2" >
-          <ConnectorPoint PointX="6.65625" PointY="25.922506510416667" />
-          <ConnectorPoint PointX="6.65625" PointY="34.903595377604177" />
-          <ConnectorPoint PointX="7.875" PointY="34.903595377604177" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__6383C8BA" >
-          <ConnectorPoint PointX="6.9218775" PointY="25.922506510416667" />
-          <ConnectorPoint PointX="6.9218775" PointY="31.653595377604177" />
-          <ConnectorPoint PointX="7.875" PointY="31.653595377604177" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__6A30C649" >
-          <ConnectorPoint PointX="6.3906225" PointY="25.922506510416667" />
-          <ConnectorPoint PointX="6.3906225" PointY="38.153595377604177" />
-          <ConnectorPoint PointX="7.875" PointY="38.153595377604177" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__user_loge__user___1FCDBCEB" >
-          <ConnectorPoint PointX="17.125" PointY="13.768992513020834" />
-          <ConnectorPoint PointX="17.291666666666668" PointY="13.768992513020832" />
-          <ConnectorPoint PointX="17.708333333333332" PointY="13.768992513020834" />
-          <ConnectorPoint PointX="17.875" PointY="13.768992513020834" />
-        </AssociationConnector>
-        <AssociationConnector Association="WarehouseServerModel.FK__user_task__user___173876EA" >
-          <ConnectorPoint PointX="17.125" PointY="15.466095377604162" />
-          <ConnectorPoint PointX="17.291666666666668" PointY="15.466095377604161" />
-          <ConnectorPoint PointX="17.708333333333332" PointY="15.466095377604162" />
-          <ConnectorPoint PointX="17.875" PointY="15.466095377604162" />
-        </AssociationConnector>
-      </Diagram>
-    </Diagrams>
-  </Designer>
+    <edmx:Diagrams>
+      <edmx:Diagram Name="Model1" ZoomLevel="80">
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material" Width="1.5" PointX="0.5" PointY="0.5" Height="7.3647265624999978" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.admin_" Width="1.5" PointX="2.625" PointY="20.125" Height="1.7879850260416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.asset" Width="1.5" PointX="25.625" PointY="6.875" Height="3.1340950520833335" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.asset_credit" Width="1.5" PointX="27.875" PointY="5.5" Height="2.5571907552083326" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.asset_debit" Width="1.5" PointX="27.875" PointY="8.75" Height="2.5571907552083317" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.bank_account" Width="1.5" PointX="14.875" PointY="6.75" Height="3.3263964843749987" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.bank_credit" Width="1.5" PointX="17.125" PointY="5.5" Height="2.5571907552083326" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.bank_debit" Width="1.5" PointX="17.125" PointY="8.75" Height="2.5571907552083317" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.bank_details" Width="1.5" PointX="12.625" PointY="7" Height="2.7494921874999987" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.bonds" Width="1.5" PointX="19.625" PointY="18.125" Height="2.5571907552083353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.box" Width="1.5" PointX="22.625" PointY="28.25" Height="2.3648893229166674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.box_credit" Width="1.5" PointX="24.875" PointY="26.5" Height="2.5571907552083317" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.box_debit" Width="1.5" PointX="24.875" PointY="29.75" Height="2.5571907552083353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.company" Width="1.5" PointX="2.625" PointY="23.125" Height="3.3263964843750031" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.Country" Width="1.5" PointX="12.625" PointY="17.125" Height="1.4033821614583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.customer" Width="1.5" PointX="12.625" PointY="34" Height="4.67250651041666" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.customer_credit" Width="1.5" PointX="14.875" PointY="19.625" Height="2.5571907552083388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.customer_debit" Width="1.5" PointX="14.875" PointY="23" Height="2.5571907552083388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.customer_ReveiveTime" Width="1.5" PointX="14.875" PointY="26.25" Height="2.5571907552083388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.error" Width="1.5" PointX="10.625" PointY="21.125" Height="1.7879850260416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.liability" Width="1.5" PointX="22.625" PointY="21" Height="2.7494921875000031" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.liability_credit" Width="1.5" PointX="24.875" PointY="19.5" Height="2.5571907552083282" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.liability_debit" Width="1.5" PointX="24.875" PointY="22.75" Height="2.5571907552083246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_cost" Width="1.5" PointX="5.25" PointY="7.75" Height="2.172587890624996" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit" Width="1.5" PointX="14.875" PointY="29.5" Height="5.8263151041666639" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_list" Width="1.5" PointX="17.125" PointY="18.25" Height="4.0956022135416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_old" Width="1.5" PointX="17.125" PointY="23.375" Height="4.0956022135416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_return" Width="1.5" PointX="10.125" PointY="7" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_list_return_old" Width="1.5" PointX="10.125" PointY="11.625" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_old" Width="1.5" PointX="14.875" PointY="36.125" Height="5.63401367187501" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_penfit_payment" Width="1.5" PointX="17.125" PointY="36.125" Height="2.3648893229166674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_return" Width="1.5" PointX="7.875" PointY="7.625" Height="4.6725065104166683" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_credit_return_old" Width="1.5" PointX="7.875" PointY="13.125" Height="4.6725065104166674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit" Width="1.5" PointX="7.875" PointY="18.5" Height="5.2494108072916674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_list" Width="1.5" PointX="13.125" PointY="12.625" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_old" Width="1.5" PointX="10.125" PointY="16.5" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_return" Width="1.5" PointX="20.125" PointY="24.375" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_list_return_old" Width="1.5" PointX="17.125" PointY="29.25" Height="3.7109993489583388" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_old" Width="1.5" PointX="7.875" PointY="24.5" Height="5.05710937500001" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_penfit_payment" Width="1.5" PointX="10.125" PointY="24.375" Height="2.3648893229166674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_return" Width="1.5" PointX="14.875" PointY="42.5" Height="4.8648079427083246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_debit_return_old" Width="1.5" PointX="14.875" PointY="48.125" Height="4.8648079427083246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_group" Width="1.5" PointX="0.75" PointY="7.875" Height="1.7879850260416532" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_maker" Width="1.5" PointX="3" PointY="0.75" Height="3.1340950520833246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.material_maker_list" Width="1.5" PointX="5.25" PointY="3.25" Height="3.1340950520833246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.materialMaker_credit" Width="1.5" PointX="3" PointY="16.25" Height="3.134095052083353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.materialMaker_credit_list" Width="1.5" PointX="5.25" PointY="11.125" Height="3.3263964843749818" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_pay" Width="1.5" PointX="20.625" PointY="14" Height="2.7494921874999818" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_pay_credit" Width="1.5" PointX="22.875" PointY="12.5" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_pay_debit" Width="1.5" PointX="22.875" PointY="15.75" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_receive" Width="1.5" PointX="20.625" PointY="7" Height="2.7494921874999809" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_receive_credit" Width="1.5" PointX="22.875" PointY="5.5" Height="2.5571907552083522" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.paper_receive_debit" Width="1.5" PointX="22.875" PointY="8.75" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.producer" Width="1.5" PointX="3" PointY="13.5" Height="1.7879850260416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.supplier" Width="1.5" PointX="5.625" PointY="21.25" Height="4.6725065104166674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.supplier_credit" Width="1.5" PointX="7.875" PointY="30.375" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.supplier_debit" Width="1.5" PointX="7.875" PointY="33.625" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.supplier_PayTime" Width="1.5" PointX="7.875" PointY="36.875" Height="2.557190755208353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.sysdiagrams" Width="1.5" PointX="4.625" PointY="27.125" Height="1.9802864583333246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.task" Width="1.5" PointX="19.625" PointY="22.125" Height="1.4033821614583246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.user_loge" Width="1.5" PointX="15.625" PointY="13.375" Height="2.5571907552083246" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.user_loge_date" Width="1.5" PointX="17.875" PointY="12.375" Height="1.7879850260416674" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.user_task" Width="1.5" PointX="17.875" PointY="15" Height="1.980286458333353" />
+        <edmx:EntityTypeShape EntityType="WarehouseServerModel.WareHouse" Width="1.5" PointX="7.75" PointY="3.5" Height="1.7879850260416674" />
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__asset_cre__asset__24285DB4">
+          <edmx:ConnectorPoint PointX="27.125" PointY="7.4660953776041659" />
+          <edmx:ConnectorPoint PointX="27.875" PointY="7.4660953776041659" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__asset_deb__asset__1C873BEC">
+          <edmx:ConnectorPoint PointX="27.125" PointY="9.3795475260416659" />
+          <edmx:ConnectorPoint PointX="27.875" PointY="9.3795475260416659" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__bank_acco__bank___756D6ECB">
+          <edmx:ConnectorPoint PointX="14.125" PointY="8.37474609375" />
+          <edmx:ConnectorPoint PointX="14.260416666666666" PointY="8.37474609375" />
+          <edmx:ConnectorPoint PointX="14.427083333333334" PointY="8.37474609375" />
+          <edmx:ConnectorPoint PointX="14.541666666666666" PointY="8.37474609375" />
+          <edmx:ConnectorPoint PointX="14.739583333333334" PointY="8.37474609375" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="8.37474609375" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__bank_cred__bank___04AFB25B">
+          <edmx:ConnectorPoint PointX="16.375" PointY="7.4035953776041659" />
+          <edmx:ConnectorPoint PointX="16.729166666666668" PointY="7.403595377604165" />
+          <edmx:ConnectorPoint PointX="16.958333333333332" PointY="7.4035953776041659" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="7.4035953776041659" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__bank_debi__bank___7D0E9093">
+          <edmx:ConnectorPoint PointX="16.375" PointY="9.4131982421875" />
+          <edmx:ConnectorPoint PointX="16.791666666666668" PointY="9.4131982421875" />
+          <edmx:ConnectorPoint PointX="16.958333333333332" PointY="9.4131982421875" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="9.4131982421875" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__box_credi__box_i__6AEFE058">
+          <edmx:ConnectorPoint PointX="24.125" PointY="28.653595377604166" />
+          <edmx:ConnectorPoint PointX="24.875" PointY="28.653595377604166" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__box_debit__box_i__634EBE90">
+          <edmx:ConnectorPoint PointX="24.125" PointY="30.182444661458334" />
+          <edmx:ConnectorPoint PointX="24.875" PointY="30.182444661458334" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__customer___custo__1332DBDC">
+          <edmx:ConnectorPoint PointX="13.375" PointY="34" />
+          <edmx:ConnectorPoint PointX="13.375" PointY="24.278595377604169" />
+          <edmx:ConnectorPoint PointX="13.697919166666667" PointY="24.278595377604169" />
+          <edmx:ConnectorPoint PointX="13.864585833333335" PointY="24.278595377604169" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="24.278595377604169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__customer___custo__1AD3FDA4">
+          <edmx:ConnectorPoint PointX="13.7812525" PointY="34" />
+          <edmx:ConnectorPoint PointX="13.7812525" PointY="20.903595377604169" />
+          <edmx:ConnectorPoint PointX="14.322916666666666" PointY="20.903595377604169" />
+          <edmx:ConnectorPoint PointX="14.489583333333334" PointY="20.903595377604169" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="20.903595377604169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__customer___custo__2180FB33">
+          <edmx:ConnectorPoint PointX="12.9687475" PointY="34" />
+          <edmx:ConnectorPoint PointX="12.9687475" PointY="27.528595377604169" />
+          <edmx:ConnectorPoint PointX="13.291666666666666" PointY="27.528595377604169" />
+          <edmx:ConnectorPoint PointX="13.458333333333334" PointY="27.528595377604169" />
+          <edmx:ConnectorPoint PointX="13.697919166666667" PointY="27.528595377604169" />
+          <edmx:ConnectorPoint PointX="13.864585833333335" PointY="27.528595377604169" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="27.528595377604169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___العمي__12C8C788">
+          <edmx:ConnectorPoint PointX="13.375" PointY="38.67250651041666" />
+          <edmx:ConnectorPoint PointX="13.375" PointY="50.557403971354162" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="50.557403971354162" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___العمي__2116E6DF">
+          <edmx:ConnectorPoint PointX="14.125" PointY="37.398753255208334" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="37.398753255208334" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___العمي__282DF8C2">
+          <edmx:ConnectorPoint PointX="13.7812525" PointY="38.67250651041666" />
+          <edmx:ConnectorPoint PointX="13.7812525" PointY="44.932403971354162" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="44.932403971354162" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___العمي__367C1819">
+          <edmx:ConnectorPoint PointX="14.125" PointY="34.663157552083334" />
+          <edmx:ConnectorPoint PointX="14.875" PointY="34.663157552083334" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__liability__liabi__5C6CB6D7">
+          <edmx:ConnectorPoint PointX="24.125" PointY="23.24974609375" />
+          <edmx:ConnectorPoint PointX="24.875" PointY="23.24974609375" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__liability__liabi__640DD89F">
+          <edmx:ConnectorPoint PointX="24.125" PointY="21.528595377604162" />
+          <edmx:ConnectorPoint PointX="24.875" PointY="21.528595377604162" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___الماد__07220AB2">
+          <edmx:ConnectorPoint PointX="0.59375" PointY="7.8647265624999978" />
+          <edmx:ConnectorPoint PointX="0.59375" PointY="9.8240364583333246" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="9.8240364583333246" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__0A338187">
+          <edmx:ConnectorPoint PointX="2" PointY="4.9397762630208311" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="4.93977626302083" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="4.9397762630208311" />
+          <edmx:ConnectorPoint PointX="4.666666666666667" PointY="4.93977626302083" />
+          <edmx:ConnectorPoint PointX="4.958333333333333" PointY="4.9397762630208311" />
+          <edmx:ConnectorPoint PointX="5" PointY="4.9397762630208311" />
+          <edmx:ConnectorPoint PointX="5" PointY="7" />
+          <edmx:ConnectorPoint PointX="5.166666666666667" PointY="6.9999999999999991" />
+          <edmx:ConnectorPoint PointX="5.333333333333333" PointY="7" />
+          <edmx:ConnectorPoint PointX="9.875" PointY="7" />
+          <edmx:ConnectorPoint PointX="9.875" PointY="16.125" />
+          <edmx:ConnectorPoint PointX="10.875" PointY="16.125" />
+          <edmx:ConnectorPoint PointX="10.875" PointY="16.5" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__1881A0DE">
+          <edmx:ConnectorPoint PointX="2" PointY="4.3795475260416623" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="4.3795475260416614" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="4.3795475260416623" />
+          <edmx:ConnectorPoint PointX="4.9375" PointY="4.3795475260416623" />
+          <edmx:ConnectorPoint PointX="4.9375" PointY="6.5090950520833246" />
+          <edmx:ConnectorPoint PointX="7.416666666666667" PointY="6.5090950520833237" />
+          <edmx:ConnectorPoint PointX="7.583333333333333" PointY="6.5090950520833246" />
+          <edmx:ConnectorPoint PointX="7.666666666666667" PointY="6.5090950520833237" />
+          <edmx:ConnectorPoint PointX="7.864583333333333" PointY="6.5090950520833246" />
+          <edmx:ConnectorPoint PointX="14.260416666666666" PointY="6.5090950520833237" />
+          <edmx:ConnectorPoint PointX="14.427083333333334" PointY="6.5090950520833246" />
+          <edmx:ConnectorPoint PointX="14.625" PointY="6.5090950520833246" />
+          <edmx:ConnectorPoint PointX="14.625" PointY="12.125" />
+          <edmx:ConnectorPoint PointX="16.791666666666668" PointY="12.125" />
+          <edmx:ConnectorPoint PointX="16.958333333333332" PointY="12.125" />
+          <edmx:ConnectorPoint PointX="17.625" PointY="12.125" />
+          <edmx:ConnectorPoint PointX="17.625" PointY="18" />
+          <edmx:ConnectorPoint PointX="17.458333333333332" PointY="18" />
+          <edmx:ConnectorPoint PointX="17.291666666666668" PointY="18" />
+          <edmx:ConnectorPoint PointX="16.875" PointY="18" />
+          <edmx:ConnectorPoint PointX="16.875" PointY="28.875" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="28.875" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="29.25" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2B947552">
+          <edmx:ConnectorPoint PointX="2" PointY="5.7556881575520773" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="5.7556881575520764" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="5.7556881575520773" />
+          <edmx:ConnectorPoint PointX="4.8125" PointY="5.7556881575520773" />
+          <edmx:ConnectorPoint PointX="4.8125" PointY="6.6340950520833246" />
+          <edmx:ConnectorPoint PointX="4.916666666666667" PointY="6.6340950520833237" />
+          <edmx:ConnectorPoint PointX="5.083333333333333" PointY="6.6340950520833246" />
+          <edmx:ConnectorPoint PointX="7.5" PointY="6.6340950520833246" />
+          <edmx:ConnectorPoint PointX="7.5" PointY="5.5379850260416674" />
+          <edmx:ConnectorPoint PointX="7.697916666666667" PointY="5.5379850260416665" />
+          <edmx:ConnectorPoint PointX="7.864583333333333" PointY="5.5379850260416674" />
+          <edmx:ConnectorPoint PointX="14.260416666666666" PointY="5.5379850260416665" />
+          <edmx:ConnectorPoint PointX="14.427083333333334" PointY="5.5379850260416674" />
+          <edmx:ConnectorPoint PointX="16.875" PointY="5.5379850260416674" />
+          <edmx:ConnectorPoint PointX="16.875" PointY="13.125" />
+          <edmx:ConnectorPoint PointX="17.375" PointY="13.125" />
+          <edmx:ConnectorPoint PointX="17.375" PointY="18.125" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="18.125" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="23" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="23" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="23.375" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2DE6D218">
+          <edmx:ConnectorPoint PointX="2" PointY="7.4948627812499993" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="7.4948627812499984" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="7.4948627812499993" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="7.4948627812499993" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="6.6965950520833246" />
+          <edmx:ConnectorPoint PointX="7.75" PointY="6.6965950520833246" />
+          <edmx:ConnectorPoint PointX="7.75" PointY="5.7879850260416674" />
+          <edmx:ConnectorPoint PointX="14.260416666666666" PointY="5.7879850260416665" />
+          <edmx:ConnectorPoint PointX="14.427083333333334" PointY="5.7879850260416674" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="5.7879850260416674" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="8.3071907552083317" />
+          <edmx:ConnectorPoint PointX="20.375" PointY="8.3071907552083317" />
+          <edmx:ConnectorPoint PointX="20.375" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="21.375" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="21.375" PointY="24" />
+          <edmx:ConnectorPoint PointX="20.875" PointY="24" />
+          <edmx:ConnectorPoint PointX="20.875" PointY="24.375" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__3AD6B8E2">
+          <edmx:ConnectorPoint PointX="2" PointY="4.6596618945312471" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="4.6596618945312462" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="4.6596618945312471" />
+          <edmx:ConnectorPoint PointX="4.75" PointY="4.6596618945312471" />
+          <edmx:ConnectorPoint PointX="4.75" PointY="7.125" />
+          <edmx:ConnectorPoint PointX="5.166666666666667" PointY="7.1249999999999991" />
+          <edmx:ConnectorPoint PointX="5.333333333333333" PointY="7.125" />
+          <edmx:ConnectorPoint PointX="9.8125" PointY="7.125" />
+          <edmx:ConnectorPoint PointX="9.8125" PointY="11.25" />
+          <edmx:ConnectorPoint PointX="10.875" PointY="11.25" />
+          <edmx:ConnectorPoint PointX="10.875" PointY="11.625" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__40F9A68C">
+          <edmx:ConnectorPoint PointX="2" PointY="4.1318187890624936" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="4.1318187890624927" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="4.1318187890624936" />
+          <edmx:ConnectorPoint PointX="4.875" PointY="4.1318187890624936" />
+          <edmx:ConnectorPoint PointX="4.875" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="4.916666666666667" PointY="6.8215950520833237" />
+          <edmx:ConnectorPoint PointX="5.083333333333333" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="5.166666666666667" PointY="6.8215950520833237" />
+          <edmx:ConnectorPoint PointX="5.333333333333333" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="7.697916666666667" PointY="6.8215950520833237" />
+          <edmx:ConnectorPoint PointX="7.864583333333333" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="14.260416666666666" PointY="6.8215950520833237" />
+          <edmx:ConnectorPoint PointX="14.427083333333334" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="14.65625" PointY="6.8215950520833246" />
+          <edmx:ConnectorPoint PointX="14.65625" PointY="12.25" />
+          <edmx:ConnectorPoint PointX="16.791666666666668" PointY="12.25" />
+          <edmx:ConnectorPoint PointX="16.958333333333332" PointY="12.25" />
+          <edmx:ConnectorPoint PointX="17.5" PointY="12.25" />
+          <edmx:ConnectorPoint PointX="17.5" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="17.541666666666668" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="17.708333333333332" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="18.1249995" PointY="17.875" />
+          <edmx:ConnectorPoint PointX="18.1249995" PointY="18.25" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__531856C7">
+          <edmx:ConnectorPoint PointX="2" PointY="7.309931390625" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="7.3099313906249987" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="7.309931390625" />
+          <edmx:ConnectorPoint PointX="5.166666666666667" PointY="7.3099313906249987" />
+          <edmx:ConnectorPoint PointX="5.333333333333333" PointY="7.309931390625" />
+          <edmx:ConnectorPoint PointX="9.7291666666666661" PointY="7.3099313906249987" />
+          <edmx:ConnectorPoint PointX="9.9583333333333339" PointY="7.309931390625" />
+          <edmx:ConnectorPoint PointX="10.125" PointY="7.309931390625" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__595B4002">
+          <edmx:ConnectorPoint PointX="2" PointY="5.3477322102864537" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="5.3477322102864528" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="5.3477322102864537" />
+          <edmx:ConnectorPoint PointX="4.666666666666667" PointY="5.347732210286452" />
+          <edmx:ConnectorPoint PointX="5.083333333333333" PointY="5.3477322102864537" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="5.3477322102864537" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__778AC167">
+          <edmx:ConnectorPoint PointX="2" PointY="0.59375" />
+          <edmx:ConnectorPoint PointX="14.34375" PointY="0.59375" />
+          <edmx:ConnectorPoint PointX="14.34375" PointY="12.625" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material__الصانع__3B75D760">
+          <edmx:ConnectorPoint PointX="3" PointY="14.393992513020834" />
+          <edmx:ConnectorPoint PointX="0.62500249999999991" PointY="14.393992513020834" />
+          <edmx:ConnectorPoint PointX="0.62500249999999991" PointY="7.8647265624999978" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material__المجمو__398D8EEE">
+          <edmx:ConnectorPoint PointX="1.375" PointY="7.875" />
+          <edmx:ConnectorPoint PointX="1.375" PointY="7.8647265624999978" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material__المستو__3D5E1FD2">
+          <edmx:ConnectorPoint PointX="7.78125" PointY="5.2879850260416674" />
+          <edmx:ConnectorPoint PointX="7.78125" PointY="6.9107975260416623" />
+          <edmx:ConnectorPoint PointX="5.333333333333333" PointY="6.9107975260416614" />
+          <edmx:ConnectorPoint PointX="5.166666666666667" PointY="6.9107975260416623" />
+          <edmx:ConnectorPoint PointX="5.083333333333333" PointY="6.9107975260416614" />
+          <edmx:ConnectorPoint PointX="4.916666666666667" PointY="6.9107975260416623" />
+          <edmx:ConnectorPoint PointX="4.833333333333333" PointY="6.9107975260416614" />
+          <edmx:ConnectorPoint PointX="4.666666666666667" PointY="6.9107975260416623" />
+          <edmx:ConnectorPoint PointX="3.8333333333333335" PointY="6.9107975260416614" />
+          <edmx:ConnectorPoint PointX="3.6666666666666665" PointY="6.9107975260416623" />
+          <edmx:ConnectorPoint PointX="2" PointY="6.9107975260416623" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__materialM__رقم_ا__7D98A078">
+          <edmx:ConnectorPoint PointX="0.56249750000000009" PointY="7.8647265624999978" />
+          <edmx:ConnectorPoint PointX="0.56249750000000009" PointY="12.28125" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="12.28125" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__41EDCAC5">
+          <edmx:ConnectorPoint PointX="16.375" PointY="29.5" />
+          <edmx:ConnectorPoint PointX="16.75" PointY="29.125" />
+          <edmx:ConnectorPoint PointX="16.75" PointY="20.297801106770834" />
+          <edmx:ConnectorPoint PointX="16.791666666666668" PointY="20.297801106770834" />
+          <edmx:ConnectorPoint PointX="16.958333333333332" PointY="20.297801106770834" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="20.297801106770834" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__45BE5BA9">
+          <edmx:ConnectorPoint PointX="16.375" PointY="35.325160258012822" />
+          <edmx:ConnectorPoint PointX="16.75" PointY="35.700160258012822" />
+          <edmx:ConnectorPoint PointX="16.75" PointY="37.307444661458334" />
+          <edmx:ConnectorPoint PointX="16.822916666666668" PointY="37.307444661458334" />
+          <edmx:ConnectorPoint PointX="16.989583333333332" PointY="37.307444661458334" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="37.307444661458334" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2C88998B">
+          <edmx:ConnectorPoint PointX="16.375" PointY="36.187306692307693" />
+          <edmx:ConnectorPoint PointX="16.691074434901122" PointY="35.871232257406575" />
+          <edmx:ConnectorPoint PointX="16.808925565098878" PointY="35.753381127208812" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="35.749806692307693" />
+          <edmx:ConnectorPoint PointX="16.8125" PointY="25.422801106770834" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="25.422801106770834" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__540C7B00">
+          <edmx:ConnectorPoint PointX="9.375" PointY="9.16799967447917" />
+          <edmx:ConnectorPoint PointX="9.7291666666666661" PointY="9.16799967447917" />
+          <edmx:ConnectorPoint PointX="9.9583333333333339" PointY="9.16799967447917" />
+          <edmx:ConnectorPoint PointX="10.125" PointY="9.16799967447917" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__3BCADD1B">
+          <edmx:ConnectorPoint PointX="9.375" PointY="14.230499674479169" />
+          <edmx:ConnectorPoint PointX="9.7916666666666661" PointY="14.230499674479169" />
+          <edmx:ConnectorPoint PointX="9.9583333333333339" PointY="14.230499674479169" />
+          <edmx:ConnectorPoint PointX="10.125" PointY="14.230499674479169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المور__4C6B5938">
+          <edmx:ConnectorPoint PointX="6.96875" PointY="21.25" />
+          <edmx:ConnectorPoint PointX="6.96875" PointY="10.523793945312498" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="10.523793945312498" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المور__3429BB53">
+          <edmx:ConnectorPoint PointX="7.0781275" PointY="21.25" />
+          <edmx:ConnectorPoint PointX="7.0781275" PointY="16.155701497395825" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="16.155701497395825" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المور__70DDC3D8">
+          <edmx:ConnectorPoint PointX="7.125" PointY="22.499705403645834" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="22.499705403645834" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__787EE5A0">
+          <edmx:ConnectorPoint PointX="9.375" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="9.8541666666666661" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="10.020833333333334" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="13.697919166666667" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="13.864585833333335" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="14.40625" PointY="23.362447916666667" />
+          <edmx:ConnectorPoint PointX="14.40625" PointY="16.335999348958339" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__7C4F7684">
+          <edmx:ConnectorPoint PointX="9.375" PointY="23.749410807291667" />
+          <edmx:ConnectorPoint PointX="9.75" PointY="24.124410807291667" />
+          <edmx:ConnectorPoint PointX="9.75" PointY="24" />
+          <edmx:ConnectorPoint PointX="9.7847277810549667" PointY="24.034727781054965" />
+          <edmx:ConnectorPoint PointX="9.9025789112527232" PointY="24.152578911252721" />
+          <edmx:ConnectorPoint PointX="10.125" PointY="24.375" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__0B27A5C0">
+          <edmx:ConnectorPoint PointX="9.375" PointY="24.56230669230769" />
+          <edmx:ConnectorPoint PointX="9.9375" PointY="23.999806692307686" />
+          <edmx:ConnectorPoint PointX="9.9375" PointY="18.355499674479169" />
+          <edmx:ConnectorPoint PointX="10.125" PointY="18.355499674479169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__2EDAF651">
+          <edmx:ConnectorPoint PointX="16.375" PointY="44.932403971354162" />
+          <edmx:ConnectorPoint PointX="16.822916666666668" PointY="44.932403971354162" />
+          <edmx:ConnectorPoint PointX="16.989583333333332" PointY="44.932403971354162" />
+          <edmx:ConnectorPoint PointX="20.875" PointY="44.932403971354162" />
+          <edmx:ConnectorPoint PointX="20.875" PointY="28.085999348958339" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__1975C517">
+          <edmx:ConnectorPoint PointX="16.375" PointY="48.156152846153844" />
+          <edmx:ConnectorPoint PointX="16.90625" PointY="47.624902846153844" />
+          <edmx:ConnectorPoint PointX="16.90625" PointY="31.105499674479169" />
+          <edmx:ConnectorPoint PointX="17.125" PointY="31.105499674479169" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المور__038683F8">
+          <edmx:ConnectorPoint PointX="7.125" PointY="25.211253255208334" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="25.211253255208334" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المجم__4DE98D56">
+          <edmx:ConnectorPoint PointX="2.25" PointY="8.7689925130208266" />
+          <edmx:ConnectorPoint PointX="3.75" PointY="8.7689925130208266" />
+          <edmx:ConnectorPoint PointX="3.75" PointY="3.8840950520833246" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___المست__4FD1D5C8">
+          <edmx:ConnectorPoint PointX="8.5" PointY="3.5" />
+          <edmx:ConnectorPoint PointX="8.5" PointY="1.96875" />
+          <edmx:ConnectorPoint PointX="4.5" PointY="1.96875" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__material___رقم_ا__5A4F643B">
+          <edmx:ConnectorPoint PointX="4.5" PointY="3.5670475260416623" />
+          <edmx:ConnectorPoint PointX="5.25" PointY="3.5670475260416623" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__materialM__رقم_ا__7E8CC4B1">
+          <edmx:ConnectorPoint PointX="4.5" PointY="17.817047526041677" />
+          <edmx:ConnectorPoint PointX="6" PointY="17.817047526041677" />
+          <edmx:ConnectorPoint PointX="6" PointY="14.451396484374982" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__paper_pay__paper__467D75B8">
+          <edmx:ConnectorPoint PointX="22.125" PointY="16.249746093749991" />
+          <edmx:ConnectorPoint PointX="22.875" PointY="16.249746093749991" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__paper_pay__paper__4E1E9780">
+          <edmx:ConnectorPoint PointX="22.125" PointY="14.528595377604177" />
+          <edmx:ConnectorPoint PointX="22.875" PointY="14.528595377604177" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__paper_rec__paper__318258D2">
+          <edmx:ConnectorPoint PointX="22.125" PointY="9.2497460937499909" />
+          <edmx:ConnectorPoint PointX="22.875" PointY="9.2497460937499909" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__paper_rec__paper__39237A9A">
+          <edmx:ConnectorPoint PointX="22.125" PointY="7.5285953776041765" />
+          <edmx:ConnectorPoint PointX="22.875" PointY="7.5285953776041765" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__5BE2A6F2">
+          <edmx:ConnectorPoint PointX="6.65625" PointY="25.922506510416667" />
+          <edmx:ConnectorPoint PointX="6.65625" PointY="34.903595377604177" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="34.903595377604177" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__6383C8BA">
+          <edmx:ConnectorPoint PointX="6.9218775" PointY="25.922506510416667" />
+          <edmx:ConnectorPoint PointX="6.9218775" PointY="31.653595377604177" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="31.653595377604177" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__supplier___Suppl__6A30C649">
+          <edmx:ConnectorPoint PointX="6.3906225" PointY="25.922506510416667" />
+          <edmx:ConnectorPoint PointX="6.3906225" PointY="38.153595377604177" />
+          <edmx:ConnectorPoint PointX="7.875" PointY="38.153595377604177" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__user_loge__user___1FCDBCEB">
+          <edmx:ConnectorPoint PointX="17.125" PointY="13.768992513020834" />
+          <edmx:ConnectorPoint PointX="17.291666666666668" PointY="13.768992513020832" />
+          <edmx:ConnectorPoint PointX="17.708333333333332" PointY="13.768992513020834" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="13.768992513020834" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="WarehouseServerModel.FK__user_task__user___173876EA">
+          <edmx:ConnectorPoint PointX="17.125" PointY="15.466095377604162" />
+          <edmx:ConnectorPoint PointX="17.291666666666668" PointY="15.466095377604161" />
+          <edmx:ConnectorPoint PointX="17.708333333333332" PointY="15.466095377604162" />
+          <edmx:ConnectorPoint PointX="17.875" PointY="15.466095377604162" />
+        </edmx:AssociationConnector>
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
 </edmx:Edmx>
