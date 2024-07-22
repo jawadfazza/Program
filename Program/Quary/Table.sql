@@ -1,846 +1,805 @@
-create table admin_(
-id int not null primary key identity(1,1) ,
-username varchar(50) not null unique ,
-password varchar(50) not null ,
-user_type varchar(10) 
-)
+ï»¿CREATE TABLE admin_(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+username VARCHAR(50) NOT NULL UNIQUE,
+password VARCHAR(50) NOT NULL,
+user_type VARCHAR(10)
+);
 
-Create Table Country(
-id int not null primary key identity(1,1) ,
-name varchar(50) not null unique 
-)
+CREATE TABLE Country(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+name VARCHAR(50) NOT NULL UNIQUE
+);
 
-drop table user_loge
+DROP TABLE IF EXISTS user_loge;
 
-create table user_loge(
-id int not null primary key identity(1,1) ,
-username varchar(50) not null unique ,
-password varchar(50) not null ,
-user_type varchar(10) 
-)
-alter table user_loge add enable_delete varchar(6) default 'No'
-alter table user_loge add remamber varchar(6) default 'No'
+CREATE TABLE user_loge(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+username VARCHAR(50) NOT NULL UNIQUE,
+password VARCHAR(50) NOT NULL,
+user_type VARCHAR(10)
+);
 
+ALTER TABLE user_loge ADD enable_delete VARCHAR(6) DEFAULT 'No';
+ALTER TABLE user_loge ADD remamber VARCHAR(6) DEFAULT 'No';
 
+DROP TABLE IF EXISTS user_task;
 
-drop table user_task
+CREATE TABLE user_task(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+opreation VARCHAR(100) NOT NULL,
+active_opreation VARCHAR(5),
+user_id_ INT NOT NULL FOREIGN KEY REFERENCES user_loge(id)
+);
 
-create table user_task(
-id int not null primary key identity(1,1) ,
-opreation varchar(100) not null  ,
-active_opreation varchar(5),
-user_id_ int not null foreign key  references user_loge(id)
-)
+DROP TABLE IF EXISTS task;
 
+CREATE TABLE task(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+opreation VARCHAR(100) NOT NULL
+);
 
-drop table task
+DROP TABLE IF EXISTS user_loge_date;
 
-create table task(
-id int not null primary key identity(1,1) ,
-opreation varchar(100) not null 
-)
+CREATE TABLE user_loge_date(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+loge_date_in DATETIME NOT NULL,
+user_id_ INT NOT NULL FOREIGN KEY REFERENCES user_loge(id)
+);
 
+DROP TABLE IF EXISTS company;
 
-drop table user_loge_date
-create table user_loge_date(
-id int  not null primary key identity(1,1) , 
-loge_date_in datetime not null,
-user_id_ int not null foreign key  references user_loge(id)
-)
+CREATE TABLE company(
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+name VARCHAR(30) NOT NULL,
+street VARCHAR(MAX) NOT NULL,
+city VARCHAR(150) NOT NULL,
+country VARCHAR(30) NOT NULL,
+phone VARCHAR(30) NOT NULL,
+email VARCHAR(50) NOT NULL,
+web_site VARCHAR(60) NOT NULL,
+logo IMAGE
+);
 
-drop table company
+ALTER TABLE company ADD active VARCHAR(6) DEFAULT 'false';
+ALTER TABLE company ADD block_Date DATETIME;
 
-Create table company(
-id int  not null primary key identity(1,1) , 
-name varchar(30) not null,
-street  varchar(MAX) not null,
-city varchar(150) not null,
-country varchar(30) not null,
-phone varchar(30) not null,
-email varchar(50) not null,
-web_site varchar(60) not null,
-logo image
-)
-alter table company add active varchar(6) default 'false'
-alter table company add block_Date datetime 
+DROP TABLE IF EXISTS material_group;
 
-drop table material_group
+CREATE TABLE material_group(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© INT NOT NULL PRIMARY KEY,
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© VARCHAR(100) NOT NULL DEFAULT ''
+);
 
-create table material_group(
-ÑŞã_ÇáãÌãæÚÉ int not null primary key ,
-ÇÓã_ÇáãÌãæÚÉ varchar(100) not null default ''
-)
- 
-drop table producer 
+DROP TABLE IF EXISTS producer;
 
-create table producer(
-ÑŞã_ÇáÕÇäÚ int not null primary key ,
-ÇÓã_ÇáÕÇäÚ varchar(60) not null default '',
-ÑãÒ_ÇáäæÚ varchar(50) not null default '',
-)
+CREATE TABLE producer(
+Ø±Ù‚Ù…_Ø§Ù„ØµØ§Ù†Ø¹ INT NOT NULL PRIMARY KEY,
+Ø§Ø³Ù…_Ø§Ù„ØµØ§Ù†Ø¹ VARCHAR(60) NOT NULL DEFAULT '',
+Ø±Ù…Ø²_Ø§Ù„Ù†ÙˆØ¹ VARCHAR(50) NOT NULL DEFAULT ''
+);
 
-drop table WareHouse
+DROP TABLE IF EXISTS WareHouse;
 
-create table WareHouse(
-ÑŞã_ÇáãÓÊæÏÚ int not null primary key ,
-ÇÓã_ÇáãÓÊæÏÚ  varchar(50) not null default ''
-)
+CREATE TABLE WareHouse(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT NOT NULL PRIMARY KEY,
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(50) NOT NULL DEFAULT ''
+);
 
-drop table material
+DROP TABLE IF EXISTS material;
 
-create table material(
-ÇáÑŞã_Çáİäí int not null primary key identity(1,1),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÊæÇÌÏ_ÇáãÇÏÉ varchar(50),
-ÇáæÍÏÉ varchar(20) not null ,
-ßãíÉ int not null default 0,
-ÓÚÑ float not null default 0 ,
-ÑãÒ_ÇáØÑÇÒ varchar(30),
-ÇáãÌãæÚÉ int  foreign key references   material_group(ÑŞã_ÇáãÌãæÚÉ) default 0 ,
-ÇáÕÇäÚ int  foreign key references   producer(ÑŞã_ÇáÕÇäÚ) default 0,
-ÇáãÓÊæÏÚ int  foreign key references WareHouse(ÑŞã_ÇáãÓÊæÏÚ) default 0
-)
---alter table material add ÇáÃáíÉ int foreign key references machine_type(ÊÓáÓá) default 0
-alter table material add ÈÇáÉ varchar(6) default 'false'
-alter table material add æÕİ_ÇáãÇÏÉ  varchar(max)
-alter table material add ÕæÑÉ  varchar(100)
-alter table material add İÑŞ_ÇáÓÚÑ  int default 0
-alter table material add İÑŞ_ÇáßãíÉ  int default 0
-alter table material add ÓÚÑ_ÇáÔÑÇÁ  int default 0
-alter table material add ÓÚÑ_ÇáÈíÚ  int default 0
-alter table material add ßæÏ_ÇáãÇÏÉ  varchar(30) default ''
-alter table material add ØÑíŞÉ_ÍÓÇÈ_ÇáßáİÉ  varchar(10)
+CREATE TABLE material(
+Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+ØªÙˆØ§Ø¬Ø¯_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(50),
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL DEFAULT 0,
+Ø³Ø¹Ø± FLOAT NOT NULL DEFAULT 0,
+Ø±Ù…Ø²_Ø§Ù„Ø·Ø±Ø§Ø² VARCHAR(30),
+Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© INT FOREIGN KEY REFERENCES material_group(Ø±Ù‚Ù…_Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©) DEFAULT 0,
+Ø§Ù„ØµØ§Ù†Ø¹ INT FOREIGN KEY REFERENCES producer(Ø±Ù‚Ù…_Ø§Ù„ØµØ§Ù†Ø¹) DEFAULT 0,
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT FOREIGN KEY REFERENCES WareHouse(Ø±Ù‚Ù…_Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹) DEFAULT 0
+);
 
+ALTER TABLE material ADD Ø¨Ø§Ù„Ø© VARCHAR(6) DEFAULT 'false';
+ALTER TABLE material ADD ÙˆØµÙ_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(MAX);
+ALTER TABLE material ADD ØµÙˆØ±Ø© VARCHAR(100);
+ALTER TABLE material ADD ÙØ±Ù‚_Ø§Ù„Ø³Ø¹Ø± INT DEFAULT 0;
+ALTER TABLE material ADD ÙØ±Ù‚_Ø§Ù„ÙƒÙ…ÙŠØ© INT DEFAULT 0;
+ALTER TABLE material ADD Ø³Ø¹Ø±_Ø§Ù„Ø´Ø±Ø§Ø¡ INT DEFAULT 0;
+ALTER TABLE material ADD Ø³Ø¹Ø±_Ø§Ù„Ø¨ÙŠØ¹ INT DEFAULT 0;
+ALTER TABLE material ADD ÙƒÙˆØ¯_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(30) DEFAULT '';
+ALTER TABLE material ADD Ø·Ø±ÙŠÙ‚Ø©_Ø­Ø³Ø§Ø¨_Ø§Ù„ÙƒÙ„ÙØ© VARCHAR(10);
 
-drop table material_cost
+DROP TABLE IF EXISTS material_cost;
 
-create table material_cost( 
-ÇáãÇÏÉ int  foreign key references material(ÇáÑŞã_Çáİäí) ,
-ÓÚÑ_ÇáÔÑÇÁ int not null ,
-ßãíÉ int not null default 0,
-ÇáÊÇÑíÎ datetime
-)
-alter table material_cost add ÑŞã_İÇÊæÑÉ_ÇáÔÑÇÁ  int
+CREATE TABLE material_cost(
+Ø§Ù„Ù…Ø§Ø¯Ø© INT FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø³Ø¹Ø±_Ø§Ù„Ø´Ø±Ø§Ø¡ INT NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL DEFAULT 0,
+Ø§Ù„ØªØ§Ø±ÙŠØ® DATETIME
+);
 
+ALTER TABLE material_cost ADD Ø±Ù‚Ù…_ÙØ§ØªÙˆØ±Ø©_Ø§Ù„Ø´Ø±Ø§Ø¡ INT;
 
-drop table customer
+DROP TABLE IF EXISTS customer;
 
-create table customer(
-ÇáÑŞã int not null primary key identity(0,1),
-ÇÓã_ÇáÑÈæä varchar(50) not null unique,
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÚäæÇä_ÇáÑÈæä varchar(100),
-åÇÊİ varchar(20),
-ÇáãæÈÇíá varchar(20),
-ÇáÈÑíÏ_ÇáÇáßÊÑæäí varchar(50),
-ÇáãæŞÚ_ÇáÇáßÊÑæäí varchar(50),
-ÊÇÑíÎ datetime,
-æÕİ_ÇáÑÈæä varchar(max),
-ÕæÑÉ varchar(100)
-)
+CREATE TABLE customer(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(0,1),
+Ø§Ø³Ù…_Ø§Ù„Ø²Ø¨ÙˆÙ† VARCHAR(50) NOT NULL UNIQUE,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø¹Ù†ÙˆØ§Ù†_Ø§Ù„Ø²Ø¨ÙˆÙ† VARCHAR(100),
+Ù‡Ø§ØªÙ VARCHAR(20),
+Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ VARCHAR(20),
+Ø§Ù„Ø¨Ø±ÙŠØ¯_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50),
+Ø§Ù„Ù…ÙˆÙ‚Ø¹_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50),
+ØªØ§Ø±ÙŠØ® DATETIME,
+ÙˆØµÙ_Ø§Ù„Ø²Ø¨ÙˆÙ† VARCHAR(MAX),
+ØµÙˆØ±Ø© VARCHAR(100)
+);
 
 INSERT INTO [Computer].[dbo].[customer]
-           ([ÇÓã_ÇáÑÈæä]
-           ,[ÇáÑÕíÏ]
-           ,[ÇáÑÕíÏ_ßÊÇÈÉ]
-           ,[ÚäæÇä_ÇáÑÈæä]
-           ,[åÇÊİ]
-           ,[ÇáãæÈÇíá]
-           ,[ÇáÈÑíÏ_ÇáÇáßÊÑæäí]
-           ,[ÇáãæŞÚ_ÇáÇáßÊÑæäí]
-           ,[ÊÇÑíÎ]
-           ,[æÕİ_ÇáÑÈæä]
-           ,[ÕæÑÉ])
+           ([Ø§Ø³Ù…_Ø§Ù„Ø²Ø¨ÙˆÙ†]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø©]
+           ,[Ø¹Ù†ÙˆØ§Ù†_Ø§Ù„Ø²Ø¨ÙˆÙ†]
+           ,[Ù‡Ø§ØªÙ]
+           ,[Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„]
+           ,[Ø§Ù„Ø¨Ø±ÙŠØ¯_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ]
+           ,[Ø§Ù„Ù…ÙˆÙ‚Ø¹_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ]
+           ,[ØªØ§Ø±ÙŠØ®]
+           ,[ÙˆØµÙ_Ø§Ù„Ø²Ø¨ÙˆÙ†]
+           ,[ØµÙˆØ±Ø©])
      VALUES
-           ('ÛíÑ ãÚÑæİ'
+           ('ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ'
            ,0
-           ,'ÕİÑ'
+           ,'ØµÙØ±'
            ,''
            ,''
            ,''
            ,''
            ,''
-           ,GETDATE ( )
+           ,GETDATE()
            ,''
-           ,'')
+           ,'');
 
+DROP TABLE IF EXISTS customer_debit;
 
-drop table customer_debit
+CREATE TABLE customer_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT 'ØªÙˆØ±ÙŠØ¯ Ø¨Ø¶Ø§Ø¹Ø© Ù„Ø¹Ù…ÙŠÙ„',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+customer_id INT FOREIGN KEY REFERENCES customer(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ãÏíä
-create table customer_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default 'ÊæÑíÏ ÈÖÇÚÉ áÚãíá ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-customer_id int  foreign key references   customer(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS customer_credit;
 
-drop table customer_credit
+CREATE TABLE customer_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT 'ØªØ³Ø¯ÙŠØ¯ Ù‚ÙŠÙ…Ø© Ø§Ù„Ø¨Ø¶Ø§Ø¹Ø©',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+customer_id INT FOREIGN KEY REFERENCES customer(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ÏÇÆä
-create table customer_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default ' ÊÓÏíÏ ŞíãÉ ÇáÈÖÇÚÉ ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-customer_id int  foreign key references   customer(ÇáÑŞã)
-)
+CREATE TABLE customer_ReveiveTime(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+customer_id INT FOREIGN KEY REFERENCES customer(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-create table customer_ReveiveTime(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-customer_id int  foreign key references   customer(ÇáÑŞã)
-)
-alter table customer_ReveiveTime add Êã_ÇáÏİÚ varchar(10) default 'false' 
+ALTER TABLE customer_ReveiveTime ADD ØªÙ…_Ø§Ù„Ø¯ÙØ¹ VARCHAR(10) DEFAULT 'false';
 
+DROP TABLE IF EXISTS supplier;
 
-drop table supplier
-
-create table supplier(
-ÇáÑŞã int not null primary key identity(0,1),
-ÇÓã_ÇáãæÑÏ varchar(50) not null unique,
-ÇáÑÕíÏ float not null default 0 ,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ' ,
-ÚäæÇä_ÇáãæÑÏ varchar(100),
-åÇÊİ varchar(20),
-ÇáãæÈÇíá varchar(20),
-ÇáÈÑíÏ_ÇáÇáßÊÑæäí varchar(50),
-ÇáãæŞÚ_ÇáÇáßÊÑæäí varchar(50),
-ÊÇÑíÎ datetime ,
-æÕİ_ÇáãæÑÏ varchar(max),
-ÕæÑÉ varchar(100)
-)
+CREATE TABLE supplier(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(0,1),
+Ø§Ø³Ù…_Ø§Ù„Ù…ÙˆØ±Ø¯ VARCHAR(50) NOT NULL UNIQUE,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø¹Ù†ÙˆØ§Ù†_Ø§Ù„Ù…ÙˆØ±Ø¯ VARCHAR(100),
+Ù‡Ø§ØªÙ VARCHAR(20),
+Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ VARCHAR(20),
+Ø§Ù„Ø¨Ø±ÙŠØ¯_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50),
+Ø§Ù„Ù…ÙˆÙ‚Ø¹_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50),
+ØªØ§Ø±ÙŠØ® DATETIME,
+ÙˆØµÙ_Ø§Ù„Ù…ÙˆØ±Ø¯ VARCHAR(MAX),
+ØµÙˆØ±Ø© VARCHAR(100)
+);
 
 INSERT INTO [Computer].[dbo].[supplier]
-           ([ÇÓã_ÇáãæÑÏ]
-           ,[ÇáÑÕíÏ]
-           ,[ÇáÑÕíÏ_ßÊÇÈÉ]
-           ,[ÚäæÇä_ÇáãæÑÏ]
-           ,[åÇÊİ]
-           ,[ÇáãæÈÇíá]
-           ,[ÇáÈÑíÏ_ÇáÇáßÊÑæäí]
-           ,[ÇáãæŞÚ_ÇáÇáßÊÑæäí]
-           ,[ÊÇÑíÎ]
-           ,[æÕİ_ÇáãæÑÏ]
-           ,[ÕæÑÉ])
+           ([Ø§Ø³Ù…_Ø§Ù„Ù…ÙˆØ±Ø¯]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø©]
+           ,[Ø¹Ù†ÙˆØ§Ù†_Ø§Ù„Ù…ÙˆØ±Ø¯]
+           ,[Ù‡Ø§ØªÙ]
+           ,[Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„]
+           ,[Ø§Ù„Ø¨Ø±ÙŠØ¯_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ]
+           ,[Ø§Ù„Ù…ÙˆÙ‚Ø¹_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ]
+           ,[ØªØ§Ø±ÙŠØ®]
+           ,[ÙˆØµÙ_Ø§Ù„Ù…ÙˆØ±Ø¯]
+           ,[ØµÙˆØ±Ø©])
      VALUES
-           ('ÛíÑ ãÚÑæİ'
+           ('ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ'
            ,0
-           ,'ÕİÑ'
+           ,'ØµÙØ±'
            ,''
            ,''
            ,''
            ,''
            ,''
-           ,GETDATE ( )
+           ,GETDATE()
            ,''
-           ,'')
+           ,'');
 
-drop table supplier_debit
+DROP TABLE IF EXISTS supplier_debit;
 
---ãÏíä
-create table supplier_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default 'ÊÓÏíÏ ãÈáÛ ááãæÑÏ ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-Supplier_id int  foreign key references   supplier(ÇáÑŞã)
-)
+CREATE TABLE supplier_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT 'ØªÙˆØ±ÙŠØ¯ Ù…Ø¨Ù„Øº Ù„Ù„Ù…ÙˆØ±Ø¯',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+Supplier_id INT FOREIGN KEY REFERENCES supplier(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-drop table supplier_credit
+DROP TABLE IF EXISTS supplier_credit;
 
---ÏÇÆä
-create table supplier_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default 'ÇÓÊíÑÇÏ ÈÖÇÚÉ ãä ÇáãæÑÏ ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-Supplier_id int  foreign key references   supplier(ÇáÑŞã)
-)
+CREATE TABLE supplier_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT 'Ø§Ø³ØªÙŠØ±Ø§Ø¯ Ø¨Ø¶Ø§Ø¹Ø© Ù…Ù† Ø§Ù„Ù…ÙˆØ±Ø¯',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+Supplier_id INT FOREIGN KEY REFERENCES supplier(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-create table supplier_PayTime(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-Supplier_id int  foreign key references   supplier(ÇáÑŞã)
-)
-alter table supplier_PayTime add Êã_ÇáÏİÚ varchar(10) default 'false'
+CREATE TABLE supplier_PayTime(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+Supplier_id INT FOREIGN KEY REFERENCES supplier(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+ALTER TABLE supplier_PayTime ADD ØªÙ…_Ø§Ù„Ø¯ÙØ¹ VARCHAR(10) DEFAULT 'false';
 
+DROP TABLE IF EXISTS material_debit;
 
-Drop table material_debit
---ãÏíä
-create table material_debit(
-ÇáÑŞã int not null primary key identity(1,1) ,
-ÊÇÑíÎ datetime not null ,
-ÇáÑÕíÏ float not null,
-ãä varchar(100) ,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÑŞã_İÇÊæÑÉ_ÇáãÕÏÑ int  ,
-ÊÇÑíÎ_İÇÊæÑÉ_ÇáãÕÏÑ datetime  ,
-ÇáãÕÏÑ varchar(40),
-ÇáãÓÊæÏÚ varchar(10) ,
-ÇáãæÑÏ int not null foreign key references supplier(ÇáÑŞã),
-)
-alter table material_debit add ÍĞİÉ varchar(5) default ''
-alter table material_debit add äæÚ_ÇáÚãáíÉ varchar(10) default 'ÔÑÇÁ' 
-alter table material_debit add ÍÓã_ãßÊÓÈ float default 0 
-alter table material_debit add ãÕÇÑíİ_ãÖÇİÉ float default 0 
-alter table material_debit add ãÕÇÑíİ_Úáì_ÍÓÇÈ varchar(20)  
-alter table material_debit add ãÑÍá varchar(5)   --true or false Êã ÊÑÍíá ÇáŞíæÏ
-alter table material_debit add ØÑíŞÉ_ÇáÏİÚ varchar(10)  
-alter table material_debit add ÇÓã_ÇáÍÓÇÈ varchar(30) 
-alter table material_debit add ÓäÏ_ÇáÏİÚ int default 0
+CREATE TABLE material_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL,
+Ù…Ù† VARCHAR(100),
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø±Ù‚Ù…_ÙØ§ØªÙˆØ±Ø©_Ø§Ù„Ù…ØµØ¯Ø± INT,
+ØªØ§Ø±ÙŠØ®_ÙØ§ØªÙˆØ±Ø©_Ø§Ù„Ù…ØµØ¯Ø± DATETIME,
+Ø§Ù„Ù…ØµØ¯Ø± VARCHAR(40),
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(10),
+Ø§Ù„Ù…ÙˆØ±Ø¯ INT NOT NULL FOREIGN KEY REFERENCES supplier(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+ALTER TABLE material_debit ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_debit ADD Ù†ÙˆØ¹_Ø§Ù„Ø¹Ù…Ù„ÙŠØ© VARCHAR(10) DEFAULT 'Ø´Ø±Ø§Ø¡';
+ALTER TABLE material_debit ADD Ø­Ø³Ø§Ù…_Ù…ÙƒØªØ³Ø¨ FLOAT DEFAULT 0;
+ALTER TABLE material_debit ADD Ù…ØµØ§Ø±ÙŠÙ_Ù…Ø¶Ø§ÙØ© FLOAT DEFAULT 0;
+ALTER TABLE material_debit ADD Ù…ØµØ§Ø±ÙŠÙ_Ø¹Ù„Ù‰_Ø­Ø³Ø§Ø¨ VARCHAR(20);
+ALTER TABLE material_debit ADD Ù…Ø±Ø­Ù„ VARCHAR(5);
+ALTER TABLE material_debit ADD Ø·Ø±ÙŠÙ‚Ø©_Ø§Ù„Ø¯ÙØ¹ VARCHAR(10);
+ALTER TABLE material_debit ADD Ø§Ø³Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(30);
+ALTER TABLE material_debit ADD Ø³Ù†Ø¯_Ø§Ù„Ø¯ÙØ¹ INT DEFAULT 0;
 
+DROP TABLE IF EXISTS material_debit_list;
 
+CREATE TABLE material_debit_list(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_debit(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø± FLOAT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø±_Ø§Ù„Ø¬Ù…Ø§Ù„ÙŠ FLOAT NOT NULL,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(50)
+);
 
+ALTER TABLE material_debit_list ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE material_debit_list ADD ÙƒÙ…ÙŠØ©_ÙƒØªØ§Ø¨Ø© VARCHAR(50);
+ALTER TABLE material_debit_list ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_debit_list ADD Ø­Ø³Ø§Ù…_Ù…ÙƒØªØ³Ø¨ FLOAT DEFAULT 0;
 
+DROP TABLE IF EXISTS material_debit_penfit_payment;
 
-/**/
-drop table material_debit_list
---ãæÇÏ ãÏíä
-create table material_debit_list(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_debit(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ÇáßãíÉ int not null ,
-ÇáÓÚÑ float not null ,	
-ÇáÓÚÑ_ÇáÌãÇáí float not null ,
-ãáÇÍÙÇÊ varchar(50) 
-)
-alter table material_debit_list add ÇáãÓÊæÏÚ int 
-alter table material_debit_list add ÇáßãíÉ_ßÊÇÈÉ varchar(50)
-alter table material_debit_list add ÍĞİÉ varchar(5) default ''
-alter table material_debit_list add ÍÓã_ãßÊÓÈ float default 0 
+CREATE TABLE material_debit_penfit_payment(
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_debit(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT NOT NULL,
+Ù†Ø³Ø¨Ø©_Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT NOT NULL,
+Ø§Ù„Ø¯ÙØ¹_ÙƒÙ„ INT NOT NULL,
+Ø¹Ø¯Ø¯_Ø§Ù„Ø£Ù‚Ø³Ø§Ø· INT NOT NULL
+);
 
-drop table material_debit_penfit_payment
---ãæÇÏ ÏÇÆä
-create table material_debit_penfit_payment(
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_debit(ÇáÑŞã),
-ÇáİÇÆÏÉ int not null,
-äÓÈÉ_ÇáİÇÆÏÉ int not null,
-ÇáÏİÚ_ßá int not null,
-ÚÏÏ_ÇáÃŞÓÇØ int not null)
-alter table material_debit_penfit_payment add ÇáÑÚÈæä int default 0
+ALTER TABLE material_debit_penfit_payment ADD Ø§Ù„Ø¹Ø±Ø¨ÙˆÙ† INT DEFAULT 0;
 
+DROP TABLE IF EXISTS material_debit_return;
 
-Drop table material_debit_return
---ãÏíä
-create table material_debit_return(
-ÇáÑŞã int not null primary key identity(1,1) ,
-ÊÇÑíÎ datetime not null ,
-ÇáÑÕíÏ float not null,
-ãä varchar(100) ,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÑŞã_İÇÊæÑÉ_ÇáãÕÏÑ int  ,
-ÊÇÑíÎ_İÇÊæÑÉ_ÇáãÕÏÑ datetime  ,
-ÇáãÕÏÑ varchar(40),
-ÇáãÓÊæÏÚ varchar(10) ,
-ÇáÚãíá int not null foreign key references customer(ÇáÑŞã),
-)
-alter table material_debit_return add ÍĞİÉ varchar(5) default ''
-alter table material_debit_return add äæÚ_ÇáÚãáíÉ varchar(10) default 'ÔÑÇÁ' 
-alter table material_debit_return add ÍÓã_ãßÊÓÈ float default 0 
-alter table material_debit_return add ãÕÇÑíİ_ãÖÇİÉ float default 0 
-alter table material_debit_return add ãÕÇÑíİ_Úáì_ÍÓÇÈ varchar(20)  
-alter table material_debit_return add ãÑÍá varchar(5)   --true or false Êã ÊÑÍíá ÇáŞíæÏ
-alter table material_debit_return add ØÑíŞÉ_ÇáÏİÚ varchar(10)  
-alter table material_debit_return add ÇÓã_ÇáÍÓÇÈ varchar(30) 
-alter table material_debit_return add ÇáßáİÉ float 
+CREATE TABLE material_debit_return(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL,
+Ù…Ù† VARCHAR(100),
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø±Ù‚Ù…_ÙØ§ØªÙˆØ±Ø©_Ø§Ù„Ù…ØµØ¯Ø± INT,
+ØªØ§Ø±ÙŠØ®_ÙØ§ØªÙˆØ±Ø©_Ø§Ù„Ù…ØµØ¯Ø± DATETIME,
+Ø§Ù„Ù…ØµØ¯Ø± VARCHAR(40),
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(10),
+Ø§Ù„Ø¹Ù…ÙŠÙ„ INT NOT NULL FOREIGN KEY REFERENCES customer(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+ALTER TABLE material_debit_return ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_debit_return ADD Ù†ÙˆØ¹_Ø§Ù„Ø¹Ù…Ù„ÙŠØ© VARCHAR(10) DEFAULT 'Ø´Ø±Ø§Ø¡';
+ALTER TABLE material_debit_return ADD Ø­Ø³Ø§Ù…_Ù…ÙƒØªØ³Ø¨ FLOAT DEFAULT 0;
+ALTER TABLE material_debit_return ADD Ù…ØµØ§Ø±ÙŠÙ_Ù…Ø¶Ø§ÙØ© FLOAT DEFAULT 0;
+ALTER TABLE material_debit_return ADD Ù…ØµØ§Ø±ÙŠÙ_Ø¹Ù„Ù‰_Ø­Ø³Ø§Ø¨ VARCHAR(20);
+ALTER TABLE material_debit_return ADD Ù…Ø±Ø­Ù„ VARCHAR(5);
+ALTER TABLE material_debit_return ADD Ø·Ø±ÙŠÙ‚Ø©_Ø§Ù„Ø¯ÙØ¹ VARCHAR(10);
+ALTER TABLE material_debit_return ADD Ø§Ø³Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(30);
+ALTER TABLE material_debit_return ADD Ø§Ù„ÙƒÙ„ÙØ© FLOAT;
 
--- ÇãÇ ÔÑÇÁ Ãæ ÑÏø ÈÖÇÚÉ 
+DROP TABLE IF EXISTS material_debit_list_return;
 
+CREATE TABLE material_debit_list_return(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_debit_return(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø± FLOAT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø±_Ø§Ù„Ø¬Ù…Ø§Ù„ÙŠ FLOAT NOT NULL,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(50)
+);
 
-/**/
-drop table material_debit_list_return
---ãæÇÏ ãÏíä
-create table material_debit_list_return(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_debit_return(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ÇáßãíÉ int not null ,
-ÇáÓÚÑ float not null ,	
-ÇáÓÚÑ_ÇáÌãÇáí float not null ,
-ãáÇÍÙÇÊ varchar(50) 
-)
-alter table material_debit_list_return add ÇáãÓÊæÏÚ int 
-alter table material_debit_list_return add ÇáßãíÉ_ßÊÇÈÉ varchar(50)
-alter table material_debit_list_return add ÍĞİÉ varchar(5) default ''
-alter table material_debit_list_return add ÍÓã_ãßÊÓÈ float default 0 
-alter table material_debit_list_return add ÓÚÑ_ÇáÔÑÇÁ int 
-alter table material_debit_list_return add ÇáßáİÉ float 
+ALTER TABLE material_debit_list_return ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE material_debit_list_return ADD ÙƒÙ…ÙŠØ©_ÙƒØªØ§Ø¨Ø© VARCHAR(50);
+ALTER TABLE material_debit_list_return ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_debit_list_return ADD Ø­Ø³Ø§Ù…_Ù…ÙƒØªØ³Ø¨ FLOAT DEFAULT 0;
+ALTER TABLE material_debit_list_return ADD Ø³Ø¹Ø±_Ø§Ù„Ø´Ø±Ø§Ø¡ INT;
+ALTER TABLE material_debit_list_return ADD Ø§Ù„ÙƒÙ„ÙØ© FLOAT;
 
+DROP TABLE IF EXISTS material_credit;
 
+CREATE TABLE material_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ØªØ§Ø±ÙŠØ®_Ø§Ù„Ø¨ÙŠØ¹ DATETIME NOT NULL,
+ØªØ§Ø±ÙŠØ®_Ø§Ù„ØªØ³Ù„ÙŠÙ… DATETIME NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100),
+Ø·Ø±ÙŠÙ‚Ø©_Ø§Ù„Ø¯ÙØ¹ VARCHAR(20),
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(10),
+Ø§Ù„Ø¹Ù…ÙŠÙ„ INT NOT NULL FOREIGN KEY REFERENCES customer(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+ALTER TABLE material_credit ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit ADD Ø¨Ø§Ù„Ø© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit ADD Ù†ÙˆØ¹_Ø§Ù„Ø¹Ù…Ù„ÙŠØ© VARCHAR(30) DEFAULT 'Ø¨ÙŠØ¹';
+ALTER TABLE material_credit ADD Ø­Ø³Ø§Ù…_Ù…Ù…Ù†ÙˆØ­ FLOAT DEFAULT 0;
+ALTER TABLE material_credit ADD Ù…ØµØ§Ø±ÙŠÙ_Ù…Ø¶Ø§ÙØ© FLOAT DEFAULT 0;
+ALTER TABLE material_credit ADD Ù…ØµØ§Ø±ÙŠÙ_Ø¹Ù„Ù‰_Ø­Ø³Ø§Ø¨ VARCHAR(20);
+ALTER TABLE material_credit ADD Ù…Ø±Ø­Ù„ VARCHAR(5);
+ALTER TABLE material_credit ADD Ø§Ø³Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(30);
+ALTER TABLE material_credit ADD Ø³Ù†Ø¯_Ø§Ù„Ù‚Ø¨Ø¶ INT DEFAULT 0;
+ALTER TABLE material_credit ADD Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT DEFAULT 0;
+ALTER TABLE material_credit ADD Ø§Ù„Ø¯ÙØ¹_ÙƒÙ„ INT DEFAULT 0;
+ALTER TABLE material_credit ADD Ø¹Ø¯Ø¯_Ø§Ù„Ø£Ù‚Ø³Ø§Ø· INT DEFAULT 0;
+ALTER TABLE material_credit ADD Ø§Ù„ÙƒÙ„ÙØ© FLOAT;
 
-drop table material_credit
---ÏÇÆä
-create table  material_credit(
-ÇáÑŞã int not null primary key identity(1,1) ,
-ÊÇÑíÎ_ÇáÈíÚ datetime not null ,
-ÊÇÑíÎ_ÇáÊÓáíã datetime not null ,
-ÇáÑÕíÏ float not null,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) ,
-ØÑíŞÉ_ÇáÏİÚ varchar(20),--äŞÏÇ Çæ áÇÌá
-ÇáãÓÊæÏÚ varchar(10),
-ÇáÚãíá int not null foreign key references customer(ÇáÑŞã)
-)
-alter table material_credit add ÍĞİÉ varchar(5) default ''
-alter table material_credit add ÈÇáÉ varchar(5) default ''
-alter table material_credit add äæÚ_ÇáÚãáíÉ varchar(30) default 'ÈíÚ' 
-alter table material_credit add ÍÓã_ããäæÍ float default 0 
-alter table material_credit add ãÕÇÑíİ_ãÖÇİÉ float default 0 
-alter table material_credit add ãÕÇÑíİ_Úáì_ÍÓÇÈ varchar(20)  
-alter table material_credit add ãÑÍá varchar(5)   --true or false Êã ÊÑÍíá ÇáŞíæÏ
-alter table material_credit add ÇÓã_ÇáÍÓÇÈ varchar(30) 
-alter table material_credit add ÓäÏ_ÇáŞÈÖ int default 0
-alter table material_credit add ÇáİÇÆÏÉ int default 0
-alter table material_credit add ÇáÏİÚ_ßá int default 0
-alter table material_credit add ÚÏÏ_ÇáÃŞÓÇØ int default 0
-alter table material_credit add ÇáßáİÉ float 
+DROP TABLE IF EXISTS material_credit_list;
 
+CREATE TABLE material_credit_list(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_credit(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø± FLOAT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø±_Ø§Ù„Ø¬Ù…Ø§Ù„ÙŠ FLOAT NOT NULL,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(50)
+);
 
--- ÇãÇ ÈíÚ Ãæ ÑÏø ãÔÊÑíÇÊ 
+ALTER TABLE material_credit_list ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE material_credit_list ADD ÙƒÙ…ÙŠØ©_ÙƒØªØ§Ø¨Ø© VARCHAR(50);
+ALTER TABLE material_credit_list ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit_list ADD Ø­Ø³Ø§Ù…_Ù…Ù…Ù†ÙˆØ­ FLOAT DEFAULT 0;
+ALTER TABLE material_credit_list ADD Ø³Ø¹Ø±_Ø§Ù„Ø´Ø±Ø§Ø¡ INT;
+ALTER TABLE material_credit_list ADD Ø§Ù„ÙƒÙ„ÙØ© FLOAT;
 
+DROP TABLE IF EXISTS material_credit_penfit_payment;
 
+CREATE TABLE material_credit_penfit_payment(
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_credit(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT NOT NULL,
+Ù†Ø³Ø¨Ø©_Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT NOT NULL,
+Ø§Ù„Ø¯ÙØ¹_ÙƒÙ„ INT NOT NULL,
+Ø¹Ø¯Ø¯_Ø§Ù„Ø£Ù‚Ø³Ø§Ø· INT NOT NULL
+);
 
-drop table material_credit_list
---ãæÇÏ ÏÇÆä
-create table material_credit_list(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_credit(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ÇáßãíÉ int not null ,
-ÇáÓÚÑ float not null ,	
-ÇáÓÚÑ_ÇáÌãÇáí float not null ,
-ãáÇÍÙÇÊ varchar(50) 
-)
-alter table material_credit_list add ÇáãÓÊæÏÚ int 
-alter table material_credit_list add ÇáßãíÉ_ßÊÇÈÉ varchar(50)
-alter table material_credit_list add ÍĞİÉ varchar(5) default ''
-alter table material_credit_list add ÍÓã_ããäæÍ float default 0 
-alter table material_credit_list add ÓÚÑ_ÇáÔÑÇÁ int 
-alter table material_credit_list add ÇáßáİÉ float 
+ALTER TABLE material_credit_penfit_payment ADD Ø§Ù„Ø¹Ø±Ø¨ÙˆÙ† INT DEFAULT 0;
 
+DROP TABLE IF EXISTS material_credit_return;
 
-drop table material_credit_penfit_payment
---ãæÇÏ ÏÇÆä
-create table material_credit_penfit_payment(
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_credit(ÇáÑŞã),
-ÇáİÇÆÏÉ int not null,
-äÓÈÉ_ÇáİÇÆÏÉ int not null,
-ÇáÏİÚ_ßá int not null,
-ÚÏÏ_ÇáÃŞÓÇØ int not null)
-alter table material_credit_penfit_payment add ÇáÑÚÈæä int default 0
+CREATE TABLE material_credit_return(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ØªØ§Ø±ÙŠØ®_Ø§Ù„Ø¨ÙŠØ¹ DATETIME NOT NULL,
+ØªØ§Ø±ÙŠØ®_Ø§Ù„ØªØ³Ù„ÙŠÙ… DATETIME NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100),
+Ø·Ø±ÙŠÙ‚Ø©_Ø§Ù„Ø¯ÙØ¹ VARCHAR(20),
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(10),
+Ø§Ù„Ù…ÙˆØ±Ø¯ INT NOT NULL FOREIGN KEY REFERENCES supplier(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+ALTER TABLE material_credit_return ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit_return ADD Ø¨Ø§Ù„Ø© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit_return ADD Ù†ÙˆØ¹_Ø§Ù„Ø¹Ù…Ù„ÙŠØ© VARCHAR(30) DEFAULT 'Ø¨ÙŠØ¹';
+ALTER TABLE material_credit_return ADD Ø­Ø³Ø§Ù…_Ù…Ù…Ù†ÙˆØ­ FLOAT DEFAULT 0;
+ALTER TABLE material_credit_return ADD Ù…ØµØ§Ø±ÙŠÙ_Ù…Ø¶Ø§ÙØ© FLOAT DEFAULT 0;
+ALTER TABLE material_credit_return ADD Ù…ØµØ§Ø±ÙŠÙ_Ø¹Ù„Ù‰_Ø­Ø³Ø§Ø¨ VARCHAR(20);
+ALTER TABLE material_credit_return ADD Ù…Ø±Ø­Ù„ VARCHAR(5);
+ALTER TABLE material_credit_return ADD Ø§Ø³Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(30);
 
+DROP TABLE IF EXISTS material_credit_list_return;
 
-drop table material_credit_return
---ÏÇÆä
-create table  material_credit_return(
-ÇáÑŞã int not null primary key identity(1,1) ,
-ÊÇÑíÎ_ÇáÈíÚ datetime not null ,
-ÊÇÑíÎ_ÇáÊÓáíã datetime not null ,
-ÇáÑÕíÏ float not null,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) ,
-ØÑíŞÉ_ÇáÏİÚ varchar(20),--äŞÏÇ Çæ áÇÌá
-ÇáãÓÊæÏÚ varchar(10),
-ÇáãæÑÏ int not null foreign key references supplier(ÇáÑŞã)
-)
-alter table material_credit_return add ÍĞİÉ varchar(5) default ''
-alter table material_credit_return add ÈÇáÉ varchar(5) default ''
-alter table material_credit_return add äæÚ_ÇáÚãáíÉ varchar(30) default 'ÈíÚ' 
-alter table material_credit_return add ÍÓã_ããäæÍ float default 0 
-alter table material_credit_return add ãÕÇÑíİ_ãÖÇİÉ float default 0 
-alter table material_credit_return add ãÕÇÑíİ_Úáì_ÍÓÇÈ varchar(20)  
-alter table material_credit_return add ãÑÍá varchar(5)   --true or false Êã ÊÑÍíá ÇáŞíæÏ
-alter table material_credit_return add ÇÓã_ÇáÍÓÇÈ varchar(30) 
+CREATE TABLE material_credit_list_return(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES material_credit_return(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø± FLOAT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø±_Ø§Ù„Ø¬Ù…Ø§Ù„ÙŠ FLOAT NOT NULL,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(50)
+);
 
--- ÇãÇ ÈíÚ Ãæ ÑÏø ãÔÊÑíÇÊ 
+ALTER TABLE material_credit_list_return ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE material_credit_list_return ADD ÙƒÙ…ÙŠØ©_ÙƒØªØ§Ø¨Ø© VARCHAR(50);
+ALTER TABLE material_credit_list_return ADD Ø­Ø°ÙØ© VARCHAR(5) DEFAULT '';
+ALTER TABLE material_credit_list_return ADD Ø­Ø³Ø§Ù…_Ù…Ù…Ù†ÙˆØ­ FLOAT DEFAULT 0;
 
-drop table material_credit_list_return
---ãæÇÏ ÏÇÆä
-create table material_credit_list_return(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references material_credit_return(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ÇáßãíÉ int not null ,
-ÇáÓÚÑ float not null ,	
-ÇáÓÚÑ_ÇáÌãÇáí float not null ,
-ãáÇÍÙÇÊ varchar(50) 
-)
-alter table material_credit_list_return add ÇáãÓÊæÏÚ int 
-alter table material_credit_list_return add ÇáßãíÉ_ßÊÇÈÉ varchar(50)
-alter table material_credit_list_return add ÍĞİÉ varchar(5) default ''
-alter table material_credit_list_return add ÍÓã_ããäæÍ float default 0 
+DROP TABLE IF EXISTS box;
 
-/**/
-drop table box
---ÑÕíÏ ãÏíä
-create table box(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇÓã_ÇáÕäÏæŞ varchar(20)not null,
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ datetime not null,
-)
+CREATE TABLE box(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„ØµÙ†Ø¯ÙˆÙ‚ VARCHAR(20) NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL
+);
 
 INSERT INTO [Computer].[dbo].[box]
-           ([ÇÓã_ÇáÕäÏæŞ]
-           ,[ÇáÑÕíÏ]
-           ,[ÇáÑÕíÏ_ßÊÇÈÉ]
-           ,[ÊÇÑíÎ])
+           ([Ø§Ø³Ù…_Ø§Ù„ØµÙ†Ø¯ÙˆÙ‚]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯]
+           ,[Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø©]
+           ,[ØªØ§Ø±ÙŠØ®])
      VALUES
-           ('ÕäÏæŞ ÇáíæãíÉ'
+           ('ØµÙ†Ø¯ÙˆÙ‚ Ø§Ù„ÙŠÙˆÙ…ÙŠØ©'
            ,0
-           ,'ÕİÑ'
-           ,CURRENT_TIMESTAMP)
-GO
+           ,'ØµÙØ±'
+           ,CURRENT_TIMESTAMP);
 
-drop table box_debit
+DROP TABLE IF EXISTS box_debit;
 
---ãÏíä
-create table box_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default ' ÇáŞÈÖ äŞÏÇ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-box_id int  foreign key references   box(ÇáÑŞã),
-)
+CREATE TABLE box_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT 'Ø§Ù„Ù‚Ø±Ø¶ Ù†Ù‚Ø¯Ø§',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+box_id INT FOREIGN KEY REFERENCES box(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-drop table box_credit
+DROP TABLE IF EXISTS box_credit;
 
---ÏÇÆä
-create table box_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default ' ÊÓÏíÏ äŞÏÇ ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-box_id int  foreign key references   box(ÇáÑŞã)
-)
+CREATE TABLE box_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT 'ØªØ³Ø¯ÙŠØ¯ Ù†Ù‚Ø¯Ø§',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+box_id INT FOREIGN KEY REFERENCES box(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+DROP TABLE IF EXISTS bank_details;
 
-drop table bank_details
+CREATE TABLE bank_details(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„Ø¨Ù†Ùƒ VARCHAR(50) NOT NULL,
+Ø¹Ù†ÙˆØ§Ù†_Ø§Ù„Ø¨Ù†Ùƒ VARCHAR(100),
+Ù‡Ø§ØªÙ VARCHAR(20),
+Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ VARCHAR(20),
+Ø§Ù„Ø¨Ø±ÙŠØ¯_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50),
+Ø§Ù„Ù…ÙˆÙ‚Ø¹_Ø§Ù„Ø§Ù„ÙƒØªØ±ÙˆÙ†ÙŠ VARCHAR(50)
+);
 
-create table bank_details(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇÓã_ÇáÈäß  varchar(50) not null ,
-ÚäæÇä_ÇáÈäß varchar(100),
-åÇÊİ varchar(20),
-ÇáãæÈÇíá varchar(20),
-ÇáÈÑíÏ_ÇáÇáßÊÑæäí varchar(50),
-ÇáãæŞÚ_ÇáÇáßÊÑæäí varchar(50)
-)
-alter table bank_details add ÊÚáíŞ varchar(100) 
+ALTER TABLE bank_details ADD ØªØ¹Ù„ÙŠÙ‚ VARCHAR(100);
 
+DROP TABLE IF EXISTS bank_account;
 
-drop table bank_account
+CREATE TABLE bank_account(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(50) NOT NULL,
+Ø±Ù‚Ù…_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(20) NOT NULL,
+Ù†ÙˆØ¹_Ø§Ù„Ø­Ø³Ø§Ø¨ VARCHAR(30) NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL,
+bank_id INT FOREIGN KEY REFERENCES bank_details(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-create table bank_account(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇÓã_ÇáÍÓÇÈ varchar(50) not null ,
-ÑŞã_ÇáÍÓÇÈ varchar(20) not null,
-äæÚ_ÇáÍÓÇÈ varchar(30)not null,
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ datetime not null,
-bank_id int  foreign key references   bank_details(ÇáÑŞã)
-)
-alter table bank_account add ÊÚáíŞ varchar(100) 
+ALTER TABLE bank_account ADD ØªØ¹Ù„ÙŠÙ‚ VARCHAR(100);
 
+DROP TABLE IF EXISTS bank_debit;
 
-drop table bank_debit
+CREATE TABLE bank_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT ' ',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+bank_id INT FOREIGN KEY REFERENCES bank_account(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ãÏíä
-create table bank_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default ' ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-bank_id int  foreign key references   bank_account(ÇáÑŞã),
-)
+DROP TABLE IF EXISTS bank_credit;
 
-drop table bank_credit
+CREATE TABLE bank_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT ' ',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+bank_id INT FOREIGN KEY REFERENCES bank_account(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ÏÇÆä
-create table bank_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default ' ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-bank_id int  foreign key references   bank_account(ÇáÑŞã)
-)
+CREATE TABLE bonds(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT ' ',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT ' ',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME
+);
 
+ALTER TABLE bonds ADD Ù…Ø±Ø­Ù„ VARCHAR(5);
 
-create table bonds(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default ' ',
-Åáì varchar(100) default ' ',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime
-)
-alter table bonds add   ãÑÍá varchar(5)
+DROP TABLE IF EXISTS asset;
 
-drop table asset
---ÑÕíÏ ãÏíä
-create table asset(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇÓã_ÇáÃÕá varchar(20)not null,
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ datetime not null,
-)
-alter table asset add äæÚ_ÇáÃÕá  varchar(100)
-alter table asset add äÓÈÉ_ÇáÃåÊáÇß  int default 0
-alter table asset add ŞíãÉ_ÇáäİÇíÉ int default 0
-alter table asset add ãÌãÚ_ÇáÅåÊáÇß  int default 0
+CREATE TABLE asset(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„Ø£ØµÙ„ VARCHAR(20) NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL
+);
 
-drop table asset_debit
+ALTER TABLE asset ADD Ù†ÙˆØ¹_Ø§Ù„Ø£ØµÙ„ VARCHAR(100);
+ALTER TABLE asset ADD Ù†Ø³Ø¨Ø©_Ø§Ù„Ø£Ù‡ØªÙ„Ø§Ùƒ INT DEFAULT 0;
+ALTER TABLE asset ADD Ù‚ÙŠÙ…Ø©_Ø§Ù„Ù†ÙØ§ÙŠØ© INT DEFAULT 0;
+ALTER TABLE asset ADD Ù…Ø¬Ù…ÙˆØ¹_Ø§Ù„Ø£Ù‡ØªÙ„Ø§Ùƒ INT DEFAULT 0;
 
---ãÏíä
-create table asset_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-asset_id int  foreign key references   asset(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS asset_debit;
 
-drop table asset_credit
+CREATE TABLE asset_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+asset_id INT FOREIGN KEY REFERENCES asset(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ÏÇÆä
-create table asset_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-asset_id int  foreign key references   asset(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS asset_credit;
 
+CREATE TABLE asset_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+asset_id INT FOREIGN KEY REFERENCES asset(Ø§Ù„Ø±Ù‚Ù…)
+);
 
+DROP TABLE IF EXISTS paper_receive;
 
-drop table paper_receive
+CREATE TABLE paper_receive(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME,
+ØªØ§Ø±ÙŠØ®_Ø§Ù„Ø§Ø³ØªØ­Ù‚Ø§Ù‚ DATETIME,
+Ø§Ù„Ø³Ø§Ø­Ø¨ VARCHAR(50),
+Ø§Ù„Ù…Ø³Ø­ÙˆØ¨_Ø¹Ù„ÙŠÙ‡ VARCHAR(50)
+);
 
-create table paper_receive(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ  datetime,
-ÊÇÑíÎ_ÇáÅÓÊÍŞÇŞ  datetime,
-ÇáÓÇÍÈ varchar(50),
-ÇáãÓÍæÈ_Úáíå varchar(50))
+DROP TABLE IF EXISTS paper_receive_debit;
 
+CREATE TABLE paper_receive_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+paper_receive_id INT FOREIGN KEY REFERENCES paper_receive(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-drop table paper_receive_debit
+DROP TABLE IF EXISTS paper_receive_credit;
 
---ãÏíä
-create table paper_receive_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-paper_receive_id int  foreign key references   paper_receive(ÇáÑŞã)
-)
+CREATE TABLE paper_receive_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+paper_receive_id INT FOREIGN KEY REFERENCES paper_receive(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-drop table paper_receive_credit
+DROP TABLE IF EXISTS paper_pay;
 
---ÏÇÆä
-create table paper_receive_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-paper_receive_id int  foreign key references   paper_receive(ÇáÑŞã)
-)
+CREATE TABLE paper_pay(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME,
+ØªØ§Ø±ÙŠØ®_Ø§Ù„Ø§Ø³ØªØ­Ù‚Ø§Ù‚ DATETIME,
+Ø§Ù„Ø³Ø§Ø­Ø¨ VARCHAR(50),
+Ø§Ù„Ù…Ø³Ø­ÙˆØ¨_Ø¹Ù„ÙŠÙ‡ VARCHAR(50)
+);
 
+DROP TABLE IF EXISTS paper_pay_debit;
 
-drop table paper_pay
+CREATE TABLE paper_pay_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+paper_receive_id INT FOREIGN KEY REFERENCES paper_pay(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-create table paper_pay(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ  datetime,
-ÊÇÑíÎ_ÇáÅÓÊÍŞÇŞ  datetime,
-ÇáÓÇÍÈ varchar(50),
-ÇáãÓÍæÈ_Úáíå varchar(50))
+DROP TABLE IF EXISTS paper_pay_credit;
 
-drop table paper_pay_debit
+CREATE TABLE paper_pay_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+paper_receive_id INT FOREIGN KEY REFERENCES paper_pay(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ãÏíä
-create table paper_pay_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-paper_receive_id int  foreign key references   paper_pay(ÇáÑŞã)
-)
+CREATE TABLE liability(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… VARCHAR(20) NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+ØªØ§Ø±ÙŠØ® DATETIME NOT NULL
+);
 
-drop table paper_pay_credit
+ALTER TABLE liability ADD Ù†ÙˆØ¹_Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… VARCHAR(100);
+ALTER TABLE liability ADD Ù†Ø³Ø¨Ø©_Ø§Ù„ÙØ§Ø¦Ø¯Ø© INT DEFAULT 0;
 
---ÏÇÆä
-create table paper_pay_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-paper_receive_id int  foreign key references   paper_pay(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS liability_debit;
 
+CREATE TABLE liability_debit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ù…Ù† VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+liability_id INT FOREIGN KEY REFERENCES liability(Ø§Ù„Ø±Ù‚Ù…)
+);
 
-create table liability(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÅáÊÒÇã varchar(20)not null,
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ÊÇÑíÎ datetime not null,
-)
-alter table liability add äæÚ_ÇáÅáÊÒÇã  varchar(100)
-alter table liability add äÓÈÉ_ÇáİÇÆÏÉ  int default 0
+DROP TABLE IF EXISTS liability_credit;
 
-drop table liability_debit
+CREATE TABLE liability_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ù„Ø±ØµÙŠØ¯ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100) DEFAULT '',
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(MAX),
+ØªØ§Ø±ÙŠØ® DATETIME,
+liability_id INT FOREIGN KEY REFERENCES liability(Ø§Ù„Ø±Ù‚Ù…)
+);
 
---ãÏíä
-create table liability_debit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-ãä varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-liability_id int  foreign key references   liability(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS error;
 
-drop table liability_credit
+CREATE TABLE error(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+class VARCHAR(50),
+error_ms VARCHAR(MAX),
+error_row INT
+);
 
---ÏÇÆä
-create table liability_credit(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇáÑÕíÏ float not null default 0,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) default '',
-ãáÇÍØÇÊ varchar(max),
-ÊÇÑíÎ  datetime,
-liability_id int  foreign key references   liability(ÇáÑŞã)
-)
+DROP TABLE IF EXISTS material_maker;
 
-drop table error
+CREATE TABLE material_maker(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL DEFAULT 0,
+Ø§Ù„ÙƒÙ„ÙØ© FLOAT NOT NULL DEFAULT 0,
+Ø³Ø¹Ø±_Ø§Ù„Ø¨ÙŠØ¹ FLOAT NOT NULL DEFAULT 0,
+Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© INT FOREIGN KEY REFERENCES material_group(Ø±Ù‚Ù…_Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©) DEFAULT 0,
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT FOREIGN KEY REFERENCES WareHouse(Ø±Ù‚Ù…_Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹) DEFAULT 0
+);
 
-create table error(
-ÇáÑŞã int not null primary key identity(1,1),
-class varchar(50),
-error_ms varchar(max),
-error_row int
-)
+ALTER TABLE material_maker ADD ÙƒÙ„Ù INT;
+ALTER TABLE material_maker ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE material_maker ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
 
-drop table material_maker
+DROP TABLE IF EXISTS material_maker_list;
 
-create table material_maker(
-ÇáÑŞã int not null primary key identity(1,1),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ßãíÉ int not null default 0,
-ÇáßáİÉ float not null default 0 ,
-ÓÚÑ_ÇáÈíÚ float not null default 0 ,
-ÇáãÌãæÚÉ int  foreign key references   material_group(ÑŞã_ÇáãÌãæÚÉ) default 0 ,
-ÇáãÓÊæÏÚ int  foreign key references WareHouse(ÑŞã_ÇáãÓÊæÏÚ) default 0
-)
-alter table material_maker add ßáİ int 
-alter table material_maker add ÇáãÓÊæÏÚ int 
-alter table material_maker add ÇáãÓÊæÏÚ int 
+CREATE TABLE material_maker_list(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„Ù…ØµÙ†Ø¹ INT NOT NULL FOREIGN KEY REFERENCES material_maker(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL DEFAULT 0,
+Ø³Ø¹Ø±_Ø§Ù„Ø´Ø±Ø§Ø¡ FLOAT NOT NULL DEFAULT 0,
+Ù†Ø³Ø¨Ø©_Ø§Ù„Ù‡Ø¯Ø± FLOAT NOT NULL DEFAULT 0,
+ÙƒÙ„ÙØ©_Ø§Ù„Ù…Ø§Ø¯Ø© FLOAT NOT NULL DEFAULT 0,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(100) NOT NULL
+);
 
-drop table material_maker_list
+DROP TABLE IF EXISTS materialMaker_credit;
 
-create table material_maker_list(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáãÕäÚ int not null foreign key references material_maker(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ßãíÉ int not null default 0,
-ÓÚÑ_ÇáÔÑÇÁ float not null default 0 ,
-äÓÈÉ_ÇáåÏÑ float not null default 0 ,
-ßáİÉ_ÇáãÇÏÉ float not null default 0 ,
-ãáÇÍÙÇÊ varchar(100) not null 
-)
+CREATE TABLE materialMaker_credit(
+Ø§Ù„Ø±Ù‚Ù… INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ØªØ§Ø±ÙŠØ®_Ø¨Ø¯Ø§ÙŠØ©_Ø§Ù„ØªØµÙ†ÙŠØ¹ DATETIME NOT NULL,
+ØªØ§Ø±ÙŠØ®_Ù†Ù‡Ø§ÙŠØ©_Ø§Ù„ØªØµÙ†ÙŠØ¹ DATETIME NOT NULL,
+Ø§Ù„ÙƒÙ„ÙØ© FLOAT NOT NULL,
+Ø§Ù„Ø±ØµÙŠØ¯_ÙƒØªØ§Ø¨Ø© VARCHAR(150) NOT NULL DEFAULT 'ØµÙØ±',
+Ø§Ù„Ù‰ VARCHAR(100),
+Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ VARCHAR(10)
+);
 
+ALTER TABLE materialMaker_credit ADD Ù‡Ø¯Ø± FLOAT DEFAULT 0;
+ALTER TABLE materialMaker_credit ADD Ù…ØµØ§Ø±ÙŠÙ_Ù…Ø¶Ø§ÙØ© FLOAT DEFAULT 0;
+ALTER TABLE materialMaker_credit ADD ÙƒÙ…ÙŠØ©_Ø§Ù„Ø§Ù†ØªØ§Ø¬ FLOAT DEFAULT 0;
 
------------------------------------
-drop table materialMaker_credit
+DROP TABLE IF EXISTS materialMaker_credit_list;
 
-create table  materialMaker_credit(
-ÇáÑŞã int not null primary key identity(1,1) ,
-ÊÇÑíÎ_ÈÏÇíÉ_ÇáÊÕäíÚ datetime not null ,
-ÊÇÑíÎ_äåÇíÉ_ÇáÊÕäíÚ datetime not null ,
-ÇáßáİÉ float not null,
-ÇáÑÕíÏ_ßÊÇÈÉ varchar(150) not null default 'ÕİÑ',
-Åáì varchar(100) ,
-ÇáãÓÊæÏÚ varchar(10),
-)
-alter table materialMaker_credit add åÏÑ float default 0 
-alter table materialMaker_credit add ãÕÇÑíİ_ãÖÇİÉ float default 0 
-alter table materialMaker_credit add ßãíÉ_ÇáÅäÊÇÌ float default 0 
+CREATE TABLE materialMaker_credit_list(
+Ø±Ù‚Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© INT NOT NULL FOREIGN KEY REFERENCES material(Ø§Ù„Ø±Ù‚Ù…_Ø§Ù„ÙÙ†ÙŠ),
+Ø±Ù‚Ù…_Ø§Ù„ØªÙ‚Ø±ÙŠØ± INT NOT NULL FOREIGN KEY REFERENCES materialMaker_credit(Ø§Ù„Ø±Ù‚Ù…),
+Ø§Ø³Ù…_Ø§Ù„Ù…Ø§Ø¯Ø© VARCHAR(100) NOT NULL,
+Ø§Ù„ÙˆØ­Ø¯Ø© VARCHAR(20) NOT NULL,
+ÙƒÙ…ÙŠØ© INT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø± FLOAT NOT NULL,
+Ø§Ù„Ø³Ø¹Ø±_Ø§Ù„Ø¬Ù…Ø§Ù„ÙŠ FLOAT NOT NULL,
+Ù…Ù„Ø§Ø­Ø¸Ø§Øª VARCHAR(50)
+);
 
-
--- ÇãÇ ÈíÚ Ãæ ÑÏø ãÔÊÑíÇÊ 
-
-
-
-drop table materialMaker_credit_list
---ãæÇÏ ÏÇÆä
-create table materialMaker_credit_list(
-ÑŞã_ÇáãÇÏÉ int not null foreign key references material(ÇáÑŞã_Çáİäí),
-ÑŞã_ÇáÊŞÑíÑ int not null foreign key references materialMaker_credit(ÇáÑŞã),
-ÇÓã_ÇáãÇÏÉ varchar(100) not null ,
-ÇáæÍÏÉ varchar(20) not null ,
-ÇáßãíÉ int not null ,
-ÇáÓÚÑ float not null ,	
-ÇáÓÚÑ_ÇáÌãÇáí float not null ,
-ãáÇÍÙÇÊ varchar(50) 
-)
-alter table materialMaker_credit_list add ÇáãÓÊæÏÚ int 
-alter table materialMaker_credit_list add ÇáåÏÑ float default 0 
+ALTER TABLE materialMaker_credit_list ADD Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹ INT;
+ALTER TABLE materialMaker_credit_list ADD Ù‡Ø¯Ø± FLOAT DEFAULT 0;

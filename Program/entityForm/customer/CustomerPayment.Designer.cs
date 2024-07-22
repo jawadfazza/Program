@@ -138,7 +138,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(48, 22);
+            this.newToolStripButton.Size = new System.Drawing.Size(50, 22);
             this.newToolStripButton.Text = "جديد";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
@@ -147,7 +147,7 @@
             this.saveToolStripButton.Image = global::Program.Properties.Resources.document_save;
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.saveToolStripButton.Size = new System.Drawing.Size(50, 22);
             this.saveToolStripButton.Text = "حفظ";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
@@ -167,7 +167,7 @@
             // 
             this.miReciveMoney.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReciveMoney.Name = "miReciveMoney";
-            this.miReciveMoney.Size = new System.Drawing.Size(193, 22);
+            this.miReciveMoney.Size = new System.Drawing.Size(205, 22);
             this.miReciveMoney.Text = "وصل أستلام نقدية";
             this.miReciveMoney.Click += new System.EventHandler(this.miReciveMoney_Click);
             // 
@@ -175,7 +175,7 @@
             // 
             this.miReciveMoneyBank.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReciveMoneyBank.Name = "miReciveMoneyBank";
-            this.miReciveMoneyBank.Size = new System.Drawing.Size(193, 22);
+            this.miReciveMoneyBank.Size = new System.Drawing.Size(205, 22);
             this.miReciveMoneyBank.Text = "تحويل مبلغ للحساب البنكي";
             this.miReciveMoneyBank.Click += new System.EventHandler(this.miReciveMoneyBank_Click);
             // 
@@ -187,7 +187,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(61, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(66, 22);
             this.toolStripLabel1.Text = "اسم الزبون :";
             // 
             // txtCustomer
@@ -205,7 +205,7 @@
             this.bAddCustomer.Image = global::Program.Properties.Resources._1354871547_plus_64;
             this.bAddCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bAddCustomer.Name = "bAddCustomer";
-            this.bAddCustomer.Size = new System.Drawing.Size(114, 22);
+            this.bAddCustomer.Size = new System.Drawing.Size(121, 22);
             this.bAddCustomer.Text = "إظهار حساب الزبون";
             this.bAddCustomer.Click += new System.EventHandler(this.bAddCustomer_Click);
             // 
@@ -222,14 +222,14 @@
             this.toolStripSplitButton1.Image = global::Program.Properties.Resources.my_reports;
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(84, 22);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
             this.toolStripSplitButton1.Text = " قيد العملية";
             // 
             // bHide
             // 
             this.bHide.Image = global::Program.Properties.Resources.hide;
             this.bHide.Name = "bHide";
-            this.bHide.Size = new System.Drawing.Size(147, 22);
+            this.bHide.Size = new System.Drawing.Size(180, 22);
             this.bHide.Text = "أخفاء قيد العملية";
             this.bHide.Click += new System.EventHandler(this.bHide_Click);
             // 
@@ -237,7 +237,7 @@
             // 
             this.bShow.Image = global::Program.Properties.Resources.show;
             this.bShow.Name = "bShow";
-            this.bShow.Size = new System.Drawing.Size(147, 22);
+            this.bShow.Size = new System.Drawing.Size(180, 22);
             this.bShow.Text = "إظهار قيد العملية";
             this.bShow.Click += new System.EventHandler(this.bShow_Click);
             // 
@@ -390,6 +390,7 @@
             // txtBalanceBond
             // 
             this.txtBalanceBond.Enabled = false;
+            this.txtBalanceBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBalanceBond.Name = "txtBalanceBond";
             this.txtBalanceBond.Size = new System.Drawing.Size(145, 25);
             // 
@@ -401,6 +402,7 @@
             // txtDibetBond
             // 
             this.txtDibetBond.Enabled = false;
+            this.txtDibetBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDibetBond.Name = "txtDibetBond";
             this.txtDibetBond.Size = new System.Drawing.Size(140, 25);
             // 
@@ -414,6 +416,7 @@
             this.txtCreditBond.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtCreditBond.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCreditBond.Enabled = false;
+            this.txtCreditBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCreditBond.Name = "txtCreditBond";
             this.txtCreditBond.Size = new System.Drawing.Size(145, 25);
             // 
@@ -527,7 +530,7 @@
             // 
             this.txtDiscount.Location = new System.Drawing.Point(27, 118);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(87, 26);
+            this.txtDiscount.Size = new System.Drawing.Size(71, 26);
             this.txtDiscount.TabIndex = 3;
             this.txtDiscount.Text = "0";
             this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
@@ -555,7 +558,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(110, 118);
+            this.label5.Location = new System.Drawing.Point(104, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 18);
             this.label5.TabIndex = 4;
