@@ -12194,7 +12194,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
                 "ر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة\r\nFROM            material";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "dbo.Insert_Material";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12211,7 +12211,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@material_disc", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@photo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
                          producer.اسم_الصانع, WareHouse.اسم_المستودع, material.وصف_المادة, material.صورة, material.سعر_الشراء, material.سعر_البيع, material.كود_المادة, material.طريقة_حساب_الكلفة
 FROM            material INNER JOIN
@@ -12222,7 +12222,7 @@ WHERE        (material.اسم_المادة LIKE @name + '%')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "اسم_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
                          producer.اسم_الصانع, WareHouse.اسم_المستودع, material.وصف_المادة, material.صورة, material.سعر_الشراء, material.سعر_البيع, material.كود_المادة, material.طريقة_حساب_الكلفة
 FROM            material INNER JOIN
@@ -12233,7 +12233,7 @@ WHERE        (material.الرقم_الفني = @id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
                 "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
                 "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المستودع = @War" +
@@ -12241,7 +12241,7 @@ WHERE        (material.الرقم_الفني = @id)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Warehouse", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "المستودع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = @"SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
                          producer.اسم_الصانع, WareHouse.اسم_المستودع, material.وصف_المادة, material.صورة, material.سعر_الشراء, material.سعر_البيع, material.كود_المادة
 FROM            material INNER JOIN
@@ -12252,7 +12252,7 @@ WHERE        (material.كود_المادة = @code)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[6].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
                 "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
                 "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (الرقم_الفني = @" +
@@ -12260,7 +12260,7 @@ WHERE        (material.كود_المادة = @code)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[7].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[7].Connection = this.Connection;
             this._commandCollection[7].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
                 "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
                 "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المجموعة = @gro" +
@@ -12268,25 +12268,25 @@ WHERE        (material.كود_المادة = @code)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@groub", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "المجموعة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[8].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[8].Connection = this.Connection;
             this._commandCollection[8].CommandText = "SELECT        MAX(الرقم_الفني) AS Expr1\r\nFROM            material";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[9].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[9].Connection = this.Connection;
             this._commandCollection[9].CommandText = "UPDATE       material\r\nSET                سعر_الشراء = @price\r\nWHERE        (الرق" +
                 "م_الفني = @id);\r\n";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_الشراء", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[10].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[10].Connection = this.Connection;
             this._commandCollection[10].CommandText = "UPDATE       material\r\nSET                كمية = @كمية\r\nWHERE        (الرقم_الفني" +
                 " = @id);\r\n";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@كمية", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "كمية", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[11].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[11].Connection = this.Connection;
             this._commandCollection[11].CommandText = "UPDATE       material\r\nSET                سعر_البيع = @price\r\nWHERE        (الرقم" +
                 "_الفني = @id);\r\n";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
@@ -14840,16 +14840,16 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
 FROM            material_debit";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM material_debit";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "DELETE FROM material_debit\r\nWHERE        (الرقم = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"SELECT        اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة,
                          من, نوع_العملية
 FROM            material_debit
@@ -14857,7 +14857,7 @@ WHERE        (الرقم = @id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, " +
                 "تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع," +
                 " مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE " +
@@ -14865,27 +14865,27 @@ WHERE        (الرقم = @id)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "المورد", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = "SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, " +
                 "تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع," +
                 " مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE " +
                 "(المورد <> 0)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[6].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = "SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, " +
                 "تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع," +
                 " مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE " +
                 "(المورد = 0)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[7].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[7].Connection = this.Connection;
             this._commandCollection[7].CommandText = @"SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE (تاريخ >= @from) AND (تاريخ <= @to)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@from", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@to", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[8].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[8].Connection = this.Connection;
             this._commandCollection[8].CommandText = "SELECT        MAX(الرقم) AS Expr1\r\nFROM            material_debit";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
         }
@@ -16066,12 +16066,12 @@ FROM            material_credit";
             this._commandCollection[1].CommandText = "DELETE FROM material_credit";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "DELETE FROM material_credit\r\nWHERE        (الرقم = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, با" +
                 "لة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, م" +
                 "صاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (الرقم = @i" +
@@ -16079,26 +16079,26 @@ FROM            material_credit";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, با" +
                 "لة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, م" +
                 "صاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (العميل = 0" +
                 ")";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = "SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, المستودع, بالة, تاري" +
                 "خ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصا" +
                 "ريف_مضافة, نوع_العملية FROM material_credit WHERE (العميل <> 0)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[6].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = @"SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, بالة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (تاريخ_البيع >= @from) AND (تاريخ_البيع <= @to)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@from", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@to", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[7].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[7].Connection = this.Connection;
             this._commandCollection[7].CommandText = "SELECT        MAX(الرقم) AS value\r\nFROM            material_credit";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
         }
@@ -17102,7 +17102,7 @@ FROM            material_credit";
             this._commandCollection[1].CommandText = "DELETE FROM material_credit_list";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "DELETE FROM material_credit_list\r\nWHERE        (رقم_التقرير = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "رقم_التقرير", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -17114,7 +17114,7 @@ FROM            material_credit";
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@material_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "رقم_المادة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@report_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "رقم_التقرير", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT        رقم_المادة, رقم_التقرير, اسم_المادة, الوحدة, الكمية, السعر, السعر_ا" +
                 "لجمالي, ملاحظات, المستودع, الكمية_كتابة, حذفة, حسم_ممنوح, سعر_الشراء, الكلفة\r\nFR" +
                 "OM            material_credit_list\r\nWHERE        (رقم_التقرير = @id)";
@@ -18060,16 +18060,16 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
 FROM            material_debit_return";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM material_debit_return";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "DELETE FROM material_debit_return\r\nWHERE        (الرقم = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"SELECT        الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رقم_فاتورة_المصدر, تاريخ_فاتورة_المصدر, المصدر, المستودع, العميل, حذفة, نوع_العملية, حسم_مكتسب, مصاريف_مضافة, مصاريف_على_حساب, مرحل, طريقة_الدفع,
                          اسم_الحساب
 FROM            material_debit_return
@@ -18077,7 +18077,7 @@ WHERE        (الرقم = @id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT        MAX(الرقم) AS Expr1\r\nFROM            material_debit_return";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
@@ -19025,16 +19025,16 @@ WHERE        (الرقم = @id)";
                 "OM            material_debit_list_return";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM material_debit_list_return";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "DELETE FROM material_debit_list_return\r\nWHERE        (رقم_التقرير = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "رقم_التقرير", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::Program.Properties.Settings.Default.WarehouseConnectionString);
+            this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT اسم_المادة, السعر, السعر_الجمالي, الكلفة, الكمية, الكمية_كتابة, المستودع, " +
                 "الوحدة, حذفة, حسم_مكتسب, رقم_التقرير, رقم_المادة, سعر_الشراء, ملاحظات FROM mater" +
                 "ial_debit_list_return WHERE (رقم_التقرير = @id)";
@@ -21364,7 +21364,7 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Program.Properties.Settings.Default.CompanyConnectionString;
+            this._connection.ConnectionString = global::Program.Properties.Settings.Default.WarehouseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

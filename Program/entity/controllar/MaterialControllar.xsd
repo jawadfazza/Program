@@ -4,9 +4,8 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CompanyConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CompanyConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.CompanyConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="materialTableAdapter" GeneratorDataComponentClassName="materialTableAdapter" Name="material" UserDataComponentName="materialTableAdapter">
@@ -165,7 +164,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
               <Mapping SourceColumn="طريقة_حساب_الكلفة" DataSetColumn="طريقة_حساب_الكلفة" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.Insert_Material" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="InsertMaterialInfo" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="InsertMaterialInfo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="InsertMaterialInfo" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.Insert_Material" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="InsertMaterialInfo" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="InsertMaterialInfo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="InsertMaterialInfo" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.Insert_Material</CommandText>
@@ -187,7 +186,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByName" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getMaterialByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByName" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByName" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getMaterialByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByName" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
@@ -203,7 +202,7 @@ WHERE        (material.اسم_المادة LIKE @name + '%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialById" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getMaterialById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialById" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialById" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getMaterialById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialById" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
@@ -219,7 +218,7 @@ WHERE        (material.الرقم_الفني = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByWarehouse" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getMaterialByWarehouse" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByWarehouse" UserSourceName="FillBy3">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByWarehouse" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getMaterialByWarehouse" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByWarehouse" UserSourceName="FillBy3">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المستودع = @Warehouse)</CommandText>
@@ -229,7 +228,7 @@ WHERE        (material.الرقم_الفني = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByCode" GeneratorSourceName="FillBy4" GetMethodModifier="Public" GetMethodName="getMaterialByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByCode" UserSourceName="FillBy4">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialByCode" GeneratorSourceName="FillBy4" GetMethodModifier="Public" GetMethodName="getMaterialByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialByCode" UserSourceName="FillBy4">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة,
@@ -245,7 +244,7 @@ WHERE        (material.كود_المادة = @code)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy5" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialTableById" GeneratorSourceName="FillBy5" GetMethodModifier="Public" GetMethodName="getMaterialTableById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialTableById" UserSourceName="FillBy5">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy5" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialTableById" GeneratorSourceName="FillBy5" GetMethodModifier="Public" GetMethodName="getMaterialTableById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialTableById" UserSourceName="FillBy5">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (الرقم_الفني = @id)</CommandText>
@@ -255,7 +254,7 @@ WHERE        (material.كود_المادة = @code)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy6" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGroub" GeneratorSourceName="FillBy6" GetMethodModifier="Public" GetMethodName="GetDataByGroub" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGroub" UserSourceName="FillBy6">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy6" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGroub" GeneratorSourceName="FillBy6" GetMethodModifier="Public" GetMethodName="GetDataByGroub" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGroub" UserSourceName="FillBy6">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المجموعة = @groub)</CommandText>
@@ -265,7 +264,7 @@ WHERE        (material.كود_المادة = @code)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxId" Modifier="Public" Name="getMaxId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getMaxId">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxId" Modifier="Public" Name="getMaxId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getMaxId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(الرقم_الفني) AS Expr1
@@ -274,7 +273,7 @@ FROM            material</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateBuyPrice" Modifier="Public" Name="UpdateBuyPrice" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateBuyPrice">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateBuyPrice" Modifier="Public" Name="UpdateBuyPrice" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateBuyPrice">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       material
@@ -288,7 +287,7 @@ WHERE        (الرقم_الفني = @id);
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateMaterialQuantity" Modifier="Public" Name="UpdateMaterialQuantity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateMaterialQuantity">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateMaterialQuantity" Modifier="Public" Name="UpdateMaterialQuantity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateMaterialQuantity">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       material
@@ -302,7 +301,7 @@ WHERE        (الرقم_الفني = @id);
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateSalePrice" Modifier="Public" Name="UpdateSalePrice" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateSalePrice">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateSalePrice" Modifier="Public" Name="UpdateSalePrice" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateSalePrice">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       material
@@ -320,7 +319,7 @@ WHERE        (الرقم_الفني = @id);
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_groupTableAdapter" GeneratorDataComponentClassName="material_groupTableAdapter" Name="material_group" UserDataComponentName="material_groupTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.material_group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.material_group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[material_group] WHERE (([رقم_المجموعة] = @Original_رقم_المجموعة) AND ([اسم_المجموعة] = @Original_اسم_المجموعة))</CommandText>
@@ -365,7 +364,7 @@ SELECT رقم_المجموعة, اسم_المجموعة FROM material_group WHER
               <Mapping SourceColumn="اسم_المجموعة" DataSetColumn="اسم_المجموعة" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Computer.dbo.material_group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.material_group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        رقم_المجموعة, اسم_المجموعة
@@ -379,7 +378,7 @@ ORDER BY رقم_المجموعة</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="producerTableAdapter" GeneratorDataComponentClassName="producerTableAdapter" Name="producer" UserDataComponentName="producerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.producer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.producer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[producer] WHERE (([رقم_الصانع] = @Original_رقم_الصانع) AND ([اسم_الصانع] = @Original_اسم_الصانع) AND ([رمز_النوع] = @Original_رمز_النوع))</CommandText>
@@ -429,7 +428,7 @@ SELECT رقم_الصانع, اسم_الصانع, رمز_النوع FROM producer
               <Mapping SourceColumn="رمز_النوع" DataSetColumn="رمز_النوع" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Computer.dbo.producer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.producer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        رقم_الصانع, اسم_الصانع, رمز_النوع
@@ -443,7 +442,7 @@ ORDER BY رقم_الصانع</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WareHouseTableAdapter" GeneratorDataComponentClassName="WareHouseTableAdapter" Name="WareHouse" UserDataComponentName="WareHouseTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.WareHouse" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.WareHouse" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[WareHouse] WHERE (([رقم_المستودع] = @Original_رقم_المستودع) AND ([اسم_المستودع] = @Original_اسم_المستودع))</CommandText>
@@ -488,7 +487,7 @@ SELECT رقم_المستودع, اسم_المستودع FROM WareHouse WHERE (ر
               <Mapping SourceColumn="اسم_المستودع" DataSetColumn="اسم_المستودع" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Computer.dbo.WareHouse" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.WareHouse" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByASC" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByASC" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        رقم_المستودع, اسم_المستودع
@@ -661,7 +660,7 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
               <Mapping SourceColumn="سند_الدفع" DataSetColumn="سند_الدفع" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit</CommandText>
@@ -669,7 +668,7 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebit" Modifier="Public" Name="DeleteMaterialDebit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebit" Modifier="Public" Name="DeleteMaterialDebit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebit">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit
@@ -680,7 +679,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Computer.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة,
@@ -693,7 +692,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditBySupplier" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getMaterialCreditBySupplier" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditBySupplier" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditBySupplier" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getMaterialCreditBySupplier" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditBySupplier" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE (المورد = @id)</CommandText>
@@ -703,7 +702,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportSupplierBuy" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getReportSupplierBuy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportSupplierBuy" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportSupplierBuy" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getReportSupplierBuy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportSupplierBuy" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE (المورد &lt;&gt; 0)</CommandText>
@@ -711,7 +710,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportSupplierReturnBuy" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getReportSupplierReturnBuy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportSupplierReturnBuy" UserSourceName="FillBy3">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportSupplierReturnBuy" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getReportSupplierReturnBuy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportSupplierReturnBuy" UserSourceName="FillBy3">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE (المورد = 0)</CommandText>
@@ -719,7 +718,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBuyReport" GeneratorSourceName="FillBy4" GetMethodModifier="Public" GetMethodName="getBuyReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBuyReport" UserSourceName="FillBy4">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBuyReport" GeneratorSourceName="FillBy4" GetMethodModifier="Public" GetMethodName="getBuyReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBuyReport" UserSourceName="FillBy4">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, المستودع, المصدر, المورد, تاريخ, تاريخ_فاتورة_المصدر, حذفة, حسم_مكتسب, رقم_فاتورة_المصدر, سند_الدفع, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, من, نوع_العملية FROM material_debit WHERE (تاريخ &gt;= @from) AND (تاريخ &lt;= @to)</CommandText>
@@ -730,7 +729,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialDebit" Modifier="Public" Name="getMaxMaterialDebit" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialDebit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialDebit" Modifier="Public" Name="getMaxMaterialDebit" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialDebit">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(الرقم) AS Expr1
@@ -908,7 +907,7 @@ SELECT الرقم, تاريخ_البيع, تاريخ_التسليم, الرصي�
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCredit" Modifier="Public" Name="DeleteMaterialCredit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCredit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCredit" Modifier="Public" Name="DeleteMaterialCredit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCredit">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit
@@ -919,7 +918,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, بالة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (الرقم = @id)</CommandText>
@@ -929,7 +928,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportCustomerReturnSale" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getReportCustomerReturnSale" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportCustomerReturnSale" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportCustomerReturnSale" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getReportCustomerReturnSale" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportCustomerReturnSale" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, بالة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (العميل = 0)</CommandText>
@@ -937,7 +936,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportCustomerSale" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getReportCustomerSale" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportCustomerSale" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getReportCustomerSale" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="getReportCustomerSale" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getReportCustomerSale" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, المستودع, بالة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (العميل &lt;&gt; 0)</CommandText>
@@ -945,7 +944,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getSalesReport" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getSalesReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getSalesReport" UserSourceName="FillBy3">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getSalesReport" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="getSalesReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getSalesReport" UserSourceName="FillBy3">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT إلى, اسم_الحساب, الرصيد, الرصيد_كتابة, الرقم, العميل, الكلفة, المستودع, بالة, تاريخ_البيع, تاريخ_التسليم, حذفة, حسم_ممنوح, سند_القبض, طريقة_الدفع, مرحل, مصاريف_على_حساب, مصاريف_مضافة, نوع_العملية FROM material_credit WHERE (تاريخ_البيع &gt;= @from) AND (تاريخ_البيع &lt;= @to)</CommandText>
@@ -956,7 +955,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialCredit" Modifier="Public" Name="getMaxMaterialCredit" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialCredit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialCredit" Modifier="Public" Name="getMaxMaterialCredit" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialCredit">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(الرقم) AS value
@@ -1025,7 +1024,7 @@ FROM            material_credit_list</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCreditList" Modifier="Public" Name="DeleteMaterialCreditList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCreditList">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCreditList" Modifier="Public" Name="DeleteMaterialCreditList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCreditList">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_list
@@ -1048,7 +1047,7 @@ WHERE        (رقم_المادة = @material_id) AND (رقم_التقرير = @
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Computer.dbo.material_credit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditReport" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Computer.dbo.material_credit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditReport" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        رقم_المادة, رقم_التقرير, اسم_المادة, الوحدة, الكمية, السعر, السعر_الجمالي, ملاحظات, المستودع, الكمية_كتابة, حذفة, حسم_ممنوح, سعر_الشراء, الكلفة
@@ -1064,7 +1063,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_debit_listTableAdapter" GeneratorDataComponentClassName="material_debit_listTableAdapter" Name="material_debit_list" UserDataComponentName="material_debit_listTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.material_debit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.material_debit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [material_debit_list] ([رقم_المادة], [رقم_التقرير], [اسم_المادة], [الوحدة], [الكمية], [السعر], [السعر_الجمالي], [ملاحظات], [المستودع], [الكمية_كتابة], [حذفة], [حسم_مكتسب]) VALUES (@رقم_المادة, @رقم_التقرير, @اسم_المادة, @الوحدة, @الكمية, @السعر, @السعر_الجمالي, @ملاحظات, @المستودع, @الكمية_كتابة, @حذفة, @حسم_مكتسب)</CommandText>
@@ -1108,7 +1107,7 @@ FROM            material_debit_list</CommandText>
               <Mapping SourceColumn="حسم_مكتسب" DataSetColumn="حسم_مكتسب" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_list</CommandText>
@@ -1116,7 +1115,7 @@ FROM            material_debit_list</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebitList" Modifier="Public" Name="DeleteMaterialDebitList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebitList">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebitList" Modifier="Public" Name="DeleteMaterialDebitList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebitList">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_list
@@ -1127,7 +1126,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.material_debit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitReport" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.material_debit_list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitReport" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_المادة, السعر, السعر_الجمالي, الكمية, الكمية_كتابة, المستودع, الوحدة, حذفة, حسم_مكتسب, رقم_التقرير, رقم_المادة, ملاحظات FROM material_debit_list WHERE (رقم_التقرير = @id)</CommandText>
@@ -1300,7 +1299,7 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
               <Mapping SourceColumn="الكلفة" DataSetColumn="الكلفة" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_return</CommandText>
@@ -1308,7 +1307,7 @@ SELECT الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رق
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebit" Modifier="Public" Name="DeleteMaterialDebit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebit" Modifier="Public" Name="DeleteMaterialDebit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebit">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_return
@@ -1319,7 +1318,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_debit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_debit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        الرقم, تاريخ, الرصيد, من, الرصيد_كتابة, رقم_فاتورة_المصدر, تاريخ_فاتورة_المصدر, المصدر, المستودع, العميل, حذفة, نوع_العملية, حسم_مكتسب, مصاريف_مضافة, مصاريف_على_حساب, مرحل, طريقة_الدفع,
@@ -1332,7 +1331,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialDebit" Modifier="Public" Name="getMaxMaterialDebit" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialDebit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialDebit" Modifier="Public" Name="getMaxMaterialDebit" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialDebit">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(الرقم) AS Expr1
@@ -1393,7 +1392,7 @@ FROM            material_debit_list_return</CommandText>
               <Mapping SourceColumn="الكلفة" DataSetColumn="الكلفة" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_list_return</CommandText>
@@ -1401,7 +1400,7 @@ FROM            material_debit_list_return</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebitList" Modifier="Public" Name="DeleteMaterialDebitList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebitList">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialDebitList" Modifier="Public" Name="DeleteMaterialDebitList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialDebitList">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_list_return
@@ -1412,7 +1411,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.material_debit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitReport" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_debit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialDebitReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialDebitReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialDebitReport" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_المادة, السعر, السعر_الجمالي, الكلفة, الكمية, الكمية_كتابة, المستودع, الوحدة, حذفة, حسم_مكتسب, رقم_التقرير, رقم_المادة, سعر_الشراء, ملاحظات FROM material_debit_list_return WHERE (رقم_التقرير = @id)</CommandText>
@@ -1426,7 +1425,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_credit_returnTableAdapter" GeneratorDataComponentClassName="material_credit_returnTableAdapter" Name="material_credit_return" UserDataComponentName="material_credit_returnTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[material_credit_return] WHERE (([الرقم] = @Original_الرقم) AND ([تاريخ_البيع] = @Original_تاريخ_البيع) AND ([تاريخ_التسليم] = @Original_تاريخ_التسليم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_إلى = 1 AND [إلى] IS NULL) OR ([إلى] = @Original_إلى)) AND ((@IsNull_طريقة_الدفع = 1 AND [طريقة_الدفع] IS NULL) OR ([طريقة_الدفع] = @Original_طريقة_الدفع)) AND ((@IsNull_المستودع = 1 AND [المستودع] IS NULL) OR ([المستودع] = @Original_المستودع)) AND ([المورد] = @Original_المورد) AND ((@IsNull_حذفة = 1 AND [حذفة] IS NULL) OR ([حذفة] = @Original_حذفة)) AND ((@IsNull_بالة = 1 AND [بالة] IS NULL) OR ([بالة] = @Original_بالة)) AND ((@IsNull_نوع_العملية = 1 AND [نوع_العملية] IS NULL) OR ([نوع_العملية] = @Original_نوع_العملية)) AND ((@IsNull_حسم_ممنوح = 1 AND [حسم_ممنوح] IS NULL) OR ([حسم_ممنوح] = @Original_حسم_ممنوح)) AND ((@IsNull_مصاريف_مضافة = 1 AND [مصاريف_مضافة] IS NULL) OR ([مصاريف_مضافة] = @Original_مصاريف_مضافة)) AND ((@IsNull_مصاريف_على_حساب = 1 AND [مصاريف_على_حساب] IS NULL) OR ([مصاريف_على_حساب] = @Original_مصاريف_على_حساب)) AND ((@IsNull_مرحل = 1 AND [مرحل] IS NULL) OR ([مرحل] = @Original_مرحل)) AND ((@IsNull_اسم_الحساب = 1 AND [اسم_الحساب] IS NULL) OR ([اسم_الحساب] = @Original_اسم_الحساب)))</CommandText>
@@ -1567,7 +1566,7 @@ SELECT الرقم, تاريخ_البيع, تاريخ_التسليم, الرصي�
               <Mapping SourceColumn="اسم_الحساب" DataSetColumn="اسم_الحساب" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_return</CommandText>
@@ -1575,7 +1574,7 @@ SELECT الرقم, تاريخ_البيع, تاريخ_التسليم, الرصي�
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCredit" Modifier="Public" Name="DeleteMaterialCredit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCredit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCredit" Modifier="Public" Name="DeleteMaterialCredit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCredit">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_return
@@ -1586,7 +1585,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        الرقم, تاريخ_البيع, تاريخ_التسليم, الرصيد, الرصيد_كتابة, إلى, طريقة_الدفع, المستودع, المورد, حذفة, بالة, نوع_العملية, حسم_ممنوح, مصاريف_مضافة, مصاريف_على_حساب, مرحل, اسم_الحساب
@@ -1598,7 +1597,7 @@ WHERE        (الرقم = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialCredit" Modifier="Public" Name="getMaxMaterialCredit" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialCredit">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxMaterialCredit" Modifier="Public" Name="getMaxMaterialCredit" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMaxMaterialCredit">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(الرقم) AS Expr1
@@ -1611,7 +1610,7 @@ FROM            material_credit_return</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_credit_list_returnTableAdapter" GeneratorDataComponentClassName="material_credit_list_returnTableAdapter" Name="material_credit_list_return" UserDataComponentName="material_credit_list_returnTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[material_credit_list_return] ([رقم_المادة], [رقم_التقرير], [اسم_المادة], [الوحدة], [الكمية], [السعر], [السعر_الجمالي], [ملاحظات], [المستودع], [الكمية_كتابة], [حذفة], [حسم_ممنوح]) VALUES (@رقم_المادة, @رقم_التقرير, @اسم_المادة, @الوحدة, @الكمية, @السعر, @السعر_الجمالي, @ملاحظات, @المستودع, @الكمية_كتابة, @حذفة, @حسم_ممنوح)</CommandText>
@@ -1654,7 +1653,7 @@ FROM            material_credit_return</CommandText>
               <Mapping SourceColumn="حسم_ممنوح" DataSetColumn="حسم_ممنوح" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_list_return</CommandText>
@@ -1662,7 +1661,7 @@ FROM            material_credit_return</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCreditList" Modifier="Public" Name="DeleteMaterialCreditList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCreditList">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMaterialCreditList" Modifier="Public" Name="DeleteMaterialCreditList" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMaterialCreditList">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_list_return
@@ -1673,7 +1672,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditReport" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_list_return" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getMaterialCreditReport" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getMaterialCreditReport" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getMaterialCreditReport" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        رقم_المادة, رقم_التقرير, اسم_المادة, الوحدة, الكمية, السعر, السعر_الجمالي, ملاحظات, المستودع, الكمية_كتابة, حذفة, حسم_ممنوح
@@ -1689,7 +1688,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_credit_penfit_paymentTableAdapter" GeneratorDataComponentClassName="material_credit_penfit_paymentTableAdapter" Name="material_credit_penfit_payment" UserDataComponentName="material_credit_penfit_paymentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [material_credit_penfit_payment] ([رقم_التقرير], [الفائدة], [نسبة_الفائدة], [الدفع_كل], [عدد_الأقساط], [الرعبون]) VALUES (@رقم_التقرير, @الفائدة, @نسبة_الفائدة, @الدفع_كل, @عدد_الأقساط, @الرعبون)</CommandText>
@@ -1721,7 +1720,7 @@ FROM            material_credit_penfit_payment</CommandText>
               <Mapping SourceColumn="الرعبون" DataSetColumn="الرعبون" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_penfit_payment</CommandText>
@@ -1729,7 +1728,7 @@ FROM            material_credit_penfit_payment</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePenfitPayment" Modifier="Public" Name="DeletePenfitPayment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeletePenfitPayment">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePenfitPayment" Modifier="Public" Name="DeletePenfitPayment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeletePenfitPayment">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_credit_penfit_payment
@@ -1740,7 +1739,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getPenfitPaymentById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getPenfitPaymentById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getPenfitPaymentById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_credit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getPenfitPaymentById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getPenfitPaymentById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getPenfitPaymentById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT الدفع_كل, الرعبون, الفائدة, رقم_التقرير, عدد_الأقساط, نسبة_الفائدة FROM material_credit_penfit_payment WHERE (رقم_التقرير = @id)</CommandText>
@@ -1754,7 +1753,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_debit_penfit_paymentTableAdapter" GeneratorDataComponentClassName="material_debit_penfit_paymentTableAdapter" Name="material_debit_penfit_payment" UserDataComponentName="material_debit_penfit_paymentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.material_debit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.material_debit_penfit_payment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[material_debit_penfit_payment] ([رقم_التقرير], [الفائدة], [نسبة_الفائدة], [الدفع_كل], [عدد_الأقساط], [الرعبون]) VALUES (@رقم_التقرير, @الفائدة, @نسبة_الفائدة, @الدفع_كل, @عدد_الأقساط, @الرعبون)</CommandText>
@@ -1785,7 +1784,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
               <Mapping SourceColumn="الرعبون" DataSetColumn="الرعبون" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAll" Modifier="Public" Name="DeleteAll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAll">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM material_debit_penfit_payment</CommandText>
@@ -1797,7 +1796,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="material_costTableAdapter" GeneratorDataComponentClassName="material_costTableAdapter" Name="material_cost" UserDataComponentName="material_costTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CompanyConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[material_cost] ([المادة], [سعر_الشراء], [كمية], [التاريخ], [رقم_فاتورة_الشراء]) VALUES (@المادة, @سعر_الشراء, @كمية, @التاريخ, @رقم_فاتورة_الشراء)</CommandText>
@@ -1826,7 +1825,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
               <Mapping SourceColumn="رقم_فاتورة_الشراء" DataSetColumn="رقم_فاتورة_الشراء" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CompanyConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById_Quintity_Ascending" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataById_Quintity_Ascending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById_Quintity_Ascending" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById_Quintity_Ascending" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataById_Quintity_Ascending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById_Quintity_Ascending" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT التاريخ, المادة, رقم_فاتورة_الشراء, سعر_الشراء, كمية FROM material_cost WHERE (المادة = @id) AND (كمية &gt; 0) ORDER BY رقم_فاتورة_الشراء</CommandText>
@@ -1836,7 +1835,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CompanyConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById_quintity_Descending" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataById_quintity_Descending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById_quintity_Descending" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.material_cost" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById_quintity_Descending" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataById_quintity_Descending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById_quintity_Descending" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT التاريخ, المادة, رقم_فاتورة_الشراء, سعر_الشراء, كمية FROM material_cost WHERE (المادة = @id) AND (كمية &gt; 0) ORDER BY رقم_فاتورة_الشراء DESC</CommandText>
@@ -1846,7 +1845,7 @@ WHERE        (رقم_التقرير = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CompanyConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetAVG_Price" Modifier="Public" Name="GetAVG_Price" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetAVG_Price">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetAVG_Price" Modifier="Public" Name="GetAVG_Price" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetAVG_Price">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        AVG(سعر_الشراء)
@@ -1858,7 +1857,7 @@ WHERE        (المادة = @ID) AND (كمية &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CompanyConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuintity" Modifier="Public" Name="UpdateQuintity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuintity">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuintity" Modifier="Public" Name="UpdateQuintity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuintity">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       material_cost

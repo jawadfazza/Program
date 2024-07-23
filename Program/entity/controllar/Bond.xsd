@@ -5,12 +5,11 @@
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bondsTableAdapter" GeneratorDataComponentClassName="bondsTableAdapter" Name="bonds" UserDataComponentName="bondsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[bonds] WHERE (([الرقم] = @Original_الرقم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_من = 1 AND [من] IS NULL) OR ([من] = @Original_من)) AND ((@IsNull_إلى = 1 AND [إلى] IS NULL) OR ([إلى] = @Original_إلى)) AND ((@IsNull_تاريخ = 1 AND [تاريخ] IS NULL) OR ([تاريخ] = @Original_تاريخ)) AND ((@IsNull_مرحل = 1 AND [مرحل] IS NULL) OR ([مرحل] = @Original_مرحل)))</CommandText>
@@ -90,7 +89,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, إلى, ملاح
               <Mapping SourceColumn="مرحل" DataSetColumn="مرحل" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBondByDate" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBondByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBondByDate" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBondByDate" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBondByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBondByDate" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        الرقم, الرصيد, الرصيد_كتابة, من, إلى, ملاحطات, تاريخ, مرحل
@@ -105,7 +104,7 @@ WHERE        (تاريخ &gt;= @from) AND (تاريخ &lt;= @to) AND (إلى LIK
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getSelectBonds" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getSelectBonds" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getSelectBonds" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.bonds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getSelectBonds" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="getSelectBonds" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getSelectBonds" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT  top 100       الرقم, الرصيد, الرصيد_كتابة, من, إلى, ملاحطات, تاريخ, مرحل

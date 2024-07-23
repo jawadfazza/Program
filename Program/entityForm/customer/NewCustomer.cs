@@ -38,60 +38,22 @@ namespace Program.entityForm
         {
             if (!ValidateFormInputs())
             {
-                MessageBox.Show("يرجى تصحيح الأخطاء المميزة والمحاولة مرة أخرى..", "خطئ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("يرجى تصحيح الأخطاء المميزة والمحاولة مرة أخرى.", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (customerRow == null)
             {
-                if (MessageBox.Show("هل تريد حفظ الزبون ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("هل تريد حفظ الزبون؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    SaveCustomerImage();
-
-                    customerTableAdapter cta = new customerTableAdapter();
-                    cta.Insert(txtName.Text,
-                        Convert.ToInt32(txtBalance.Text),
-                        txtBalanceText.Text,
-                        txtPlace.Text,
-                        txtPhone.Text,
-                        txtMobile.Text,
-                        txtEmail.Text,
-                        txtWebSite.Text,
-                        dtpDate.Value,
-                        txtCustomerDisc.Text,
-                        "..\\..\\Image\\Customer\\" + txtName.Text + ".jpg");
-
-                    MessageBox.Show("تم إضافة الزبون ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    getCustomerNameAutocomplete();
-                    NewCustomer_Load(sender, e);
+                    SaveCustomer();
                 }
             }
             else
             {
-                if (MessageBox.Show("هل تريد تعديل بيانات الزبون ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("هل تريد تعديل بيانات الزبون؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    try
-                    {
-                        customerTableAdapter cta = new customerTableAdapter();
-
-                        customerRow["اسم_الربون"] = txtName.Text;
-                        customerRow["عنوان_الربون"] = txtPlace.Text;
-                        customerRow["هاتف"] = txtPhone.Text;
-                        customerRow["الموبايل"] = txtMobile.Text;
-                        customerRow["البريد_الالكتروني"] = txtEmail.Text;
-                        customerRow["الموقع_الالكتروني"] = txtWebSite.Text;
-                        customerRow["وصف_الربون"] = txtCustomerDisc.Text;
-                        customerRow["تاريخ"] = dtpDate.Value;
-                        customerRow["صورة"] = txtImageFile.Text;
-
-                        cta.Update(customerRow);
-                        MessageBox.Show("تم تعديل بيانات الزبون ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NewCustomer_Load(sender, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("error : " + ex.Message);
-                    }
+                    UpdateCustomer();
                 }
             }
         }
@@ -122,7 +84,7 @@ namespace Program.entityForm
 
             if (!Regex.IsMatch(txtWebSite.Text, @"www\.\S+\.\S+"))
             {
-                errorProvider2.SetError(txtWebSite, "example : www.hostname.com");
+                errorProvider2.SetError(txtWebSite, "example: www.hostname.com");
                 isValid = false;
             }
             else
@@ -133,16 +95,56 @@ namespace Program.entityForm
             return isValid;
         }
 
-
-        private void bBrowse_Click(object sender, EventArgs e)
+        private void SaveCustomer()
         {
-            if (txtImageFile.Text == "")
+            try
             {
-                OpenFileAndDisplayImage();
+                customerTableAdapter cta = new customerTableAdapter();
+                cta.Insert(txtName.Text,
+                    Convert.ToInt32(txtBalance.Text),
+                    txtBalanceText.Text,
+                    txtPlace.Text,
+                    txtPhone.Text,
+                    txtMobile.Text,
+                    txtEmail.Text,
+                    txtWebSite.Text,
+                    dtpDate.Value,
+                    txtCustomerDisc.Text,
+                    "..\\..\\Image\\Customer\\" + txtName.Text + ".jpg");
+
+                MessageBox.Show("تم إضافة الزبون", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                getCustomerNameAutocomplete();
+                NewCustomer_Load(this, EventArgs.Empty);
             }
-            else if (MessageBox.Show("هل تريد تغيير صورة الزبون ؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            catch (Exception ex)
             {
-                ReplaceCustomerImage();
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateCustomer()
+        {
+            try
+            {
+                customerTableAdapter cta = new customerTableAdapter();
+                customerRow["اسم_الربون"] = txtName.Text;
+                customerRow["عنوان_الربون"] = txtPlace.Text;
+                customerRow["هاتف"] = txtPhone.Text;
+                customerRow["الموبايل"] = txtMobile.Text;
+                customerRow["البريد_الالكتروني"] = txtEmail.Text;
+                customerRow["الموقع_الالكتروني"] = txtWebSite.Text;
+                customerRow["وصف_الربون"] = txtCustomerDisc.Text;
+                customerRow["تاريخ"] = dtpDate.Value;
+                //customerRow["صورة"] = txtImageFile.Text;
+
+                cta.Update(customerRow);
+
+                MessageBox.Show("تم تعديل بيانات الزبون", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NewCustomer_Load(this, EventArgs.Empty);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -153,12 +155,23 @@ namespace Program.entityForm
 
         private void NewCustomer_Load(object sender, EventArgs e)
         {
-            customerTableAdapter cta = new customerTableAdapter();
-            dataGridView1.DataSource = cta.GetData();
+            LoadCustomerData();
             getCustomerNameAutocomplete();
         }
 
-        public void getCustomerNameAutocomplete()
+        private void LoadCustomerData()
+        {
+            customerTableAdapter cta = new customerTableAdapter();
+            dataGridView1.DataSource = cta.GetData();
+            dataGridView1.Columns["البريد_الالكتروني"].Visible = false;
+            dataGridView1.Columns["الموقع_الالكتروني"].Visible = false;
+
+            dataGridView1.Columns["وصف_الربون"].Visible = false;
+            dataGridView1.Columns["صورة"].Visible = false;
+
+        }
+
+        private void getCustomerNameAutocomplete()
         {
             customerTableAdapter cta = new customerTableAdapter();
             var cdt = cta.getCustomerAutocomplete(txtName.Text);
@@ -184,11 +197,7 @@ namespace Program.entityForm
             txtWebSite.Text = customerRow["الموقع_الالكتروني"].ToString();
             txtCustomerDisc.Text = customerRow["وصف_الربون"].ToString();
             dtpDate.Value = Convert.ToDateTime(customerRow["تاريخ"].ToString());
-            txtImageFile.Text = customerRow["صورة"].ToString();
-            pCustomerPicture.ImageLocation = txtImageFile.Text;
         }
-
-       
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
@@ -201,7 +210,7 @@ namespace Program.entityForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error : " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -212,6 +221,7 @@ namespace Program.entityForm
                 customerTableAdapter cta = new customerTableAdapter();
                 var cdt = cta.getCustomerAutocomplete(txtNameSearch.Text);
                 dataGridView1.DataSource = cdt;
+
                 if (cdt.Rows.Count > 0)
                 {
                     customerRow = cdt.Rows[0];
@@ -220,7 +230,7 @@ namespace Program.entityForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error : " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -258,11 +268,12 @@ namespace Program.entityForm
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
         }
 
-        long ComputeFibonacci(int n, BackgroundWorker worker, DoWorkEventArgs e)
+        private long ComputeFibonacci(int n, BackgroundWorker worker, DoWorkEventArgs e)
         {
-            if (n < 0 || n > 91) throw new ArgumentException("value must be >= 0 and <= 91", "n");
+            if (n < 0 || n > 91) throw new ArgumentException("Value must be >= 0 and <= 91", nameof(n));
 
             long result = 0;
+
             if (worker.CancellationPending)
             {
                 e.Cancel = true;
@@ -272,13 +283,14 @@ namespace Program.entityForm
                 if (n < 2) result = 1;
                 else result = ComputeFibonacci(n - 1, worker, e) + ComputeFibonacci(n - 2, worker, e);
 
-                int percentComplete = (int)((float)n / (float)numberToCompute * 100);
+                int percentComplete = (int)((float)n / numberToCompute * 100);
                 if (percentComplete > highestPercentageReached)
                 {
                     highestPercentageReached = percentComplete;
                     worker.ReportProgress(percentComplete);
                 }
             }
+
             return result;
         }
 
@@ -306,49 +318,6 @@ namespace Program.entityForm
             }
         }
 
-        private void SaveCustomerImage()
-        {
-            if (!string.IsNullOrEmpty(txtImageFile.Text))
-            {
-                byte[] image;
-                using (var fsr = new FileStream(txtImageFile.Text, FileMode.OpenOrCreate, FileAccess.Read))
-                {
-                    image = new byte[fsr.Length];
-                    fsr.Read(image, 0, image.Length);
-                }
-
-                using (var fsw = new FileStream($"..\\..\\Image\\Customer\\{txtName.Text}.jpg", FileMode.OpenOrCreate, FileAccess.Write))
-                {
-                    fsw.Write(image, 0, image.Length);
-                }
-            }
-        }
-
-        private void OpenFileAndDisplayImage()
-        {
-            openFileDialog1.ShowDialog();
-            txtImageFile.Text = openFileDialog1.FileName;
-            pCustomerPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-            pCustomerPicture.ImageLocation = txtImageFile.Text;
-        }
-
-        private void ReplaceCustomerImage()
-        {
-            openFileDialog1.ShowDialog();
-            System.IO.File.Delete(txtImageFile.Text);
-            byte[] image;
-            using (var fsr = new FileStream(openFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.Read))
-            {
-                image = new byte[fsr.Length];
-                fsr.Read(image, 0, image.Length);
-            }
-
-            using (var fsw = new FileStream($"..\\..\\Image\\Customer\\{txtName.Text}.jpg", FileMode.OpenOrCreate, FileAccess.Write))
-            {
-                fsw.Write(image, 0, image.Length);
-            }
-        }
-
         private void ResetForm()
         {
             customerRow = null;
@@ -362,11 +331,6 @@ namespace Program.entityForm
             txtWebSite.Text = "";
             txtCustomerDisc.Text = "";
             dtpDate.Value = DateTime.Now;
-            txtImageFile.Text = "";
         }
-
-       
-
-      
     }
 }

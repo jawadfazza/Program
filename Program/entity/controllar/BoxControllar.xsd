@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="boxTableAdapter" GeneratorDataComponentClassName="boxTableAdapter" Name="box" UserDataComponentName="boxTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [box] WHERE (([الرقم] = @Original_الرقم) AND ([اسم_الصندوق] = @Original_اسم_الصندوق) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ([تاريخ] = @Original_تاريخ))</CommandText>
@@ -69,7 +69,7 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
               <Mapping SourceColumn="الرصيد" DataSetColumn="الرصيد" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetBoxById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetBoxById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetBoxById" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetBoxById" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetBoxById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetBoxById" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT اسم_الصندوق, الرصيد, الرصيد_كتابة, الرقم, تاريخ FROM box WHERE (الرقم = @id)</CommandText>
@@ -79,7 +79,7 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Company.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdDate" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataByIdDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdDate" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Company.dbo.box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdDate" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataByIdDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdDate" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        اسم_الصندوق, الرصيد, الرصيد_كتابة, الرقم, تاريخ
@@ -97,7 +97,7 @@ WHERE        (الرقم = @id) AND (تاريخ BETWEEN @from AND @to)</CommandT
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="box_creditTableAdapter" GeneratorDataComponentClassName="box_creditTableAdapter" Name="box_credit" UserDataComponentName="box_creditTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[box_credit] WHERE (([الرقم] = @Original_الرقم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_إلى = 1 AND [إلى] IS NULL) OR ([إلى] = @Original_إلى)) AND ((@IsNull_تاريخ = 1 AND [تاريخ] IS NULL) OR ([تاريخ] = @Original_تاريخ)) AND ((@IsNull_box_id = 1 AND [box_id] IS NULL) OR ([box_id] = @Original_box_id)))</CommandText>
@@ -170,7 +170,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
               <Mapping SourceColumn="box_id" DataSetColumn="box_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBoxCreditId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBoxCreditId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBoxCreditId" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box_credit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBoxCreditId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBoxCreditId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBoxCreditId" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات, تاريخ, box_id
@@ -186,7 +186,7 @@ WHERE        (box_id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="box_debitTableAdapter" GeneratorDataComponentClassName="box_debitTableAdapter" Name="box_debit" UserDataComponentName="box_debitTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[box_debit] WHERE (([الرقم] = @Original_الرقم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_من = 1 AND [من] IS NULL) OR ([من] = @Original_من)) AND ((@IsNull_تاريخ = 1 AND [تاريخ] IS NULL) OR ([تاريخ] = @Original_تاريخ)) AND ((@IsNull_box_id = 1 AND [box_id] IS NULL) OR ([box_id] = @Original_box_id)))</CommandText>
@@ -259,7 +259,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
               <Mapping SourceColumn="box_id" DataSetColumn="box_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Warehouse.dbo.box_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBoxDebitId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBoxDebitId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBoxDebitId" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Warehouse.dbo.box_debit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="getBoxDebitId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getBoxDebitId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getBoxDebitId" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, تاريخ, box_id

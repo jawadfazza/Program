@@ -92,7 +92,7 @@ WHERE        (customer_id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerSaleTableAdapter" GeneratorDataComponentClassName="CustomerSaleTableAdapter" Name="CustomerSale" UserDataComponentName="CustomerSaleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        material_credit.العميل, material_credit_list.رقم_المادة, material_credit_list.اسم_المادة, material_credit_list.الوحدة, material_credit_list.الكمية, material_credit_list.السعر,
@@ -288,72 +288,72 @@ WHERE        (رقم_التقرير = @id)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CustomerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CustomerDataSet" msprop:Generator_UserDSName="CustomerDataSet">
+  <xs:element name="CustomerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CustomerDataSet" msprop:Generator_DataSetName="CustomerDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CustomerReport" msprop:Generator_TableClassName="CustomerReportDataTable" msprop:Generator_TableVarName="tableCustomerReport" msprop:Generator_TablePropName="CustomerReport" msprop:Generator_RowDeletingName="CustomerReportRowDeleting" msprop:Generator_UserTableName="CustomerReport" msprop:Generator_RowChangingName="CustomerReportRowChanging" msprop:Generator_RowEvHandlerName="CustomerReportRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerReportRowDeleted" msprop:Generator_RowEvArgName="CustomerReportRowChangeEvent" msprop:Generator_RowChangedName="CustomerReportRowChanged" msprop:Generator_RowClassName="CustomerReportRow">
+        <xs:element name="CustomerReport" msprop:Generator_RowEvHandlerName="CustomerReportRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerReportRowDeleted" msprop:Generator_RowDeletingName="CustomerReportRowDeleting" msprop:Generator_RowEvArgName="CustomerReportRowChangeEvent" msprop:Generator_TablePropName="CustomerReport" msprop:Generator_RowChangedName="CustomerReportRowChanged" msprop:Generator_RowChangingName="CustomerReportRowChanging" msprop:Generator_UserTableName="CustomerReport" msprop:Generator_TableClassName="CustomerReportDataTable" msprop:Generator_RowClassName="CustomerReportRow" msprop:Generator_TableVarName="tableCustomerReport">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
-              <xs:element name="اسم_الربون" msprop:Generator_ColumnVarNameInTable="columnاسم_الربون" msprop:Generator_ColumnPropNameInRow="اسم_الربون" msprop:Generator_ColumnPropNameInTable="اسم_الربونColumn" msprop:Generator_UserColumnName="اسم_الربون">
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="اسم_الربون" msprop:Generator_ColumnPropNameInRow="اسم_الربون" msprop:Generator_ColumnPropNameInTable="اسم_الربونColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_الربون" msprop:Generator_UserColumnName="اسم_الربون">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
-              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+              <xs:element name="الرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_UserColumnName="الرصيد_كتابة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="هاتف" msprop:Generator_ColumnVarNameInTable="columnهاتف" msprop:Generator_ColumnPropNameInRow="هاتف" msprop:Generator_ColumnPropNameInTable="هاتفColumn" msprop:Generator_UserColumnName="هاتف" minOccurs="0">
+              <xs:element name="هاتف" msprop:Generator_ColumnPropNameInRow="هاتف" msprop:Generator_ColumnPropNameInTable="هاتفColumn" msprop:Generator_ColumnVarNameInTable="columnهاتف" msprop:Generator_UserColumnName="هاتف" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="عنوان_الربون" msprop:Generator_ColumnVarNameInTable="columnعنوان_الربون" msprop:Generator_ColumnPropNameInRow="عنوان_الربون" msprop:Generator_ColumnPropNameInTable="عنوان_الربونColumn" msprop:Generator_UserColumnName="عنوان_الربون" minOccurs="0">
+              <xs:element name="عنوان_الربون" msprop:Generator_ColumnPropNameInRow="عنوان_الربون" msprop:Generator_ColumnPropNameInTable="عنوان_الربونColumn" msprop:Generator_ColumnVarNameInTable="columnعنوان_الربون" msprop:Generator_UserColumnName="عنوان_الربون" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="البريد_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالبريد_الالكتروني" msprop:Generator_ColumnPropNameInRow="البريد_الالكتروني" msprop:Generator_ColumnPropNameInTable="البريد_الالكترونيColumn" msprop:Generator_UserColumnName="البريد_الالكتروني" minOccurs="0">
+              <xs:element name="البريد_الالكتروني" msprop:Generator_ColumnPropNameInRow="البريد_الالكتروني" msprop:Generator_ColumnPropNameInTable="البريد_الالكترونيColumn" msprop:Generator_ColumnVarNameInTable="columnالبريد_الالكتروني" msprop:Generator_UserColumnName="البريد_الالكتروني" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الموبايل" msprop:Generator_ColumnVarNameInTable="columnالموبايل" msprop:Generator_ColumnPropNameInRow="الموبايل" msprop:Generator_ColumnPropNameInTable="الموبايلColumn" msprop:Generator_UserColumnName="الموبايل" minOccurs="0">
+              <xs:element name="الموبايل" msprop:Generator_ColumnPropNameInRow="الموبايل" msprop:Generator_ColumnPropNameInTable="الموبايلColumn" msprop:Generator_ColumnVarNameInTable="columnالموبايل" msprop:Generator_UserColumnName="الموبايل" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الموقع_الالكتروني" msprop:Generator_ColumnVarNameInTable="columnالموقع_الالكتروني" msprop:Generator_ColumnPropNameInRow="الموقع_الالكتروني" msprop:Generator_ColumnPropNameInTable="الموقع_الالكترونيColumn" msprop:Generator_UserColumnName="الموقع_الالكتروني" minOccurs="0">
+              <xs:element name="الموقع_الالكتروني" msprop:Generator_ColumnPropNameInRow="الموقع_الالكتروني" msprop:Generator_ColumnPropNameInTable="الموقع_الالكترونيColumn" msprop:Generator_ColumnVarNameInTable="columnالموقع_الالكتروني" msprop:Generator_UserColumnName="الموقع_الالكتروني" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="صورة" msprop:Generator_ColumnVarNameInTable="columnصورة" msprop:Generator_ColumnPropNameInRow="صورة" msprop:Generator_ColumnPropNameInTable="صورةColumn" msprop:Generator_UserColumnName="صورة" minOccurs="0">
+              <xs:element name="تاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="صورة" msprop:Generator_ColumnPropNameInRow="صورة" msprop:Generator_ColumnPropNameInTable="صورةColumn" msprop:Generator_ColumnVarNameInTable="columnصورة" msprop:Generator_UserColumnName="صورة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="وصف_الربون" msprop:Generator_ColumnVarNameInTable="columnوصف_الربون" msprop:Generator_ColumnPropNameInRow="وصف_الربون" msprop:Generator_ColumnPropNameInTable="وصف_الربونColumn" msprop:Generator_UserColumnName="وصف_الربون" minOccurs="0">
+              <xs:element name="وصف_الربون" msprop:Generator_ColumnPropNameInRow="وصف_الربون" msprop:Generator_ColumnPropNameInTable="وصف_الربونColumn" msprop:Generator_ColumnVarNameInTable="columnوصف_الربون" msprop:Generator_UserColumnName="وصف_الربون" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -363,375 +363,375 @@ WHERE        (رقم_التقرير = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="customerReport_credit" msprop:Generator_TableClassName="customerReport_creditDataTable" msprop:Generator_TableVarName="tablecustomerReport_credit" msprop:Generator_TablePropName="customerReport_credit" msprop:Generator_RowDeletingName="customerReport_creditRowDeleting" msprop:Generator_UserTableName="customerReport_credit" msprop:Generator_RowChangingName="customerReport_creditRowChanging" msprop:Generator_RowEvHandlerName="customerReport_creditRowChangeEventHandler" msprop:Generator_RowDeletedName="customerReport_creditRowDeleted" msprop:Generator_RowEvArgName="customerReport_creditRowChangeEvent" msprop:Generator_RowChangedName="customerReport_creditRowChanged" msprop:Generator_RowClassName="customerReport_creditRow">
+        <xs:element name="customerReport_credit" msprop:Generator_RowEvHandlerName="customerReport_creditRowChangeEventHandler" msprop:Generator_RowDeletedName="customerReport_creditRowDeleted" msprop:Generator_RowDeletingName="customerReport_creditRowDeleting" msprop:Generator_RowEvArgName="customerReport_creditRowChangeEvent" msprop:Generator_TablePropName="customerReport_credit" msprop:Generator_RowChangedName="customerReport_creditRowChanged" msprop:Generator_RowChangingName="customerReport_creditRowChanging" msprop:Generator_UserTableName="customerReport_credit" msprop:Generator_TableClassName="customerReport_creditDataTable" msprop:Generator_RowClassName="customerReport_creditRow" msprop:Generator_TableVarName="tablecustomerReport_credit">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
-              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
-              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_UserColumnName="الرصيد_كتابة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="إلى" msprop:Generator_ColumnVarNameInTable="columnإلى" msprop:Generator_ColumnPropNameInRow="إلى" msprop:Generator_ColumnPropNameInTable="إلىColumn" msprop:Generator_UserColumnName="إلى" minOccurs="0">
+              <xs:element name="إلى" msprop:Generator_ColumnPropNameInRow="إلى" msprop:Generator_ColumnPropNameInTable="إلىColumn" msprop:Generator_ColumnVarNameInTable="columnإلى" msprop:Generator_UserColumnName="إلى" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ملاحطات" msprop:Generator_ColumnVarNameInTable="columnملاحطات" msprop:Generator_ColumnPropNameInRow="ملاحطات" msprop:Generator_ColumnPropNameInTable="ملاحطاتColumn" msprop:Generator_UserColumnName="ملاحطات" minOccurs="0">
+              <xs:element name="ملاحطات" msprop:Generator_ColumnPropNameInRow="ملاحطات" msprop:Generator_ColumnPropNameInTable="ملاحطاتColumn" msprop:Generator_ColumnVarNameInTable="columnملاحطات" msprop:Generator_UserColumnName="ملاحطات" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="customer_id" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_UserColumnName="customer_id" type="xs:int" minOccurs="0" />
+              <xs:element name="تاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="customer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_UserColumnName="customer_id" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="customerReport_debit" msprop:Generator_TableClassName="customerReport_debitDataTable" msprop:Generator_TableVarName="tablecustomerReport_debit" msprop:Generator_TablePropName="customerReport_debit" msprop:Generator_RowDeletingName="customerReport_debitRowDeleting" msprop:Generator_UserTableName="customerReport_debit" msprop:Generator_RowChangingName="customerReport_debitRowChanging" msprop:Generator_RowEvHandlerName="customerReport_debitRowChangeEventHandler" msprop:Generator_RowDeletedName="customerReport_debitRowDeleted" msprop:Generator_RowEvArgName="customerReport_debitRowChangeEvent" msprop:Generator_RowChangedName="customerReport_debitRowChanged" msprop:Generator_RowClassName="customerReport_debitRow">
+        <xs:element name="customerReport_debit" msprop:Generator_RowEvHandlerName="customerReport_debitRowChangeEventHandler" msprop:Generator_RowDeletedName="customerReport_debitRowDeleted" msprop:Generator_RowDeletingName="customerReport_debitRowDeleting" msprop:Generator_RowEvArgName="customerReport_debitRowChangeEvent" msprop:Generator_TablePropName="customerReport_debit" msprop:Generator_RowChangedName="customerReport_debitRowChanged" msprop:Generator_RowChangingName="customerReport_debitRowChanging" msprop:Generator_UserTableName="customerReport_debit" msprop:Generator_TableClassName="customerReport_debitDataTable" msprop:Generator_RowClassName="customerReport_debitRow" msprop:Generator_TableVarName="tablecustomerReport_debit">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
-              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
-              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+              <xs:element name="الرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_UserColumnName="الرصيد_كتابة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="من" msprop:Generator_ColumnVarNameInTable="columnمن" msprop:Generator_ColumnPropNameInRow="من" msprop:Generator_ColumnPropNameInTable="منColumn" msprop:Generator_UserColumnName="من" minOccurs="0">
+              <xs:element name="من" msprop:Generator_ColumnPropNameInRow="من" msprop:Generator_ColumnPropNameInTable="منColumn" msprop:Generator_ColumnVarNameInTable="columnمن" msprop:Generator_UserColumnName="من" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="ملاحطات" msprop:Generator_ColumnVarNameInTable="columnملاحطات" msprop:Generator_ColumnPropNameInRow="ملاحطات" msprop:Generator_ColumnPropNameInTable="ملاحطاتColumn" msprop:Generator_UserColumnName="ملاحطات" minOccurs="0">
+              <xs:element name="تاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ملاحطات" msprop:Generator_ColumnPropNameInRow="ملاحطات" msprop:Generator_ColumnPropNameInTable="ملاحطاتColumn" msprop:Generator_ColumnVarNameInTable="columnملاحطات" msprop:Generator_UserColumnName="ملاحطات" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="customer_id" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_UserColumnName="customer_id" type="xs:int" minOccurs="0" />
+              <xs:element name="customer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_UserColumnName="customer_id" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CustomerSale" msprop:Generator_TableClassName="CustomerSaleDataTable" msprop:Generator_TableVarName="tableCustomerSale" msprop:Generator_TablePropName="CustomerSale" msprop:Generator_RowDeletingName="CustomerSaleRowDeleting" msprop:Generator_UserTableName="CustomerSale" msprop:Generator_RowChangingName="CustomerSaleRowChanging" msprop:Generator_RowEvHandlerName="CustomerSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerSaleRowDeleted" msprop:Generator_RowEvArgName="CustomerSaleRowChangeEvent" msprop:Generator_RowChangedName="CustomerSaleRowChanged" msprop:Generator_RowClassName="CustomerSaleRow">
+        <xs:element name="CustomerSale" msprop:Generator_RowEvHandlerName="CustomerSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerSaleRowDeleted" msprop:Generator_RowDeletingName="CustomerSaleRowDeleting" msprop:Generator_RowEvArgName="CustomerSaleRowChangeEvent" msprop:Generator_TablePropName="CustomerSale" msprop:Generator_RowChangedName="CustomerSaleRowChanged" msprop:Generator_RowChangingName="CustomerSaleRowChanging" msprop:Generator_UserTableName="CustomerSale" msprop:Generator_TableClassName="CustomerSaleDataTable" msprop:Generator_RowClassName="CustomerSaleRow" msprop:Generator_TableVarName="tableCustomerSale">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="العميل" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_UserColumnName="العميل" type="xs:int" />
-              <xs:element name="رقم_المادة" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
-              <xs:element name="اسم_المادة" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_UserColumnName="اسم_المادة">
+              <xs:element name="العميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_UserColumnName="العميل" type="xs:int" />
+              <xs:element name="رقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
+              <xs:element name="اسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_UserColumnName="اسم_المادة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الوحدة" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_UserColumnName="الوحدة">
+              <xs:element name="الوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_UserColumnName="الوحدة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
-              <xs:element name="السعر" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_UserColumnName="السعر" type="xs:double" />
-              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
-              <xs:element name="ملاحظات" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
+              <xs:element name="الكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
+              <xs:element name="السعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_UserColumnName="السعر" type="xs:double" />
+              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
+              <xs:element name="ملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
-              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
+              <xs:element name="المستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
+              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="materialBills_credit" msprop:Generator_TableClassName="materialBills_creditDataTable" msprop:Generator_TableVarName="tablematerialBills_credit" msprop:Generator_TablePropName="materialBills_credit" msprop:Generator_RowDeletingName="materialBills_creditRowDeleting" msprop:Generator_UserTableName="materialBills_credit" msprop:Generator_RowChangingName="materialBills_creditRowChanging" msprop:Generator_RowEvHandlerName="materialBills_creditRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_creditRowDeleted" msprop:Generator_RowEvArgName="materialBills_creditRowChangeEvent" msprop:Generator_RowChangedName="materialBills_creditRowChanged" msprop:Generator_RowClassName="materialBills_creditRow">
+        <xs:element name="materialBills_credit" msprop:Generator_RowEvHandlerName="materialBills_creditRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_creditRowDeleted" msprop:Generator_RowDeletingName="materialBills_creditRowDeleting" msprop:Generator_RowEvArgName="materialBills_creditRowChangeEvent" msprop:Generator_TablePropName="materialBills_credit" msprop:Generator_RowChangedName="materialBills_creditRowChanged" msprop:Generator_RowChangingName="materialBills_creditRowChanging" msprop:Generator_UserTableName="materialBills_credit" msprop:Generator_TableClassName="materialBills_creditDataTable" msprop:Generator_RowClassName="materialBills_creditRow" msprop:Generator_TableVarName="tablematerialBills_credit">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
-              <xs:element name="تاريخ_البيع" msprop:Generator_ColumnVarNameInTable="columnتاريخ_البيع" msprop:Generator_ColumnPropNameInRow="تاريخ_البيع" msprop:Generator_ColumnPropNameInTable="تاريخ_البيعColumn" msprop:Generator_UserColumnName="تاريخ_البيع" type="xs:dateTime" />
-              <xs:element name="تاريخ_التسليم" msprop:Generator_ColumnVarNameInTable="columnتاريخ_التسليم" msprop:Generator_ColumnPropNameInRow="تاريخ_التسليم" msprop:Generator_ColumnPropNameInTable="تاريخ_التسليمColumn" msprop:Generator_UserColumnName="تاريخ_التسليم" type="xs:dateTime" />
-              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
-              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="تاريخ_البيع" msprop:Generator_ColumnPropNameInRow="تاريخ_البيع" msprop:Generator_ColumnPropNameInTable="تاريخ_البيعColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ_البيع" msprop:Generator_UserColumnName="تاريخ_البيع" type="xs:dateTime" />
+              <xs:element name="تاريخ_التسليم" msprop:Generator_ColumnPropNameInRow="تاريخ_التسليم" msprop:Generator_ColumnPropNameInTable="تاريخ_التسليمColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ_التسليم" msprop:Generator_UserColumnName="تاريخ_التسليم" type="xs:dateTime" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_UserColumnName="الرصيد_كتابة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="إلى" msprop:Generator_ColumnVarNameInTable="columnإلى" msprop:Generator_ColumnPropNameInRow="إلى" msprop:Generator_ColumnPropNameInTable="إلىColumn" msprop:Generator_UserColumnName="إلى" minOccurs="0">
+              <xs:element name="إلى" msprop:Generator_ColumnPropNameInRow="إلى" msprop:Generator_ColumnPropNameInTable="إلىColumn" msprop:Generator_ColumnVarNameInTable="columnإلى" msprop:Generator_UserColumnName="إلى" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="طريقة_الدفع" msprop:Generator_ColumnVarNameInTable="columnطريقة_الدفع" msprop:Generator_ColumnPropNameInRow="طريقة_الدفع" msprop:Generator_ColumnPropNameInTable="طريقة_الدفعColumn" msprop:Generator_UserColumnName="طريقة_الدفع" minOccurs="0">
+              <xs:element name="طريقة_الدفع" msprop:Generator_ColumnPropNameInRow="طريقة_الدفع" msprop:Generator_ColumnPropNameInTable="طريقة_الدفعColumn" msprop:Generator_ColumnVarNameInTable="columnطريقة_الدفع" msprop:Generator_UserColumnName="طريقة_الدفع" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" minOccurs="0">
+              <xs:element name="المستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_UserColumnName="المستودع" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="العميل" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_UserColumnName="العميل" type="xs:int" />
-              <xs:element name="حذفة" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
+              <xs:element name="العميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_UserColumnName="العميل" type="xs:int" />
+              <xs:element name="حذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="بالة" msprop:Generator_ColumnVarNameInTable="columnبالة" msprop:Generator_ColumnPropNameInRow="بالة" msprop:Generator_ColumnPropNameInTable="بالةColumn" msprop:Generator_UserColumnName="بالة" minOccurs="0">
+              <xs:element name="بالة" msprop:Generator_ColumnPropNameInRow="بالة" msprop:Generator_ColumnPropNameInTable="بالةColumn" msprop:Generator_ColumnVarNameInTable="columnبالة" msprop:Generator_UserColumnName="بالة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="نوع_العملية" msprop:Generator_ColumnVarNameInTable="columnنوع_العملية" msprop:Generator_ColumnPropNameInRow="نوع_العملية" msprop:Generator_ColumnPropNameInTable="نوع_العمليةColumn" msprop:Generator_UserColumnName="نوع_العملية" minOccurs="0">
+              <xs:element name="نوع_العملية" msprop:Generator_ColumnPropNameInRow="نوع_العملية" msprop:Generator_ColumnPropNameInTable="نوع_العمليةColumn" msprop:Generator_ColumnVarNameInTable="columnنوع_العملية" msprop:Generator_UserColumnName="نوع_العملية" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
-              <xs:element name="مصاريف_مضافة" msprop:Generator_ColumnVarNameInTable="columnمصاريف_مضافة" msprop:Generator_ColumnPropNameInRow="مصاريف_مضافة" msprop:Generator_ColumnPropNameInTable="مصاريف_مضافةColumn" msprop:Generator_UserColumnName="مصاريف_مضافة" type="xs:double" minOccurs="0" />
-              <xs:element name="مصاريف_على_حساب" msprop:Generator_ColumnVarNameInTable="columnمصاريف_على_حساب" msprop:Generator_ColumnPropNameInRow="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInTable="مصاريف_على_حسابColumn" msprop:Generator_UserColumnName="مصاريف_على_حساب" minOccurs="0">
+              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
+              <xs:element name="مصاريف_مضافة" msprop:Generator_ColumnPropNameInRow="مصاريف_مضافة" msprop:Generator_ColumnPropNameInTable="مصاريف_مضافةColumn" msprop:Generator_ColumnVarNameInTable="columnمصاريف_مضافة" msprop:Generator_UserColumnName="مصاريف_مضافة" type="xs:double" minOccurs="0" />
+              <xs:element name="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInRow="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInTable="مصاريف_على_حسابColumn" msprop:Generator_ColumnVarNameInTable="columnمصاريف_على_حساب" msprop:Generator_UserColumnName="مصاريف_على_حساب" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="مرحل" msprop:Generator_ColumnVarNameInTable="columnمرحل" msprop:Generator_ColumnPropNameInRow="مرحل" msprop:Generator_ColumnPropNameInTable="مرحلColumn" msprop:Generator_UserColumnName="مرحل" minOccurs="0">
+              <xs:element name="مرحل" msprop:Generator_ColumnPropNameInRow="مرحل" msprop:Generator_ColumnPropNameInTable="مرحلColumn" msprop:Generator_ColumnVarNameInTable="columnمرحل" msprop:Generator_UserColumnName="مرحل" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="اسم_الحساب" msprop:Generator_ColumnVarNameInTable="columnاسم_الحساب" msprop:Generator_ColumnPropNameInRow="اسم_الحساب" msprop:Generator_ColumnPropNameInTable="اسم_الحسابColumn" msprop:Generator_UserColumnName="اسم_الحساب" minOccurs="0">
+              <xs:element name="اسم_الحساب" msprop:Generator_ColumnPropNameInRow="اسم_الحساب" msprop:Generator_ColumnPropNameInTable="اسم_الحسابColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_الحساب" msprop:Generator_UserColumnName="اسم_الحساب" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="سند_القبض" msprop:Generator_ColumnVarNameInTable="columnسند_القبض" msprop:Generator_ColumnPropNameInRow="سند_القبض" msprop:Generator_ColumnPropNameInTable="سند_القبضColumn" msprop:Generator_UserColumnName="سند_القبض" type="xs:int" minOccurs="0" />
+              <xs:element name="سند_القبض" msprop:Generator_ColumnPropNameInRow="سند_القبض" msprop:Generator_ColumnPropNameInTable="سند_القبضColumn" msprop:Generator_ColumnVarNameInTable="columnسند_القبض" msprop:Generator_UserColumnName="سند_القبض" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="materialBills_credit_list" msprop:Generator_TableClassName="materialBills_credit_listDataTable" msprop:Generator_TableVarName="tablematerialBills_credit_list" msprop:Generator_TablePropName="materialBills_credit_list" msprop:Generator_RowDeletingName="materialBills_credit_listRowDeleting" msprop:Generator_UserTableName="materialBills_credit_list" msprop:Generator_RowChangingName="materialBills_credit_listRowChanging" msprop:Generator_RowEvHandlerName="materialBills_credit_listRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_credit_listRowDeleted" msprop:Generator_RowEvArgName="materialBills_credit_listRowChangeEvent" msprop:Generator_RowChangedName="materialBills_credit_listRowChanged" msprop:Generator_RowClassName="materialBills_credit_listRow">
+        <xs:element name="materialBills_credit_list" msprop:Generator_RowEvHandlerName="materialBills_credit_listRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_credit_listRowDeleted" msprop:Generator_RowDeletingName="materialBills_credit_listRowDeleting" msprop:Generator_RowEvArgName="materialBills_credit_listRowChangeEvent" msprop:Generator_TablePropName="materialBills_credit_list" msprop:Generator_RowChangedName="materialBills_credit_listRowChanged" msprop:Generator_RowChangingName="materialBills_credit_listRowChanging" msprop:Generator_UserTableName="materialBills_credit_list" msprop:Generator_TableClassName="materialBills_credit_listDataTable" msprop:Generator_RowClassName="materialBills_credit_listRow" msprop:Generator_TableVarName="tablematerialBills_credit_list">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="رقم_المادة" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
-              <xs:element name="رقم_التقرير" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
-              <xs:element name="اسم_المادة" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_UserColumnName="اسم_المادة">
+              <xs:element name="رقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
+              <xs:element name="رقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
+              <xs:element name="اسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_UserColumnName="اسم_المادة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الوحدة" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_UserColumnName="الوحدة">
+              <xs:element name="الوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_UserColumnName="الوحدة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
-              <xs:element name="السعر" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_UserColumnName="السعر" type="xs:double" />
-              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
-              <xs:element name="ملاحظات" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
+              <xs:element name="الكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
+              <xs:element name="السعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_UserColumnName="السعر" type="xs:double" />
+              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
+              <xs:element name="ملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
-              <xs:element name="الكمية_كتابة" msprop:Generator_ColumnVarNameInTable="columnالكمية_كتابة" msprop:Generator_ColumnPropNameInRow="الكمية_كتابة" msprop:Generator_ColumnPropNameInTable="الكمية_كتابةColumn" msprop:Generator_UserColumnName="الكمية_كتابة" minOccurs="0">
+              <xs:element name="المستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
+              <xs:element name="الكمية_كتابة" msprop:Generator_ColumnPropNameInRow="الكمية_كتابة" msprop:Generator_ColumnPropNameInTable="الكمية_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالكمية_كتابة" msprop:Generator_UserColumnName="الكمية_كتابة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حذفة" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
+              <xs:element name="حذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
+              <xs:element name="حسم_ممنوح" msprop:Generator_ColumnPropNameInRow="حسم_ممنوح" msprop:Generator_ColumnPropNameInTable="حسم_ممنوحColumn" msprop:Generator_ColumnVarNameInTable="columnحسم_ممنوح" msprop:Generator_UserColumnName="حسم_ممنوح" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="material_debit_returnCard" msprop:Generator_TableClassName="material_debit_returnCardDataTable" msprop:Generator_TableVarName="tablematerial_debit_returnCard" msprop:Generator_TablePropName="material_debit_returnCard" msprop:Generator_RowDeletingName="material_debit_returnCardRowDeleting" msprop:Generator_UserTableName="material_debit_returnCard" msprop:Generator_RowChangingName="material_debit_returnCardRowChanging" msprop:Generator_RowEvHandlerName="material_debit_returnCardRowChangeEventHandler" msprop:Generator_RowDeletedName="material_debit_returnCardRowDeleted" msprop:Generator_RowEvArgName="material_debit_returnCardRowChangeEvent" msprop:Generator_RowChangedName="material_debit_returnCardRowChanged" msprop:Generator_RowClassName="material_debit_returnCardRow">
+        <xs:element name="material_debit_returnCard" msprop:Generator_RowEvHandlerName="material_debit_returnCardRowChangeEventHandler" msprop:Generator_RowDeletedName="material_debit_returnCardRowDeleted" msprop:Generator_RowDeletingName="material_debit_returnCardRowDeleting" msprop:Generator_RowEvArgName="material_debit_returnCardRowChangeEvent" msprop:Generator_TablePropName="material_debit_returnCard" msprop:Generator_RowChangedName="material_debit_returnCardRowChanged" msprop:Generator_RowChangingName="material_debit_returnCardRowChanging" msprop:Generator_UserTableName="material_debit_returnCard" msprop:Generator_TableClassName="material_debit_returnCardDataTable" msprop:Generator_RowClassName="material_debit_returnCardRow" msprop:Generator_TableVarName="tablematerial_debit_returnCard">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
-              <xs:element name="تاريخ" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" />
-              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
-              <xs:element name="من" msprop:Generator_ColumnVarNameInTable="columnمن" msprop:Generator_ColumnPropNameInRow="من" msprop:Generator_ColumnPropNameInTable="منColumn" msprop:Generator_UserColumnName="من" minOccurs="0">
+              <xs:element name="الرقم" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="الرقم" msprop:Generator_ColumnPropNameInTable="الرقمColumn" msprop:Generator_ColumnVarNameInTable="columnالرقم" msprop:Generator_UserColumnName="الرقم" type="xs:int" />
+              <xs:element name="تاريخ" msprop:Generator_ColumnPropNameInRow="تاريخ" msprop:Generator_ColumnPropNameInTable="تاريخColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ" msprop:Generator_UserColumnName="تاريخ" type="xs:dateTime" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_UserColumnName="الرصيد" type="xs:double" />
+              <xs:element name="من" msprop:Generator_ColumnPropNameInRow="من" msprop:Generator_ColumnPropNameInTable="منColumn" msprop:Generator_ColumnVarNameInTable="columnمن" msprop:Generator_UserColumnName="من" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_UserColumnName="الرصيد_كتابة">
+              <xs:element name="الرصيد_كتابة" msprop:Generator_ColumnPropNameInRow="الرصيد_كتابة" msprop:Generator_ColumnPropNameInTable="الرصيد_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالرصيد_كتابة" msprop:Generator_UserColumnName="الرصيد_كتابة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="رقم_فاتورة_المصدر" msprop:Generator_ColumnVarNameInTable="columnرقم_فاتورة_المصدر" msprop:Generator_ColumnPropNameInRow="رقم_فاتورة_المصدر" msprop:Generator_ColumnPropNameInTable="رقم_فاتورة_المصدرColumn" msprop:Generator_UserColumnName="رقم_فاتورة_المصدر" type="xs:int" minOccurs="0" />
-              <xs:element name="تاريخ_فاتورة_المصدر" msprop:Generator_ColumnVarNameInTable="columnتاريخ_فاتورة_المصدر" msprop:Generator_ColumnPropNameInRow="تاريخ_فاتورة_المصدر" msprop:Generator_ColumnPropNameInTable="تاريخ_فاتورة_المصدرColumn" msprop:Generator_UserColumnName="تاريخ_فاتورة_المصدر" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="المصدر" msprop:Generator_ColumnVarNameInTable="columnالمصدر" msprop:Generator_ColumnPropNameInRow="المصدر" msprop:Generator_ColumnPropNameInTable="المصدرColumn" msprop:Generator_UserColumnName="المصدر" minOccurs="0">
+              <xs:element name="رقم_فاتورة_المصدر" msprop:Generator_ColumnPropNameInRow="رقم_فاتورة_المصدر" msprop:Generator_ColumnPropNameInTable="رقم_فاتورة_المصدرColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_فاتورة_المصدر" msprop:Generator_UserColumnName="رقم_فاتورة_المصدر" type="xs:int" minOccurs="0" />
+              <xs:element name="تاريخ_فاتورة_المصدر" msprop:Generator_ColumnPropNameInRow="تاريخ_فاتورة_المصدر" msprop:Generator_ColumnPropNameInTable="تاريخ_فاتورة_المصدرColumn" msprop:Generator_ColumnVarNameInTable="columnتاريخ_فاتورة_المصدر" msprop:Generator_UserColumnName="تاريخ_فاتورة_المصدر" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="المصدر" msprop:Generator_ColumnPropNameInRow="المصدر" msprop:Generator_ColumnPropNameInTable="المصدرColumn" msprop:Generator_ColumnVarNameInTable="columnالمصدر" msprop:Generator_UserColumnName="المصدر" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" minOccurs="0">
+              <xs:element name="المستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_UserColumnName="المستودع" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حذفة" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
+              <xs:element name="حذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="نوع_العملية" msprop:Generator_ColumnVarNameInTable="columnنوع_العملية" msprop:Generator_ColumnPropNameInRow="نوع_العملية" msprop:Generator_ColumnPropNameInTable="نوع_العمليةColumn" msprop:Generator_UserColumnName="نوع_العملية" minOccurs="0">
+              <xs:element name="نوع_العملية" msprop:Generator_ColumnPropNameInRow="نوع_العملية" msprop:Generator_ColumnPropNameInTable="نوع_العمليةColumn" msprop:Generator_ColumnVarNameInTable="columnنوع_العملية" msprop:Generator_UserColumnName="نوع_العملية" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حسم_مكتسب" msprop:Generator_ColumnVarNameInTable="columnحسم_مكتسب" msprop:Generator_ColumnPropNameInRow="حسم_مكتسب" msprop:Generator_ColumnPropNameInTable="حسم_مكتسبColumn" msprop:Generator_UserColumnName="حسم_مكتسب" type="xs:double" minOccurs="0" />
-              <xs:element name="مصاريف_مضافة" msprop:Generator_ColumnVarNameInTable="columnمصاريف_مضافة" msprop:Generator_ColumnPropNameInRow="مصاريف_مضافة" msprop:Generator_ColumnPropNameInTable="مصاريف_مضافةColumn" msprop:Generator_UserColumnName="مصاريف_مضافة" type="xs:double" minOccurs="0" />
-              <xs:element name="مصاريف_على_حساب" msprop:Generator_ColumnVarNameInTable="columnمصاريف_على_حساب" msprop:Generator_ColumnPropNameInRow="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInTable="مصاريف_على_حسابColumn" msprop:Generator_UserColumnName="مصاريف_على_حساب" minOccurs="0">
+              <xs:element name="حسم_مكتسب" msprop:Generator_ColumnPropNameInRow="حسم_مكتسب" msprop:Generator_ColumnPropNameInTable="حسم_مكتسبColumn" msprop:Generator_ColumnVarNameInTable="columnحسم_مكتسب" msprop:Generator_UserColumnName="حسم_مكتسب" type="xs:double" minOccurs="0" />
+              <xs:element name="مصاريف_مضافة" msprop:Generator_ColumnPropNameInRow="مصاريف_مضافة" msprop:Generator_ColumnPropNameInTable="مصاريف_مضافةColumn" msprop:Generator_ColumnVarNameInTable="columnمصاريف_مضافة" msprop:Generator_UserColumnName="مصاريف_مضافة" type="xs:double" minOccurs="0" />
+              <xs:element name="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInRow="مصاريف_على_حساب" msprop:Generator_ColumnPropNameInTable="مصاريف_على_حسابColumn" msprop:Generator_ColumnVarNameInTable="columnمصاريف_على_حساب" msprop:Generator_UserColumnName="مصاريف_على_حساب" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="مرحل" msprop:Generator_ColumnVarNameInTable="columnمرحل" msprop:Generator_ColumnPropNameInRow="مرحل" msprop:Generator_ColumnPropNameInTable="مرحلColumn" msprop:Generator_UserColumnName="مرحل" minOccurs="0">
+              <xs:element name="مرحل" msprop:Generator_ColumnPropNameInRow="مرحل" msprop:Generator_ColumnPropNameInTable="مرحلColumn" msprop:Generator_ColumnVarNameInTable="columnمرحل" msprop:Generator_UserColumnName="مرحل" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="طريقة_الدفع" msprop:Generator_ColumnVarNameInTable="columnطريقة_الدفع" msprop:Generator_ColumnPropNameInRow="طريقة_الدفع" msprop:Generator_ColumnPropNameInTable="طريقة_الدفعColumn" msprop:Generator_UserColumnName="طريقة_الدفع" minOccurs="0">
+              <xs:element name="طريقة_الدفع" msprop:Generator_ColumnPropNameInRow="طريقة_الدفع" msprop:Generator_ColumnPropNameInTable="طريقة_الدفعColumn" msprop:Generator_ColumnVarNameInTable="columnطريقة_الدفع" msprop:Generator_UserColumnName="طريقة_الدفع" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="اسم_الحساب" msprop:Generator_ColumnVarNameInTable="columnاسم_الحساب" msprop:Generator_ColumnPropNameInRow="اسم_الحساب" msprop:Generator_ColumnPropNameInTable="اسم_الحسابColumn" msprop:Generator_UserColumnName="اسم_الحساب" minOccurs="0">
+              <xs:element name="اسم_الحساب" msprop:Generator_ColumnPropNameInRow="اسم_الحساب" msprop:Generator_ColumnPropNameInTable="اسم_الحسابColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_الحساب" msprop:Generator_UserColumnName="اسم_الحساب" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="العميل" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_UserColumnName="العميل" type="xs:int" />
+              <xs:element name="العميل" msprop:Generator_ColumnPropNameInRow="العميل" msprop:Generator_ColumnPropNameInTable="العميلColumn" msprop:Generator_ColumnVarNameInTable="columnالعميل" msprop:Generator_UserColumnName="العميل" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="material_debit_list_returnCard" msprop:Generator_TableClassName="material_debit_list_returnCardDataTable" msprop:Generator_TableVarName="tablematerial_debit_list_returnCard" msprop:Generator_TablePropName="material_debit_list_returnCard" msprop:Generator_RowDeletingName="material_debit_list_returnCardRowDeleting" msprop:Generator_UserTableName="material_debit_list_returnCard" msprop:Generator_RowChangingName="material_debit_list_returnCardRowChanging" msprop:Generator_RowEvHandlerName="material_debit_list_returnCardRowChangeEventHandler" msprop:Generator_RowDeletedName="material_debit_list_returnCardRowDeleted" msprop:Generator_RowEvArgName="material_debit_list_returnCardRowChangeEvent" msprop:Generator_RowChangedName="material_debit_list_returnCardRowChanged" msprop:Generator_RowClassName="material_debit_list_returnCardRow">
+        <xs:element name="material_debit_list_returnCard" msprop:Generator_RowEvHandlerName="material_debit_list_returnCardRowChangeEventHandler" msprop:Generator_RowDeletedName="material_debit_list_returnCardRowDeleted" msprop:Generator_RowDeletingName="material_debit_list_returnCardRowDeleting" msprop:Generator_RowEvArgName="material_debit_list_returnCardRowChangeEvent" msprop:Generator_TablePropName="material_debit_list_returnCard" msprop:Generator_RowChangedName="material_debit_list_returnCardRowChanged" msprop:Generator_RowChangingName="material_debit_list_returnCardRowChanging" msprop:Generator_UserTableName="material_debit_list_returnCard" msprop:Generator_TableClassName="material_debit_list_returnCardDataTable" msprop:Generator_RowClassName="material_debit_list_returnCardRow" msprop:Generator_TableVarName="tablematerial_debit_list_returnCard">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="رقم_المادة" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
-              <xs:element name="رقم_التقرير" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
-              <xs:element name="اسم_المادة" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_UserColumnName="اسم_المادة">
+              <xs:element name="رقم_المادة" msprop:Generator_ColumnPropNameInRow="رقم_المادة" msprop:Generator_ColumnPropNameInTable="رقم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_المادة" msprop:Generator_UserColumnName="رقم_المادة" type="xs:int" />
+              <xs:element name="رقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
+              <xs:element name="اسم_المادة" msprop:Generator_ColumnPropNameInRow="اسم_المادة" msprop:Generator_ColumnPropNameInTable="اسم_المادةColumn" msprop:Generator_ColumnVarNameInTable="columnاسم_المادة" msprop:Generator_UserColumnName="اسم_المادة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الوحدة" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_UserColumnName="الوحدة">
+              <xs:element name="الوحدة" msprop:Generator_ColumnPropNameInRow="الوحدة" msprop:Generator_ColumnPropNameInTable="الوحدةColumn" msprop:Generator_ColumnVarNameInTable="columnالوحدة" msprop:Generator_UserColumnName="الوحدة">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
-              <xs:element name="السعر" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_UserColumnName="السعر" type="xs:double" />
-              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
-              <xs:element name="ملاحظات" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
+              <xs:element name="الكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
+              <xs:element name="السعر" msprop:Generator_ColumnPropNameInRow="السعر" msprop:Generator_ColumnPropNameInTable="السعرColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر" msprop:Generator_UserColumnName="السعر" type="xs:double" />
+              <xs:element name="السعر_الجمالي" msprop:Generator_ColumnPropNameInRow="السعر_الجمالي" msprop:Generator_ColumnPropNameInTable="السعر_الجماليColumn" msprop:Generator_ColumnVarNameInTable="columnالسعر_الجمالي" msprop:Generator_UserColumnName="السعر_الجمالي" type="xs:double" />
+              <xs:element name="ملاحظات" msprop:Generator_ColumnPropNameInRow="ملاحظات" msprop:Generator_ColumnPropNameInTable="ملاحظاتColumn" msprop:Generator_ColumnVarNameInTable="columnملاحظات" msprop:Generator_UserColumnName="ملاحظات" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="المستودع" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
-              <xs:element name="الكمية_كتابة" msprop:Generator_ColumnVarNameInTable="columnالكمية_كتابة" msprop:Generator_ColumnPropNameInRow="الكمية_كتابة" msprop:Generator_ColumnPropNameInTable="الكمية_كتابةColumn" msprop:Generator_UserColumnName="الكمية_كتابة" minOccurs="0">
+              <xs:element name="المستودع" msprop:Generator_ColumnPropNameInRow="المستودع" msprop:Generator_ColumnPropNameInTable="المستودعColumn" msprop:Generator_ColumnVarNameInTable="columnالمستودع" msprop:Generator_UserColumnName="المستودع" type="xs:int" minOccurs="0" />
+              <xs:element name="الكمية_كتابة" msprop:Generator_ColumnPropNameInRow="الكمية_كتابة" msprop:Generator_ColumnPropNameInTable="الكمية_كتابةColumn" msprop:Generator_ColumnVarNameInTable="columnالكمية_كتابة" msprop:Generator_UserColumnName="الكمية_كتابة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حذفة" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
+              <xs:element name="حذفة" msprop:Generator_ColumnPropNameInRow="حذفة" msprop:Generator_ColumnPropNameInTable="حذفةColumn" msprop:Generator_ColumnVarNameInTable="columnحذفة" msprop:Generator_UserColumnName="حذفة" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="حسم_مكتسب" msprop:Generator_ColumnVarNameInTable="columnحسم_مكتسب" msprop:Generator_ColumnPropNameInRow="حسم_مكتسب" msprop:Generator_ColumnPropNameInTable="حسم_مكتسبColumn" msprop:Generator_UserColumnName="حسم_مكتسب" type="xs:double" minOccurs="0" />
+              <xs:element name="حسم_مكتسب" msprop:Generator_ColumnPropNameInRow="حسم_مكتسب" msprop:Generator_ColumnPropNameInTable="حسم_مكتسبColumn" msprop:Generator_ColumnVarNameInTable="columnحسم_مكتسب" msprop:Generator_UserColumnName="حسم_مكتسب" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="materialBills_credit_penfit_payment" msprop:Generator_TableClassName="materialBills_credit_penfit_paymentDataTable" msprop:Generator_TableVarName="tablematerialBills_credit_penfit_payment" msprop:Generator_TablePropName="materialBills_credit_penfit_payment" msprop:Generator_RowDeletingName="materialBills_credit_penfit_paymentRowDeleting" msprop:Generator_UserTableName="materialBills_credit_penfit_payment" msprop:Generator_RowChangingName="materialBills_credit_penfit_paymentRowChanging" msprop:Generator_RowEvHandlerName="materialBills_credit_penfit_paymentRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_credit_penfit_paymentRowDeleted" msprop:Generator_RowEvArgName="materialBills_credit_penfit_paymentRowChangeEvent" msprop:Generator_RowChangedName="materialBills_credit_penfit_paymentRowChanged" msprop:Generator_RowClassName="materialBills_credit_penfit_paymentRow">
+        <xs:element name="materialBills_credit_penfit_payment" msprop:Generator_RowEvHandlerName="materialBills_credit_penfit_paymentRowChangeEventHandler" msprop:Generator_RowDeletedName="materialBills_credit_penfit_paymentRowDeleted" msprop:Generator_RowDeletingName="materialBills_credit_penfit_paymentRowDeleting" msprop:Generator_RowEvArgName="materialBills_credit_penfit_paymentRowChangeEvent" msprop:Generator_TablePropName="materialBills_credit_penfit_payment" msprop:Generator_RowChangedName="materialBills_credit_penfit_paymentRowChanged" msprop:Generator_RowChangingName="materialBills_credit_penfit_paymentRowChanging" msprop:Generator_UserTableName="materialBills_credit_penfit_payment" msprop:Generator_TableClassName="materialBills_credit_penfit_paymentDataTable" msprop:Generator_RowClassName="materialBills_credit_penfit_paymentRow" msprop:Generator_TableVarName="tablematerialBills_credit_penfit_payment">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="رقم_التقرير" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
-              <xs:element name="الفائدة" msprop:Generator_ColumnVarNameInTable="columnالفائدة" msprop:Generator_ColumnPropNameInRow="الفائدة" msprop:Generator_ColumnPropNameInTable="الفائدةColumn" msprop:Generator_UserColumnName="الفائدة" type="xs:int" />
-              <xs:element name="نسبة_الفائدة" msprop:Generator_ColumnVarNameInTable="columnنسبة_الفائدة" msprop:Generator_ColumnPropNameInRow="نسبة_الفائدة" msprop:Generator_ColumnPropNameInTable="نسبة_الفائدةColumn" msprop:Generator_UserColumnName="نسبة_الفائدة" type="xs:int" />
-              <xs:element name="الدفع_كل" msprop:Generator_ColumnVarNameInTable="columnالدفع_كل" msprop:Generator_ColumnPropNameInRow="الدفع_كل" msprop:Generator_ColumnPropNameInTable="الدفع_كلColumn" msprop:Generator_UserColumnName="الدفع_كل" type="xs:int" />
-              <xs:element name="عدد_الأقساط" msprop:Generator_ColumnVarNameInTable="columnعدد_الأقساط" msprop:Generator_ColumnPropNameInRow="عدد_الأقساط" msprop:Generator_ColumnPropNameInTable="عدد_الأقساطColumn" msprop:Generator_UserColumnName="عدد_الأقساط" type="xs:int" />
-              <xs:element name="الرعبون" msprop:Generator_ColumnVarNameInTable="columnالرعبون" msprop:Generator_ColumnPropNameInRow="الرعبون" msprop:Generator_ColumnPropNameInTable="الرعبونColumn" msprop:Generator_UserColumnName="الرعبون" type="xs:int" minOccurs="0" />
+              <xs:element name="رقم_التقرير" msprop:Generator_ColumnPropNameInRow="رقم_التقرير" msprop:Generator_ColumnPropNameInTable="رقم_التقريرColumn" msprop:Generator_ColumnVarNameInTable="columnرقم_التقرير" msprop:Generator_UserColumnName="رقم_التقرير" type="xs:int" />
+              <xs:element name="الفائدة" msprop:Generator_ColumnPropNameInRow="الفائدة" msprop:Generator_ColumnPropNameInTable="الفائدةColumn" msprop:Generator_ColumnVarNameInTable="columnالفائدة" msprop:Generator_UserColumnName="الفائدة" type="xs:int" />
+              <xs:element name="نسبة_الفائدة" msprop:Generator_ColumnPropNameInRow="نسبة_الفائدة" msprop:Generator_ColumnPropNameInTable="نسبة_الفائدةColumn" msprop:Generator_ColumnVarNameInTable="columnنسبة_الفائدة" msprop:Generator_UserColumnName="نسبة_الفائدة" type="xs:int" />
+              <xs:element name="الدفع_كل" msprop:Generator_ColumnPropNameInRow="الدفع_كل" msprop:Generator_ColumnPropNameInTable="الدفع_كلColumn" msprop:Generator_ColumnVarNameInTable="columnالدفع_كل" msprop:Generator_UserColumnName="الدفع_كل" type="xs:int" />
+              <xs:element name="عدد_الأقساط" msprop:Generator_ColumnPropNameInRow="عدد_الأقساط" msprop:Generator_ColumnPropNameInTable="عدد_الأقساطColumn" msprop:Generator_ColumnVarNameInTable="columnعدد_الأقساط" msprop:Generator_UserColumnName="عدد_الأقساط" type="xs:int" />
+              <xs:element name="الرعبون" msprop:Generator_ColumnPropNameInRow="الرعبون" msprop:Generator_ColumnPropNameInTable="الرعبونColumn" msprop:Generator_ColumnVarNameInTable="columnالرعبون" msprop:Generator_UserColumnName="الرعبون" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -760,13 +760,13 @@ WHERE        (رقم_التقرير = @id)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__customer___custo__4242D080" msdata:parent="CustomerReport" msdata:child="customerReport_credit" msdata:parentkey="الرقم" msdata:childkey="customer_id" msprop:Generator_UserChildTable="customerReport_credit" msprop:Generator_ChildPropName="GetcustomerReport_creditRows" msprop:Generator_ParentPropName="CustomerReportRow" msprop:Generator_UserRelationName="FK__customer___custo__4242D080" msprop:Generator_RelationVarName="relationFK__customer___custo__4242D080" msprop:Generator_UserParentTable="CustomerReport" />
-      <msdata:Relationship name="FK__customer___custo__3AA1AEB8" msdata:parent="CustomerReport" msdata:child="customerReport_debit" msdata:parentkey="الرقم" msdata:childkey="customer_id" msprop:Generator_UserChildTable="customerReport_debit" msprop:Generator_ChildPropName="GetcustomerReport_debitRows" msprop:Generator_ParentPropName="CustomerReportRow" msprop:Generator_UserRelationName="FK__customer___custo__3AA1AEB8" msprop:Generator_RelationVarName="relationFK__customer___custo__3AA1AEB8" msprop:Generator_UserParentTable="CustomerReport" />
-      <msdata:Relationship name="FK__material___رقم_ا__4EA8A765" msdata:parent="materialBills_credit" msdata:child="materialBills_credit_list" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_UserChildTable="materialBills_credit_list" msprop:Generator_ChildPropName="GetmaterialBills_credit_listRows" msprop:Generator_ParentPropName="materialBills_creditRow" msprop:Generator_UserRelationName="FK__material___رقم_ا__4EA8A765" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__4EA8A765" msprop:Generator_UserParentTable="materialBills_credit" />
-      <msdata:Relationship name="FK__material___رقم_ا__1BE81D6E" msdata:parent="material_debit_returnCard" msdata:child="material_debit_list_returnCard" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_UserChildTable="material_debit_list_returnCard" msprop:Generator_ChildPropName="Getmaterial_debit_list_returnCardRows" msprop:Generator_UserParentTable="material_debit_returnCard" msprop:Generator_UserRelationName="FK__material___رقم_ا__1BE81D6E" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__1BE81D6E" msprop:Generator_ParentPropName="material_debit_returnCardRow" />
-      <msdata:Relationship name="FK__material___العمي__6CA31EA0" msdata:parent="CustomerReport" msdata:child="material_debit_returnCard" msdata:parentkey="الرقم" msdata:childkey="العميل" msprop:Generator_UserChildTable="material_debit_returnCard" msprop:Generator_ChildPropName="Getmaterial_debit_returnCardRows" msprop:Generator_UserParentTable="CustomerReport" msprop:Generator_UserRelationName="FK__material___العمي__6CA31EA0" msprop:Generator_RelationVarName="relationFK__material___العمي__6CA31EA0" msprop:Generator_ParentPropName="CustomerReportRow" />
-      <msdata:Relationship name="FK__material___العمي__7AF13DF7" msdata:parent="CustomerReport" msdata:child="materialBills_credit" msdata:parentkey="الرقم" msdata:childkey="العميل" msprop:Generator_UserChildTable="materialBills_credit" msprop:Generator_ChildPropName="GetmaterialBills_creditRows" msprop:Generator_ParentPropName="CustomerReportRow" msprop:Generator_UserRelationName="FK__material___العمي__7AF13DF7" msprop:Generator_RelationVarName="relationFK__material___العمي__7AF13DF7" msprop:Generator_UserParentTable="CustomerReport" />
-      <msdata:Relationship name="FK__material___رقم_ا__53A266AC" msdata:parent="materialBills_credit" msdata:child="materialBills_credit_penfit_payment" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_UserChildTable="materialBills_credit_penfit_payment" msprop:Generator_ChildPropName="GetmaterialBills_credit_penfit_paymentRows" msprop:Generator_ParentPropName="materialBills_creditRow" msprop:Generator_UserRelationName="FK__material___رقم_ا__53A266AC" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__53A266AC" msprop:Generator_UserParentTable="materialBills_credit" />
+      <msdata:Relationship name="FK__customer___custo__4242D080" msdata:parent="CustomerReport" msdata:child="customerReport_credit" msdata:parentkey="الرقم" msdata:childkey="customer_id" msprop:Generator_ChildPropName="GetcustomerReport_creditRows" msprop:Generator_UserChildTable="customerReport_credit" msprop:Generator_RelationVarName="relationFK__customer___custo__4242D080" msprop:Generator_UserRelationName="FK__customer___custo__4242D080" msprop:Generator_UserParentTable="CustomerReport" msprop:Generator_ParentPropName="CustomerReportRow" />
+      <msdata:Relationship name="FK__customer___custo__3AA1AEB8" msdata:parent="CustomerReport" msdata:child="customerReport_debit" msdata:parentkey="الرقم" msdata:childkey="customer_id" msprop:Generator_ChildPropName="GetcustomerReport_debitRows" msprop:Generator_UserChildTable="customerReport_debit" msprop:Generator_RelationVarName="relationFK__customer___custo__3AA1AEB8" msprop:Generator_UserRelationName="FK__customer___custo__3AA1AEB8" msprop:Generator_UserParentTable="CustomerReport" msprop:Generator_ParentPropName="CustomerReportRow" />
+      <msdata:Relationship name="FK__material___رقم_ا__4EA8A765" msdata:parent="materialBills_credit" msdata:child="materialBills_credit_list" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_ChildPropName="GetmaterialBills_credit_listRows" msprop:Generator_UserChildTable="materialBills_credit_list" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__4EA8A765" msprop:Generator_UserRelationName="FK__material___رقم_ا__4EA8A765" msprop:Generator_UserParentTable="materialBills_credit" msprop:Generator_ParentPropName="materialBills_creditRow" />
+      <msdata:Relationship name="FK__material___رقم_ا__1BE81D6E" msdata:parent="material_debit_returnCard" msdata:child="material_debit_list_returnCard" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_UserParentTable="material_debit_returnCard" msprop:Generator_UserChildTable="material_debit_list_returnCard" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__1BE81D6E" msprop:Generator_ChildPropName="Getmaterial_debit_list_returnCardRows" msprop:Generator_ParentPropName="material_debit_returnCardRow" msprop:Generator_UserRelationName="FK__material___رقم_ا__1BE81D6E" />
+      <msdata:Relationship name="FK__material___العمي__6CA31EA0" msdata:parent="CustomerReport" msdata:child="material_debit_returnCard" msdata:parentkey="الرقم" msdata:childkey="العميل" msprop:Generator_UserParentTable="CustomerReport" msprop:Generator_UserChildTable="material_debit_returnCard" msprop:Generator_RelationVarName="relationFK__material___العمي__6CA31EA0" msprop:Generator_ChildPropName="Getmaterial_debit_returnCardRows" msprop:Generator_ParentPropName="CustomerReportRow" msprop:Generator_UserRelationName="FK__material___العمي__6CA31EA0" />
+      <msdata:Relationship name="FK__material___العمي__7AF13DF7" msdata:parent="CustomerReport" msdata:child="materialBills_credit" msdata:parentkey="الرقم" msdata:childkey="العميل" msprop:Generator_ChildPropName="GetmaterialBills_creditRows" msprop:Generator_UserChildTable="materialBills_credit" msprop:Generator_RelationVarName="relationFK__material___العمي__7AF13DF7" msprop:Generator_UserRelationName="FK__material___العمي__7AF13DF7" msprop:Generator_UserParentTable="CustomerReport" msprop:Generator_ParentPropName="CustomerReportRow" />
+      <msdata:Relationship name="FK__material___رقم_ا__53A266AC" msdata:parent="materialBills_credit" msdata:child="materialBills_credit_penfit_payment" msdata:parentkey="الرقم" msdata:childkey="رقم_التقرير" msprop:Generator_ChildPropName="GetmaterialBills_credit_penfit_paymentRows" msprop:Generator_UserChildTable="materialBills_credit_penfit_payment" msprop:Generator_RelationVarName="relationFK__material___رقم_ا__53A266AC" msprop:Generator_UserRelationName="FK__material___رقم_ا__53A266AC" msprop:Generator_UserParentTable="materialBills_credit" msprop:Generator_ParentPropName="materialBills_creditRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
