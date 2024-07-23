@@ -162,6 +162,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.bDeleteBills,
@@ -182,7 +183,7 @@
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1093, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1179, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -191,7 +192,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(53, 22);
+            this.newToolStripButton.Size = new System.Drawing.Size(63, 24);
             this.newToolStripButton.Text = " جديد";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
@@ -376,14 +377,14 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 695);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(16, 0, 1, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1093, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1179, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -401,8 +402,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Size = new System.Drawing.Size(1093, 670);
-            this.splitContainer1.SplitterDistance = 430;
+            this.splitContainer1.Size = new System.Drawing.Size(1179, 668);
+            this.splitContainer1.SplitterDistance = 428;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -413,7 +414,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(651, 430);
+            this.panel3.Size = new System.Drawing.Size(697, 428);
             this.panel3.TabIndex = 4;
             // 
             // gbBonds
@@ -425,7 +426,7 @@
             this.gbBonds.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBonds.Name = "gbBonds";
             this.gbBonds.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBonds.Size = new System.Drawing.Size(651, 430);
+            this.gbBonds.Size = new System.Drawing.Size(697, 428);
             this.gbBonds.TabIndex = 2;
             this.gbBonds.TabStop = false;
             this.gbBonds.Text = "قيد العملية";
@@ -437,7 +438,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 52);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 374);
+            this.panel2.Size = new System.Drawing.Size(691, 372);
             this.panel2.TabIndex = 12;
             // 
             // dataGridViewBond
@@ -453,7 +454,7 @@
             this.dataGridViewBond.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewBond.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewBond.Name = "dataGridViewBond";
-            this.dataGridViewBond.Size = new System.Drawing.Size(645, 374);
+            this.dataGridViewBond.Size = new System.Drawing.Size(691, 372);
             this.dataGridViewBond.TabIndex = 10;
             // 
             // dgvBalance
@@ -513,7 +514,7 @@
             this.bAddBond});
             this.toolStrip3.Location = new System.Drawing.Point(3, 27);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(645, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(691, 25);
             this.toolStrip3.TabIndex = 11;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -573,6 +574,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.lDatePayment);
             this.panel1.Controls.Add(this.dtpPaperRecieved);
             this.panel1.Controls.Add(this.pPayAfter);
@@ -593,31 +595,31 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(651, 0);
+            this.panel1.Location = new System.Drawing.Point(697, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(442, 430);
+            this.panel1.Size = new System.Drawing.Size(482, 428);
             this.panel1.TabIndex = 0;
             // 
             // lDatePayment
             // 
             this.lDatePayment.AutoSize = true;
-            this.lDatePayment.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDatePayment.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDatePayment.ForeColor = System.Drawing.Color.Maroon;
-            this.lDatePayment.Location = new System.Drawing.Point(32, 82);
+            this.lDatePayment.Location = new System.Drawing.Point(337, 105);
             this.lDatePayment.Name = "lDatePayment";
-            this.lDatePayment.Size = new System.Drawing.Size(120, 14);
+            this.lDatePayment.Size = new System.Drawing.Size(133, 19);
             this.lDatePayment.TabIndex = 37;
-            this.lDatePayment.Text = " حدد تاريخ الإستحقاق ";
+            this.lDatePayment.Text = "  تاريخ الإستحقاق ";
             // 
             // dtpPaperRecieved
             // 
             this.dtpPaperRecieved.Enabled = false;
-            this.dtpPaperRecieved.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpPaperRecieved.Location = new System.Drawing.Point(166, 82);
+            this.dtpPaperRecieved.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPaperRecieved.Location = new System.Drawing.Point(40, 105);
             this.dtpPaperRecieved.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpPaperRecieved.Name = "dtpPaperRecieved";
-            this.dtpPaperRecieved.Size = new System.Drawing.Size(18, 22);
+            this.dtpPaperRecieved.Size = new System.Drawing.Size(171, 27);
             this.dtpPaperRecieved.TabIndex = 36;
             // 
             // pPayAfter
@@ -633,21 +635,21 @@
             this.pPayAfter.Controls.Add(this.label6);
             this.pPayAfter.Controls.Add(this.label7);
             this.pPayAfter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pPayAfter.Location = new System.Drawing.Point(0, 355);
+            this.pPayAfter.Location = new System.Drawing.Point(0, 330);
             this.pPayAfter.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pPayAfter.Name = "pPayAfter";
-            this.pPayAfter.Size = new System.Drawing.Size(442, 75);
+            this.pPayAfter.Size = new System.Drawing.Size(482, 98);
             this.pPayAfter.TabIndex = 31;
             this.pPayAfter.Tag = "";
             // 
             // txtPenfitValue
             // 
             this.txtPenfitValue.Enabled = false;
-            this.txtPenfitValue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPenfitValue.Location = new System.Drawing.Point(27, 7);
+            this.txtPenfitValue.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPenfitValue.Location = new System.Drawing.Point(38, 10);
             this.txtPenfitValue.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPenfitValue.Name = "txtPenfitValue";
-            this.txtPenfitValue.Size = new System.Drawing.Size(51, 23);
+            this.txtPenfitValue.Size = new System.Drawing.Size(51, 27);
             this.txtPenfitValue.TabIndex = 15;
             this.txtPenfitValue.Text = "0";
             this.txtPenfitValue.TextChanged += new System.EventHandler(this.txtPenfitValue_TextChanged);
@@ -655,21 +657,21 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Maroon;
-            this.label12.Location = new System.Drawing.Point(223, 45);
+            this.label12.Location = new System.Drawing.Point(234, 48);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 18);
+            this.label12.Size = new System.Drawing.Size(29, 19);
             this.label12.TabIndex = 34;
             this.label12.Text = "يوم";
             // 
             // txtPenfitPresent
             // 
-            this.txtPenfitPresent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPenfitPresent.Location = new System.Drawing.Point(81, 7);
+            this.txtPenfitPresent.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPenfitPresent.Location = new System.Drawing.Point(92, 10);
             this.txtPenfitPresent.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPenfitPresent.Name = "txtPenfitPresent";
-            this.txtPenfitPresent.Size = new System.Drawing.Size(28, 23);
+            this.txtPenfitPresent.Size = new System.Drawing.Size(28, 27);
             this.txtPenfitPresent.TabIndex = 14;
             this.txtPenfitPresent.Text = "0";
             this.txtPenfitPresent.TextChanged += new System.EventHandler(this.txtPenfitPresent_TextChanged);
@@ -677,50 +679,50 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label11.Location = new System.Drawing.Point(117, 12);
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(128, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 16);
+            this.label11.Size = new System.Drawing.Size(93, 19);
             this.label11.TabIndex = 33;
             this.label11.Text = "نسبة الفائدة";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label3.Location = new System.Drawing.Point(321, 51);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(332, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 31;
             this.label3.Text = "الدفع كل ";
             // 
             // txtPayTime
             // 
-            this.txtPayTime.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayTime.Location = new System.Drawing.Point(259, 40);
+            this.txtPayTime.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPayTime.Location = new System.Drawing.Point(270, 43);
             this.txtPayTime.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPayTime.Name = "txtPayTime";
-            this.txtPayTime.Size = new System.Drawing.Size(56, 23);
+            this.txtPayTime.Size = new System.Drawing.Size(56, 27);
             this.txtPayTime.TabIndex = 16;
             // 
             // txtPayCount
             // 
-            this.txtPayCount.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayCount.Location = new System.Drawing.Point(27, 41);
+            this.txtPayCount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPayCount.Location = new System.Drawing.Point(38, 45);
             this.txtPayCount.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPayCount.Name = "txtPayCount";
-            this.txtPayCount.Size = new System.Drawing.Size(84, 23);
+            this.txtPayCount.Size = new System.Drawing.Size(84, 27);
             this.txtPayCount.TabIndex = 17;
             this.txtPayCount.Text = "0";
             this.txtPayCount.TextChanged += new System.EventHandler(this.txtPayCount_TextChanged);
             // 
             // txtFiestCashPaymant
             // 
-            this.txtFiestCashPaymant.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiestCashPaymant.Location = new System.Drawing.Point(217, 7);
+            this.txtFiestCashPaymant.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiestCashPaymant.Location = new System.Drawing.Point(228, 10);
             this.txtFiestCashPaymant.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtFiestCashPaymant.Name = "txtFiestCashPaymant";
-            this.txtFiestCashPaymant.Size = new System.Drawing.Size(97, 23);
+            this.txtFiestCashPaymant.Size = new System.Drawing.Size(97, 27);
             this.txtFiestCashPaymant.TabIndex = 13;
             this.txtFiestCashPaymant.Text = "0";
             this.txtFiestCashPaymant.TextChanged += new System.EventHandler(this.txtFiestCashPaymant_TextChanged);
@@ -728,31 +730,31 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label6.Location = new System.Drawing.Point(117, 45);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(128, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.Size = new System.Drawing.Size(93, 19);
             this.label6.TabIndex = 27;
             this.label6.Text = "عدد الأقساط";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label7.Location = new System.Drawing.Point(321, 12);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(332, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(96, 19);
             this.label7.TabIndex = 28;
             this.label7.Text = "رعبون الشراء";
             // 
             // rbPaperPay
             // 
             this.rbPaperPay.AutoSize = true;
-            this.rbPaperPay.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rbPaperPay.Location = new System.Drawing.Point(183, 82);
+            this.rbPaperPay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPaperPay.Location = new System.Drawing.Point(204, 107);
             this.rbPaperPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbPaperPay.Name = "rbPaperPay";
-            this.rbPaperPay.Size = new System.Drawing.Size(110, 21);
+            this.rbPaperPay.Size = new System.Drawing.Size(124, 23);
             this.rbPaperPay.TabIndex = 26;
             this.rbPaperPay.Text = "سند دفع لأجل";
             this.rbPaperPay.UseVisualStyleBackColor = true;
@@ -760,26 +762,26 @@
             // 
             // cbMoreBillsOption
             // 
-            this.cbMoreBillsOption.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cbMoreBillsOption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMoreBillsOption.FormattingEnabled = true;
             this.cbMoreBillsOption.Items.AddRange(new object[] {
             "على المورد",
             "على الشركة"});
-            this.cbMoreBillsOption.Location = new System.Drawing.Point(21, 215);
+            this.cbMoreBillsOption.Location = new System.Drawing.Point(42, 241);
             this.cbMoreBillsOption.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbMoreBillsOption.Name = "cbMoreBillsOption";
-            this.cbMoreBillsOption.Size = new System.Drawing.Size(141, 24);
+            this.cbMoreBillsOption.Size = new System.Drawing.Size(141, 27);
             this.cbMoreBillsOption.TabIndex = 20;
             this.cbMoreBillsOption.Text = "على المورد";
             this.cbMoreBillsOption.SelectedValueChanged += new System.EventHandler(this.cbMoreBillsOption_SelectedValueChanged);
             // 
             // txtMoreBills
             // 
-            this.txtMoreBills.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtMoreBills.Location = new System.Drawing.Point(169, 215);
+            this.txtMoreBills.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoreBills.Location = new System.Drawing.Point(190, 241);
             this.txtMoreBills.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMoreBills.Name = "txtMoreBills";
-            this.txtMoreBills.Size = new System.Drawing.Size(141, 24);
+            this.txtMoreBills.Size = new System.Drawing.Size(141, 27);
             this.txtMoreBills.TabIndex = 10;
             this.txtMoreBills.Text = "0";
             this.txtMoreBills.TextChanged += new System.EventHandler(this.txtMoreBills_TextChanged);
@@ -787,10 +789,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 10.75F);
-            this.label10.Location = new System.Drawing.Point(316, 215);
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(337, 241);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 18);
+            this.label10.Size = new System.Drawing.Size(107, 19);
             this.label10.TabIndex = 19;
             this.label10.Text = "مصاريف الشراء";
             // 
@@ -798,68 +800,68 @@
             // 
             this.txtSupplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtSupplier.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtSupplier.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSupplier.FormattingEnabled = true;
-            this.txtSupplier.Location = new System.Drawing.Point(21, 5);
+            this.txtSupplier.Location = new System.Drawing.Point(40, 14);
             this.txtSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(288, 24);
+            this.txtSupplier.Size = new System.Drawing.Size(288, 27);
             this.txtSupplier.TabIndex = 0;
             this.txtSupplier.SelectedValueChanged += new System.EventHandler(this.txtSupplier_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label9.Location = new System.Drawing.Point(314, 179);
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(335, 205);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 17);
+            this.label9.Size = new System.Drawing.Size(132, 19);
             this.label9.TabIndex = 18;
             this.label9.Text = "رقم و تاريخ الفاتورة";
             // 
             // txtBiles
             // 
-            this.txtBiles.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtBiles.Location = new System.Drawing.Point(214, 179);
+            this.txtBiles.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBiles.Location = new System.Drawing.Point(235, 205);
             this.txtBiles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBiles.Name = "txtBiles";
-            this.txtBiles.Size = new System.Drawing.Size(93, 24);
+            this.txtBiles.Size = new System.Drawing.Size(93, 27);
             this.txtBiles.TabIndex = 8;
             this.txtBiles.Text = "0";
             // 
             // cbBankAccounting
             // 
             this.cbBankAccounting.Enabled = false;
-            this.cbBankAccounting.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cbBankAccounting.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBankAccounting.FormattingEnabled = true;
-            this.cbBankAccounting.Location = new System.Drawing.Point(19, 145);
+            this.cbBankAccounting.Location = new System.Drawing.Point(40, 171);
             this.cbBankAccounting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbBankAccounting.Name = "cbBankAccounting";
-            this.cbBankAccounting.Size = new System.Drawing.Size(288, 24);
+            this.cbBankAccounting.Size = new System.Drawing.Size(288, 27);
             this.cbBankAccounting.TabIndex = 4;
             this.cbBankAccounting.SelectedValueChanged += new System.EventHandler(this.cbBankAccounting_SelectedValueChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label8.Location = new System.Drawing.Point(314, 145);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(335, 171);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 17);
+            this.label8.Size = new System.Drawing.Size(100, 19);
             this.label8.TabIndex = 15;
             this.label8.Text = "اسم الحساب";
             // 
             // cbTypeOperation
             // 
-            this.cbTypeOperation.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cbTypeOperation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTypeOperation.FormattingEnabled = true;
             this.cbTypeOperation.Items.AddRange(new object[] {
             "كاش",
             "شيك"});
-            this.cbTypeOperation.Location = new System.Drawing.Point(19, 115);
+            this.cbTypeOperation.Location = new System.Drawing.Point(40, 141);
             this.cbTypeOperation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbTypeOperation.Name = "cbTypeOperation";
-            this.cbTypeOperation.Size = new System.Drawing.Size(288, 24);
+            this.cbTypeOperation.Size = new System.Drawing.Size(288, 27);
             this.cbTypeOperation.TabIndex = 3;
             this.cbTypeOperation.Text = "كاش";
             this.cbTypeOperation.SelectedValueChanged += new System.EventHandler(this.cbTypeOperation_SelectedValueChanged);
@@ -867,11 +869,11 @@
             // rbAfter
             // 
             this.rbAfter.AutoSize = true;
-            this.rbAfter.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rbAfter.Location = new System.Drawing.Point(194, 53);
+            this.rbAfter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAfter.Location = new System.Drawing.Point(217, 76);
             this.rbAfter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbAfter.Name = "rbAfter";
-            this.rbAfter.Size = new System.Drawing.Size(99, 21);
+            this.rbAfter.Size = new System.Drawing.Size(111, 23);
             this.rbAfter.TabIndex = 2;
             this.rbAfter.Text = "لأجل(بالدين)";
             this.rbAfter.UseVisualStyleBackColor = true;
@@ -881,11 +883,11 @@
             // 
             this.rbCash.AutoSize = true;
             this.rbCash.Checked = true;
-            this.rbCash.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rbCash.Location = new System.Drawing.Point(245, 31);
+            this.rbCash.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCash.Location = new System.Drawing.Point(276, 48);
             this.rbCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbCash.Name = "rbCash";
-            this.rbCash.Size = new System.Drawing.Size(48, 21);
+            this.rbCash.Size = new System.Drawing.Size(52, 23);
             this.rbCash.TabIndex = 1;
             this.rbCash.TabStop = true;
             this.rbCash.Text = "نقداُ";
@@ -894,30 +896,30 @@
             // 
             // dtpBillDate
             // 
-            this.dtpBillDate.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dtpBillDate.Location = new System.Drawing.Point(19, 179);
+            this.dtpBillDate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBillDate.Location = new System.Drawing.Point(40, 205);
             this.dtpBillDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBillDate.Name = "dtpBillDate";
-            this.dtpBillDate.Size = new System.Drawing.Size(188, 24);
+            this.dtpBillDate.Size = new System.Drawing.Size(188, 27);
             this.dtpBillDate.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.Location = new System.Drawing.Point(317, 115);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(338, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 17);
+            this.label2.Size = new System.Drawing.Size(87, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "طريقة الدفع";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label1.Location = new System.Drawing.Point(317, 15);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(336, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.Size = new System.Drawing.Size(48, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "المورد";
             // 
@@ -925,10 +927,10 @@
             // 
             this.panel4.Controls.Add(this.dataGridViewMaterial);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 25);
+            this.panel4.Location = new System.Drawing.Point(0, 27);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1093, 185);
+            this.panel4.Size = new System.Drawing.Size(1179, 183);
             this.panel4.TabIndex = 5;
             // 
             // dataGridViewMaterial
@@ -947,7 +949,7 @@
             this.dataGridViewMaterial.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewMaterial.Name = "dataGridViewMaterial";
-            this.dataGridViewMaterial.Size = new System.Drawing.Size(1093, 185);
+            this.dataGridViewMaterial.Size = new System.Drawing.Size(1179, 183);
             this.dataGridViewMaterial.TabIndex = 1;
             this.dataGridViewMaterial.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dataGridViewMaterial_CellStateChanged);
             this.dataGridViewMaterial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewMaterial_KeyDown);
@@ -1015,7 +1017,7 @@
             this.txtTotalCost});
             this.toolStrip4.Location = new System.Drawing.Point(0, 210);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Size = new System.Drawing.Size(1093, 25);
+            this.toolStrip4.Size = new System.Drawing.Size(1179, 25);
             this.toolStrip4.TabIndex = 4;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -1084,6 +1086,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.txtSearchMaterial,
@@ -1095,7 +1098,7 @@
             this.bMaterialCard});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1093, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1179, 27);
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -1188,7 +1191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 717);
+            this.ClientSize = new System.Drawing.Size(1179, 717);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
