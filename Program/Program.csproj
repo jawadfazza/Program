@@ -190,9 +190,9 @@
     </Compile>
     <Compile Include="Connection\Connect.cs" />
     <Compile Include="CustomerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="entityForm\Assets_Liability\NewLiability.cs">
       <SubType>Form</SubType>
@@ -969,9 +969,9 @@
       <DependentUpon>CustomerDataSet.xsd</DependentUpon>
     </None>
     <None Include="CustomerDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CustomerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="CustomerDataSet.xss">
       <DependentUpon>CustomerDataSet.xsd</DependentUpon>
@@ -1290,6 +1290,7 @@
     <None Include="Resources\1352240457_company.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataSetReports\" />
     <Folder Include="entityForm\Assets_Liability\Report\" />
     <Folder Include="Image\Customer\" />
     <Folder Include="Image\Logo\" />

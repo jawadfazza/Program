@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WarehouseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WarehouseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Program.Properties.Settings.GlobalReference.Default.WarehouseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_logeTableAdapter" GeneratorDataComponentClassName="user_logeTableAdapter" Name="user_loge" UserDataComponentName="user_logeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.user_loge" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.user_loge" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[user_loge] WHERE (([id] = @Original_id) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ((@IsNull_user_type = 1 AND [user_type] IS NULL) OR ([user_type] = @Original_user_type)) AND ((@IsNull_enable_delete = 1 AND [enable_delete] IS NULL) OR ([enable_delete] = @Original_enable_delete)) AND ((@IsNull_remamber = 1 AND [remamber] IS NULL) OR ([remamber] = @Original_remamber)))</CommandText>
@@ -79,7 +79,7 @@ SELECT id, username, password, user_type, enable_delete, remamber FROM user_loge
               <Mapping SourceColumn="remamber" DataSetColumn="remamber" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserById" Modifier="Public" Name="DeleteUserById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteUserById">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserById" Modifier="Public" Name="DeleteUserById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteUserById">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM user_loge
@@ -90,7 +90,7 @@ WHERE        (id = @Original_id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Test1.dbo.user_loge" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUsername" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByUsername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUsername" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Test1.dbo.user_loge" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUsername" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByUsername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUsername" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, username, password, user_type, enable_delete, remamber
@@ -102,7 +102,7 @@ WHERE        (username = @username)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FindUser" Modifier="Public" Name="FindUser" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FindUser">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FindUser" Modifier="Public" Name="FindUser" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FindUser">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Expr1
@@ -114,7 +114,7 @@ WHERE        (username = @username)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxUserId" Modifier="Public" Name="getMaxUserId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getMaxUserId">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxUserId" Modifier="Public" Name="getMaxUserId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getMaxUserId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(id) AS Expr1
@@ -127,7 +127,7 @@ FROM            user_loge</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_taskTableAdapter" GeneratorDataComponentClassName="user_taskTableAdapter" Name="user_task" UserDataComponentName="user_taskTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.user_task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.user_task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[user_task] WHERE (([id] = @Original_id) AND ([opreation] = @Original_opreation) AND ((@IsNull_active_opreation = 1 AND [active_opreation] IS NULL) OR ([active_opreation] = @Original_active_opreation)) AND ([user_id_] = @Original_user_id_))</CommandText>
@@ -183,7 +183,7 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
               <Mapping SourceColumn="user_id_" DataSetColumn="user_id_" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserTask" Modifier="Public" Name="DeleteUserTask" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteUserTask">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserTask" Modifier="Public" Name="DeleteUserTask" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteUserTask">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM user_task
@@ -194,7 +194,7 @@ WHERE        (user_id_ = @Original_user_id_)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="Test1.dbo.user_task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="Test1.dbo.user_task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id, opreation, active_opreation, user_id_
@@ -210,7 +210,7 @@ WHERE        (user_id_ = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="taskTableAdapter" GeneratorDataComponentClassName="taskTableAdapter" Name="task" UserDataComponentName="taskTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectName="WarehouseServer.dbo.task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectName="WarehouseServer.dbo.task" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[task] WHERE (([id] = @Original_id) AND ([opreation] = @Original_opreation))</CommandText>
@@ -254,7 +254,7 @@ SELECT id, opreation FROM task WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="opreation" DataSetColumn="opreation" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="WarehouseConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetCount" Modifier="Public" Name="GetCount" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetCount">
+              <DbSource ConnectionRef="WarehouseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetCount" Modifier="Public" Name="GetCount" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetCount">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM task</CommandText>

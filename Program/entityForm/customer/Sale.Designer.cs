@@ -181,7 +181,7 @@
             this.helpToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(984, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1159, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -190,7 +190,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(48, 22);
+            this.newToolStripButton.Size = new System.Drawing.Size(50, 22);
             this.newToolStripButton.Text = "جديد";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
@@ -199,7 +199,7 @@
             this.bDeleteBills.Image = ((System.Drawing.Image)(resources.GetObject("bDeleteBills.Image")));
             this.bDeleteBills.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bDeleteBills.Name = "bDeleteBills";
-            this.bDeleteBills.Size = new System.Drawing.Size(51, 22);
+            this.bDeleteBills.Size = new System.Drawing.Size(55, 22);
             this.bDeleteBills.Text = "حذف ";
             this.bDeleteBills.Click += new System.EventHandler(this.bDeleteBills_Click);
             // 
@@ -212,14 +212,14 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(58, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 22);
             this.toolStripDropDownButton1.Text = "حفط ";
             // 
             // bSaveAll
             // 
             this.bSaveAll.Image = ((System.Drawing.Image)(resources.GetObject("bSaveAll.Image")));
             this.bSaveAll.Name = "bSaveAll";
-            this.bSaveAll.Size = new System.Drawing.Size(231, 22);
+            this.bSaveAll.Size = new System.Drawing.Size(246, 22);
             this.bSaveAll.Text = "حفظ بطاقة الإدخال مع ترحيل القيود";
             this.bSaveAll.Click += new System.EventHandler(this.bSaveAll_Click);
             // 
@@ -227,7 +227,7 @@
             // 
             this.bSaveCard.Image = ((System.Drawing.Image)(resources.GetObject("bSaveCard.Image")));
             this.bSaveCard.Name = "bSaveCard";
-            this.bSaveCard.Size = new System.Drawing.Size(231, 22);
+            this.bSaveCard.Size = new System.Drawing.Size(246, 22);
             this.bSaveCard.Text = "حفظ بطاقة الإدخال فقط";
             this.bSaveCard.Click += new System.EventHandler(this.bSaveCard_Click);
             // 
@@ -235,7 +235,7 @@
             // 
             this.bSaveBonds.Image = ((System.Drawing.Image)(resources.GetObject("bSaveBonds.Image")));
             this.bSaveBonds.Name = "bSaveBonds";
-            this.bSaveBonds.Size = new System.Drawing.Size(231, 22);
+            this.bSaveBonds.Size = new System.Drawing.Size(246, 22);
             this.bSaveBonds.Text = "ترحيل قيود بطاقة الإدخال";
             this.bSaveBonds.Click += new System.EventHandler(this.bSaveBonds_Click);
             // 
@@ -276,6 +276,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(50, 25);
             // 
@@ -310,7 +311,7 @@
             this.bRefresh.Image = ((System.Drawing.Image)(resources.GetObject("bRefresh.Image")));
             this.bRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bRefresh.Name = "bRefresh";
-            this.bRefresh.Size = new System.Drawing.Size(55, 22);
+            this.bRefresh.Size = new System.Drawing.Size(59, 22);
             this.bRefresh.Text = "تحديث";
             this.bRefresh.Click += new System.EventHandler(this.bRefresh_Click);
             // 
@@ -322,14 +323,14 @@
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(84, 22);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(93, 22);
             this.toolStripSplitButton1.Text = " قيد العملية";
             // 
             // bHide
             // 
             this.bHide.Image = ((System.Drawing.Image)(resources.GetObject("bHide.Image")));
             this.bHide.Name = "bHide";
-            this.bHide.Size = new System.Drawing.Size(147, 22);
+            this.bHide.Size = new System.Drawing.Size(158, 22);
             this.bHide.Text = "أخفاء قيد العملية";
             this.bHide.Click += new System.EventHandler(this.bHide_Click);
             // 
@@ -337,7 +338,7 @@
             // 
             this.bShow.Image = ((System.Drawing.Image)(resources.GetObject("bShow.Image")));
             this.bShow.Name = "bShow";
-            this.bShow.Size = new System.Drawing.Size(147, 22);
+            this.bShow.Size = new System.Drawing.Size(158, 22);
             this.bShow.Text = "إظهار قيد العملية";
             this.bShow.Click += new System.EventHandler(this.bShow_Click);
             // 
@@ -357,9 +358,9 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 571);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 687);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(984, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1159, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -383,8 +384,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel3);
             this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Size = new System.Drawing.Size(984, 546);
-            this.splitContainer1.SplitterDistance = 304;
+            this.splitContainer1.Size = new System.Drawing.Size(1159, 662);
+            this.splitContainer1.SplitterDistance = 368;
             this.splitContainer1.TabIndex = 2;
             // 
             // gbBonds
@@ -396,7 +397,7 @@
             this.gbBonds.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBonds.Name = "gbBonds";
             this.gbBonds.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBonds.Size = new System.Drawing.Size(584, 304);
+            this.gbBonds.Size = new System.Drawing.Size(759, 368);
             this.gbBonds.TabIndex = 2;
             this.gbBonds.TabStop = false;
             this.gbBonds.Text = "قيد العملية";
@@ -408,7 +409,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 49);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(578, 251);
+            this.panel2.Size = new System.Drawing.Size(753, 315);
             this.panel2.TabIndex = 12;
             // 
             // dataGridViewBond
@@ -424,7 +425,7 @@
             this.dataGridViewBond.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewBond.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewBond.Name = "dataGridViewBond";
-            this.dataGridViewBond.Size = new System.Drawing.Size(578, 251);
+            this.dataGridViewBond.Size = new System.Drawing.Size(753, 315);
             this.dataGridViewBond.TabIndex = 10;
             // 
             // dgvBalance
@@ -484,7 +485,7 @@
             this.bAddBond});
             this.toolStrip3.Location = new System.Drawing.Point(3, 24);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(578, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(753, 25);
             this.toolStrip3.TabIndex = 11;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -502,6 +503,7 @@
             // txtBalanceBond
             // 
             this.txtBalanceBond.Enabled = false;
+            this.txtBalanceBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBalanceBond.Name = "txtBalanceBond";
             this.txtBalanceBond.Size = new System.Drawing.Size(145, 25);
             // 
@@ -513,6 +515,7 @@
             // txtDibetBond
             // 
             this.txtDibetBond.Enabled = false;
+            this.txtDibetBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDibetBond.Name = "txtDibetBond";
             this.txtDibetBond.Size = new System.Drawing.Size(140, 25);
             // 
@@ -526,6 +529,7 @@
             this.txtCreditBond.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtCreditBond.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCreditBond.Enabled = false;
+            this.txtCreditBond.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCreditBond.Name = "txtCreditBond";
             this.txtCreditBond.Size = new System.Drawing.Size(145, 25);
             // 
@@ -560,10 +564,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(584, 0);
+            this.panel1.Location = new System.Drawing.Point(759, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 304);
+            this.panel1.Size = new System.Drawing.Size(400, 368);
             this.panel1.TabIndex = 1;
             // 
             // lDatePayment
@@ -589,7 +593,7 @@
             this.pPayAfter.Controls.Add(this.label3);
             this.pPayAfter.Controls.Add(this.label6);
             this.pPayAfter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pPayAfter.Location = new System.Drawing.Point(0, 242);
+            this.pPayAfter.Location = new System.Drawing.Point(0, 306);
             this.pPayAfter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pPayAfter.Name = "pPayAfter";
             this.pPayAfter.Size = new System.Drawing.Size(400, 62);
@@ -624,7 +628,7 @@
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label11.Location = new System.Drawing.Point(105, 10);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 16);
+            this.label11.Size = new System.Drawing.Size(76, 16);
             this.label11.TabIndex = 33;
             this.label11.Text = "نسبة الفائدة";
             // 
@@ -634,7 +638,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label9.Location = new System.Drawing.Point(289, 42);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 16);
+            this.label9.Size = new System.Drawing.Size(57, 16);
             this.label9.TabIndex = 31;
             this.label9.Text = "الدفع كل ";
             // 
@@ -675,7 +679,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label3.Location = new System.Drawing.Point(105, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 27;
             this.label3.Text = "عدد الأقساط";
             // 
@@ -685,7 +689,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label6.Location = new System.Drawing.Point(289, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(78, 16);
             this.label6.TabIndex = 28;
             this.label6.Text = "رعبون الشراء";
             // 
@@ -882,9 +886,9 @@
             this.txtTotalCost,
             this.toolStripLabel9,
             this.txtTotalProfit});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 213);
+            this.toolStrip4.Location = new System.Drawing.Point(0, 265);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Size = new System.Drawing.Size(984, 25);
+            this.toolStrip4.Size = new System.Drawing.Size(1159, 25);
             this.toolStrip4.TabIndex = 3;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -892,12 +896,13 @@
             // 
             this.toolStripLabel5.ForeColor = System.Drawing.Color.DarkGreen;
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(65, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(76, 22);
             this.toolStripLabel5.Text = "قيمة المبيعات";
             // 
             // txtTotalPrice
             // 
             this.txtTotalPrice.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.Size = new System.Drawing.Size(100, 25);
             this.txtTotalPrice.Text = "0";
@@ -907,12 +912,13 @@
             // 
             this.toolStripLabel6.ForeColor = System.Drawing.Color.DarkGreen;
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(62, 22);
+            this.toolStripLabel6.Size = new System.Drawing.Size(71, 22);
             this.toolStripLabel6.Text = "-حسم ممنوح";
             // 
             // txtDiscount
             // 
             this.txtDiscount.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 25);
             this.txtDiscount.Text = "0";
@@ -922,12 +928,13 @@
             // 
             this.toolStripLabel7.ForeColor = System.Drawing.Color.DarkGreen;
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel7.Size = new System.Drawing.Size(47, 22);
             this.toolStripLabel7.Text = "+الفائدة";
             // 
             // txtPenfitValue
             // 
             this.txtPenfitValue.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtPenfitValue.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPenfitValue.Name = "txtPenfitValue";
             this.txtPenfitValue.Size = new System.Drawing.Size(100, 25);
             this.txtPenfitValue.Text = "0";
@@ -937,12 +944,13 @@
             // 
             this.toolStripLabel8.ForeColor = System.Drawing.Color.DarkGreen;
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(71, 22);
+            this.toolStripLabel8.Size = new System.Drawing.Size(80, 22);
             this.toolStripLabel8.Text = "-كلفة المبيعات";
             // 
             // txtTotalCost
             // 
             this.txtTotalCost.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtTotalCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalCost.Name = "txtTotalCost";
             this.txtTotalCost.Size = new System.Drawing.Size(100, 25);
             this.txtTotalCost.Text = "0";
@@ -951,12 +959,13 @@
             // 
             this.toolStripLabel9.ForeColor = System.Drawing.Color.DarkGreen;
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(66, 22);
+            this.toolStripLabel9.Size = new System.Drawing.Size(70, 22);
             this.toolStripLabel9.Text = "=مجمل الربح";
             // 
             // txtTotalProfit
             // 
             this.txtTotalProfit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtTotalProfit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalProfit.Name = "txtTotalProfit";
             this.txtTotalProfit.Size = new System.Drawing.Size(100, 25);
             this.txtTotalProfit.Text = "0";
@@ -967,7 +976,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 213);
+            this.panel3.Size = new System.Drawing.Size(1159, 265);
             this.panel3.TabIndex = 2;
             // 
             // dataGridViewMaterial
@@ -989,7 +998,7 @@
             this.dataGridViewMaterial.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewMaterial.Name = "dataGridViewMaterial";
-            this.dataGridViewMaterial.Size = new System.Drawing.Size(984, 213);
+            this.dataGridViewMaterial.Size = new System.Drawing.Size(1159, 265);
             this.dataGridViewMaterial.TabIndex = 1;
             this.dataGridViewMaterial.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dataGridViewMaterial_CellStateChanged);
             this.dataGridViewMaterial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewMaterial_KeyDown);
@@ -1080,14 +1089,14 @@
             this.bMaterialCard});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(984, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1159, 25);
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(65, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
             this.toolStripLabel1.Text = "بحث عن مادة";
             // 
             // txtSearchMaterial
@@ -1101,12 +1110,13 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(34, 22);
+            this.toolStripLabel4.Size = new System.Drawing.Size(37, 22);
             this.toolStripLabel4.Text = "الكمية";
             // 
             // txtQuintity
             // 
             this.txtQuintity.AcceptsReturn = true;
+            this.txtQuintity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuintity.Name = "txtQuintity";
             this.txtQuintity.Size = new System.Drawing.Size(25, 25);
             this.txtQuintity.Text = "0";
@@ -1122,14 +1132,14 @@
             this.bAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("bAddMaterial.Image")));
             this.bAddMaterial.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bAddMaterial.Name = "bAddMaterial";
-            this.bAddMaterial.Size = new System.Drawing.Size(82, 22);
+            this.bAddMaterial.Size = new System.Drawing.Size(89, 22);
             this.bAddMaterial.Text = "إضافة المادة";
             this.bAddMaterial.Click += new System.EventHandler(this.bAddMaterial_Click);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(65, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(73, 22);
             this.toolStripLabel3.Text = "البحث حسب :";
             // 
             // cbSearchType
@@ -1147,7 +1157,7 @@
             this.bRemoveMaterial.Image = ((System.Drawing.Image)(resources.GetObject("bRemoveMaterial.Image")));
             this.bRemoveMaterial.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bRemoveMaterial.Name = "bRemoveMaterial";
-            this.bRemoveMaterial.Size = new System.Drawing.Size(76, 22);
+            this.bRemoveMaterial.Size = new System.Drawing.Size(79, 22);
             this.bRemoveMaterial.Text = "إزالة المادة";
             this.bRemoveMaterial.Click += new System.EventHandler(this.bRemoveMaterial_Click);
             // 
@@ -1156,7 +1166,7 @@
             this.bMaterialCard.Image = ((System.Drawing.Image)(resources.GetObject("bMaterialCard.Image")));
             this.bMaterialCard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bMaterialCard.Name = "bMaterialCard";
-            this.bMaterialCard.Size = new System.Drawing.Size(74, 22);
+            this.bMaterialCard.Size = new System.Drawing.Size(81, 22);
             this.bMaterialCard.Text = "بطاقة مادة";
             this.bMaterialCard.Click += new System.EventHandler(this.bMaterialCard_Click);
             // 
@@ -1187,7 +1197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 593);
+            this.ClientSize = new System.Drawing.Size(1159, 709);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
