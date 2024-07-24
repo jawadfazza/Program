@@ -60,139 +60,172 @@ namespace Program.entityForm.customer
         // delegate is used to write to a UI control from a non-UI thread
         private delegate void SetTextDeleg(string text);
 
-        public void calculateReportValue()
+        public void CalculateReportValue()
         {
             try
             {
-                if (dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[0].Value == null)
+                var currentRow = dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex];
+
+                if (currentRow.Cells[0].Value == null)
                 {
+                    return;
                 }
-                else
+
+                int materialId = Convert.ToInt32(currentRow.Cells[0].Value);
+                int quantity = Convert.ToInt32(currentRow.Cells[2].Value);
+                materialTableAdapter mta = new materialTableAdapter();
+
+                int availableQuantity = Convert.ToInt32(mta.getMaterialById(materialId)[0]["كمية"]);
+                if (quantity > availableQuantity)
                 {
-                    materialTableAdapter mta = new materialTableAdapter();
-                    int quantity = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[2].Value.ToString());
-
-                    if (quantity > Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[0].Value.ToString()))[0]["كمية"]))
-                    {
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[2].Value = 0;
-                        MessageBox.Show("إن الكمية المطلوبة أكبر من الموجودة ب المستودع", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        quantity = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[2].Value.ToString());
-                        int price = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[3].Value.ToString());
-                        int price_buy = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[8].Value.ToString());
-
-                        double DiscountPersent = Convert.ToDouble(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[4].Value.ToString());
-                        double discount = quantity * price * (DiscountPersent / 100);
-                        double PriceValue = (quantity * price) - discount;
-                        ///////////////////////////////////////////////////////
-                        DataRow dr = materialList.Find(
-                        delegate(DataRow row)
-                        {
-                            return dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentRow.Index].Cells[0].Value.ToString().Trim() == row["الرقم_الفني"].ToString().Trim();
-                        });
-
-                        // calculate cost of material
-                        double PriceValue_buy = 0;//(quantity * price_buy);
-                        material_costTableAdapter mcta_cost = new material_costTableAdapter();
-                        if (dr["طريقة_حساب_الكلفة"].ToString() == "FIFO")
-                        {
-                            MaterialControllar.material_costDataTable mcdt_cost = mcta_cost.GetDataById_Quintity_Ascending(Convert.ToInt32(dr["الرقم_الفني"]));
-                            int quantity_stay = quantity;
-                            foreach (DataRow row1 in mcdt_cost)
-                            {
-                                if (quantity_stay <= Convert.ToInt32(row1["كمية"]) && quantity_stay != 0)
-                                {
-                                    PriceValue_buy += quantity_stay * Convert.ToDouble(row1["سعر_الشراء"]);
-                                    quantity_stay = 0;
-                                }
-                                if (quantity_stay > Convert.ToInt32(row1["كمية"]))
-                                {
-                                    PriceValue_buy += Convert.ToInt32(row1["كمية"]) * Convert.ToDouble(row1["سعر_الشراء"]);
-                                    quantity_stay = quantity_stay - Convert.ToInt32(row1["كمية"]);
-                                }
-                            }
-                        }
-                        if (dr["طريقة_حساب_الكلفة"].ToString() == "LIFO")
-                        {
-                            MaterialControllar.material_costDataTable mcdt_cost = mcta_cost.GetDataById_quintity_Descending(Convert.ToInt32(dr["الرقم_الفني"]));
-                            int quantity_stay = quantity;
-                            foreach (DataRow row1 in mcdt_cost)
-                            {
-                                if (quantity_stay <= Convert.ToInt32(row1["كمية"]) && quantity_stay != 0)
-                                {
-                                    PriceValue_buy += quantity_stay * Convert.ToDouble(row1["سعر_الشراء"]);
-                                    quantity_stay = 0;
-                                }
-                                if (quantity_stay > Convert.ToInt32(row1["كمية"]))
-                                {
-                                    PriceValue_buy += Convert.ToInt32(row1["كمية"]) * Convert.ToDouble(row1["سعر_الشراء"]);
-                                    quantity_stay = quantity_stay - Convert.ToInt32(row1["كمية"]);
-                                }
-                            }
-                        }
-                        if (dr["طريقة_حساب_الكلفة"].ToString() == "AVG")
-                        {
-                            dr["سعر_الشراء"] = mcta_cost.GetAVG_Price(Convert.ToInt32(dr["الرقم_الفني"]));
-                            PriceValue_buy = quantity * Convert.ToDouble(dr["سعر_الشراء"]);
-                        }
-                        ///////////////////////////////////////////
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[5].Value = discount;
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[6].Value = PriceValue;
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[9].Value = PriceValue_buy;
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[10].Value = (PriceValue - PriceValue_buy);
-
-                        dr["كمية"] = quantity;
-                        dr["DiscountPersent"] = DiscountPersent;
-                        dr["Discount"] = discount;
-                        dr["Comment"] = dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[7].Value.ToString();
-                        dr["TotalValue"] = PriceValue;
-                        dr["TotalCost"] = PriceValue_buy;
-                        dr["profit"] = PriceValue - PriceValue_buy;
-                        if (price != Convert.ToInt32(dr["سعر_البيع"]))
-                        {
-                            if (MessageBox.Show("هل ترغب بتغير سعر بيع  " + dr["اسم_المادة"] + " ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                            {
-                                mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
-                                dr["سعر_البيع"] = price;
-                            }
-                            else
-                            {
-                                dr["سعر_البيع"] = price;
-                            }
-                        }
-                        else
-                        {
-                            dr["سعر_البيع"] = price;
-                        }
-                        totalPriceValue = 0;
-                        totalCostValue = 0;
-                        totalDiscountValue = 0;
-                        foreach (DataRow row in materialList)
-                        {
-                            try
-                            {
-                                totalPriceValue += Convert.ToDouble(row["TotalValue"]);
-                                totalCostValue += Convert.ToDouble(row["TotalCost"]);
-                                totalDiscountValue += Convert.ToDouble(row["Discount"]);
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine("Exception1 :: " + ex.Message);
-                            }
-                        }
-                        txtTotalPrice.Text = totalPriceValue.ToString();
-                        txtDiscount.Text = totalDiscountValue.ToString();
-                        txtTotalCost.Text = totalCostValue.ToString();
-                        txtTotalProfit.Text = (totalPriceValue - totalDiscountValue - totalCostValue + totalPenfitValue).ToString();
-                    }
+                    currentRow.Cells[2].Value = 0;
+                    MessageBox.Show("إن الكمية المطلوبة أكبر من الموجودة بالمستودع", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
+
+                int price = Convert.ToInt32(currentRow.Cells[3].Value);
+                int priceBuy = Convert.ToInt32(currentRow.Cells[8].Value);
+                double discountPercent = Convert.ToDouble(currentRow.Cells[4].Value);
+                double discount = quantity * price * (discountPercent / 100);
+                double priceValue = (quantity * price) - discount;
+
+                DataRow dr = materialList.Find(row => currentRow.Cells[0].Value.ToString().Trim() == row["الرقم_الفني"].ToString().Trim());
+                double priceValueBuy = CalculateMaterialCost(dr, quantity);
+
+                UpdateCurrentRowValues(currentRow, discount, priceValue, priceValueBuy, price);
+
+                UpdateDataRowValues(dr, quantity, discountPercent, discount, currentRow, priceValue, priceValueBuy, price);
+
+                UpdateTotals();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception2 :: " + ex.Message);
-            }/**/
+                Console.WriteLine("Exception :: " + ex.Message);
+            }
+        }
+
+        private double CalculateMaterialCost(DataRow dr, int quantity)
+        {
+            double priceValueBuy = 0;
+            material_costTableAdapter mctaCost = new material_costTableAdapter();
+            MaterialControllar.material_costDataTable mcdtCost;
+
+            switch (dr["طريقة_حساب_الكلفة"].ToString())
+            {
+                case "FIFO":
+                    mcdtCost = mctaCost.GetDataById_Quintity_Ascending(Convert.ToInt32(dr["الرقم_الفني"]));
+                    priceValueBuy = CalculateCostFIFO(mcdtCost, quantity);
+                    break;
+                case "LIFO":
+                    mcdtCost = mctaCost.GetDataById_quintity_Descending(Convert.ToInt32(dr["الرقم_الفني"]));
+                    priceValueBuy = CalculateCostLIFO(mcdtCost, quantity);
+                    break;
+                case "AVG":
+                    dr["سعر_الشراء"] = mctaCost.GetAVG_Price(Convert.ToInt32(dr["الرقم_الفني"]));
+                    priceValueBuy = quantity * Convert.ToDouble(dr["سعر_الشراء"]);
+                    break;
+            }
+
+            return priceValueBuy;
+        }
+
+        private double CalculateCostFIFO(MaterialControllar.material_costDataTable mcdtCost, int quantity)
+        {
+            double priceValueBuy = 0;
+            int quantityStay = quantity;
+
+            foreach (DataRow row in mcdtCost)
+            {
+                int rowQuantity = Convert.ToInt32(row["كمية"]);
+                double rowPrice = Convert.ToDouble(row["سعر_الشراء"]);
+
+                if (quantityStay <= rowQuantity && quantityStay != 0)
+                {
+                    priceValueBuy += quantityStay * rowPrice;
+                    quantityStay = 0;
+                }
+                else if (quantityStay > rowQuantity)
+                {
+                    priceValueBuy += rowQuantity * rowPrice;
+                    quantityStay -= rowQuantity;
+                }
+            }
+
+            return priceValueBuy;
+        }
+
+        private double CalculateCostLIFO(MaterialControllar.material_costDataTable mcdtCost, int quantity)
+        {
+            double priceValueBuy = 0;
+            int quantityStay = quantity;
+
+            foreach (DataRow row in mcdtCost)
+            {
+                int rowQuantity = Convert.ToInt32(row["كمية"]);
+                double rowPrice = Convert.ToDouble(row["سعر_الشراء"]);
+
+                if (quantityStay <= rowQuantity && quantityStay != 0)
+                {
+                    priceValueBuy += quantityStay * rowPrice;
+                    quantityStay = 0;
+                }
+                else if (quantityStay > rowQuantity)
+                {
+                    priceValueBuy += rowQuantity * rowPrice;
+                    quantityStay -= rowQuantity;
+                }
+            }
+
+            return priceValueBuy;
+        }
+
+        private void UpdateCurrentRowValues(DataGridViewRow currentRow, double discount, double priceValue, double priceValueBuy, int price)
+        {
+            currentRow.Cells[5].Value = discount;
+            currentRow.Cells[6].Value = priceValue;
+            currentRow.Cells[9].Value = priceValueBuy;
+            currentRow.Cells[10].Value = priceValue - priceValueBuy;
+
+            if (price != Convert.ToInt32(currentRow.Cells[3].Value))
+            {
+                if (MessageBox.Show($"هل ترغب بتغير سعر بيع {currentRow.Cells[1].Value} ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    materialTableAdapter mta = new materialTableAdapter();
+                    mta.UpdateBuyPrice(price, Convert.ToInt32(currentRow.Cells[0].Value));
+                }
+                currentRow.Cells[3].Value = price;
+            }
+        }
+
+        private void UpdateDataRowValues(DataRow dr, int quantity, double discountPercent, double discount, DataGridViewRow currentRow, double priceValue, double priceValueBuy, int price)
+        {
+            dr["كمية"] = quantity;
+            dr["DiscountPersent"] = discountPercent;
+            dr["Discount"] = discount;
+            dr["Comment"] = currentRow.Cells[7].Value.ToString();
+            dr["TotalValue"] = priceValue;
+            dr["TotalCost"] = priceValueBuy;
+            dr["profit"] = priceValue - priceValueBuy;
+            dr["سعر_البيع"] = price;
+        }
+
+        private void UpdateTotals()
+        {
+            totalPriceValue = 0;
+            totalCostValue = 0;
+            totalDiscountValue = 0;
+
+            foreach (DataRow row in materialList)
+            {
+                totalPriceValue += Convert.ToDouble(row["TotalValue"]);
+                totalCostValue += Convert.ToDouble(row["TotalCost"]);
+                totalDiscountValue += Convert.ToDouble(row["Discount"]);
+            }
+
+            txtTotalPrice.Text = totalPriceValue.ToString();
+            txtDiscount.Text = totalDiscountValue.ToString();
+            txtTotalCost.Text = totalCostValue.ToString();
+            txtTotalProfit.Text = (totalPriceValue - totalDiscountValue - totalCostValue + totalPenfitValue).ToString();
         }
 
         public bool CheckBondsError(string dir, int index)
@@ -320,7 +353,7 @@ namespace Program.entityForm.customer
             {
             }
             txtQuintity.Text = "0";
-            calculateReportValue();
+            CalculateReportValue();
         }
 
         private void bDeleteBills_Click(object sender, EventArgs e)
@@ -965,7 +998,7 @@ namespace Program.entityForm.customer
 
         private void dataGridViewMaterial_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
         {
-            calculateReportValue();
+            CalculateReportValue();
         }
 
         private void dataGridViewMaterial_KeyDown(object sender, KeyEventArgs e)

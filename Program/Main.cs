@@ -29,6 +29,7 @@ using Program.entity.controllar.MaterialControllarTableAdapters;
 using Program.entity.controllar.CustomerControllarTableAdapters;
 using System.Diagnostics;
 using Program.Connection;
+using ConfigUpdater;
 
 //WIN-IS6T0MAU3LS
 namespace Program
@@ -51,13 +52,8 @@ namespace Program
         {
             try
             {
-                Connect c = new Connect();
-                if (!c.TestConnection())
-                {
-                    MessageBox.Show("ملف قاعدة البيانات مفقود !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    NewCompany nc = new NewCompany();
-                    nc.ShowDialog();
-                }
+                ConfigForm nc = new ConfigForm();
+                nc.ShowDialog();
             }
             catch (Exception ex)
             {

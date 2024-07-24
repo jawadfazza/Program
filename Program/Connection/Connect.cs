@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -9,7 +10,7 @@ namespace Program.Connection
     internal class Connect
     {
         private readonly string _connectionString = "Data Source=Localhost;Initial Catalog=master;User ID=sa;Password=sqladmin";
-        private readonly string _connectionStringCompany = "Data Source=localhost;Initial Catalog=Warehouse;User ID=sa;Password=sqladmin";
+        private readonly string _connectionStringCompany = ConfigurationManager.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString;
 
         public bool TestConnection()
         {

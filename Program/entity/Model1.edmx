@@ -5233,7 +5233,7 @@
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <edmx:Diagram Name="Model1" ZoomLevel="80">
+      <edmx:Diagram Name="Model1" ZoomLevel="77">
         <edmx:EntityTypeShape EntityType="WarehouseServerModel.material" Width="1.5" PointX="0.5" PointY="0.5" Height="7.3647265624999978" IsExpanded="true" />
         <edmx:EntityTypeShape EntityType="WarehouseServerModel.admin_" Width="1.5" PointX="2.625" PointY="20.125" Height="1.7879850260416674" />
         <edmx:EntityTypeShape EntityType="WarehouseServerModel.asset" Width="1.5" PointX="25.625" PointY="6.875" Height="3.1340950520833335" />
