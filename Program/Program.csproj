@@ -805,6 +805,9 @@
     <EmbeddedResource Include="entityForm\FileData\BackUp.resx">
       <DependentUpon>BackUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="entityForm\FileData\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="entityForm\FileData\ImportData.resx">
       <DependentUpon>ImportData.cs</DependentUpon>
     </EmbeddedResource>
@@ -898,6 +901,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ar.resx">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

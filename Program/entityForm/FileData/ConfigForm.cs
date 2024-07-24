@@ -71,6 +71,7 @@ namespace ConfigUpdater
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadSelectedConfiguration();
+            this.Close();
         }
 
         private void LoadSelectedConfiguration()
@@ -100,6 +101,7 @@ namespace ConfigUpdater
                     break;
                 }
             }
+
         }
 
         private void SaveCurrentConfiguration()
@@ -151,7 +153,7 @@ namespace ConfigUpdater
                 {
                     connection.Open();
                     MessageBox.Show("Connection successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+
                 }
             }
             catch (Exception ex)

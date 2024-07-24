@@ -1,55 +1,326 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using Program.entity.controllar.SupplierControllarTableAdapters;
 using Num2Wrd;
-using System.Text.RegularExpressions;
-using Program.entity.controllar;
-using Program.entityForm.Supplier.Report;
+using System.Linq;
 
 namespace Program.entityForm
 {
-    public partial class NewSupplier : Form
+    public partial class NewSupplier: Form
     {
+        private DataRow SupplierRow;
+        private static int id = 0;
+        private int numberToCompute = 0;
+        private int highestPercentageReached = 100;
+
         public NewSupplier()
         {
             InitializeComponent();
+            InitializeBackgroundWorker();
         }
 
-        public DataRow supplierRow;
-        static int id = 0;
-        private void setCustomerValue()
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.S))
+            {
+                save_Click(this, new EventArgs());
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            if (!ValidateFormInputs())
+            {
+                MessageBox.Show("يرجى تصحيح الأخطاء المميزة والمحاولة مرة أخرى.", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (SupplierRow == null)
+            {
+                if (MessageBox.Show("هل تريد حفظ المورد؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    SaveSupplier();
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("هل تريد تعديل بيانات المورد؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    UpdateSupplier();
+                }
+            }
+        }
+
+        private bool ValidateFormInputs()
+        {
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                errorProvider1.SetError(txtName, "حقل اسم العميل فارغ");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtName, "");
+            }
+
+            if (!Regex.IsMatch(txtEmail.Text, @"\S+@\S+\.\S+"))
+            {
+                errorProvider1.SetError(txtEmail, "SomeOne@HostName.com");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, "");
+            }
+
+            if (!Regex.IsMatch(txtWebSite.Text, @"www\.\S+\.\S+"))
+            {
+                errorProvider2.SetError(txtWebSite, "example: www.hostname.com");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider2.SetError(txtWebSite, "");
+            }
+
+            return isValid;
+        }
+
+        private void SaveSupplier()
         {
             try
             {
-                id = Convert.ToInt32(supplierRow["الرقم"]);
-                txtName.Text = supplierRow["اسم_المورد"].ToString();
-                txtBalance.Text = supplierRow["الرصيد"].ToString();
-                txtBalanceText.Text = supplierRow["الرصيد_كتابة"].ToString();
-                txtPlace.Text = supplierRow["عنوان_المورد"].ToString();
-                txtPhone.Text = supplierRow["هاتف"].ToString();
-                txtMobile.Text = supplierRow["الموبايل"].ToString();
-                txtEmail.Text = supplierRow["البريد_الالكتروني"].ToString();
-                txtWebSite.Text = supplierRow["الموقع_الالكتروني"].ToString();
-                txtSupplierDisc.Text = supplierRow["وصف_المورد"].ToString();
-                dtpDate.Value = Convert.ToDateTime(supplierRow["تاريخ"].ToString());
-                txtImageFile.Text = supplierRow["صورة"].ToString();
-                pSupplierPicture.ImageLocation = txtImageFile.Text;
+                supplierTableAdapter cta = new supplierTableAdapter();
+                cta.Insert(txtName.Text,
+                    Convert.ToInt32(txtBalance.Text),
+                    txtBalanceText.Text,
+                    txtPlace.Text,
+                    txtPhone.Text,
+                    txtMobile.Text,
+                    txtEmail.Text,
+                    txtWebSite.Text,
+                    dtpDate.Value,
+                    txtSupplierDisc.Text,
+                    "..\\..\\Image\\Supplier\\" + txtName.Text + ".jpg");
+
+                MessageBox.Show("تم إضافة المورد", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                getSupplierNameAutocomplete();
+                NewSupplier_Load(this, EventArgs.Empty);
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void UpdateSupplier()
+        {
+            try
+            {
+                supplierTableAdapter cta = new supplierTableAdapter();
+                SupplierRow["اسم_المورد"] = txtName.Text;
+                SupplierRow["عنوان_المورد"] = txtPlace.Text;
+                SupplierRow["هاتف"] = txtPhone.Text;
+                SupplierRow["الموبايل"] = txtMobile.Text;
+                SupplierRow["البريد_الالكتروني"] = txtEmail.Text;
+                SupplierRow["الموقع_الالكتروني"] = txtWebSite.Text;
+                SupplierRow["وصف_المورد"] = txtSupplierDisc.Text;
+                SupplierRow["تاريخ"] = dtpDate.Value;
+                //SupplierRow["صورة"] = txtImageFile.Text;
+
+                cta.Update(SupplierRow);
+
+                MessageBox.Show("تم تعديل بيانات المورد", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NewSupplier_Load(this, EventArgs.Empty);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
+            ResetForm();
+        }
+
+        private void NewSupplier_Load(object sender, EventArgs e)
+        {
+            LoadSupplierData();
+            getSupplierNameAutocomplete();
+        }
+
+        private void LoadSupplierData()
+        {
+            supplierTableAdapter cta = new supplierTableAdapter();
+            dataGridView1.DataSource = cta.GetData();
+            dataGridView1.Columns["البريد_الالكتروني"].Visible = false;
+            dataGridView1.Columns["الموقع_الالكتروني"].Visible = false;
+
+            dataGridView1.Columns["وصف_المورد"].Visible = false;
+            dataGridView1.Columns["صورة"].Visible = false;
+
+        }
+
+        private void getSupplierNameAutocomplete()
+        {
+            supplierTableAdapter cta = new supplierTableAdapter();
+            var cdt = cta.getAutoCompleteSupplierName(txtName.Text);
+            var array = cdt.Rows.OfType<DataRow>().Select(row => row["اسم_المورد"].ToString()).ToArray();
+
+            txtNameSearch.Items.Clear();
+            txtNameSearch.AutoCompleteCustomSource.AddRange(array);
+            txtNameSearch.Items.AddRange(array);
+        }
+
+        private void setSupplierValue()
+        {
+            if (SupplierRow == null) return;
+
+            id = Convert.ToInt32(SupplierRow["الرقم"]);
+            txtName.Text = SupplierRow["اسم_المورد"].ToString();
+            txtBalance.Text = SupplierRow["الرصيد"].ToString();
+            txtBalanceText.Text = SupplierRow["الرصيد_كتابة"].ToString();
+            txtPlace.Text = SupplierRow["عنوان_المورد"].ToString();
+            txtPhone.Text = SupplierRow["هاتف"].ToString();
+            txtMobile.Text = SupplierRow["الموبايل"].ToString();
+            txtEmail.Text = SupplierRow["البريد_الالكتروني"].ToString();
+            txtWebSite.Text = SupplierRow["الموقع_الالكتروني"].ToString();
+            txtSupplierDisc.Text = SupplierRow["وصف_المورد"].ToString();
+            dtpDate.Value = Convert.ToDateTime(SupplierRow["تاريخ"].ToString());
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                supplierTableAdapter cta = new supplierTableAdapter();
+                var cdt = cta.getSupplierById(Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value));
+                SupplierRow = cdt.Rows[0];
+                setSupplierValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                supplierTableAdapter cta = new supplierTableAdapter();
+                var cdt = cta.getAutoCompleteSupplierName(txtNameSearch.Text);
+                dataGridView1.DataSource = cdt;
+
+                if (cdt.Rows.Count > 0)
+                {
+                    SupplierRow = cdt.Rows[0];
+                    setSupplierValue();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            toolStripProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            var worker = sender as BackgroundWorker;
+            e.Result = ComputeFibonacci((int)e.Argument, worker, e);
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+            }
+            else if (e.Cancelled)
+            {
+                resultLabel.Text = "Canceled";
+            }
+            else
+            {
+                resultLabel.Text = e.Result.ToString();
+            }
+        }
+
+        private void InitializeBackgroundWorker()
+        {
+            backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
+            backgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
+            backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+        }
+
+        private long ComputeFibonacci(int n, BackgroundWorker worker, DoWorkEventArgs e)
+        {
+            if (n < 0 || n > 91) throw new ArgumentException("Value must be >= 0 and <= 91", nameof(n));
+
+            long result = 0;
+
+            if (worker.CancellationPending)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                if (n < 2) result = 1;
+                else result = ComputeFibonacci(n - 1, worker, e) + ComputeFibonacci(n - 2, worker, e);
+
+                int percentComplete = (int)((float)n / numberToCompute * 100);
+                if (percentComplete > highestPercentageReached)
+                {
+                    highestPercentageReached = percentComplete;
+                    worker.ReportProgress(percentComplete);
+                }
+            }
+
+            return result;
+        }
+
+        private void bRefresh_Click(object sender, EventArgs e)
+        {
+            NewSupplier_Load(sender, e);
+        }
+
+        private void bDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("هل تريد حذف المورد؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                try
+                {
+                    supplierTableAdapter sta = new supplierTableAdapter();
+                    sta.DeleteQuery(id);
+                    NewSupplier_Load(sender, e);
+                    newToolStripButton_Click(sender, e);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("لا يمكن حذف المورد مربوط بسجلات مخزنة في قاعدة البيانات", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("في حال الضرورة يجب إزالة المورد من الجداول المرتبطة بالمورد", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void ResetForm()
+        {
+            SupplierRow = null;
             txtName.Text = "";
             txtBalance.Text = "0";
             txtBalanceText.Text = "صفر";
@@ -60,324 +331,6 @@ namespace Program.entityForm
             txtWebSite.Text = "";
             txtSupplierDisc.Text = "";
             dtpDate.Value = DateTime.Now;
-            txtImageFile.Text = "";
         }
-
-        private void saveToolStripButton_Click(object sender, EventArgs e)
-        {
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("هناك بعض الحقول فارغة", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (MessageBox.Show("هل تريد حفط المورد ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                {
-                    if (txtImageFile.Text != "")
-                    {
-                        byte[] image;
-                        FileStream fsr = new FileStream(txtImageFile.Text, FileMode.OpenOrCreate, FileAccess.Read);
-                        image = new byte[fsr.Length];
-                        fsr.Read(image, 0, image.Length);
-                        fsr.Close();
-                        FileStream fsw = new FileStream("..\\..\\Image\\Supplier\\" + txtName.Text + ".jpg", FileMode.OpenOrCreate, FileAccess.Write);
-                        fsw.Write(image, 0, image.Length);
-                        fsw.Close();
-                    }
-                    supplierTableAdapter sta = new supplierTableAdapter();
-                    sta.Insert(txtName.Text,
-                        Convert.ToInt32(txtBalance.Text),
-                        txtBalanceText.Text,
-                        txtPlace.Text,
-                        txtPhone.Text,
-                        txtMobile.Text,
-                        txtEmail.Text,
-                        txtWebSite.Text,
-                        dtpDate.Value,
-                        txtSupplierDisc.Text,
-                        "..\\..\\Image\\Supplier\\" + txtName.Text + ".jpg");
-                    MessageBox.Show("تم إضافة الزبون ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    getSupplierNameAutocomplete();
-                }
-            }
-
-        }
-
-        private void getSupplierNameAutocomplete()
-        {
-            supplierTableAdapter sta = new supplierTableAdapter();
-            entity.controllar.SupplierControllar.supplierDataTable sdt = sta.getAutoCompleteSupplierName(txtName.Text);
-            string[] array = new string[sdt.Rows.Count];
-            int count = 0;
-            foreach (DataRow row in sdt.Rows)
-            {
-                array[count] = row["اسم_المورد"].ToString();
-                count++;
-            }
-            txtNameSearch.Items.Clear();
-            txtNameSearch.AutoCompleteCustomSource.AddRange(array);
-            txtNameSearch.Items.AddRange(array);
-        }
-
-        private void NewSupplier_Load(object sender, EventArgs e)
-        {
-            supplierTableAdapter sta = new supplierTableAdapter();
-            dataGridViewSpplier.DataSource = sta.GetData();
-            //supplierRow = new DataRow();
-            getSupplierNameAutocomplete();
-           // splitContainer2.SplitterDistance = 400;
-        }
-
-        private void txtName_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtName.Text == "")
-            {
-                errorProvider1.SetError((Control)sender, "حقل اسم العميل فارغ");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
-            }
-        }
-
-        private void txtBalance_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                NumberToEnglish nte = new NumberToEnglish();
-                txtBalanceText.Text = nte.changeNumericToWords(Convert.ToInt64(txtBalance.Text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error : " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                supplierRow["هاتف"] = txtPhone.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void txtMobile_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-            supplierRow["الموبايل"] = txtMobile.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            try{
-            supplierRow["البريد_الالكتروني"] = txtEmail.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void txtWebSite_TextChanged(object sender, EventArgs e)
-        {
-            try{
-            supplierRow["الموقع_الالكتروني"] = txtWebSite.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void txtSupplierDisc_TextChanged(object sender, EventArgs e)
-        {
-            try{
-            supplierRow["وصف_الزبون"] = txtSupplierDisc.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void bBrowse_Click(object sender, EventArgs e)
-        {
-            if (txtImageFile.Text == "")
-            {
-                openFileDialog1.ShowDialog();
-                txtImageFile.Text = openFileDialog1.FileName;
-                pSupplierPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                pSupplierPicture.ImageLocation = txtImageFile.Text;
-            }
-            else
-            {
-                if (MessageBox.Show("هل تريد تغير صورةالمورد ؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    openFileDialog1.ShowDialog();
-                    System.IO.File.Delete(txtImageFile.Text);
-                    byte[] image;
-                    FileStream fsr = new FileStream(openFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.Read);
-                    image = new byte[fsr.Length];
-                    fsr.Read(image, 0, image.Length);
-                    fsr.Close();
-                    FileStream fsw = new FileStream("..\\..\\Image\\Supplier\\" + txtName.Text + ".jpg", FileMode.OpenOrCreate, FileAccess.Write);
-                    fsw.Write(image, 0, image.Length);
-                    fsw.Close();
-                }
-            }
-        }
-
-        private void editToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("هل تريد تعديل بيانات المورد ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                {
-                    supplierTableAdapter sta = new supplierTableAdapter();
-                    sta.Update(supplierRow);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error : " + ex.Message);
-            }
-        }
-
-        private void dataGridViewSpplier_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                supplierTableAdapter sta = new supplierTableAdapter();
-                entity.controllar.SupplierControllar.supplierDataTable cdt = sta.getSupplierById(Convert.ToInt32(dataGridViewSpplier.Rows[dataGridViewSpplier.CurrentRow.Index].Cells[0].Value));
-                supplierRow = cdt.Rows[0];
-                setCustomerValue();
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void txtNameSearch_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                supplierTableAdapter cta = new supplierTableAdapter();
-                SupplierControllar.supplierDataTable sdt = cta.getAutoCompleteSupplierName(txtNameSearch.Text);
-                dataGridViewSpplier.DataSource = sdt;
-
-                supplierRow = sdt.Rows[0];
-            }
-            catch (Exception ex)
-            {
-
-            }
-            setCustomerValue();
-        }
-
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
-        {
-            Regex regex = new Regex(@"\S+@\S+\.\S+");
-            if (!regex.IsMatch(txtEmail.Text))
-            {
-                errorProvider1.SetError((Control)sender, "SomeOne@HostName.com");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
-            }
-        }
-
-        private void txtWebSite_Validating(object sender, CancelEventArgs e)
-        {
-            Regex regex = new Regex(@"www\.\S+\.\S+");
-            if (!regex.IsMatch(txtWebSite.Text))
-            {
-                errorProvider2.SetError((Control)sender, "example : www.hostname.com");
-            }
-            else
-            {
-                errorProvider2.SetError((Control)sender, "");
-            }
-        }
-
-        private void txtPlace_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                supplierRow["عنوان_المورد"] = txtPlace.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void NewSupplier_Resize(object sender, EventArgs e)
-        {
-            //splitContainer2.SplitterDistance = 400;
-
-        }
-
-        private void miReportSupplierAccounting_Click(object sender, EventArgs e)
-        {
-            SupplierAccounting sa = new SupplierAccounting();
-            sa.ShowDialog();
-        }
-
-        private void miMaterialBuy_Click(object sender, EventArgs e)
-        {
-            SupplierBuy sb = new SupplierBuy();
-            sb.ShowDialog();
-        }
-
-        private void bRefresh_Click(object sender, EventArgs e)
-        {
-            NewSupplier_Load(sender, e);
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                supplierRow["اسم_المورد"] = txtName.Text;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-        }
-
-        private void bDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("هل تريد حذف المورد؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                {
-                    supplierTableAdapter sta = new supplierTableAdapter();
-                    sta.DeleteQuery(id);
-
-                    NewSupplier_Load(sender, e);
-                    newToolStripButton_Click(sender, e);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("لا يمكن حذف المورد مربوط بسجلات مخزنة في قاعدة البيانات", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                MessageBox.Show("في حال الضرورة يجب إزالة المورد من الجداول المرتبطة بالمورد", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-       
     }
 }

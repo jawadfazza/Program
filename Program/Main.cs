@@ -30,6 +30,7 @@ using Program.entity.controllar.CustomerControllarTableAdapters;
 using System.Diagnostics;
 using Program.Connection;
 using ConfigUpdater;
+using ConfigForm = ConfigUpdater.ConfigForm;
 
 //WIN-IS6T0MAU3LS
 namespace Program
@@ -1048,6 +1049,12 @@ namespace Program
                     f.Close();
                 }
             }
+        }
+
+        private void miDB_Connection_Click(object sender, EventArgs e)
+        {
+            ConfigForm nc = new ConfigForm();
+            nc.ShowDialog();
         }
     }
 }

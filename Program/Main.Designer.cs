@@ -141,6 +141,7 @@
             this.bMaterial = new System.Windows.Forms.Button();
             this.bBalance = new System.Windows.Forms.Button();
             this.bReport = new System.Windows.Forms.Button();
+            this.miDB_Connection = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -172,6 +173,7 @@
             // ملفToolStripMenuItem
             // 
             this.ملفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miDB_Connection,
             this.miCompanyInfo,
             this.miNewYear,
             this.miUser,
@@ -179,14 +181,14 @@
             this.miExit});
             this.ملفToolStripMenuItem.Image = global::Program.Properties.Resources.generic_folder_alt;
             this.ملفToolStripMenuItem.Name = "ملفToolStripMenuItem";
-            this.ملفToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.ملفToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.ملفToolStripMenuItem.Text = "ملف";
             // 
             // miCompanyInfo
             // 
             this.miCompanyInfo.Image = global::Program.Properties.Resources._1352240457_company;
             this.miCompanyInfo.Name = "miCompanyInfo";
-            this.miCompanyInfo.Size = new System.Drawing.Size(243, 24);
+            this.miCompanyInfo.Size = new System.Drawing.Size(282, 24);
             this.miCompanyInfo.Text = "بيانات الشركة";
             this.miCompanyInfo.Click += new System.EventHandler(this.miCompanyInfo_Click);
             // 
@@ -194,7 +196,7 @@
             // 
             this.miNewYear.Image = global::Program.Properties.Resources.photo_new_year_s_eve_1;
             this.miNewYear.Name = "miNewYear";
-            this.miNewYear.Size = new System.Drawing.Size(243, 24);
+            this.miNewYear.Size = new System.Drawing.Size(282, 24);
             this.miNewYear.Text = "بداية عام جديد";
             this.miNewYear.Click += new System.EventHandler(this.miNewYear_Click);
             // 
@@ -202,7 +204,7 @@
             // 
             this.miUser.Image = global::Program.Properties.Resources.user;
             this.miUser.Name = "miUser";
-            this.miUser.Size = new System.Drawing.Size(243, 24);
+            this.miUser.Size = new System.Drawing.Size(282, 24);
             this.miUser.Text = "المستخدمين";
             this.miUser.Click += new System.EventHandler(this.miUser_Click);
             // 
@@ -210,7 +212,7 @@
             // 
             this.miBackUp.Image = global::Program.Properties.Resources.hp_folder_backup;
             this.miBackUp.Name = "miBackUp";
-            this.miBackUp.Size = new System.Drawing.Size(243, 24);
+            this.miBackUp.Size = new System.Drawing.Size(282, 24);
             this.miBackUp.Text = "إنشاء نسخة إحتياطية و إستعادتها";
             this.miBackUp.Click += new System.EventHandler(this.miBackUp_Click);
             // 
@@ -218,7 +220,7 @@
             // 
             this.miExit.Image = global::Program.Properties.Resources.exit;
             this.miExit.Name = "miExit";
-            this.miExit.Size = new System.Drawing.Size(243, 24);
+            this.miExit.Size = new System.Drawing.Size(282, 24);
             this.miExit.Text = "خروج";
             this.miExit.Click += new System.EventHandler(this.miExit_Click);
             // 
@@ -238,14 +240,14 @@
             this.miSaleReport});
             this.الزبائنToolStripMenuItem.Image = global::Program.Properties.Resources._1353172927_Users_Group;
             this.الزبائنToolStripMenuItem.Name = "الزبائنToolStripMenuItem";
-            this.الزبائنToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.الزبائنToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.الزبائنToolStripMenuItem.Text = "الزبائن";
             // 
             // miNewCustumer
             // 
             this.miNewCustumer.Image = global::Program.Properties.Resources._1353172927_Users_Group;
             this.miNewCustumer.Name = "miNewCustumer";
-            this.miNewCustumer.Size = new System.Drawing.Size(205, 24);
+            this.miNewCustumer.Size = new System.Drawing.Size(230, 24);
             this.miNewCustumer.Text = " إضافة زبون";
             this.miNewCustumer.Click += new System.EventHandler(this.miNewCustumer_Click);
             // 
@@ -253,7 +255,7 @@
             // 
             this.miSaleCash.Image = global::Program.Properties.Resources._1354872607_sale;
             this.miSaleCash.Name = "miSaleCash";
-            this.miSaleCash.Size = new System.Drawing.Size(205, 24);
+            this.miSaleCash.Size = new System.Drawing.Size(230, 24);
             this.miSaleCash.Text = "إضافة طلبية بيع بضاعة";
             this.miSaleCash.Click += new System.EventHandler(this.miSaleCash_Click);
             // 
@@ -261,7 +263,7 @@
             // 
             this.miFastSale.Image = global::Program.Properties.Resources.customers;
             this.miFastSale.Name = "miFastSale";
-            this.miFastSale.Size = new System.Drawing.Size(205, 24);
+            this.miFastSale.Size = new System.Drawing.Size(230, 24);
             this.miFastSale.Text = " نافذة البيع السريع";
             this.miFastSale.Click += new System.EventHandler(this.miFastSale_Click);
             // 
@@ -269,7 +271,7 @@
             // 
             this.miCustomerPayment.Image = global::Program.Properties.Resources.coins;
             this.miCustomerPayment.Name = "miCustomerPayment";
-            this.miCustomerPayment.Size = new System.Drawing.Size(205, 24);
+            this.miCustomerPayment.Size = new System.Drawing.Size(230, 24);
             this.miCustomerPayment.Text = "تلقي دفعات الزبائن";
             this.miCustomerPayment.Click += new System.EventHandler(this.miCustomerPayment_Click);
             // 
@@ -277,20 +279,20 @@
             // 
             this.miReturnSales.Image = global::Program.Properties.Resources.sticker_black_sale;
             this.miReturnSales.Name = "miReturnSales";
-            this.miReturnSales.Size = new System.Drawing.Size(205, 24);
+            this.miReturnSales.Size = new System.Drawing.Size(230, 24);
             this.miReturnSales.Text = "ردّ بضاعة مباعة";
             this.miReturnSales.Click += new System.EventHandler(this.miReturnSales_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(202, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(227, 6);
             // 
             // miReportCustomerAccounting
             // 
             this.miReportCustomerAccounting.Image = global::Program.Properties.Resources._1353172927_Users_Group;
             this.miReportCustomerAccounting.Name = "miReportCustomerAccounting";
-            this.miReportCustomerAccounting.Size = new System.Drawing.Size(205, 24);
+            this.miReportCustomerAccounting.Size = new System.Drawing.Size(230, 24);
             this.miReportCustomerAccounting.Text = " حساب الزبون";
             this.miReportCustomerAccounting.Click += new System.EventHandler(this.miReportCustomerAccounting_Click);
             // 
@@ -298,7 +300,7 @@
             // 
             this.miMaterialSale.Image = global::Program.Properties.Resources._1354872607_sale;
             this.miMaterialSale.Name = "miMaterialSale";
-            this.miMaterialSale.Size = new System.Drawing.Size(205, 24);
+            this.miMaterialSale.Size = new System.Drawing.Size(230, 24);
             this.miMaterialSale.Text = "بطاقة مبيعات الزبون";
             this.miMaterialSale.Click += new System.EventHandler(this.miMaterialSale_Click);
             // 
@@ -306,7 +308,7 @@
             // 
             this.miSaleBills.Image = global::Program.Properties.Resources._1353174954_document;
             this.miSaleBills.Name = "miSaleBills";
-            this.miSaleBills.Size = new System.Drawing.Size(205, 24);
+            this.miSaleBills.Size = new System.Drawing.Size(230, 24);
             this.miSaleBills.Text = "فاتورة بيع مواد";
             this.miSaleBills.Click += new System.EventHandler(this.miSaleBills_Click);
             // 
@@ -314,7 +316,7 @@
             // 
             this.miReturnSaleBills.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReturnSaleBills.Name = "miReturnSaleBills";
-            this.miReturnSaleBills.Size = new System.Drawing.Size(205, 24);
+            this.miReturnSaleBills.Size = new System.Drawing.Size(230, 24);
             this.miReturnSaleBills.Text = "تقرير إعادة بضاعة مباعة";
             this.miReturnSaleBills.Click += new System.EventHandler(this.miReturnSaleBills_Click);
             // 
@@ -326,7 +328,7 @@
             this.miSalesChartReport});
             this.miSaleReport.Image = global::Program.Properties.Resources._1353174954_document;
             this.miSaleReport.Name = "miSaleReport";
-            this.miSaleReport.Size = new System.Drawing.Size(205, 24);
+            this.miSaleReport.Size = new System.Drawing.Size(230, 24);
             this.miSaleReport.Text = "تقرير المبيعات ";
             this.miSaleReport.Click += new System.EventHandler(this.miSaleReport_Click);
             // 
@@ -334,7 +336,7 @@
             // 
             this.miSalesBillsTable.Image = global::Program.Properties.Resources._1353174954_document;
             this.miSalesBillsTable.Name = "miSalesBillsTable";
-            this.miSalesBillsTable.Size = new System.Drawing.Size(232, 24);
+            this.miSalesBillsTable.Size = new System.Drawing.Size(276, 24);
             this.miSalesBillsTable.Text = "جدول فواتير المبيعات ";
             this.miSalesBillsTable.Click += new System.EventHandler(this.miSalesBillsTable_Click);
             // 
@@ -342,7 +344,7 @@
             // 
             this.miSalesBillsTableDetails.Image = global::Program.Properties.Resources._1353174954_document;
             this.miSalesBillsTableDetails.Name = "miSalesBillsTableDetails";
-            this.miSalesBillsTableDetails.Size = new System.Drawing.Size(232, 24);
+            this.miSalesBillsTableDetails.Size = new System.Drawing.Size(276, 24);
             this.miSalesBillsTableDetails.Text = "جدول فواتير المبيعات التفصيلي";
             this.miSalesBillsTableDetails.Click += new System.EventHandler(this.miSalesBillsTableDetails_Click);
             // 
@@ -350,7 +352,7 @@
             // 
             this.miSalesChartReport.Image = global::Program.Properties.Resources.colorful_chart;
             this.miSalesChartReport.Name = "miSalesChartReport";
-            this.miSalesChartReport.Size = new System.Drawing.Size(232, 24);
+            this.miSalesChartReport.Size = new System.Drawing.Size(276, 24);
             this.miSalesChartReport.Text = "المخطط البياني للمبيعات";
             this.miSalesChartReport.Click += new System.EventHandler(this.miSalesChartReport_Click);
             // 
@@ -370,14 +372,14 @@
             this.miBuyReport});
             this.miVendorList.Image = global::Program.Properties.Resources._1353173427_Customer_Male_Light;
             this.miVendorList.Name = "miVendorList";
-            this.miVendorList.Size = new System.Drawing.Size(80, 24);
+            this.miVendorList.Size = new System.Drawing.Size(91, 24);
             this.miVendorList.Text = "الموردين";
             // 
             // miVendor
             // 
             this.miVendor.Image = global::Program.Properties.Resources._1353173427_Customer_Male_Light;
             this.miVendor.Name = "miVendor";
-            this.miVendor.Size = new System.Drawing.Size(218, 24);
+            this.miVendor.Size = new System.Drawing.Size(245, 24);
             this.miVendor.Text = " إضافة مورد ";
             this.miVendor.Click += new System.EventHandler(this.miVendor_Click);
             // 
@@ -385,7 +387,7 @@
             // 
             this.miBuy.Image = global::Program.Properties.Resources.shopping_cart;
             this.miBuy.Name = "miBuy";
-            this.miBuy.Size = new System.Drawing.Size(218, 24);
+            this.miBuy.Size = new System.Drawing.Size(245, 24);
             this.miBuy.Text = "إضافة طلبية شراء بضاعة";
             this.miBuy.Click += new System.EventHandler(this.miBuy_Click);
             // 
@@ -393,7 +395,7 @@
             // 
             this.miFastBuy.Image = global::Program.Properties.Resources.customers;
             this.miFastBuy.Name = "miFastBuy";
-            this.miFastBuy.Size = new System.Drawing.Size(218, 24);
+            this.miFastBuy.Size = new System.Drawing.Size(245, 24);
             this.miFastBuy.Text = "نافذة الشراء السريع";
             this.miFastBuy.Click += new System.EventHandler(this.miFastBuy_Click);
             // 
@@ -401,7 +403,7 @@
             // 
             this.miSupplierPayment.Image = global::Program.Properties.Resources.coins;
             this.miSupplierPayment.Name = "miSupplierPayment";
-            this.miSupplierPayment.Size = new System.Drawing.Size(218, 24);
+            this.miSupplierPayment.Size = new System.Drawing.Size(245, 24);
             this.miSupplierPayment.Text = "دفع مبلغ للموردين";
             this.miSupplierPayment.Click += new System.EventHandler(this.miSupplierPayment_Click);
             // 
@@ -409,20 +411,20 @@
             // 
             this.miReturnBuy.Image = global::Program.Properties.Resources.cart_delete;
             this.miReturnBuy.Name = "miReturnBuy";
-            this.miReturnBuy.Size = new System.Drawing.Size(218, 24);
+            this.miReturnBuy.Size = new System.Drawing.Size(245, 24);
             this.miReturnBuy.Text = "ردّ بضاعة مشترات";
             this.miReturnBuy.Click += new System.EventHandler(this.miReturnBuy_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(242, 6);
             // 
             // miReportSupplierAccounting
             // 
             this.miReportSupplierAccounting.Image = global::Program.Properties.Resources._1353173427_Customer_Male_Light;
             this.miReportSupplierAccounting.Name = "miReportSupplierAccounting";
-            this.miReportSupplierAccounting.Size = new System.Drawing.Size(218, 24);
+            this.miReportSupplierAccounting.Size = new System.Drawing.Size(245, 24);
             this.miReportSupplierAccounting.Text = "حساب المورد";
             this.miReportSupplierAccounting.Click += new System.EventHandler(this.miReportSupplierAccounting_Click);
             // 
@@ -430,7 +432,7 @@
             // 
             this.miMaterialBuy.Image = global::Program.Properties.Resources.shopping_cart;
             this.miMaterialBuy.Name = "miMaterialBuy";
-            this.miMaterialBuy.Size = new System.Drawing.Size(218, 24);
+            this.miMaterialBuy.Size = new System.Drawing.Size(245, 24);
             this.miMaterialBuy.Text = "بطاقة مشتريات المورد";
             this.miMaterialBuy.Click += new System.EventHandler(this.miMaterialBuy_Click);
             // 
@@ -438,7 +440,7 @@
             // 
             this.miBuyList.Image = global::Program.Properties.Resources._1353174954_document;
             this.miBuyList.Name = "miBuyList";
-            this.miBuyList.Size = new System.Drawing.Size(218, 24);
+            this.miBuyList.Size = new System.Drawing.Size(245, 24);
             this.miBuyList.Text = "وثيقة إدخال مواد";
             this.miBuyList.Click += new System.EventHandler(this.miBuyList_Click);
             // 
@@ -446,7 +448,7 @@
             // 
             this.miReturnBuyBills.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReturnBuyBills.Name = "miReturnBuyBills";
-            this.miReturnBuyBills.Size = new System.Drawing.Size(218, 24);
+            this.miReturnBuyBills.Size = new System.Drawing.Size(245, 24);
             this.miReturnBuyBills.Text = "تقرير إعادة بضاعة مشترات";
             this.miReturnBuyBills.Click += new System.EventHandler(this.miReturnBuyBills_Click);
             // 
@@ -454,7 +456,7 @@
             // 
             this.miBuyReport.Image = global::Program.Properties.Resources._1353174954_document;
             this.miBuyReport.Name = "miBuyReport";
-            this.miBuyReport.Size = new System.Drawing.Size(218, 24);
+            this.miBuyReport.Size = new System.Drawing.Size(245, 24);
             this.miBuyReport.Text = "تقرير المشتريات";
             this.miBuyReport.Click += new System.EventHandler(this.miBuyReport_Click);
             // 
@@ -468,14 +470,14 @@
             this.miPaperPayReport});
             this.سنداتToolStripMenuItem.Image = global::Program.Properties.Resources.document_attach;
             this.سنداتToolStripMenuItem.Name = "سنداتToolStripMenuItem";
-            this.سنداتToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.سنداتToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.سنداتToolStripMenuItem.Text = "سندات";
             // 
             // miPaperReceived
             // 
             this.miPaperReceived.Image = global::Program.Properties.Resources.toolbar_documents;
             this.miPaperReceived.Name = "miPaperReceived";
-            this.miPaperReceived.Size = new System.Drawing.Size(194, 24);
+            this.miPaperReceived.Size = new System.Drawing.Size(233, 24);
             this.miPaperReceived.Text = "سندات القبض المستحقة";
             this.miPaperReceived.Click += new System.EventHandler(this.miPaperReceived_Click);
             // 
@@ -483,21 +485,21 @@
             // 
             this.miPaperPay.Image = global::Program.Properties.Resources.toolbar_documents;
             this.miPaperPay.Name = "miPaperPay";
-            this.miPaperPay.Size = new System.Drawing.Size(194, 24);
+            this.miPaperPay.Size = new System.Drawing.Size(233, 24);
             this.miPaperPay.Text = "سندات الدفع المستحقة";
             this.miPaperPay.Click += new System.EventHandler(this.miPaperPay_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(230, 6);
             // 
             // miPaperRecieveReport
             // 
             this.miPaperRecieveReport.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
             this.miPaperRecieveReport.Image = global::Program.Properties.Resources._1353174954_document;
             this.miPaperRecieveReport.Name = "miPaperRecieveReport";
-            this.miPaperRecieveReport.Size = new System.Drawing.Size(194, 24);
+            this.miPaperRecieveReport.Size = new System.Drawing.Size(233, 24);
             this.miPaperRecieveReport.Text = "كمبيالات القبض";
             this.miPaperRecieveReport.Click += new System.EventHandler(this.miPaperRecieveReport_Click);
             // 
@@ -505,7 +507,7 @@
             // 
             this.miPaperPayReport.Image = global::Program.Properties.Resources._1353174954_document;
             this.miPaperPayReport.Name = "miPaperPayReport";
-            this.miPaperPayReport.Size = new System.Drawing.Size(194, 24);
+            this.miPaperPayReport.Size = new System.Drawing.Size(233, 24);
             this.miPaperPayReport.Text = "كمبيالات الدفع";
             this.miPaperPayReport.Click += new System.EventHandler(this.miPaperPayReport_Click);
             // 
@@ -520,14 +522,14 @@
             this.miReciveBills});
             this.mliBox.Image = global::Program.Properties.Resources._1353174121_piggy_bank;
             this.mliBox.Name = "mliBox";
-            this.mliBox.Size = new System.Drawing.Size(81, 24);
+            this.mliBox.Size = new System.Drawing.Size(93, 24);
             this.mliBox.Text = "الصندوق";
             // 
             // miNewBox
             // 
             this.miNewBox.Image = global::Program.Properties.Resources.strong_box_money;
             this.miNewBox.Name = "miNewBox";
-            this.miNewBox.Size = new System.Drawing.Size(191, 24);
+            this.miNewBox.Size = new System.Drawing.Size(228, 24);
             this.miNewBox.Text = "إضافة صندوق نقدية";
             this.miNewBox.Click += new System.EventHandler(this.miNewBox_Click);
             // 
@@ -535,20 +537,20 @@
             // 
             this.miBoxTransfare.Image = global::Program.Properties.Resources._1354561043_Business;
             this.miBoxTransfare.Name = "miBoxTransfare";
-            this.miBoxTransfare.Size = new System.Drawing.Size(191, 24);
+            this.miBoxTransfare.Size = new System.Drawing.Size(228, 24);
             this.miBoxTransfare.Text = "دفع أو قبض مبلغ نقدي ";
             this.miBoxTransfare.Click += new System.EventHandler(this.miBoxTransfare_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(188, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(225, 6);
             // 
             // miBoxAccounting
             // 
             this.miBoxAccounting.Image = global::Program.Properties.Resources._1354561007_safety_box;
             this.miBoxAccounting.Name = "miBoxAccounting";
-            this.miBoxAccounting.Size = new System.Drawing.Size(191, 24);
+            this.miBoxAccounting.Size = new System.Drawing.Size(228, 24);
             this.miBoxAccounting.Text = "حساب الصندوق";
             this.miBoxAccounting.Click += new System.EventHandler(this.miBoxAccounting_Click);
             // 
@@ -556,7 +558,7 @@
             // 
             this.miPayBills.Image = global::Program.Properties.Resources._1353174954_document;
             this.miPayBills.Name = "miPayBills";
-            this.miPayBills.Size = new System.Drawing.Size(191, 24);
+            this.miPayBills.Size = new System.Drawing.Size(228, 24);
             this.miPayBills.Text = "أمر دفع نقدي ";
             this.miPayBills.Click += new System.EventHandler(this.miPayBills_Click);
             // 
@@ -564,7 +566,7 @@
             // 
             this.miReciveBills.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReciveBills.Name = "miReciveBills";
-            this.miReciveBills.Size = new System.Drawing.Size(191, 24);
+            this.miReciveBills.Size = new System.Drawing.Size(228, 24);
             this.miReciveBills.Text = "وصل أستلام نقدية";
             this.miReciveBills.Click += new System.EventHandler(this.miReciveBills_Click);
             // 
@@ -580,14 +582,14 @@
             this.bReceiveCheck});
             this.البنكToolStripMenuItem.Image = global::Program.Properties.Resources._1353174326_Bank;
             this.البنكToolStripMenuItem.Name = "البنكToolStripMenuItem";
-            this.البنكToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.البنكToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.البنكToolStripMenuItem.Text = "البنك";
             // 
             // miNewBank
             // 
             this.miNewBank.Image = global::Program.Properties.Resources._1353174326_Bank;
             this.miNewBank.Name = "miNewBank";
-            this.miNewBank.Size = new System.Drawing.Size(214, 24);
+            this.miNewBank.Size = new System.Drawing.Size(245, 24);
             this.miNewBank.Text = " إضافة بنك";
             this.miNewBank.Click += new System.EventHandler(this.miNewBank_Click);
             // 
@@ -596,7 +598,7 @@
             this.miBankAccounting.AccessibleDescription = "";
             this.miBankAccounting.Image = global::Program.Properties.Resources._1354561007_safety_box;
             this.miBankAccounting.Name = "miBankAccounting";
-            this.miBankAccounting.Size = new System.Drawing.Size(214, 24);
+            this.miBankAccounting.Size = new System.Drawing.Size(245, 24);
             this.miBankAccounting.Text = "إضافة حساب بنكي";
             this.miBankAccounting.Click += new System.EventHandler(this.miBankAccounting_Click);
             // 
@@ -604,20 +606,20 @@
             // 
             this.miBankTransfare.Image = global::Program.Properties.Resources._1354561043_Business;
             this.miBankTransfare.Name = "miBankTransfare";
-            this.miBankTransfare.Size = new System.Drawing.Size(214, 24);
+            this.miBankTransfare.Size = new System.Drawing.Size(245, 24);
             this.miBankTransfare.Text = "سحب أو يداع مبلغ";
             this.miBankTransfare.Click += new System.EventHandler(this.miBankTransfare_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(242, 6);
             // 
             // miBankAccount
             // 
             this.miBankAccount.Image = global::Program.Properties.Resources._1354561007_safety_box;
             this.miBankAccount.Name = "miBankAccount";
-            this.miBankAccount.Size = new System.Drawing.Size(214, 24);
+            this.miBankAccount.Size = new System.Drawing.Size(245, 24);
             this.miBankAccount.Text = "حساب الحساب المصرفي";
             this.miBankAccount.Click += new System.EventHandler(this.miBankAccount_Click);
             // 
@@ -625,7 +627,7 @@
             // 
             this.miPayCheck.Image = global::Program.Properties.Resources._1353174954_document;
             this.miPayCheck.Name = "miPayCheck";
-            this.miPayCheck.Size = new System.Drawing.Size(214, 24);
+            this.miPayCheck.Size = new System.Drawing.Size(245, 24);
             this.miPayCheck.Text = " أمر صرف مبلغ";
             this.miPayCheck.Click += new System.EventHandler(this.miPayCheck_Click);
             // 
@@ -633,7 +635,7 @@
             // 
             this.bReceiveCheck.Image = global::Program.Properties.Resources._1353174954_document;
             this.bReceiveCheck.Name = "bReceiveCheck";
-            this.bReceiveCheck.Size = new System.Drawing.Size(214, 24);
+            this.bReceiveCheck.Size = new System.Drawing.Size(245, 24);
             this.bReceiveCheck.Text = "إيداع مبلغ بحساب مصرفي ";
             this.bReceiveCheck.Click += new System.EventHandler(this.bReceiveCheck_Click);
             // 
@@ -649,14 +651,14 @@
             this.miReportMaterialInventory});
             this.السلعوالخدماتToolStripMenuItem.Image = global::Program.Properties.Resources._1353174596_materials;
             this.السلعوالخدماتToolStripMenuItem.Name = "السلعوالخدماتToolStripMenuItem";
-            this.السلعوالخدماتToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.السلعوالخدماتToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.السلعوالخدماتToolStripMenuItem.Text = "السلع و الخدمات";
             // 
             // miMaterilaTree
             // 
             this.miMaterilaTree.Image = global::Program.Properties.Resources.view_tree;
             this.miMaterilaTree.Name = "miMaterilaTree";
-            this.miMaterilaTree.Size = new System.Drawing.Size(216, 24);
+            this.miMaterilaTree.Size = new System.Drawing.Size(244, 24);
             this.miMaterilaTree.Text = "شجرت المواد";
             this.miMaterilaTree.Click += new System.EventHandler(this.miMaterilaTree_Click);
             // 
@@ -665,7 +667,7 @@
             this.miNewMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
             this.miNewMaterial.Image = global::Program.Properties.Resources._1353174596_materials;
             this.miNewMaterial.Name = "miNewMaterial";
-            this.miNewMaterial.Size = new System.Drawing.Size(216, 24);
+            this.miNewMaterial.Size = new System.Drawing.Size(244, 24);
             this.miNewMaterial.Text = "السلع و الخدمات الجديدة";
             this.miNewMaterial.Click += new System.EventHandler(this.miNewMaterial_Click);
             // 
@@ -673,7 +675,7 @@
             // 
             this.miMaterialInventory.Image = global::Program.Properties.Resources._1353371323_TextEdit;
             this.miMaterialInventory.Name = "miMaterialInventory";
-            this.miMaterialInventory.Size = new System.Drawing.Size(216, 24);
+            this.miMaterialInventory.Size = new System.Drawing.Size(244, 24);
             this.miMaterialInventory.Text = "جردّ بضاعة المستودعات";
             this.miMaterialInventory.Click += new System.EventHandler(this.miMaterialInventory_Click);
             // 
@@ -681,19 +683,19 @@
             // 
             this.كلفةالموادالباقيةToolStripMenuItem.Image = global::Program.Properties.Resources.cost;
             this.كلفةالموادالباقيةToolStripMenuItem.Name = "كلفةالموادالباقيةToolStripMenuItem";
-            this.كلفةالموادالباقيةToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
+            this.كلفةالموادالباقيةToolStripMenuItem.Size = new System.Drawing.Size(244, 24);
             this.كلفةالموادالباقيةToolStripMenuItem.Text = "كلفة المواد الباقية";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(241, 6);
             // 
             // miMaterialCard
             // 
             this.miMaterialCard.Image = global::Program.Properties.Resources._1353174954_document;
             this.miMaterialCard.Name = "miMaterialCard";
-            this.miMaterialCard.Size = new System.Drawing.Size(216, 24);
+            this.miMaterialCard.Size = new System.Drawing.Size(244, 24);
             this.miMaterialCard.Text = "بطاقة مادة";
             this.miMaterialCard.Click += new System.EventHandler(this.miMaterialCard_Click);
             // 
@@ -701,7 +703,7 @@
             // 
             this.miReportMaterialInventory.Image = global::Program.Properties.Resources._1353174954_document;
             this.miReportMaterialInventory.Name = "miReportMaterialInventory";
-            this.miReportMaterialInventory.Size = new System.Drawing.Size(216, 24);
+            this.miReportMaterialInventory.Size = new System.Drawing.Size(244, 24);
             this.miReportMaterialInventory.Text = "تقرير جردّ بضاعة المستودع";
             this.miReportMaterialInventory.Click += new System.EventHandler(this.miReportMaterialInventory_Click);
             // 
@@ -717,51 +719,51 @@
             this.جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem});
             this.تصنيعToolStripMenuItem.Image = global::Program.Properties.Resources.make;
             this.تصنيعToolStripMenuItem.Name = "تصنيعToolStripMenuItem";
-            this.تصنيعToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.تصنيعToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.تصنيعToolStripMenuItem.Text = "تصنيع ";
             // 
             // miMaterialMaker
             // 
             this.miMaterialMaker.Name = "miMaterialMaker";
-            this.miMaterialMaker.Size = new System.Drawing.Size(269, 24);
+            this.miMaterialMaker.Size = new System.Drawing.Size(325, 24);
             this.miMaterialMaker.Text = "دليل المواد المصنعة";
             this.miMaterialMaker.Click += new System.EventHandler(this.miMaterialMakerList_Click);
             // 
             // miMaterialMakerList
             // 
             this.miMaterialMakerList.Name = "miMaterialMakerList";
-            this.miMaterialMakerList.Size = new System.Drawing.Size(269, 24);
+            this.miMaterialMakerList.Size = new System.Drawing.Size(325, 24);
             this.miMaterialMakerList.Text = "إضافة إحتياجات تصنع منتج";
             this.miMaterialMakerList.Click += new System.EventHandler(this.miMaterialMakerList_Click_1);
             // 
             // miMaterialMaker1
             // 
             this.miMaterialMaker1.Name = "miMaterialMaker1";
-            this.miMaterialMaker1.Size = new System.Drawing.Size(269, 24);
+            this.miMaterialMaker1.Size = new System.Drawing.Size(325, 24);
             this.miMaterialMaker1.Text = "إجراء عملية تصنيع جديدة";
             this.miMaterialMaker1.Click += new System.EventHandler(this.miMaterialMaker1_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(266, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(322, 6);
             // 
             // حسابإحتياجاتالتصنيعToolStripMenuItem
             // 
             this.حسابإحتياجاتالتصنيعToolStripMenuItem.Name = "حسابإحتياجاتالتصنيعToolStripMenuItem";
-            this.حسابإحتياجاتالتصنيعToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
+            this.حسابإحتياجاتالتصنيعToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
             this.حسابإحتياجاتالتصنيعToolStripMenuItem.Text = "حساب إحتياجات التصنيع";
             // 
             // جدولعملياتالتصنيعالمرحلToolStripMenuItem
             // 
             this.جدولعملياتالتصنيعالمرحلToolStripMenuItem.Name = "جدولعملياتالتصنيعالمرحلToolStripMenuItem";
-            this.جدولعملياتالتصنيعالمرحلToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
+            this.جدولعملياتالتصنيعالمرحلToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
             this.جدولعملياتالتصنيعالمرحلToolStripMenuItem.Text = "جدول عمليات التصنيع المرحل";
             // 
             // جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem
             // 
             this.جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Name = "جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem";
-            this.جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
+            this.جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
             this.جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Text = "جدول المواد الأولية المستخدمة للتصنيع";
             // 
             // miNewAssets
@@ -773,14 +775,14 @@
             this.جدولأهتلاكالأصولToolStripMenuItem});
             this.miNewAssets.Image = global::Program.Properties.Resources.asset_green;
             this.miNewAssets.Name = "miNewAssets";
-            this.miNewAssets.Size = new System.Drawing.Size(158, 24);
+            this.miNewAssets.Size = new System.Drawing.Size(173, 24);
             this.miNewAssets.Text = "أصول و إلتزامات أخرى";
             // 
             // miAddAsset
             // 
             this.miAddAsset.Image = global::Program.Properties.Resources.shopping_cart;
             this.miAddAsset.Name = "miAddAsset";
-            this.miAddAsset.Size = new System.Drawing.Size(218, 24);
+            this.miAddAsset.Size = new System.Drawing.Size(248, 24);
             this.miAddAsset.Text = "إضافة أصول أخرى";
             this.miAddAsset.Click += new System.EventHandler(this.miAddAsset_Click);
             // 
@@ -788,19 +790,19 @@
             // 
             this.miAddLiability.Image = global::Program.Properties.Resources.report_check;
             this.miAddLiability.Name = "miAddLiability";
-            this.miAddLiability.Size = new System.Drawing.Size(218, 24);
+            this.miAddLiability.Size = new System.Drawing.Size(248, 24);
             this.miAddLiability.Text = "إضافة إلتزامات أخرى";
             this.miAddLiability.Click += new System.EventHandler(this.miAddLiability_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(245, 6);
             // 
             // جدولأهتلاكالأصولToolStripMenuItem
             // 
             this.جدولأهتلاكالأصولToolStripMenuItem.Name = "جدولأهتلاكالأصولToolStripMenuItem";
-            this.جدولأهتلاكالأصولToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
+            this.جدولأهتلاكالأصولToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.جدولأهتلاكالأصولToolStripMenuItem.Text = "جدول أهتلاك الأصول الثابتة";
             // 
             // جردوميزانياتToolStripMenuItem
@@ -812,14 +814,14 @@
             this.ميزانياتToolStripMenuItem});
             this.جردوميزانياتToolStripMenuItem.Image = global::Program.Properties.Resources.emblem_money;
             this.جردوميزانياتToolStripMenuItem.Name = "جردوميزانياتToolStripMenuItem";
-            this.جردوميزانياتToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.جردوميزانياتToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.جردوميزانياتToolStripMenuItem.Text = "محاسبة";
             // 
             // miAddBonds
             // 
             this.miAddBonds.Image = global::Program.Properties.Resources.my_reports;
             this.miAddBonds.Name = "miAddBonds";
-            this.miAddBonds.Size = new System.Drawing.Size(222, 24);
+            this.miAddBonds.Size = new System.Drawing.Size(266, 24);
             this.miAddBonds.Text = "إضافة القيود اليومية";
             this.miAddBonds.Click += new System.EventHandler(this.miAddBonds_Click);
             // 
@@ -827,7 +829,7 @@
             // 
             this.miBondList.Image = global::Program.Properties.Resources._1353371323_TextEdit;
             this.miBondList.Name = "miBondList";
-            this.miBondList.Size = new System.Drawing.Size(222, 24);
+            this.miBondList.Size = new System.Drawing.Size(266, 24);
             this.miBondList.Text = "جدول القيود المختلفة المرحلة ";
             this.miBondList.Click += new System.EventHandler(this.miBondList_Click);
             // 
@@ -835,7 +837,7 @@
             // 
             this.miTradeAccount.Image = global::Program.Properties.Resources._1354561043_Business;
             this.miTradeAccount.Name = "miTradeAccount";
-            this.miTradeAccount.Size = new System.Drawing.Size(222, 24);
+            this.miTradeAccount.Size = new System.Drawing.Size(266, 24);
             this.miTradeAccount.Text = "قائمة الدخل ";
             this.miTradeAccount.Click += new System.EventHandler(this.miTradeAccount_Click);
             // 
@@ -844,14 +846,14 @@
             this.ميزانياتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.الميزانيةالعموميةToolStripMenuItem});
             this.ميزانياتToolStripMenuItem.Name = "ميزانياتToolStripMenuItem";
-            this.ميزانياتToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.ميزانياتToolStripMenuItem.Size = new System.Drawing.Size(266, 24);
             this.ميزانياتToolStripMenuItem.Text = "ميزانيات";
             // 
             // الميزانيةالعموميةToolStripMenuItem
             // 
             this.الميزانيةالعموميةToolStripMenuItem.Image = global::Program.Properties.Resources._1353174970_gnome_mime_application_vnd_lotus_1_2_3;
             this.الميزانيةالعموميةToolStripMenuItem.Name = "الميزانيةالعموميةToolStripMenuItem";
-            this.الميزانيةالعموميةToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.الميزانيةالعموميةToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.الميزانيةالعموميةToolStripMenuItem.Text = "الميزانية العمومية";
             this.الميزانيةالعموميةToolStripMenuItem.Click += new System.EventHandler(this.الميزانيةالعموميةToolStripMenuItem_Click);
             // 
@@ -861,13 +863,13 @@
             this.مساعدةToolStripMenuItem1});
             this.مساعدةToolStripMenuItem.Image = global::Program.Properties.Resources.question1;
             this.مساعدةToolStripMenuItem.Name = "مساعدةToolStripMenuItem";
-            this.مساعدةToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.مساعدةToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.مساعدةToolStripMenuItem.Text = "مساعدة";
             // 
             // مساعدةToolStripMenuItem1
             // 
             this.مساعدةToolStripMenuItem1.Name = "مساعدةToolStripMenuItem1";
-            this.مساعدةToolStripMenuItem1.Size = new System.Drawing.Size(140, 24);
+            this.مساعدةToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
             this.مساعدةToolStripMenuItem1.Text = " عن الشركة.";
             // 
             // statusStrip1
@@ -960,7 +962,7 @@
             this.bCalculator.Image = global::Program.Properties.Resources.gnome_accessories_calculator;
             this.bCalculator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bCalculator.Name = "bCalculator";
-            this.bCalculator.Size = new System.Drawing.Size(63, 22);
+            this.bCalculator.Size = new System.Drawing.Size(64, 22);
             this.bCalculator.Text = "الحاسبة";
             this.bCalculator.Click += new System.EventHandler(this.bCalculator_Click);
             // 
@@ -1006,6 +1008,7 @@
             this.lvFormOption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvFormOption.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvFormOption.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lvFormOption.HideSelection = false;
             this.lvFormOption.LargeImageList = this.imageList1;
             this.lvFormOption.Location = new System.Drawing.Point(0, 0);
             this.lvFormOption.Name = "lvFormOption";
@@ -1228,6 +1231,14 @@
             this.bReport.UseVisualStyleBackColor = true;
             this.bReport.Click += new System.EventHandler(this.bReport_Click);
             // 
+            // miDB_Connection
+            // 
+            this.miDB_Connection.Image = global::Program.Properties.Resources.database_3_32;
+            this.miDB_Connection.Name = "miDB_Connection";
+            this.miDB_Connection.Size = new System.Drawing.Size(282, 24);
+            this.miDB_Connection.Text = "الإتصال بقاعدة البيانات";
+            this.miDB_Connection.Click += new System.EventHandler(this.miDB_Connection_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1373,5 +1384,6 @@
         private System.Windows.Forms.ToolStripMenuItem miSalesBillsTableDetails;
         private System.Windows.Forms.ToolStripMenuItem miSalesChartReport;
         private System.Windows.Forms.ToolStripMenuItem miMaterilaTree;
+        private System.Windows.Forms.ToolStripMenuItem miDB_Connection;
     }
 }

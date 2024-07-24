@@ -421,6 +421,60 @@ namespace Program.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configuration not found..
+        /// </summary>
+        internal static string ConfigDeleteError {
+            get {
+                return ResourceManager.GetString("ConfigDeleteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration deleted successfully!.
+        /// </summary>
+        internal static string ConfigDeleteSuccess {
+            get {
+                return ResourceManager.GetString("ConfigDeleteSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error saving configuration: {0}.
+        /// </summary>
+        internal static string ConfigSavedError {
+            get {
+                return ResourceManager.GetString("ConfigSavedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration saved successfully!.
+        /// </summary>
+        internal static string ConfigSavedSuccess {
+            get {
+                return ResourceManager.GetString("ConfigSavedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection failed: {0}.
+        /// </summary>
+        internal static string ConnectionFailed {
+            get {
+                return ResourceManager.GetString("ConnectionFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection successful!.
+        /// </summary>
+        internal static string ConnectionSuccess {
+            get {
+                return ResourceManager.GetString("ConnectionSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cost {
@@ -507,6 +561,15 @@ namespace Program.Properties {
             get {
                 object obj = ResourceManager.GetObject("emblem_money", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error loading current configuration: {0}.
+        /// </summary>
+        internal static string ErrorLoadingCurrentConfig {
+            get {
+                return ResourceManager.GetString("ErrorLoadingCurrentConfig", resourceCulture);
             }
         }
         
@@ -687,6 +750,24 @@ namespace Program.Properties {
             get {
                 object obj = ResourceManager.GetObject("report_edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select a configuration to delete..
+        /// </summary>
+        internal static string SelectConfigToDelete {
+            get {
+                return ResourceManager.GetString("SelectConfigToDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select a configuration to load..
+        /// </summary>
+        internal static string SelectConfigToLoad {
+            get {
+                return ResourceManager.GetString("SelectConfigToLoad", resourceCulture);
             }
         }
         

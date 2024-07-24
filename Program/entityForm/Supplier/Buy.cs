@@ -251,72 +251,62 @@ namespace Program.entityForm.customer
         {
             try
             {
-                if (dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[0].Value == null)
+                var currentCell = dataGridViewMaterial.CurrentCell;
+                if (currentCell == null)
+                    return;
+
+                var currentRow = dataGridViewMaterial.Rows[currentCell.RowIndex];
+                if (currentRow.Cells[0].Value == null)
+                    return;
+
+                int quantity = Convert.ToInt32(currentRow.Cells[2].Value);
+                int price = Convert.ToInt32(currentRow.Cells[3].Value);
+                double discountPercent = Convert.ToDouble(currentRow.Cells[4].Value);
+                double discount = quantity * price * (discountPercent / 100);
+                double priceValue = (quantity * price) - discount;
+
+                currentRow.Cells[5].Value = discount;
+                currentRow.Cells[6].Value = priceValue;
+
+                DataRow dr = materialList.Find(row =>
+                    currentRow.Cells[0].Value.ToString().Trim() == row["الرقم_الفني"].ToString().Trim());
+
+                if (dr != null)
                 {
+                    dr["كمية"] = quantity;
+                    dr["DiscountPersent"] = discountPercent;
+                    dr["Discount"] = discount;
+                    dr["Comment"] = currentRow.Cells[7].Value.ToString();
+                    dr["TotalValue"] = priceValue;
 
-                }
-                else
-                {
-                        int quantity = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[2].Value.ToString());
-                        int price = Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[3].Value.ToString());
-                        double DiscountPersent = Convert.ToDouble(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[4].Value.ToString());
-                        double discount = quantity * price * (DiscountPersent / 100);
-                        double PriceValue = (quantity * price) - discount;
-
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[5].Value = discount;
-                        dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[6].Value = PriceValue;
-
-                        DataRow dr = materialList.Find(
-                        delegate(DataRow row)
+                    int currentPrice = Convert.ToInt32(dr["سعر_الشراء"]);
+                    if (price != currentPrice)
+                    {
+                        if (MessageBox.Show($"هل ترغب بتغير سعر بيع {dr["اسم_المادة"]} ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                         {
-                            return dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentRow.Index].Cells[0].Value.ToString().Trim() == row["الرقم_الفني"].ToString().Trim();
-                        });
-
-                        dr["كمية"] = quantity;
-                        dr["DiscountPersent"] = DiscountPersent;
-                        dr["Discount"] = discount;
-                        dr["Comment"] = dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentCell.RowIndex].Cells[7].Value.ToString();
-                        dr["TotalValue"] = PriceValue;
-                        if (price != Convert.ToInt32(dr["سعر_الشراء"]))
-                        {
-                            if (MessageBox.Show("هل ترغب بتغير سعر بيع  " + dr["اسم_المادة"] + " ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                            {
-                                materialTableAdapter mta=new materialTableAdapter();
-                                mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
-                                dr["سعر_الشراء"] = price;
-                            }
-                            else
-                            {
-                                dr["سعر_الشراء"] = price;
-                            }
+                            materialTableAdapter mta = new materialTableAdapter();
+                            mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
                         }
-                        else
-                        {
-                            dr["سعر_الشراء"] = price;
-                        }
-                        totalPriceValue = 0;
-                        totalDiscountValue = 0;
-                        foreach (DataRow row in materialList)
-                        {
-                            try
-                            {
-                                totalPriceValue += Convert.ToDouble(row["TotalValue"]);
-                                totalDiscountValue += Convert.ToDouble(row["Discount"]);
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine("Exception1 :: " + ex.Message);
-                            }
-                        }
-                        txtTotalPrice.Text = totalPriceValue.ToString();
-                        txtDiscount.Text = totalDiscountValue.ToString();
+                        dr["سعر_الشراء"] = price;
+                    }
+
+                    totalPriceValue = 0;
+                    totalDiscountValue = 0;
+                    foreach (DataRow row in materialList)
+                    {
+                        totalPriceValue += Convert.ToDouble(row["TotalValue"]);
+                        totalDiscountValue += Convert.ToDouble(row["Discount"]);
+                    }
+
+                    txtTotalPrice.Text = totalPriceValue.ToString();
+                    txtDiscount.Text = totalDiscountValue.ToString();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception2 :: " + ex.Message);
-            }/**/
-
+                Console.WriteLine($"Exception: {ex.Message}");
+                MessageBox.Show($"An error occurred while calculating the report value: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bAddBond_Click(object sender, EventArgs e)
@@ -915,89 +905,127 @@ namespace Program.entityForm.customer
         {
             try
             {
+                if (indexValue < 0 || indexValue >= cbIds.Items.Count)
+                {
+                    MessageBox.Show("Invalid index value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 txtId.Text = cbIds.Items[indexValue].ToString();
                 int id = Convert.ToInt32(txtId.Text);
                 material_debitTableAdapter mcta = new material_debitTableAdapter();
                 MaterialControllar.material_debitDataTable mcdt = mcta.getMaterialDebitById(id);
+
+                if (mcdt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found for the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 rowMaterialdDebit = mcdt.Rows[0];
 
                 txtSupplier.Text = rowMaterialdDebit["من"].ToString().Split('.')[1] + "." + rowMaterialdDebit["من"].ToString().Split('.')[2];
-                totalPriceValue = Convert.ToDouble(rowMaterialdDebit["الرصيد"].ToString());
-                txtTotalPrice.Text = rowMaterialdDebit["الرصيد"].ToString();
-                txtDiscount.Text = rowMaterialdDebit["حسم_مكتسب"].ToString();
-                totalDiscountValue = Convert.ToDouble(txtDiscount.Text);
-                if (rowMaterialdDebit["نوع_العملية"].ToString() == "نقداً")
-                {
-                    rbCash.Checked = true;
-                }
-                if (rowMaterialdDebit["نوع_العملية"].ToString() == "لأجل")
-                {
-                    rbAfter.Checked = true;
-                }
-                if (rowMaterialdDebit["نوع_العملية"].ToString() == "سند دفع")
-                {
-                    rbPaperPay.Checked = true;
-                }
+                totalPriceValue = Convert.ToDouble(rowMaterialdDebit["الرصيد"]);
+                txtTotalPrice.Text = totalPriceValue.ToString();
+                totalDiscountValue = Convert.ToDouble(rowMaterialdDebit["حسم_مكتسب"]);
+                txtDiscount.Text = totalDiscountValue.ToString();
+
+                SetOperationType(rowMaterialdDebit["نوع_العملية"].ToString());
                 cbTypeOperation.Text = rowMaterialdDebit["طريقة_الدفع"].ToString();
                 cbBankAccounting.Text = rowMaterialdDebit["اسم_الحساب"].ToString();
-               // dtpSaleDate.Value = Convert.ToDateTime(rowMaterialdDebit["تاريخ"]);
                 txtBiles.Text = rowMaterialdDebit["رقم_فاتورة_المصدر"].ToString();
                 dtpBillDate.Value = Convert.ToDateTime(rowMaterialdDebit["تاريخ_فاتورة_المصدر"]);
                 txtMoreBills.Text = rowMaterialdDebit["مصاريف_مضافة"].ToString();
                 cbMoreBillsOption.Text = rowMaterialdDebit["مصاريف_على_حساب"].ToString();
                 isSaveBonds = Convert.ToBoolean(rowMaterialdDebit["مرحل"]);
                 idPaperPay = Convert.ToInt32(rowMaterialdDebit["سند_الدفع"]);
-                if (isSaveBonds)
-                {
-                    gbBonds.Text = "تم ترحيل قيد العملية";
-                    gbBonds.ForeColor = Color.Green;
 
-                }
-               if (!isSaveBonds)
-                {
-                    gbBonds.Text = "لم يتم ترحيل قيد العملية";
-                    gbBonds.ForeColor = Color.Red;
-                }
+                UpdateBondStatus(isSaveBonds);
 
                 material_debit_listTableAdapter mclta = new material_debit_listTableAdapter();
                 MaterialControllar.material_debit_listDataTable mcldt = mclta.getMaterialDebitReport(id);
 
-                for (int i = 0; i < 20; i++)
-                {
-                    dataGridViewMaterial.Rows[i].Cells[0].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[1].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[2].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[3].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[4].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[5].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[6].Value = "";
-                    dataGridViewMaterial.Rows[i].Cells[7].Value = "";
-                }
-                int count = 0;
+                ClearDataGridViewMaterial();
+
                 materialList.Clear();
+                int count = 0;
 
                 foreach (DataRow dr in mcldt)
                 {
-                    materialTableAdapter mta1 = new materialTableAdapter();
-                    MaterialControllar.materialDataTable material =  mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
-
-                    dataGridViewMaterial.Rows[count].Cells[0].Value = dr["رقم_المادة"];
-                    dataGridViewMaterial.Rows[count].Cells[1].Value = dr["اسم_المادة"];
-                    dataGridViewMaterial.Rows[count].Cells[2].Value = dr["الكمية"];
-                    dataGridViewMaterial.Rows[count].Cells[3].Value = dr["السعر"];
-                    dataGridViewMaterial.Rows[count].Cells[4].Value = Convert.ToInt32((Convert.ToDouble(dr["حسم_مكتسب"]) / Convert.ToDouble(dr["السعر_الجمالي"])) * 100);
-                    dataGridViewMaterial.Rows[count].Cells[5].Value = dr["حسم_مكتسب"];
-                    dataGridViewMaterial.Rows[count].Cells[6].Value = dr["السعر_الجمالي"];
-                    dataGridViewMaterial.Rows[count].Cells[7].Value = dr["ملاحظات"];
+                    AddMaterialToGrid(dr, count);
                     count++;
-                    material.Rows[0]["كمية"] = dr["الكمية"];
-                    materialList.Add(material.Rows[0]);
                 }
-
             }
             catch (Exception ex)
             {
+                MessageBox.Show($"Error loading report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void SetOperationType(string operationType)
+        {
+            switch (operationType)
+            {
+                case "نقداً":
+                    rbCash.Checked = true;
+                    break;
+                case "لأجل":
+                    rbAfter.Checked = true;
+                    break;
+                case "سند دفع":
+                    rbPaperPay.Checked = true;
+                    break;
+                default:
+                    rbCash.Checked = false;
+                    rbAfter.Checked = false;
+                    rbPaperPay.Checked = false;
+                    break;
+            }
+        }
+
+        private void UpdateBondStatus(bool isBondSaved)
+        {
+            if (isBondSaved)
+            {
+                gbBonds.Text = "تم ترحيل قيد العملية";
+                gbBonds.ForeColor = Color.Green;
+            }
+            else
+            {
+                gbBonds.Text = "لم يتم ترحيل قيد العملية";
+                gbBonds.ForeColor = Color.Red;
+            }
+        }
+
+        private void ClearDataGridViewMaterial()
+        {
+            for (int i = 0; i < dataGridViewMaterial.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridViewMaterial.Columns.Count; j++)
+                {
+                    dataGridViewMaterial.Rows[i].Cells[j].Value = null;
+                }
+            }
+        }
+
+        private void AddMaterialToGrid(DataRow dr, int rowIndex)
+        {
+            materialTableAdapter mta1 = new materialTableAdapter();
+            MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+
+            dataGridViewMaterial.Rows[rowIndex].Cells[0].Value = dr["رقم_المادة"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[1].Value = dr["اسم_المادة"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[2].Value = dr["الكمية"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[3].Value = dr["السعر"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[4].Value = Convert.ToInt32((Convert.ToDouble(dr["حسم_مكتسب"]) / Convert.ToDouble(dr["السعر_الجمالي"])) * 100);
+            dataGridViewMaterial.Rows[rowIndex].Cells[5].Value = dr["حسم_مكتسب"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[6].Value = dr["السعر_الجمالي"];
+            dataGridViewMaterial.Rows[rowIndex].Cells[7].Value = dr["ملاحظات"];
+
+            if (material.Rows.Count > 0)
+            {
+                material.Rows[0]["كمية"] = dr["الكمية"];
+                materialList.Add(material.Rows[0]);
             }
         }
 
