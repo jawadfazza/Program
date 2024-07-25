@@ -14,10 +14,11 @@ using Program.entityForm.Material.report;
 using System.Collections;
 using System.IO.Ports;
 using System.Threading;
+using ComponentFactory.Krypton.Toolkit;  //this for styling tool
 
 namespace Program.entityForm
 {
-    public partial class NewMaterial : Form
+    public partial class NewMaterial : KryptonForm   //to apply the styling tool
     {
         public NewMaterial()
         {
