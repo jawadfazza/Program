@@ -108,6 +108,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -120,6 +123,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.saveToolStripButton,
@@ -689,7 +693,6 @@
             // 
             // txtName
             // 
-            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtName.Location = new System.Drawing.Point(29, 23);
@@ -776,6 +779,131 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "سعر البيع";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.toolStrip2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 25);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(813, 777);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "قائمة المواد";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridViewMaterial);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(807, 730);
+            this.panel2.TabIndex = 2;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel2,
+            this.cbSearchType,
+            this.toolStripLabel1,
+            this.txtSearchMaterial,
+            this.bRefreshTable,
+            this.bNext,
+            this.txtId,
+            this.pPrevious});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 19);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(807, 25);
+            this.toolStrip2.TabIndex = 1;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(73, 22);
+            this.toolStripLabel2.Text = "البحث حسب :";
+            // 
+            // cbSearchType
+            // 
+            this.cbSearchType.Items.AddRange(new object[] {
+            "اسم المادة",
+            "كود المادة"});
+            this.cbSearchType.Name = "cbSearchType";
+            this.cbSearchType.Size = new System.Drawing.Size(121, 25);
+            this.cbSearchType.Text = "اسم المادة";
+            this.cbSearchType.Click += new System.EventHandler(this.cbSearchType_SelectedIndexChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel1.Text = "بحث عن مادة";
+            // 
+            // txtSearchMaterial
+            // 
+            this.txtSearchMaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearchMaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchMaterial.Name = "txtSearchMaterial";
+            this.txtSearchMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSearchMaterial.Size = new System.Drawing.Size(250, 25);
+            this.txtSearchMaterial.TextChanged += new System.EventHandler(this.txtSearchMaterial_TextChanged);
+            // 
+            // bRefreshTable
+            // 
+            this.bRefreshTable.Image = global::Program.Properties.Resources._1353000626_adept_update;
+            this.bRefreshTable.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bRefreshTable.Name = "bRefreshTable";
+            this.bRefreshTable.Size = new System.Drawing.Size(91, 22);
+            this.bRefreshTable.Text = "تحديث المواد";
+            this.bRefreshTable.Click += new System.EventHandler(this.bRefreshTable_Click);
+            // 
+            // bNext
+            // 
+            this.bNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bNext.Image = global::Program.Properties.Resources._1354380474_resultset_last;
+            this.bNext.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bNext.Name = "bNext";
+            this.bNext.Size = new System.Drawing.Size(23, 22);
+            this.bNext.Text = "Next";
+            this.bNext.Click += new System.EventHandler(this.bNext_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(50, 25);
+            // 
+            // pPrevious
+            // 
+            this.pPrevious.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pPrevious.Image = global::Program.Properties.Resources._1354380473_resultset_first;
+            this.pPrevious.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pPrevious.Name = "pPrevious";
+            this.pPrevious.Size = new System.Drawing.Size(23, 22);
+            this.pPrevious.Text = "Previous";
+            this.pPrevious.Click += new System.EventHandler(this.pPrevious_Click);
+            // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "CustomSource"});
+            this.kryptonTextBox1.Location = new System.Drawing.Point(34, 19);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(255, 27);
+            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.Peru;
+            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateActive.Border.Rounding = 6;
+            this.kryptonTextBox1.TabIndex = 84;
+            this.kryptonTextBox1.Text = "اسم المادة";
+            // 
             // NewMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -790,6 +918,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewMaterial";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StateActive.Back.Color1 = System.Drawing.Color.White;
+            this.StateActive.Back.Color2 = System.Drawing.Color.White;
+            this.StateActive.Header.Back.Color1 = System.Drawing.Color.White;
             this.Text = "مواد وخدمات الشركة";
             this.Shown += new System.EventHandler(this.NewMaterial_Shown);
             this.toolStrip1.ResumeLayout(false);
@@ -810,6 +941,11 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -882,5 +1018,7 @@
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtPleace;
         private System.Windows.Forms.TextBox txtName;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }
