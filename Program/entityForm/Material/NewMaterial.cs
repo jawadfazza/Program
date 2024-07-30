@@ -21,133 +21,128 @@ namespace Program.entityForm
     {
         public NewMaterial()
         {
-           
-                InitializeComponent();
-                getgroupList();
-                getProdectList();
-                getWarehouseList();
-
-                getMaterialNameAutocomplete();
-
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.GetData();
-                dataGridViewMaterial.DataSource = mdt;
-                int count = dataGridViewMaterial.Rows.Count;
-                getMaterialTable(count);
-           
+            InitializeComponent();
+            getgroupList();
+            getProdectList();
+            getWarehouseList();
+            getMaterialNameAutocomplete();
         }
 
+        private int pageSize = 25; // Number of records per page
+        private int currentPage = 1;
+        private DataTable originalDataTable;
+        static DataRow materialRow;
 
-        private void getMaterialTable(int count)
+        #region Form Events
+        private void NewMaterial_Shown(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void bRefreshTable_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (currentPage < GetTotalPages())
+            {
+                currentPage++;
+                BindData();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                BindData();
+            }
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (ValidateInputFields())
+            {
+                if (materialRow == null)
+                {
+                    AddMaterial();
+                }
+                else
+                {
+                    UpdateMaterial();
+                }
+            }
+        }
+
+        private void newToolStripButton_Click(object sender, EventArgs e)
+        {
+            materialRow = null;
+            txtName.Text = "";
+            txtPleace.Text = "";
+            txtUint.Text = "عدد";
+            txtQuantity.Text = "0";
+            txtPrice.Text = "0";
+            txtPriceBuy.Text = "0";
+            txtPriceSale.Text = "0";
+            txtType.Text = "";
+            cbWarehouse.Text = "";
+            cbProduct.Text = "";
+            cbGroup.Text = "";
+            txtMaterialDiscr.Text = "";
+            txtImageFile.Text = "";
+            txtMaterialCode.Text = "";
+            txtImageFile.Text = "";
+        }
+
+        private void dataGridViewMaterial_Click(object sender, EventArgs e)
         {
             try
             {
-                // Use a HashSet for O(1) lookup times when hiding columns
-                var columnsToHide = new HashSet<string>
+                int globalIndex = (currentPage - 1) * pageSize + dataGridViewMaterial.CurrentRow.Index;
+                materialRow = originalDataTable.Rows[globalIndex];
+                setMaterialValue(materialRow);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception appropriately
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void dataGridViewMaterial_KeyUp(object sender, KeyEventArgs e)
         {
-            "المجموعة", "الصانع", "بالة", "المستودع", "صورة", "فرق_السعر",
-            "فرق_الكمية", "DiscountPersent", "Discount", "Comment", "TotalValue",
-            "رمز_الطراز", "وصف_المادة"
-        };
+            try
+            {
+                int globalIndex = (currentPage - 1) * pageSize + dataGridViewMaterial.CurrentRow.Index;
+                materialRow = originalDataTable.Rows[globalIndex];
+                setMaterialValue(materialRow);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception appropriately
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
 
-                // Hide unnecessary columns
-                foreach (DataGridViewColumn column in dataGridViewMaterial.Columns)
+        private void cbSearchType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSearchType.Text == "اسم المادة")
                 {
-                    column.Visible = !columnsToHide.Contains(column.Name);
+                    getMaterialNameAutocomplete();
                 }
-
-                // Adjust specific column properties
-                if (dataGridViewMaterial.Columns.Contains("اسم_المادة"))
+                if (cbSearchType.Text == "كود المادة")
                 {
-                    dataGridViewMaterial.Columns["اسم_المادة"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-                }
-
-                // Prepare colors outside of the loop
-                var colorGreen = Color.Green;
-                var colorGoldenrod = Color.Goldenrod;
-                var colorRed = Color.Red;
-
-                // Loop through each row and apply formatting based on quantity
-                for (int i = 0; i < count; i++)
-                {
-                    var row = dataGridViewMaterial.Rows[i];
-                    var cell = row.Cells["كمية"];
-
-                    if (cell?.Value != null && int.TryParse(cell.Value.ToString(), out int quantity))
-                    {
-                        if (quantity != 0)
-                        {
-                            row.DefaultCellStyle.ForeColor = colorGreen;
-                            row.ErrorText = string.Empty;
-                        }
-                        else
-                        {
-                            row.DefaultCellStyle.ForeColor = colorGoldenrod;
-                            row.ErrorText = "إن كمية المادة المحددة صفر";
-                        }
-                    }
-                    else
-                    {
-                        // Handle the case where the "كمية" cell does not contain a valid value
-                        row.DefaultCellStyle.ForeColor = colorRed;
-                        row.ErrorText = "الكمية غير محددة أو غير صحيحة";
-                    }
+                    getMaterialCodeAutocomplete();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while setting up the material table: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void getgroupList()
-        {
-            cbGroup.Items.Clear();
-            material_groupTableAdapter mgta = new material_groupTableAdapter();
-            MaterialControllar.material_groupDataTable mgdt= mgta.GetDataByASC();
-            ArrayList array = new ArrayList();
-            foreach (DataRow row in mgdt.Rows)
-            {
-                cbGroup.Items.Add(row["اسم_المجموعة"].ToString() + "." + row["رقم_المجموعة"].ToString());
-                array.Add(row["اسم_المجموعة"].ToString() + "." + row["رقم_المجموعة"].ToString());
-            }
-            
-            //array.Sort();
-            cbGroup.Items.Clear();
-            cbGroup.AutoCompleteCustomSource.AddRange((string[])array.ToArray(typeof(string)));
-            cbGroup.Items.AddRange(array.ToArray());
-        }
-
-        private void getProdectList()
-        {
-            cbProduct.Items.Clear();
-            producerTableAdapter mgta = new producerTableAdapter();
-            MaterialControllar.producerDataTable mgdt = mgta.GetDataByASC();
-            ArrayList array = new ArrayList();
-
-            foreach (DataRow row in mgdt.Rows)
-            {
-                cbProduct.Items.Add(row["اسم_الصانع"].ToString() + "." + row["رقم_الصانع"].ToString());
-                array.Add(row["اسم_الصانع"].ToString() + "." + row["رقم_الصانع"].ToString());
-
-            }
-
-            //array.Sort();
-            cbProduct.Items.Clear();
-            cbProduct.AutoCompleteCustomSource.AddRange((string[])array.ToArray(typeof(string)));
-            cbProduct.Items.AddRange(array.ToArray());
-        }
-
-        private void getWarehouseList()
-        {
-            cbWarehouse.Items.Clear();
-            WareHouseTableAdapter mgta = new WareHouseTableAdapter();
-            MaterialControllar.WareHouseDataTable mgdt = mgta.GetDataByASC();
-            foreach (DataRow row in mgdt.Rows)
-            {
-                cbWarehouse.Items.Add(row["اسم_المستودع"].ToString() + "." + row["رقم_المستودع"].ToString());
-
+                Console.WriteLine("error : " + ex.Message);
             }
         }
 
@@ -164,10 +159,8 @@ namespace Program.entityForm
                 {
                     if (MessageBox.Show("هل تريد اضافة المجموعة؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-
                         mgta.Insert(cbGroup.Items.Count + 1, cbGroup.Text);
                         getgroupList();
-
                         MessageBox.Show("تم اضافة المجموعة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cbGroup.Text = cbGroup.Items[(cbGroup.Items.Count - 1)].ToString();
                     }
@@ -206,8 +199,6 @@ namespace Program.entityForm
             }
         }
 
-        
-
         private void bWarehouse_Click(object sender, EventArgs e)
         {
             WareHouseTableAdapter pta = new WareHouseTableAdapter();
@@ -226,129 +217,12 @@ namespace Program.entityForm
                         cbWarehouse.Text = "";
                         MessageBox.Show("تم اضافة المستودع", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cbWarehouse.Text = cbWarehouse.Items[(cbWarehouse.Items.Count - 1)].ToString();
-
                     }
                 }
             }
             else
             {
                 MessageBox.Show("!!!حقل المستودع فارغ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-        }
-
-        
-
-        private void NewMaterial_Load(object sender, EventArgs e)
-        {
-            materialTableAdapter mta = new materialTableAdapter();
-            dataGridViewMaterial.DataSource = mta.GetData();
-            int count = dataGridViewMaterial.Rows.Count;
-            getMaterialTable(count);
-        }
-
-        private void saveToolStripButton_Click(object sender, EventArgs e)
-        {
-            //material m = new material();
-
-            if (txtName.Text == "" || txtPrice.Text == "0" || cbGroup.Text == "" || cbProduct.Text == "" || cbWarehouse.Text == "")
-            {
-                MessageBox.Show(" يجب إضافة بعض المعلومات قبل حفظ البيانات!!", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else
-            {
-                if (materialRow == null)
-                {
-                    if (MessageBox.Show("هل تريد اضافة المادة الى المستودع؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            materialTableAdapter mta = new materialTableAdapter();
-                            mta.Insert(txtName.Text,
-                                txtPleace.Text,
-                                txtUint.Text,
-                                Convert.ToInt32(txtQuantity.Text),
-                                Convert.ToDouble(txtPrice.Text),
-                                txtType.Text,
-                                Convert.ToInt32(cbGroup.Text.Split('.')[1]),
-                                Convert.ToInt32(cbProduct.Text.Split('.')[1]),
-                                cbTrash.Checked.ToString(),
-                                Convert.ToInt32(cbWarehouse.Text.Split('.')[1]),
-                                 txtMaterialDiscr.Text,
-                                 "..\\..\\Image\\Material\\" + txtName.Text + ".jpg",
-                                 0,
-                                 0,
-                                Convert.ToInt32(txtPriceBuy.Text),
-                                Convert.ToInt32(txtPriceSale.Text),
-                                 txtMaterialCode.Text,
-                                 cbWayOut.Text);
-
-
-                            if (txtImageFile.Text != "")
-                            {
-                                //File.Delete(txtImageFile.Text);
-                                byte[] image;
-                                FileStream fsr = new FileStream(txtImageFile.Text, FileMode.OpenOrCreate, FileAccess.Read);
-                                image = new byte[fsr.Length];
-                                fsr.Read(image, 0, image.Length);
-                                fsr.Close();
-                                FileStream fsw = new FileStream("..\\..\\Image\\Material\\" + txtName.Text + ".jpg", FileMode.OpenOrCreate, FileAccess.Write);
-                                fsw.Write(image, 0, image.Length);
-                                fsw.Close();
-                            }
-
-                            MessageBox.Show("تم اضافة المادة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            int count = dataGridViewMaterial.Rows.Count;
-                            getMaterialTable(count);
-
-                            getMaterialNameAutocomplete();
-                            newToolStripButton_Click(sender, e);
-                            bRefreshTable_Click(sender, e);
-                            txtName.Focus();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("هناك خطأ حيث لم يتم إضافة المجموعة أو الصانع أو المستودع", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                        }
-                    }
-                }
-                else
-                {
-                    if (txtName.Text == "" || txtPrice.Text == "0")
-                    {
-                        MessageBox.Show(" يجب إضافة بعض المعلومات قبل تعديل البيانات!!", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    }
-                    else
-                    {
-                        if (MessageBox.Show("هل تريد تعديل المادة؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            try
-                            {
-                                materialTableAdapter mta = new materialTableAdapter();
-                                mta.Update(materialRow);
-
-                                MessageBox.Show("تم تعديل المادة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                int count = dataGridViewMaterial.Rows.Count;
-                                getMaterialTable(count);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("erorr : " + ex.Message, "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void txtName_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtName.Text == "")
-            {
-                errorProvider1.SetError((Control)sender, "حقل اسم العميل فارغ");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
             }
         }
 
@@ -386,62 +260,524 @@ namespace Program.entityForm
                         mta.Update(materialRow);
                         MessageBox.Show("تم إضافة الصورة", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
                 }
             }
             catch (Exception ex)
             {
-
+                // Handle exception
             }
         }
 
-        private void txtPrice_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtName.Text == "0")
-            {
-                errorProvider2.SetError((Control)sender, "المادة سعرها صفر");
-            }
-            else
-            {
-                errorProvider2.SetError((Control)sender, "");
-            }
-        }
-
-        static DataRow materialRow;
         private void txtSearchMaterial_TextChanged(object sender, EventArgs e)
         {
             try
             {
+                IEnumerable<DataRow> filteredRows = null;
+
                 if (cbSearchType.Text == "اسم المادة")
                 {
-                    materialTableAdapter mta = new materialTableAdapter();
-                    MaterialControllar.materialDataTable mdt = mta.getMaterialByName(txtSearchMaterial.Text);
-                    
-                    dataGridViewMaterial.DataSource = mdt;
-                    int count = dataGridViewMaterial.Rows.Count;
-                    getMaterialTable(count);
-                    setMaterialValue(mdt.Rows[0]);
+                    filteredRows = originalDataTable.AsEnumerable()
+                                                    .Where(row => row.Field<string>("اسم_المادة")
+                                                    .Contains(txtSearchMaterial.Text));
                 }
-                if (cbSearchType.Text == "كود المادة")
+                else if (cbSearchType.Text == "كود المادة")
                 {
-                    materialTableAdapter mta = new materialTableAdapter();
-                    MaterialControllar.materialDataTable mdt = mta.getMaterialByCode(txtSearchMaterial.Text);
-                    dataGridViewMaterial.DataSource = mdt;
+                    filteredRows = originalDataTable.AsEnumerable()
+                                                    .Where(row => row.Field<string>("كود_المادة")
+                                                    .Contains(txtSearchMaterial.Text));
+                }
+
+                if (filteredRows != null)
+                {
+                    var filteredTable = filteredRows.CopyToDataTable();
+                    dataGridViewMaterial.DataSource = filteredTable;
                     int count = dataGridViewMaterial.Rows.Count;
-                    getMaterialTable(count);
-                    setMaterialValue(mdt.Rows[0]);
+                    TableStyle(count);
+
+                    if (count > 0)
+                    {
+                        setMaterialValue(filteredTable.Rows[0]);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("error : "+ex.Message);
+                Console.WriteLine("error : " + ex.Message);
             }
-            
+        }
+        #endregion
+
+        #region Data Loading and Binding
+        private void LoadData()
+        {
+            materialTableAdapter mta = new materialTableAdapter();
+            originalDataTable = mta.GetDataByFillDetails();
+            BindData();
+        }
+
+        private void BindData()
+        {
+            DataTable pagedTable = GetPagedTable(originalDataTable, currentPage, pageSize);
+            dataGridViewMaterial.DataSource = pagedTable;
+            TableStyle(pagedTable.Rows.Count);
+            UpdatePageLabel();
+        }
+
+        private DataTable GetPagedTable(DataTable dataTable, int page, int pageSize)
+        {
+            DataTable pagedTable = dataTable.Clone();
+
+            var rows = dataTable.AsEnumerable()
+                                .Skip((page - 1) * pageSize)
+                                .Take(pageSize);
+
+            foreach (var row in rows)
+            {
+                pagedTable.ImportRow(row);
+            }
+
+            return pagedTable;
+        }
+
+        private void UpdatePageLabel()
+        {
+            lblPage.Text = $"Page {currentPage} of {GetTotalPages()}";
+        }
+
+        private int GetTotalPages()
+        {
+            return (int)Math.Ceiling(originalDataTable.Rows.Count / (double)pageSize);
+        }
+        #endregion
+
+        #region Table Styling
+        private void TableStyle(int count)
+        {
+            try
+            {
+                var columnsToHide = new HashSet<string>
+                {
+                    "صورة", "فرق_السعر","المجموعة","الصانع","المستودع","صورة","وصف_المادة","رقم_المستودع","رقم_المجموعة","رقم_الصانع",
+                    "فرق_الكمية", "DiscountPersent", "Discount", "Comment", "TotalValue","TotalCost","profit"
+                };
+
+                foreach (DataGridViewColumn column in dataGridViewMaterial.Columns)
+                {
+                    column.Visible = !columnsToHide.Contains(column.Name);
+                }
+
+                if (dataGridViewMaterial.Columns.Contains("اسم_المادة"))
+                {
+                    dataGridViewMaterial.Columns["اسم_المادة"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                }
+
+                var colorGreen = Color.Green;
+                var colorGoldenrod = Color.Goldenrod;
+                var colorRed = Color.Red;
+
+                for (int i = 0; i < count; i++)
+                {
+                    var row = dataGridViewMaterial.Rows[i];
+                    var cell = row.Cells["كمية"];
+
+                    if (cell?.Value != null && int.TryParse(cell.Value.ToString(), out int quantity))
+                    {
+                        if (quantity != 0)
+                        {
+                            row.DefaultCellStyle.ForeColor = colorGreen;
+                            row.ErrorText = string.Empty;
+                        }
+                        else
+                        {
+                            row.DefaultCellStyle.ForeColor = colorGoldenrod;
+                            row.ErrorText = "إن كمية المادة المحددة صفر";
+                        }
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.ForeColor = colorRed;
+                        row.ErrorText = "الكمية غير محددة أو غير صحيحة";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+        }
+        #endregion
+
+        #region Data Retrieval Methods
+        private void getgroupList()
+        {
+            try
+            {
+                material_groupTableAdapter mgta = new material_groupTableAdapter();
+                MaterialControllar.material_groupDataTable mgdt = mgta.GetDataByASC();
+
+                var groups = mgdt.AsEnumerable()
+                                 .Select(row => $"{row["اسم_المجموعة"]}.{row["رقم_المجموعة"]}")
+                                 .OrderBy(group => group)
+                                 .ToArray();
+
+                cbGroup.Items.Clear();
+                cbGroup.AutoCompleteCustomSource.AddRange(groups);
+                cbGroup.Items.AddRange(groups);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+        }
+
+        private void getProdectList()
+        {
+            try
+            {
+                producerTableAdapter pta = new producerTableAdapter();
+                MaterialControllar.producerDataTable pdt = pta.GetDataByASC();
+
+                var products = pdt.AsEnumerable()
+                                  .Select(row => $"{row["اسم_الصانع"]}.{row["رقم_الصانع"]}")
+                                  .OrderBy(product => product)
+                                  .ToArray();
+
+                cbProduct.Items.Clear();
+                cbProduct.AutoCompleteCustomSource.AddRange(products);
+                cbProduct.Items.AddRange(products);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+        }
+
+        private void getWarehouseList()
+        {
+            try
+            {
+                WareHouseTableAdapter wta = new WareHouseTableAdapter();
+                MaterialControllar.WareHouseDataTable wdt = wta.GetDataByASC();
+
+                var warehouses = wdt.AsEnumerable()
+                                    .Select(row => $"{row["اسم_المستودع"]}.{row["رقم_المستودع"]}")
+                                    .OrderBy(warehouse => warehouse)
+                                    .ToArray();
+
+                cbWarehouse.Items.Clear();
+                cbWarehouse.AutoCompleteCustomSource.AddRange(warehouses);
+                cbWarehouse.Items.AddRange(warehouses);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+        }
+
+        public void getMaterialNameAutocomplete()
+        {
+            try
+            {
+                materialTableAdapter mta = new materialTableAdapter();
+                MaterialControllar.materialDataTable mdt = mta.GetData();
+
+                var sortedNames = mdt.AsEnumerable()
+                                     .Select(row => row.Field<string>("اسم_المادة"))
+                                     .Where(name => !string.IsNullOrWhiteSpace(name))
+                                     .Distinct()
+                                     .OrderBy(name => name)
+                                     .ToArray();
+
+                txtName.AutoCompleteCustomSource.Clear();
+                txtName.AutoCompleteCustomSource.AddRange(sortedNames);
+
+                txtSearchMaterial.Items.Clear();
+                txtSearchMaterial.AutoCompleteCustomSource.Clear();
+                txtSearchMaterial.AutoCompleteCustomSource.AddRange(sortedNames);
+                txtSearchMaterial.Items.AddRange(sortedNames);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        public void getMaterialCodeAutocomplete()
+        {
+            try
+            {
+                materialTableAdapter mta = new materialTableAdapter();
+                MaterialControllar.materialDataTable mdt = mta.GetData();
+
+                var sortedCodes = mdt.AsEnumerable()
+                                     .Select(row => row.Field<string>("كود_المادة"))
+                                     .Where(code => !string.IsNullOrWhiteSpace(code))
+                                     .Distinct()
+                                     .OrderBy(code => code)
+                                     .ToArray();
+
+                txtSearchMaterial.Items.Clear();
+                txtSearchMaterial.AutoCompleteCustomSource.Clear();
+                txtSearchMaterial.AutoCompleteCustomSource.AddRange(sortedCodes);
+                txtSearchMaterial.Items.AddRange(sortedCodes);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+        #endregion
+
+        #region Material Methods
+        private void AddMaterial()
+        {
+            if (MessageBox.Show("هل تريد اضافة المادة الى المستودع؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    materialTableAdapter mta = new materialTableAdapter();
+                    mta.Insert(txtName.Text,
+                        txtPleace.Text,
+                        txtUint.Text,
+                        Convert.ToInt32(txtQuantity.Text),
+                        Convert.ToDouble(txtPrice.Text),
+                        txtType.Text,
+                        Convert.ToInt32(cbGroup.Text.Split('.')[1]),
+                        Convert.ToInt32(cbProduct.Text.Split('.')[1]),
+                        cbTrash.Checked.ToString(),
+                        Convert.ToInt32(cbWarehouse.Text.Split('.')[1]),
+                        txtMaterialDiscr.Text,
+                        "..\\..\\Image\\Material\\" + txtName.Text + ".jpg",
+                        0,
+                        0,
+                        Convert.ToInt32(txtPriceBuy.Text),
+                        Convert.ToInt32(txtPriceSale.Text),
+                        txtMaterialCode.Text,
+                        cbWayOut.Text, 0);
+
+                    SaveImage();
+
+                    MessageBox.Show("تم اضافة المادة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefreshMaterialTable();
+                    ResetForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("هناك خطأ حيث لم يتم إضافة المجموعة أو الصانع أو المستودع", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+        }
+
+        private void UpdateMaterial()
+        {
+            if (MessageBox.Show("هل تريد تعديل المادة؟", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    materialTableAdapter mta = new materialTableAdapter();
+                    MaterialControllar.materialDataTable materialDataTable = mta.getMaterialTableById(Convert.ToInt32(materialRow["الرقم_الفني"].ToString()));
+                    materialRow = materialDataTable.Rows[0];
+                    materialRow["اسم_المادة"] = txtName.Text;
+                    materialRow["تواجد_المادة"] = txtPleace.Text;
+                    materialRow["الوحدة"] = txtUint.Text;
+                    materialRow["كمية"] = txtQuantity.Text;
+                    materialRow["سعر"] = txtPrice.Text;
+                    materialRow["رمز_الطراز"] = txtType.Text;
+                    if (cbGroup.Text.Split('.').Length > 1) { materialRow["المجموعة"] = Convert.ToInt32(cbGroup.Text.Split('.')[1]); }
+                    if (cbProduct.Text.Split('.').Length > 1) { materialRow["الصانع"] = Convert.ToInt32(cbProduct.Text.Split('.')[1]); }
+                    if (cbWarehouse.Text.Split('.').Length > 1) { materialRow["المستودع"] = Convert.ToInt32(cbWarehouse.Text.Split('.')[1]); }
+                    materialRow["بالة"] = cbTrash.Checked;
+
+                    materialRow["وصف_المادة"] = txtMaterialDiscr.Text;
+                    materialRow["صورة"] = txtImageFile.Text;
+                    materialRow["سعر_الشراء"] = txtPriceBuy.Text;
+                    materialRow["سعر_البيع"] = txtPriceSale.Text;
+                    materialRow["كود_المادة"] = txtMaterialCode.Text;
+                    materialRow["طريقة_حساب_الكلفة"] = cbWayOut.Text;
+
+                    mta.Update(materialRow);
+
+                    foreach (DataRow row in originalDataTable.Rows)
+                    {
+                        if (Convert.ToInt32(row["الرقم_الفني"]) == Convert.ToInt32(materialRow["الرقم_الفني"]))
+                        {
+                            row["اسم_المادة"] = txtName.Text;
+                            row["تواجد_المادة"] = txtPleace.Text;
+                            row["الوحدة"] = txtUint.Text;
+                            row["كمية"] = txtQuantity.Text;
+                            row["سعر"] = txtPrice.Text;
+                            row["رمز_الطراز"] = txtType.Text;
+                            row["اسم_المجموعة"] = cbGroup.Text;
+                            row["اسم_الصانع"] = cbProduct.Text;
+                            row["اسم_المستودع"] = cbWarehouse.Text;
+                            row["بالة"] = cbTrash.Checked;
+                            row["وصف_المادة"] = txtMaterialDiscr.Text;
+                            row["صورة"] = txtImageFile.Text;
+                            row["سعر_الشراء"] = txtPriceBuy.Text;
+                            row["سعر_البيع"] = txtPriceSale.Text;
+                            row["كود_المادة"] = txtMaterialCode.Text;
+                            row["طريقة_حساب_الكلفة"] = cbWayOut.Text;
+                            break;
+                        }
+                    }
+
+                    MessageBox.Show("تم تعديل المادة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BindData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("erorr : " + ex.Message, "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+        }
+
+        private void SaveImage()
+        {
+            if (!string.IsNullOrEmpty(txtImageFile.Text))
+            {
+                try
+                {
+                    byte[] image;
+                    using (FileStream fsr = new FileStream(txtImageFile.Text, FileMode.OpenOrCreate, FileAccess.Read))
+                    {
+                        image = new byte[fsr.Length];
+                        fsr.Read(image, 0, image.Length);
+                    }
+                    using (FileStream fsw = new FileStream("..\\..\\Image\\Material\\" + txtName.Text + ".jpg", FileMode.OpenOrCreate, FileAccess.Write))
+                    {
+                        fsw.Write(image, 0, image.Length);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void RefreshMaterialTable()
+        {
+            int count = dataGridViewMaterial.Rows.Count;
+            TableStyle(count);
+        }
+
+        private void ResetForm()
+        {
+            getMaterialNameAutocomplete();
+            newToolStripButton_Click(null, null);
+            bRefreshTable_Click(null, null);
+            txtName.Focus();
+        }
+        #endregion
+
+        #region Validation Methods
+        private bool ValidateInputFields()
+        {
+            var hasError = false;
+
+            // Clear previous error messages
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+
+            // Check txtName
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                errorProvider1.SetError(txtName, "حقل اسم المادة فارغ");
+                hasError = true;
+            }
+            else
+            {
+                errorProvider3.SetError(txtName, "الحقل مقبول");
+            }
+
+            // Check txtPrice
+            if (txtPrice.Text == "0")
+            {
+                errorProvider2.SetError(txtPrice, "حقل سعر المادة صفر");
+                hasError = true;
+            }
+            else
+            {
+                errorProvider3.SetError(txtPrice, "الحقل مقبول");
+            }
+
+            // Check cbGroup
+            if (string.IsNullOrWhiteSpace(cbGroup.Text))
+            {
+                errorProvider1.SetError(cbGroup, "حقل مجموعة المادة فارغ");
+                hasError = true;
+            }
+            else
+            {
+                errorProvider3.SetError(cbGroup, "الحقل مقبول");
+            }
+
+            // Check cbProduct
+            if (string.IsNullOrWhiteSpace(cbProduct.Text))
+            {
+                errorProvider1.SetError(cbProduct, "حقل صانع المادة فارغ");
+                hasError = true;
+            }
+            else
+            {
+                errorProvider3.SetError(cbProduct, "الحقل مقبول");
+            }
+
+            // Check cbWarehouse
+            if (string.IsNullOrWhiteSpace(cbWarehouse.Text))
+            {
+                errorProvider1.SetError(cbWarehouse, "حقل مستودع المادة فارغ");
+                hasError = true;
+            }
+            else
+            {
+                errorProvider3.SetError(cbWarehouse, "الحقل مقبول");
+            }
+
+            if (hasError)
+            {
+                MessageBox.Show("يجب إضافة بعض المعلومات قبل حفظ البيانات!!", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #region Data Mapping Methods
+        private MaterialControllar.materialDataTable MapDataRowToMaterialDataTable(DataRow material)
+        {
+            var mdt = new MaterialControllar.materialDataTable();
+            var newRow = mdt.NewRow();
+
+            newRow["الرقم_الفني"] = material["الرقم_الفني"];
+            newRow["اسم_المادة"] = material["اسم_المادة"];
+            newRow["تواجد_المادة"] = material["تواجد_المادة"];
+            newRow["الوحدة"] = material["الوحدة"];
+            newRow["كمية"] = material["كمية"];
+            newRow["سعر"] = material["سعر"];
+            newRow["رمز_الطراز"] = material["رمز_الطراز"];
+            newRow["المجموعة"] = material["رقم_المجموعة"];
+            newRow["الصانع"] = material["رقم_الصانع"];
+            newRow["بالة"] = material["بالة"];
+            newRow["المستودع"] = material["رقم_المستودع"];
+            newRow["وصف_المادة"] = material["وصف_المادة"];
+            newRow["صورة"] = material["صورة"];
+            newRow["فرق_السعر"] = material["فرق_السعر"];
+            newRow["فرق_الكمية"] = material["فرق_الكمية"];
+            newRow["سعر_الشراء"] = material["سعر_الشراء"];
+            newRow["سعر_البيع"] = material["سعر_البيع"];
+            newRow["كود_المادة"] = material["كود_المادة"];
+            newRow["طريقة_حساب_الكلفة"] = material["طريقة_حساب_الكلفة"];
+
+            mdt.Rows.Add(newRow);
+            return mdt;
         }
 
         private void setMaterialValue(DataRow material)
         {
-            txtId.Text = material["الرقم_الفني"].ToString();
+            lblPage.Text = material["الرقم_الفني"].ToString();
             txtName.Text = material["اسم_المادة"].ToString();
             txtPleace.Text = material["تواجد_المادة"].ToString();
             txtUint.Text = material["الوحدة"].ToString();
@@ -469,283 +805,9 @@ namespace Program.entityForm
             pMaterialPicture.ImageLocation = txtImageFile.Text;
             txtMaterialCode.Text = material["كود_المادة"].ToString();
 
-           materialTableAdapter mta = new materialTableAdapter();
-            MaterialControllar.materialDataTable mdt = mta.getMaterialTableById(Convert.ToInt32(material["الرقم_الفني"]));
-            materialRow = mdt.Rows[0];            
-
+            var mdt = MapDataRowToMaterialDataTable(material);
+            materialRow = mdt.Rows[0];
         }
-
-        private void dataGridViewMaterial_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.getMaterialById(Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentRow.Index].Cells[0].Value));
-                setMaterialValue(mdt.Rows[0]);
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void newToolStripButton_Click(object sender, EventArgs e)
-        {
-            txtName.Text = "";
-            txtPleace.Text = "";
-            txtUint.Text = "عدد";
-            txtQuantity.Text = "0";
-            txtPrice.Text = "0";
-            txtPriceBuy.Text = "0";
-            txtPriceSale.Text = "0";
-            txtType.Text = "";
-            //cbWarehouse.Text = "";
-            cbProduct.Text = "";
-            cbGroup.Text = "";
-            txtMaterialDiscr.Text = "";
-            txtImageFile.Text = "";
-            txtMaterialCode.Text = "";
-            //txtImageFile.Text = ""; 
-        }
-
-        static int index_dataGridViewMain = 0;
-        private void bNext_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                index_dataGridViewMain++;
-                dataGridViewMaterial.Rows[index_dataGridViewMain].Selected = true;
-
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.getMaterialById(Convert.ToInt32(dataGridViewMaterial.Rows[index_dataGridViewMain].Cells[0].Value));
-               // txtId.Text = dataGridViewMaterial.Rows[index_dataGridViewMain].Cells[0].Value.ToString();
-                setMaterialValue(mdt.Rows[0]);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error  :  " + ex.Message);
-                index_dataGridViewMain = -1;
-            }
-        }
-
-        private void pPrevious_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                index_dataGridViewMain--;
-                dataGridViewMaterial.Rows[index_dataGridViewMain].Selected = true;
-
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.getMaterialById(Convert.ToInt32(dataGridViewMaterial.Rows[index_dataGridViewMain].Cells[0].Value));
-               // txtId.Text = dataGridViewMaterial.Rows[index_dataGridViewMain].Cells[0].Value.ToString();
-                setMaterialValue(mdt.Rows[0]);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error  :  " + ex.Message);
-                index_dataGridViewMain = 0;
-            }
-        }
-
-        private void NewMaterial_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void miMaterialCard_Click(object sender, EventArgs e)
-        {
-            MaterialCard mc = new MaterialCard();
-            mc.ShowDialog();
-        }
-
-       
-
-        private void bRefreshTable_Click(object sender, EventArgs e)
-        {
-            materialTableAdapter mta = new materialTableAdapter();
-            MaterialControllar.materialDataTable mdt = mta.GetData();
-            dataGridViewMaterial.DataSource = mdt;
-            int count = dataGridViewMaterial.Rows.Count;
-            getMaterialTable(count);
-
-        }
-
-        private void cbSearchType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbSearchType.Text == "اسم المادة")
-                {
-                    getMaterialNameAutocomplete();
-                }
-                if (cbSearchType.Text == "كود المادة")
-                {
-                    getMaterialCodeAutocomplete();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
-
-        }
-
-        public void getMaterialNameAutocomplete()
-        {
-            /*try
-            {*/
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.GetData();
-                ArrayList array = new ArrayList();
-                foreach (DataRow row in mdt.Rows)
-                {
-                    if (row["اسم_المادة"].ToString() != "")
-                    {
-                        array.Add(row["اسم_المادة"].ToString());
-                    }
-                }
-                array.Sort();
-                txtName.AutoCompleteCustomSource.AddRange((string[])array.ToArray(typeof(string)));
-
-                txtSearchMaterial.Items.Clear();
-                txtSearchMaterial.AutoCompleteCustomSource.AddRange((string[])array.ToArray(typeof(string)));
-                txtSearchMaterial.Items.AddRange(array.ToArray());
-                
-            /*}
-            catch (Exception ex)
-            {
-
-            }*/
-        }
-
-
-        public void getMaterialCodeAutocomplete()
-        {
-            materialTableAdapter mta = new materialTableAdapter();
-            MaterialControllar.materialDataTable mdt = mta.GetData();
-            ArrayList array = new ArrayList();
-            foreach (DataRow row in mdt.Rows)
-            {
-                if (row["كود_المادة"].ToString() != "")
-                {
-                    array.Add(row["كود_المادة"].ToString());
-                }
-            }
-            array.Sort();
-            txtSearchMaterial.Items.Clear();
-            txtSearchMaterial.AutoCompleteCustomSource.AddRange((string[])array.ToArray(typeof(string)));
-            txtSearchMaterial.Items.AddRange(array.ToArray());
-        }
-
-        private void cbGroup_Validating(object sender, CancelEventArgs e)
-        {
-            if (cbGroup.Text == "")
-            {
-                errorProvider1.SetError((Control)sender, "حقل مجموعة المادة فارغ");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
-            }
-        }
-
-        private void cbProduct_Validating(object sender, CancelEventArgs e)
-        {
-            if (cbProduct.Text == "")
-            {
-                errorProvider1.SetError((Control)sender, "حقل صانع المادة فارغ");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
-            }
-        }
-
-        private void cbWarehouse_Validating(object sender, CancelEventArgs e)
-        {
-            if (cbWarehouse.Text == "")
-            {
-                errorProvider1.SetError((Control)sender, "حقل مستودع المادة فارغ");
-            }
-            else
-            {
-                errorProvider1.SetError((Control)sender, "");
-            }
-        }
-
-        private void bSave_Click(object sender, EventArgs e)
-        {
-            saveToolStripButton_Click(sender, e);
-        }
-
-      
-
-        private void dataGridViewMaterial_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-
-        }
-
-        private void dataGridViewMaterial_KeyUp(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                materialTableAdapter mta = new materialTableAdapter();
-                MaterialControllar.materialDataTable mdt = mta.getMaterialById(Convert.ToInt32(dataGridViewMaterial.Rows[dataGridViewMaterial.CurrentRow.Index].Cells[0].Value));
-                materialRow = mdt.Rows[0];
-                setMaterialValue(materialRow);
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-        }
-
-        private void bGetCode_Click(object sender, EventArgs e)
-        {
-            //// bar code Start
-            StartBarCode();
-          
-        }
-
-        SerialPort _serialPort;
-
-        // delegate is used to write to a UI control from a non-UI thread
-        private delegate void SetTextDeleg(string text);
-        public void StartBarCode()
-        {
-            try
-            {
-                // all of the options for a serial device
-                // can be sent through the constructor of the SerialPort class
-                // PortName = "COM1", Baud Rate = 19200, Parity = None, 
-                // Data Bits = 8, Stop Bits = One, Handshake = None
-                _serialPort = new SerialPort("COM1", 19200, Parity.None, 8, StopBits.One);
-                _serialPort.Handshake = Handshake.None;
-                _serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
-                _serialPort.ReadTimeout = 500;
-                _serialPort.WriteTimeout = 500;
-                _serialPort.Open();
-
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            Thread.Sleep(500);
-            string data = _serialPort.ReadLine();
-            this.BeginInvoke(new SetTextDeleg(si_DataReceived), new object[] { data });
-        }
-
-        private void si_DataReceived(string data)
-        {
-            txtMaterialCode.Text = data.Trim();
-        }
+        #endregion
     }
 }

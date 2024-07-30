@@ -10,9 +10,9 @@ namespace Program.Connection
     internal class Connect
     {
         private readonly string _connectionString = "Data Source=Localhost;Initial Catalog=master;User ID=sa;Password=sqladmin";
-        private readonly string _connectionStringCompany = ConfigurationManager.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString;
+        static string _connectionStringCompany = ConfigurationManager.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString;
 
-        public bool TestConnection()
+        public static bool TestConnection()
         {
             try
             {
@@ -142,7 +142,7 @@ namespace Program.Connection
             MessageBox.Show("Error: " + ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void LogError(Exception ex)
+        private static void LogError(Exception ex)
         {
             // Implement your logging here, for example, logging to a file or an event log.
             Console.WriteLine($"Error: {ex.Message}");

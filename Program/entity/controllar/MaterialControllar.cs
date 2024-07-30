@@ -18,21 +18,7 @@
 
 namespace Program.entity.controllar.MaterialControllarTableAdapters
 {
-    partial class material_credit_penfit_paymentTableAdapter
-    {
-    }
-
-    partial class material_debit_listTableAdapter
-    {
-    }
-
-    partial class material_credit_listTableAdapter
-    {
-    }
-
-    public partial class materialTableAdapter
-    {
-    }
+  
 }
 
 namespace Program.entity.controllar.MaterialControllarTableAdapters
