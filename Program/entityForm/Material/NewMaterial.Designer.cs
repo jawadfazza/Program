@@ -44,6 +44,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pMaterialPicture = new System.Windows.Forms.PictureBox();
             this.cbWayOut = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -81,7 +82,6 @@
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtPleace = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -94,7 +94,6 @@
             this.txtId = new System.Windows.Forms.ToolStripTextBox();
             this.pPrevious = new System.Windows.Forms.ToolStripButton();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaterial)).BeginInit();
@@ -225,7 +224,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FloralWhite;
-            this.groupBox2.Controls.Add(this.kryptonTextBox1);
+            this.groupBox2.Controls.Add(this.txtName);
             this.groupBox2.Controls.Add(this.pMaterialPicture);
             this.groupBox2.Controls.Add(this.cbWayOut);
             this.groupBox2.Controls.Add(this.label15);
@@ -265,6 +264,21 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "تفاصيل المادة";
+            // 
+            // txtName
+            // 
+            this.txtName.AutoCompleteCustomSource.AddRange(new string[] {
+            "CustomSource"});
+            this.txtName.Location = new System.Drawing.Point(35, 19);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(255, 27);
+            this.txtName.StateActive.Border.Color1 = System.Drawing.Color.Peru;
+            this.txtName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtName.StateActive.Border.Rounding = 6;
+            this.txtName.TabIndex = 84;
+            this.txtName.Text = "اسم المادة";
             // 
             // pMaterialPicture
             // 
@@ -484,7 +498,6 @@
             this.groupBox3.Controls.Add(this.txtPriceBuy);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txtName);
             this.groupBox3.Location = new System.Drawing.Point(34, 468);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(256, 130);
@@ -658,18 +671,6 @@
             this.txtPleace.Size = new System.Drawing.Size(256, 27);
             this.txtPleace.TabIndex = 53;
             // 
-            // txtName
-            // 
-            this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(-24, -12);
-            this.txtName.Name = "txtName";
-            this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtName.Size = new System.Drawing.Size(256, 31);
-            this.txtName.TabIndex = 52;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel2);
@@ -780,21 +781,6 @@
             // 
             this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "CustomSource"});
-            this.kryptonTextBox1.Location = new System.Drawing.Point(34, 19);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(255, 27);
-            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.Peru;
-            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateActive.Border.Rounding = 6;
-            this.kryptonTextBox1.TabIndex = 84;
-            this.kryptonTextBox1.Text = "اسم المادة";
-            // 
             // NewMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -900,8 +886,7 @@
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtPleace;
-        private System.Windows.Forms.TextBox txtName;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtName;
     }
 }
