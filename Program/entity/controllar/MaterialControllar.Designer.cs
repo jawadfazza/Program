@@ -917,6 +917,8 @@ namespace Program.entity.controllar {
             
             private global::System.Data.DataColumn columnطريقة_حساب_الكلفة;
             
+            private global::System.Data.DataColumn columnفرق_القيمة;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public materialDataTable() {
@@ -1152,6 +1154,14 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn فرق_القيمةColumn {
+                get {
+                    return this.columnفرق_القيمة;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1211,7 +1221,8 @@ namespace Program.entity.controllar {
                         string كود_المادة, 
                         string TotalCost, 
                         string profit, 
-                        string طريقة_حساب_الكلفة) {
+                        string طريقة_حساب_الكلفة, 
+                        int فرق_القيمة) {
                 materialRow rowmaterialRow = ((materialRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1238,7 +1249,8 @@ namespace Program.entity.controllar {
                         كود_المادة,
                         TotalCost,
                         profit,
-                        طريقة_حساب_الكلفة};
+                        طريقة_حساب_الكلفة,
+                        فرق_القيمة};
                 if ((parentmaterial_groupRowByFK__material__المجمو__5165187F != null)) {
                     columnValuesArray[7] = parentmaterial_groupRowByFK__material__المجمو__5165187F[0];
                 }
@@ -1302,6 +1314,7 @@ namespace Program.entity.controllar {
                 this.columnTotalCost = base.Columns["TotalCost"];
                 this.columnprofit = base.Columns["profit"];
                 this.columnطريقة_حساب_الكلفة = base.Columns["طريقة_حساب_الكلفة"];
+                this.columnفرق_القيمة = base.Columns["فرق_القيمة"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1357,6 +1370,8 @@ namespace Program.entity.controllar {
                 base.Columns.Add(this.columnprofit);
                 this.columnطريقة_حساب_الكلفة = new global::System.Data.DataColumn("طريقة_حساب_الكلفة", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnطريقة_حساب_الكلفة);
+                this.columnفرق_القيمة = new global::System.Data.DataColumn("فرق_القيمة", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnفرق_القيمة);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnالرقم_الفني}, true));
                 this.columnالرقم_الفني.AutoIncrement = true;
@@ -7585,6 +7600,22 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int فرق_القيمة {
+                get {
+                    try {
+                        return ((int)(this[this.tablematerial.فرق_القيمةColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'فرق_القيمة\' in table \'material\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablematerial.فرق_القيمةColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public material_groupRow material_groupRow {
                 get {
                     return ((material_groupRow)(this.GetParentRow(this.Table.ParentRelations["FK__material__المجمو__5165187F"])));
@@ -7854,6 +7885,18 @@ namespace Program.entity.controllar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setطريقة_حساب_الكلفةNull() {
                 this[this.tablematerial.طريقة_حساب_الكلفةColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isفرق_القيمةNull() {
+                return this.IsNull(this.tablematerial.فرق_القيمةColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setفرق_القيمةNull() {
+                this[this.tablematerial.فرق_القيمةColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12035,10 +12078,29 @@ namespace Program.entity.controllar.MaterialControllarTableAdapters {
             tableMapping.ColumnMappings.Add("سعر_البيع", "سعر_البيع");
             tableMapping.ColumnMappings.Add("كود_المادة", "كود_المادة");
             tableMapping.ColumnMappings.Add("طريقة_حساب_الكلفة", "طريقة_حساب_الكلفة");
+            tableMapping.ColumnMappings.Add("فرق_القيمة", "فرق_القيمة");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [material] WHERE (([الرقم_الفني] = @Original_الرقم_الفني) AND ([اسم_المادة] = @Original_اسم_المادة) AND ((@IsNull_تواجد_المادة = 1 AND [تواجد_المادة] IS NULL) OR ([تواجد_المادة] = @Original_تواجد_المادة)) AND ([الوحدة] = @Original_الوحدة) AND ([كمية] = @Original_كمية) AND ([سعر] = @Original_سعر) AND ((@IsNull_رمز_الطراز = 1 AND [رمز_الطراز] IS NULL) OR ([رمز_الطراز] = @Original_رمز_الطراز)) AND ((@IsNull_المجموعة = 1 AND [المجموعة] IS NULL) OR ([المجموعة] = @Original_المجموعة)) AND ((@IsNull_الصانع = 1 AND [الصانع] IS NULL) OR ([الصانع] = @Original_الصانع)) AND ((@IsNull_بالة = 1 AND [بالة] IS NULL) OR ([بالة] = @Original_بالة)) AND ((@IsNull_المستودع = 1 AND [المستودع] IS NULL) OR ([المستودع] = @Original_المستودع)) AND ((@IsNull_صورة = 1 AND [صورة] IS NULL) OR ([صورة] = @Original_صورة)) AND ((@IsNull_فرق_السعر = 1 AND [فرق_السعر] IS NULL) OR ([فرق_السعر] = @Original_فرق_السعر)) AND ((@IsNull_فرق_الكمية = 1 AND [فرق_الكمية] IS NULL) OR ([فرق_الكمية] = @Original_فرق_الكمية)) AND ((@IsNull_سعر_الشراء = 1 AND [سعر_الشراء] IS NULL) OR ([سعر_الشراء] = @Original_سعر_الشراء)) AND ((@IsNull_سعر_البيع = 1 AND [سعر_البيع] IS NULL) OR ([سعر_البيع] = @Original_سعر_البيع)) AND ((@IsNull_كود_المادة = 1 AND [كود_المادة] IS NULL) OR ([كود_المادة] = @Original_كود_المادة)) AND ((@IsNull_طريقة_حساب_الكلفة = 1 AND [طريقة_حساب_الكلفة] IS NULL) OR ([طريقة_حساب_الكلفة] = @Original_طريقة_حساب_الكلفة)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [material] WHERE (([الرقم_الفني] = @Original_الرقم_الفني) AND ([اسم_ا" +
+                "لمادة] = @Original_اسم_المادة) AND ((@IsNull_تواجد_المادة = 1 AND [تواجد_المادة]" +
+                " IS NULL) OR ([تواجد_المادة] = @Original_تواجد_المادة)) AND ([الوحدة] = @Origina" +
+                "l_الوحدة) AND ([كمية] = @Original_كمية) AND ([سعر] = @Original_سعر) AND ((@IsNul" +
+                "l_رمز_الطراز = 1 AND [رمز_الطراز] IS NULL) OR ([رمز_الطراز] = @Original_رمز_الطر" +
+                "از)) AND ((@IsNull_المجموعة = 1 AND [المجموعة] IS NULL) OR ([المجموعة] = @Origin" +
+                "al_المجموعة)) AND ((@IsNull_الصانع = 1 AND [الصانع] IS NULL) OR ([الصانع] = @Ori" +
+                "ginal_الصانع)) AND ((@IsNull_بالة = 1 AND [بالة] IS NULL) OR ([بالة] = @Original" +
+                "_بالة)) AND ((@IsNull_المستودع = 1 AND [المستودع] IS NULL) OR ([المستودع] = @Ori" +
+                "ginal_المستودع)) AND ((@IsNull_صورة = 1 AND [صورة] IS NULL) OR ([صورة] = @Origin" +
+                "al_صورة)) AND ((@IsNull_فرق_السعر = 1 AND [فرق_السعر] IS NULL) OR ([فرق_السعر] =" +
+                " @Original_فرق_السعر)) AND ((@IsNull_فرق_الكمية = 1 AND [فرق_الكمية] IS NULL) OR" +
+                " ([فرق_الكمية] = @Original_فرق_الكمية)) AND ((@IsNull_سعر_الشراء = 1 AND [سعر_ال" +
+                "شراء] IS NULL) OR ([سعر_الشراء] = @Original_سعر_الشراء)) AND ((@IsNull_سعر_البيع" +
+                " = 1 AND [سعر_البيع] IS NULL) OR ([سعر_البيع] = @Original_سعر_البيع)) AND ((@IsN" +
+                "ull_كود_المادة = 1 AND [كود_المادة] IS NULL) OR ([كود_المادة] = @Original_كود_ال" +
+                "مادة)) AND ((@IsNull_طريقة_حساب_الكلفة = 1 AND [طريقة_حساب_الكلفة] IS NULL) OR (" +
+                "[طريقة_حساب_الكلفة] = @Original_طريقة_حساب_الكلفة)) AND ((@IsNull_فرق_القيمة = 1" +
+                " AND [فرق_القيمة] IS NULL) OR ([فرق_القيمة] = @Original_فرق_القيمة)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرقم_الفني", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_اسم_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "اسم_المادة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12071,10 +12133,12 @@ namespace Program.entity.controllar.MaterialControllarTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_كود_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_طريقة_حساب_الكلفة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_طريقة_حساب_الكلفة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [material] ([اسم_المادة], [تواجد_المادة], [الوحدة], [كمية], [سعر], [رمز_الطراز], [المجموعة], [الصانع], [بالة], [المستودع], [وصف_المادة], [صورة], [فرق_السعر], [فرق_الكمية], [سعر_الشراء], [سعر_البيع], [كود_المادة], [طريقة_حساب_الكلفة]) VALUES (@اسم_المادة, @تواجد_المادة, @الوحدة, @كمية, @سعر, @رمز_الطراز, @المجموعة, @الصانع, @بالة, @المستودع, @وصف_المادة, @صورة, @فرق_السعر, @فرق_الكمية, @سعر_الشراء, @سعر_البيع, @كود_المادة, @طريقة_حساب_الكلفة);
-SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سعر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة FROM material WHERE (الرقم_الفني = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [material] ([اسم_المادة], [تواجد_المادة], [الوحدة], [كمية], [سعر], [رمز_الطراز], [المجموعة], [الصانع], [بالة], [المستودع], [وصف_المادة], [صورة], [فرق_السعر], [فرق_الكمية], [سعر_الشراء], [سعر_البيع], [كود_المادة], [طريقة_حساب_الكلفة], [فرق_القيمة]) VALUES (@اسم_المادة, @تواجد_المادة, @الوحدة, @كمية, @سعر, @رمز_الطراز, @المجموعة, @الصانع, @بالة, @المستودع, @وصف_المادة, @صورة, @فرق_السعر, @فرق_الكمية, @سعر_الشراء, @سعر_البيع, @كود_المادة, @طريقة_حساب_الكلفة, @فرق_القيمة);
+SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سعر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة, فرق_القيمة FROM material WHERE (الرقم_الفني = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@اسم_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "اسم_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تواجد_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تواجد_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12094,6 +12158,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@سعر_البيع", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@كود_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@طريقة_حساب_الكلفة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [material] SET [اسم_المادة] = @اسم_المادة, [تواجد_المادة] = @تواجد_المادة," +
@@ -12101,28 +12166,30 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
                 "المجموعة] = @المجموعة, [الصانع] = @الصانع, [بالة] = @بالة, [المستودع] = @المستود" +
                 "ع, [وصف_المادة] = @وصف_المادة, [صورة] = @صورة, [فرق_السعر] = @فرق_السعر, [فرق_ال" +
                 "كمية] = @فرق_الكمية, [سعر_الشراء] = @سعر_الشراء, [سعر_البيع] = @سعر_البيع, [كود_" +
-                "المادة] = @كود_المادة, [طريقة_حساب_الكلفة] = @طريقة_حساب_الكلفة WHERE (([الرقم_ا" +
-                "لفني] = @Original_الرقم_الفني) AND ([اسم_المادة] = @Original_اسم_المادة) AND ((@" +
-                "IsNull_تواجد_المادة = 1 AND [تواجد_المادة] IS NULL) OR ([تواجد_المادة] = @Origin" +
-                "al_تواجد_المادة)) AND ([الوحدة] = @Original_الوحدة) AND ([كمية] = @Original_كمية" +
-                ") AND ([سعر] = @Original_سعر) AND ((@IsNull_رمز_الطراز = 1 AND [رمز_الطراز] IS N" +
-                "ULL) OR ([رمز_الطراز] = @Original_رمز_الطراز)) AND ((@IsNull_المجموعة = 1 AND [ا" +
-                "لمجموعة] IS NULL) OR ([المجموعة] = @Original_المجموعة)) AND ((@IsNull_الصانع = 1" +
-                " AND [الصانع] IS NULL) OR ([الصانع] = @Original_الصانع)) AND ((@IsNull_بالة = 1 " +
-                "AND [بالة] IS NULL) OR ([بالة] = @Original_بالة)) AND ((@IsNull_المستودع = 1 AND" +
-                " [المستودع] IS NULL) OR ([المستودع] = @Original_المستودع)) AND ((@IsNull_صورة = " +
-                "1 AND [صورة] IS NULL) OR ([صورة] = @Original_صورة)) AND ((@IsNull_فرق_السعر = 1 " +
-                "AND [فرق_السعر] IS NULL) OR ([فرق_السعر] = @Original_فرق_السعر)) AND ((@IsNull_ف" +
-                "رق_الكمية = 1 AND [فرق_الكمية] IS NULL) OR ([فرق_الكمية] = @Original_فرق_الكمية)" +
-                ") AND ((@IsNull_سعر_الشراء = 1 AND [سعر_الشراء] IS NULL) OR ([سعر_الشراء] = @Ori" +
-                "ginal_سعر_الشراء)) AND ((@IsNull_سعر_البيع = 1 AND [سعر_البيع] IS NULL) OR ([سعر" +
-                "_البيع] = @Original_سعر_البيع)) AND ((@IsNull_كود_المادة = 1 AND [كود_المادة] IS" +
-                " NULL) OR ([كود_المادة] = @Original_كود_المادة)) AND ((@IsNull_طريقة_حساب_الكلفة" +
-                " = 1 AND [طريقة_حساب_الكلفة] IS NULL) OR ([طريقة_حساب_الكلفة] = @Original_طريقة_" +
-                "حساب_الكلفة)));\r\nSELECT الرقم_الفني, اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر" +
-                ", رمز_الطراز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق" +
-                "_الكمية, سعر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة FROM material WHER" +
-                "E (الرقم_الفني = @الرقم_الفني)";
+                "المادة] = @كود_المادة, [طريقة_حساب_الكلفة] = @طريقة_حساب_الكلفة, [فرق_القيمة] = " +
+                "@فرق_القيمة WHERE (([الرقم_الفني] = @Original_الرقم_الفني) AND ([اسم_المادة] = @" +
+                "Original_اسم_المادة) AND ((@IsNull_تواجد_المادة = 1 AND [تواجد_المادة] IS NULL) " +
+                "OR ([تواجد_المادة] = @Original_تواجد_المادة)) AND ([الوحدة] = @Original_الوحدة) " +
+                "AND ([كمية] = @Original_كمية) AND ([سعر] = @Original_سعر) AND ((@IsNull_رمز_الطر" +
+                "از = 1 AND [رمز_الطراز] IS NULL) OR ([رمز_الطراز] = @Original_رمز_الطراز)) AND (" +
+                "(@IsNull_المجموعة = 1 AND [المجموعة] IS NULL) OR ([المجموعة] = @Original_المجموع" +
+                "ة)) AND ((@IsNull_الصانع = 1 AND [الصانع] IS NULL) OR ([الصانع] = @Original_الصا" +
+                "نع)) AND ((@IsNull_بالة = 1 AND [بالة] IS NULL) OR ([بالة] = @Original_بالة)) AN" +
+                "D ((@IsNull_المستودع = 1 AND [المستودع] IS NULL) OR ([المستودع] = @Original_المس" +
+                "تودع)) AND ((@IsNull_صورة = 1 AND [صورة] IS NULL) OR ([صورة] = @Original_صورة)) " +
+                "AND ((@IsNull_فرق_السعر = 1 AND [فرق_السعر] IS NULL) OR ([فرق_السعر] = @Original" +
+                "_فرق_السعر)) AND ((@IsNull_فرق_الكمية = 1 AND [فرق_الكمية] IS NULL) OR ([فرق_الك" +
+                "مية] = @Original_فرق_الكمية)) AND ((@IsNull_سعر_الشراء = 1 AND [سعر_الشراء] IS N" +
+                "ULL) OR ([سعر_الشراء] = @Original_سعر_الشراء)) AND ((@IsNull_سعر_البيع = 1 AND [" +
+                "سعر_البيع] IS NULL) OR ([سعر_البيع] = @Original_سعر_البيع)) AND ((@IsNull_كود_ال" +
+                "مادة = 1 AND [كود_المادة] IS NULL) OR ([كود_المادة] = @Original_كود_المادة)) AND" +
+                " ((@IsNull_طريقة_حساب_الكلفة = 1 AND [طريقة_حساب_الكلفة] IS NULL) OR ([طريقة_حسا" +
+                "ب_الكلفة] = @Original_طريقة_حساب_الكلفة)) AND ((@IsNull_فرق_القيمة = 1 AND [فرق_" +
+                "القيمة] IS NULL) OR ([فرق_القيمة] = @Original_فرق_القيمة)));\r\nSELECT الرقم_الفني" +
+                ", اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, بال" +
+                "ة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سعر_الشراء, سعر_البيع, كود" +
+                "_المادة, طريقة_حساب_الكلفة, فرق_القيمة FROM material WHERE (الرقم_الفني = @الرقم" +
+                "_الفني)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@اسم_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "اسم_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تواجد_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تواجد_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12142,6 +12209,7 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@سعر_البيع", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@كود_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@طريقة_حساب_الكلفة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرقم_الفني", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_اسم_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "اسم_المادة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_تواجد_المادة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تواجد_المادة", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -12173,6 +12241,8 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_كود_المادة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_طريقة_حساب_الكلفة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_طريقة_حساب_الكلفة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "طريقة_حساب_الكلفة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_فرق_القيمة", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "فرق_القيمة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرقم_الفني", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -12186,12 +12256,13 @@ SELECT الرقم_الفني, اسم_المادة, تواجد_المادة, ال
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[12];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[13];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        الرقم_الفني, اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطرا" +
                 "ز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سع" +
-                "ر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة\r\nFROM            material";
+                "ر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة, فرق_القيمة\r\nFROM            " +
+                "material";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -12234,10 +12305,7 @@ WHERE        (material.الرقم_الفني = @id)";
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
-                "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
-                "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المستودع = @War" +
-                "ehouse)";
+            this._commandCollection[4].CommandText = @"SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_القيمة, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المستودع = @Warehouse)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Warehouse", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "المستودع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
@@ -12253,45 +12321,48 @@ WHERE        (material.كود_المادة = @code)";
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "كود_المادة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
-                "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
-                "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (الرقم_الفني = @" +
-                "id)";
+            this._commandCollection[6].CommandText = @"SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_القيمة, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (الرقم_الفني = @id)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_ا" +
-                "لمادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السع" +
-                "ر, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المجموعة = @gro" +
-                "ub)";
+            this._commandCollection[7].CommandText = @"SELECT اسم_المادة, الرقم_الفني, الصانع, المجموعة, المستودع, الوحدة, بالة, تواجد_المادة, رمز_الطراز, سعر, سعر_البيع, سعر_الشراء, صورة, طريقة_حساب_الكلفة, فرق_السعر, فرق_القيمة, فرق_الكمية, كمية, كود_المادة, وصف_المادة FROM material WHERE (المجموعة = @groub)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@groub", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "المجموعة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "SELECT        MAX(الرقم_الفني) AS Expr1\r\nFROM            material";
+            this._commandCollection[8].CommandText = @"SELECT        material.الرقم_الفني, material.اسم_المادة, material.تواجد_المادة, material.الوحدة, material.كمية, material.سعر, material.رمز_الطراز, material.بالة, material_group.اسم_المجموعة, producer.اسم_الصانع, WareHouse.اسم_المستودع, 
+                         material.وصف_المادة, material.صورة, material.سعر_الشراء, material.سعر_البيع, material.كود_المادة, material.طريقة_حساب_الكلفة, producer.رقم_الصانع, material_group.رقم_المجموعة, WareHouse.رقم_المستودع
+FROM            material INNER JOIN
+                         material_group ON material.المجموعة = material_group.رقم_المجموعة INNER JOIN
+                         producer ON material.الصانع = producer.رقم_الصانع INNER JOIN
+                         WareHouse ON material.المستودع = WareHouse.رقم_المستودع";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[9].Connection = this.Connection;
-            this._commandCollection[9].CommandText = "UPDATE       material\r\nSET                سعر_الشراء = @price\r\nWHERE        (الرق" +
-                "م_الفني = @id);\r\n";
+            this._commandCollection[9].CommandText = "SELECT        MAX(الرقم_الفني) AS Expr1\r\nFROM            material";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_الشراء", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[10].Connection = this.Connection;
-            this._commandCollection[10].CommandText = "UPDATE       material\r\nSET                كمية = @كمية\r\nWHERE        (الرقم_الفني" +
-                " = @id);\r\n";
+            this._commandCollection[10].CommandText = "UPDATE       material\r\nSET                سعر_الشراء = @price\r\nWHERE        (الرق" +
+                "م_الفني = @id);\r\n";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@كمية", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "كمية", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_الشراء", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[11].Connection = this.Connection;
-            this._commandCollection[11].CommandText = "UPDATE       material\r\nSET                سعر_البيع = @price\r\nWHERE        (الرقم" +
-                "_الفني = @id);\r\n";
+            this._commandCollection[11].CommandText = "UPDATE       material\r\nSET                كمية = @كمية\r\nWHERE        (الرقم_الفني" +
+                " = @id);\r\n";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@كمية", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "كمية", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[12].Connection = this.Connection;
+            this._commandCollection[12].CommandText = "UPDATE       material\r\nSET                سعر_البيع = @price\r\nWHERE        (الرقم" +
+                "_الفني = @id);\r\n";
+            this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "سعر_البيع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم_الفني", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12685,6 +12756,30 @@ WHERE        (material.كود_المادة = @code)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy7(MaterialControllar.materialDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[8];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MaterialControllar.materialDataTable GetDataByFillDetails() {
+            this.Adapter.SelectCommand = this.CommandCollection[8];
+            MaterialControllar.materialDataTable dataTable = new MaterialControllar.materialDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MaterialControllar.materialDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -12733,7 +12828,8 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> Original_سعر_الشراء, 
                     global::System.Nullable<int> Original_سعر_البيع, 
                     string Original_كود_المادة, 
-                    string Original_طريقة_حساب_الكلفة) {
+                    string Original_طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> Original_فرق_القيمة) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_الرقم_الفني));
             if ((Original_اسم_المادة == null)) {
                 throw new global::System.ArgumentNullException("Original_اسم_المادة");
@@ -12853,6 +12949,14 @@ WHERE        (material.كود_المادة = @code)";
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_طريقة_حساب_الكلفة));
             }
+            if ((Original_فرق_القيمة.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_فرق_القيمة.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12891,7 +12995,8 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> سعر_الشراء, 
                     global::System.Nullable<int> سعر_البيع, 
                     string كود_المادة, 
-                    string طريقة_حساب_الكلفة) {
+                    string طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> فرق_القيمة) {
             if ((اسم_المادة == null)) {
                 throw new global::System.ArgumentNullException("اسم_المادة");
             }
@@ -12990,6 +13095,12 @@ WHERE        (material.كود_المادة = @code)";
             else {
                 this.Adapter.InsertCommand.Parameters[17].Value = ((string)(طريقة_حساب_الكلفة));
             }
+            if ((فرق_القيمة.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((int)(فرق_القيمة.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13029,6 +13140,7 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> سعر_البيع, 
                     string كود_المادة, 
                     string طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> فرق_القيمة, 
                     int Original_الرقم_الفني, 
                     string Original_اسم_المادة, 
                     string Original_تواجد_المادة, 
@@ -13047,6 +13159,7 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> Original_سعر_البيع, 
                     string Original_كود_المادة, 
                     string Original_طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> Original_فرق_القيمة, 
                     int الرقم_الفني) {
             if ((اسم_المادة == null)) {
                 throw new global::System.ArgumentNullException("اسم_المادة");
@@ -13146,126 +13259,140 @@ WHERE        (material.كود_المادة = @code)";
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(طريقة_حساب_الكلفة));
             }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_الرقم_الفني));
+            if ((فرق_القيمة.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(فرق_القيمة.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_الرقم_الفني));
             if ((Original_اسم_المادة == null)) {
                 throw new global::System.ArgumentNullException("Original_اسم_المادة");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_اسم_المادة));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_اسم_المادة));
             }
             if ((Original_تواجد_المادة == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_تواجد_المادة));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_تواجد_المادة));
             }
             if ((Original_الوحدة == null)) {
                 throw new global::System.ArgumentNullException("Original_الوحدة");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_الوحدة));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_الوحدة));
             }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_كمية));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((double)(Original_سعر));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_كمية));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_سعر));
             if ((Original_رمز_الطراز == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_رمز_الطراز));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_رمز_الطراز));
             }
             if ((Original_المجموعة.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_المجموعة.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_المجموعة.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             if ((Original_الصانع.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_الصانع.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_الصانع.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_بالة == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_بالة));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_بالة));
             }
             if ((Original_المستودع.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_المستودع.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_المستودع.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_صورة == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_صورة));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_صورة));
             }
             if ((Original_فرق_السعر.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_فرق_السعر.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_فرق_السعر.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             if ((Original_فرق_الكمية.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_فرق_الكمية.Value));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_فرق_الكمية.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             if ((Original_سعر_الشراء.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_سعر_الشراء.Value));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_سعر_الشراء.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             if ((Original_سعر_البيع.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_سعر_البيع.Value));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_سعر_البيع.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             if ((Original_كود_المادة == null)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_كود_المادة));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_كود_المادة));
             }
             if ((Original_طريقة_حساب_الكلفة == null)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_طريقة_حساب_الكلفة));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_طريقة_حساب_الكلفة));
             }
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(الرقم_الفني));
+            if ((Original_فرق_القيمة.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_فرق_القيمة.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(الرقم_الفني));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13305,6 +13432,7 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> سعر_البيع, 
                     string كود_المادة, 
                     string طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> فرق_القيمة, 
                     int Original_الرقم_الفني, 
                     string Original_اسم_المادة, 
                     string Original_تواجد_المادة, 
@@ -13322,15 +13450,16 @@ WHERE        (material.كود_المادة = @code)";
                     global::System.Nullable<int> Original_سعر_الشراء, 
                     global::System.Nullable<int> Original_سعر_البيع, 
                     string Original_كود_المادة, 
-                    string Original_طريقة_حساب_الكلفة) {
-            return this.Update(اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سعر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة, Original_الرقم_الفني, Original_اسم_المادة, Original_تواجد_المادة, Original_الوحدة, Original_كمية, Original_سعر, Original_رمز_الطراز, Original_المجموعة, Original_الصانع, Original_بالة, Original_المستودع, Original_صورة, Original_فرق_السعر, Original_فرق_الكمية, Original_سعر_الشراء, Original_سعر_البيع, Original_كود_المادة, Original_طريقة_حساب_الكلفة, Original_الرقم_الفني);
+                    string Original_طريقة_حساب_الكلفة, 
+                    global::System.Nullable<int> Original_فرق_القيمة) {
+            return this.Update(اسم_المادة, تواجد_المادة, الوحدة, كمية, سعر, رمز_الطراز, المجموعة, الصانع, بالة, المستودع, وصف_المادة, صورة, فرق_السعر, فرق_الكمية, سعر_الشراء, سعر_البيع, كود_المادة, طريقة_حساب_الكلفة, فرق_القيمة, Original_الرقم_الفني, Original_اسم_المادة, Original_تواجد_المادة, Original_الوحدة, Original_كمية, Original_سعر, Original_رمز_الطراز, Original_المجموعة, Original_الصانع, Original_بالة, Original_المستودع, Original_صورة, Original_فرق_السعر, Original_فرق_الكمية, Original_سعر_الشراء, Original_سعر_البيع, Original_كود_المادة, Original_طريقة_حساب_الكلفة, Original_فرق_القيمة, Original_الرقم_الفني);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> getMaxId() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13359,7 +13488,7 @@ WHERE        (material.كود_المادة = @code)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateBuyPrice(global::System.Nullable<int> price, int id) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
             if ((price.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(price.Value));
             }
@@ -13389,7 +13518,7 @@ WHERE        (material.كود_المادة = @code)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateMaterialQuantity(int كمية, int id) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
             command.Parameters[0].Value = ((int)(كمية));
             command.Parameters[1].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
@@ -13414,7 +13543,7 @@ WHERE        (material.كود_المادة = @code)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateSalePrice(global::System.Nullable<int> price, int id) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[12];
             if ((price.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(price.Value));
             }

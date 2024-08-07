@@ -53,8 +53,12 @@ namespace Program
         {
             try
             {
-                ConfigForm nc = new ConfigForm();
-                nc.ShowDialog();
+                if (!Connect.TestConnection())
+                {
+                    ConfigForm nc = new ConfigForm();
+                    nc.ShowDialog();
+                }
+               
             }
             catch (Exception ex)
             {

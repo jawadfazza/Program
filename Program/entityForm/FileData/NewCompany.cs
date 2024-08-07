@@ -37,8 +37,7 @@ namespace Program
         {
             try
             {
-                Connect c = new Connect();
-                if (c.TestConnection() == false)
+                if (Connect.TestConnection() == false)
                 {
                     if (MessageBox.Show("?هل ترغب بإستعادة النسخة الإحتياطية من قاعدة البيانات", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                     {

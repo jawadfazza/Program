@@ -298,7 +298,7 @@ namespace Program.entityForm.File
                                 m.سعر_الشراء,
                                 m.سعر_البيع,
                                 m.كود_المادة ,
-                                m.طريقة_حساب_الكلفة);
+                                m.طريقة_حساب_الكلفة,0);
                             //   richTextBoxStatus.AppendText("row number :" + rowNumber + "  \n");
 
                             richTextBoxStatus.AppendText("row number :" + rowNumber + "  \n");

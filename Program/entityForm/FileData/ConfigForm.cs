@@ -70,7 +70,21 @@ namespace ConfigUpdater
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            LoadSelectedConfiguration();
+            try
+            {
+                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var connectionString = $"Data Source={txtDataSource.Text};Initial Catalog={txtInitialCatalog.Text};User ID={txtUserID.Text};Password={txtPassword.Text};Encrypt={chkEncrypt.Checked};TrustServerCertificate={chkTrustServerCertificate.Checked};";
+
+                config.ConnectionStrings.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString = connectionString;
+                config.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection("connectionStrings");
+
+                MessageBox.Show("Configuration saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving configuration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             this.Close();
         }
 
