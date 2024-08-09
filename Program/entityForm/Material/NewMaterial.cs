@@ -117,8 +117,8 @@ namespace Program.entityForm
         {
             try
             {
-                int globalIndex = (currentPage - 1) * pageSize + dataGridViewMaterial.CurrentRow.Index;
-                materialRow = originalDataTable.Rows[globalIndex];
+
+                materialRow = originalDataTable.Rows[dataGridViewMaterial.CurrentRow.Index];
                 setMaterialValue(materialRow);
             }
             catch (Exception ex)
@@ -130,21 +130,7 @@ namespace Program.entityForm
 
         private void cbSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (cbSearchType.Text == "اسم المادة")
-                {
-                    getMaterialNameAutocomplete();
-                }
-                if (cbSearchType.Text == "كود المادة")
-                {
-                    getMaterialCodeAutocomplete();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error : " + ex.Message);
-            }
+           
         }
 
         private void bGroup_Click(object sender, EventArgs e)
@@ -273,33 +259,17 @@ namespace Program.entityForm
         {
             try
             {
-                IEnumerable<DataRow> filteredRows = null;
 
                 if (cbSearchType.Text == "اسم المادة")
                 {
-                    filteredRows = originalDataTable.AsEnumerable()
-                                                    .Where(row => row.Field<string>("اسم_المادة")
-                                                    .Contains(txtSearchMaterial.Text));
+                    LoadDataByNameOrCode(txtSearchMaterial.Text,null);
                 }
                 else if (cbSearchType.Text == "كود المادة")
                 {
-                    filteredRows = originalDataTable.AsEnumerable()
-                                                    .Where(row => row.Field<string>("كود_المادة")
-                                                    .Contains(txtSearchMaterial.Text));
+                    LoadDataByNameOrCode(null, txtSearchMaterial.Text);
                 }
 
-                if (filteredRows != null)
-                {
-                    var filteredTable = filteredRows.CopyToDataTable();
-                    dataGridViewMaterial.DataSource = filteredTable;
-                    int count = dataGridViewMaterial.Rows.Count;
-                    TableStyle(count);
-
-                    if (count > 0)
-                    {
-                        setMaterialValue(filteredTable.Rows[0]);
-                    }
-                }
+              
             }
             catch (Exception ex)
             {
@@ -309,6 +279,14 @@ namespace Program.entityForm
         #endregion
 
         #region Data Loading and Binding
+        private void UpdateNavigationButtons()
+        {
+            // Disable the Previous button if it's the first page
+            btnPrevious.Enabled = currentPage > 1;
+
+            // Disable the Next button if it's the last page
+            btnNext.Enabled = currentPage < GetTotalPages();
+        }
 
         private void LoadData()
         {
@@ -345,9 +323,51 @@ namespace Program.entityForm
                                  }).Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
 
                 // Convert to DataTable
-                DataTable dataTable = ConvertToDataTable(materials);
-                dataGridViewMaterial.DataSource = dataTable;
-                TableStyle(dataTable.Rows.Count);
+                originalDataTable = ConvertToDataTable(materials);
+                dataGridViewMaterial.DataSource = originalDataTable;
+                TableStyle(originalDataTable.Rows.Count);
+                UpdatePageLabel();
+            }
+        }
+
+        private void LoadDataByNameOrCode(string name=null , string code=null)
+        {
+            using (var context = new AccountingEntities())
+            {
+
+                var materials = (from material1 in context.material
+                                 join group1 in context.material_group on material1.المجموعة equals group1.رقم_المجموعة
+                                 join producer1 in context.producer on material1.الصانع equals producer1.رقم_الصانع
+                                 join warehouse1 in context.WareHouse on material1.المستودع equals warehouse1.رقم_المستودع
+                                 orderby material1.الرقم_الفني
+                                 select new
+                                 {
+                                     الرقم_الفني = material1.الرقم_الفني,
+                                     اسم_المادة = material1.اسم_المادة,
+                                     تواجد_المادة = material1.تواجد_المادة,
+                                     الوحدة = material1.الوحدة,
+                                     كمية = material1.كمية,
+                                     سعر = material1.سعر,
+                                     رمز_الطراز = material1.رمز_الطراز,
+                                     بالة = material1.بالة,
+                                     اسم_المجموعة = group1.اسم_المجموعة,
+                                     اسم_الصانع = producer1.اسم_الصانع,
+                                     اسم_المستودع = warehouse1.اسم_المستودع,
+                                     وصف_المادة = material1.وصف_المادة,
+                                     صورة = material1.صورة,
+                                     سعر_الشراء = material1.سعر_الشراء,
+                                     سعر_البيع = material1.سعر_البيع,
+                                     كود_المادة = material1.كود_المادة,
+                                     طريقة_حساب_الكلفة = material1.طريقة_حساب_الكلفة,
+                                     رقم_الصانع = producer1.رقم_الصانع,
+                                     رقم_المجموعة = group1.رقم_المجموعة,
+                                     رقم_المستودع = warehouse1.رقم_المستودع
+                                 }).Where(x=>x.اسم_المادة.Contains(name) || x.كود_المادة.Contains(code)).ToList();
+
+                // Convert to DataTable
+                originalDataTable = ConvertToDataTable(materials);
+                dataGridViewMaterial.DataSource = originalDataTable;
+                TableStyle(originalDataTable.Rows.Count);
                 UpdatePageLabel();
             }
         }
@@ -385,7 +405,11 @@ namespace Program.entityForm
 
         private int GetTotalPages()
         {
-            return (int)Math.Ceiling(originalDataTable.Rows.Count / (double)pageSize);
+            using (var context = new AccountingEntities())
+            {
+
+                return (int)Math.Ceiling(context.material.Count() / (double)pageSize);
+            }
         }
 
         #endregion
@@ -854,6 +878,40 @@ namespace Program.entityForm
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void cbSearchType_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSearchType.Text == "اسم المادة")
+                {
+                    getMaterialNameAutocomplete();
+                }
+                if (cbSearchType.Text == "كود المادة")
+                {
+                    getMaterialCodeAutocomplete();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error : " + ex.Message);
+            }
+        }
+
+        private void dataGridViewMaterial_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                materialRow = originalDataTable.Rows[dataGridViewMaterial.CurrentRow.Index];
+                setMaterialValue(materialRow);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception appropriately
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }

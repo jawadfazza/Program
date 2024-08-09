@@ -91,9 +91,9 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtSearchMaterial = new System.Windows.Forms.ToolStripComboBox();
             this.bRefreshTable = new System.Windows.Forms.ToolStripButton();
-            this.bNext = new System.Windows.Forms.ToolStripButton();
+            this.btnNext = new System.Windows.Forms.ToolStripButton();
             this.lblPage = new System.Windows.Forms.ToolStripTextBox();
-            this.pPrevious = new System.Windows.Forms.ToolStripButton();
+            this.btnPrevious = new System.Windows.Forms.ToolStripButton();
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -133,7 +133,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1311, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // newToolStripButton
             // 
@@ -202,8 +201,8 @@
             this.dataGridViewMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewMaterial.Size = new System.Drawing.Size(893, 811);
             this.dataGridViewMaterial.TabIndex = 0;
+            this.dataGridViewMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMaterial_CellDoubleClick);
             this.dataGridViewMaterial.SelectionChanged += new System.EventHandler(this.dataGridViewMaterial_Click);
-            this.dataGridViewMaterial.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridViewMaterial_KeyUp);
             // 
             // errorProvider2
             // 
@@ -705,9 +704,9 @@
             this.toolStripLabel1,
             this.txtSearchMaterial,
             this.bRefreshTable,
-            this.bNext,
+            this.btnNext,
             this.lblPage,
-            this.pPrevious});
+            this.btnPrevious});
             this.toolStrip2.Location = new System.Drawing.Point(3, 19);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(893, 25);
@@ -724,13 +723,11 @@
             // 
             this.cbSearchType.Items.AddRange(new object[] {
             "اسم المادة",
-            "كود المادة",
-            "اسم المادة",
             "كود المادة"});
             this.cbSearchType.Name = "cbSearchType";
             this.cbSearchType.Size = new System.Drawing.Size(121, 25);
             this.cbSearchType.Text = "اسم المادة";
-            this.cbSearchType.Click += new System.EventHandler(this.cbSearchType_SelectedIndexChanged);
+            this.cbSearchType.TextChanged += new System.EventHandler(this.cbSearchType_TextChanged);
             // 
             // toolStripLabel1
             // 
@@ -756,15 +753,14 @@
             this.bRefreshTable.Text = "تحديث المواد";
             this.bRefreshTable.Click += new System.EventHandler(this.bRefreshTable_Click);
             // 
-            // bNext
+            // btnNext
             // 
-            this.bNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bNext.Image = global::Program.Properties.Resources._1354380474_resultset_last;
-            this.bNext.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(23, 22);
-            this.bNext.Text = "Next";
-            this.bNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnNext.Image = global::Program.Properties.Resources._1354380474_resultset_last;
+            this.btnNext.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(55, 22);
+            this.btnNext.Text = "التالي";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblPage
             // 
@@ -774,15 +770,15 @@
             this.lblPage.Size = new System.Drawing.Size(75, 25);
             this.lblPage.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pPrevious
+            // btnPrevious
             // 
-            this.pPrevious.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pPrevious.Image = global::Program.Properties.Resources._1354380473_resultset_first;
-            this.pPrevious.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pPrevious.Name = "pPrevious";
-            this.pPrevious.Size = new System.Drawing.Size(23, 22);
-            this.pPrevious.Text = "Previous";
-            this.pPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            this.btnPrevious.Image = global::Program.Properties.Resources._1354380473_resultset_first;
+            this.btnPrevious.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(60, 22);
+            this.btnPrevious.Text = "السابق";
+            this.btnPrevious.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // errorProvider3
             // 
@@ -851,9 +847,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox txtSearchMaterial;
         private System.Windows.Forms.ToolStripButton bRefreshTable;
-        private System.Windows.Forms.ToolStripButton bNext;
+        private System.Windows.Forms.ToolStripButton btnNext;
         private System.Windows.Forms.ToolStripTextBox lblPage;
-        private System.Windows.Forms.ToolStripButton pPrevious;
+        private System.Windows.Forms.ToolStripButton btnPrevious;
         private System.Windows.Forms.DataGridView dataGridViewMaterial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

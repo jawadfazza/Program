@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.EntityClient;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
@@ -22,30 +23,49 @@ namespace ConfigUpdater
         {
             try
             {
-                var settings = ConfigurationManager.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString;
-                var connectionStringParts = settings.Split(';')
-                    .Select(part => part.Split('='))
-                    .Where(split => split.Length == 2)
-                    .ToDictionary(split => split[0].Trim(), split => split[1].Trim());
+                // Load standard SQL connection string
+                var standardSettings = ConfigurationManager.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString;
+                SetConnectionStringComponents(standardSettings, isEF: false);
 
-                if (connectionStringParts.ContainsKey("Data Source"))
-                    txtDataSource.Text = connectionStringParts["Data Source"];
-                if (connectionStringParts.ContainsKey("Initial Catalog"))
-                    txtInitialCatalog.Text = connectionStringParts["Initial Catalog"];
-                if (connectionStringParts.ContainsKey("User ID"))
-                    txtUserID.Text = connectionStringParts["User ID"];
-                if (connectionStringParts.ContainsKey("Password"))
-                    txtPassword.Text = connectionStringParts["Password"];
-                if (connectionStringParts.ContainsKey("Encrypt"))
-                    chkEncrypt.Checked = bool.Parse(connectionStringParts["Encrypt"]);
-                if (connectionStringParts.ContainsKey("TrustServerCertificate"))
-                    chkTrustServerCertificate.Checked = bool.Parse(connectionStringParts["TrustServerCertificate"]);
+                // Load Entity Framework connection string
+                var efSettings = ConfigurationManager.ConnectionStrings["AccountingEntities"].ConnectionString;
+                SetConnectionStringComponents(efSettings, isEF: true);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading current configuration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SetConnectionStringComponents(string connectionString, bool isEF)
+        {
+            if (isEF)
+            {
+                // Extract the inner SQL connection string for Entity Framework
+                var efBuilder = new EntityConnectionStringBuilder(connectionString);
+                connectionString = efBuilder.ProviderConnectionString;
+            }
+
+            var connectionStringParts = connectionString.Split(';')
+                .Select(part => part.Split('='))
+                .Where(split => split.Length == 2)
+                .ToDictionary(split => split[0].Trim(), split => split[1].Trim());
+
+            // Set connection string components to UI
+            if (connectionStringParts.ContainsKey("Data Source"))
+                txtDataSource.Text = connectionStringParts["Data Source"];
+            if (connectionStringParts.ContainsKey("Initial Catalog"))
+                txtInitialCatalog.Text = connectionStringParts["Initial Catalog"];
+            if (connectionStringParts.ContainsKey("User ID"))
+                txtUserID.Text = connectionStringParts["User ID"];
+            if (connectionStringParts.ContainsKey("Password"))
+                txtPassword.Text = connectionStringParts["Password"];
+            if (connectionStringParts.ContainsKey("Encrypt"))
+                chkEncrypt.Checked = bool.Parse(connectionStringParts["Encrypt"]);
+            if (connectionStringParts.ContainsKey("TrustServerCertificate"))
+                chkTrustServerCertificate.Checked = bool.Parse(connectionStringParts["TrustServerCertificate"]);
+        }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -54,9 +74,15 @@ namespace ConfigUpdater
             try
             {
                 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var connectionString = $"Data Source={txtDataSource.Text};Initial Catalog={txtInitialCatalog.Text};User ID={txtUserID.Text};Password={txtPassword.Text};Encrypt={chkEncrypt.Checked};TrustServerCertificate={chkTrustServerCertificate.Checked};";
+                var standardConnectionString = $"Data Source={txtDataSource.Text};Initial Catalog={txtInitialCatalog.Text};User ID={txtUserID.Text};Password={txtPassword.Text};Encrypt={chkEncrypt.Checked};TrustServerCertificate={chkTrustServerCertificate.Checked};";
+                var efConnectionString = $"metadata=res://*/entity.Model.csdl|res://*/entity.Model.ssdl|res://*/entity.Model.msl;provider=System.Data.SqlClient;provider connection string=\"data source={txtDataSource.Text};initial catalog={txtInitialCatalog.Text};persist security info=True;user id={txtUserID.Text};password={txtPassword.Text};encrypt={chkEncrypt.Checked};trustservercertificate={chkTrustServerCertificate.Checked};MultipleActiveResultSets=True;App=EntityFramework\"";
 
-                config.ConnectionStrings.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString = connectionString;
+                // Update standard connection string
+                config.ConnectionStrings.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString = standardConnectionString;
+
+                // Update Entity Framework connection string
+                config.ConnectionStrings.ConnectionStrings["AccountingEntities"].ConnectionString = efConnectionString;
+
                 config.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection("connectionStrings");
 
@@ -67,6 +93,7 @@ namespace ConfigUpdater
                 MessageBox.Show($"Error saving configuration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
