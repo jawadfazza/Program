@@ -27,10 +27,10 @@ namespace Program.entity
         public System.DateTime تاريخ { get; set; }
         public string نوع_الأصل { get; set; }
         public Nullable<int> نسبة_الأهتلاك { get; set; }
-        public Nullable<int> قيمة_النفاية { get; set; }
-        public Nullable<int> مجمع_الإهتلاك { get; set; }
         public string نوع_الاصل { get; set; }
         public Nullable<int> نسبة_الاهتلاك { get; set; }
+        public Nullable<int> قيمة_النفاية { get; set; }
+        public Nullable<int> مجمع_الإهتلاك { get; set; }
     
         public virtual ICollection<asset_credit> asset_credit { get; set; }
         public virtual ICollection<asset_debit> asset_debit { get; set; }

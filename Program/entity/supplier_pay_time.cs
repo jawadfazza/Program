@@ -12,12 +12,16 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class supplier_pay_time
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int الرقم { get; set; }
+        public double الرصيد { get; set; }
+        public string الرصيد_كتابة { get; set; }
+        public string ملاحظات { get; set; }
+        public Nullable<System.DateTime> تاريخ { get; set; }
+        public Nullable<int> supplier_id { get; set; }
+        public string تم_الدفع { get; set; }
+    
+        public virtual supplier supplier { get; set; }
     }
 }

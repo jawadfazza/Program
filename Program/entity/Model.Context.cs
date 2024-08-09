@@ -13,10 +13,10 @@ namespace Program.entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WarehouseServerEntities : DbContext
+    public partial class AccountingEntities : DbContext
     {
-        public WarehouseServerEntities()
-            : base("name=WarehouseServerEntities")
+        public AccountingEntities()
+            : base("name=AccountingEntities")
         {
         }
     
@@ -25,7 +25,6 @@ namespace Program.entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<material> material { get; set; }
         public DbSet<admin_> admin_ { get; set; }
         public DbSet<asset> asset { get; set; }
         public DbSet<asset_credit> asset_credit { get; set; }
@@ -43,33 +42,18 @@ namespace Program.entity
         public DbSet<customer> customer { get; set; }
         public DbSet<customer_credit> customer_credit { get; set; }
         public DbSet<customer_debit> customer_debit { get; set; }
-        public DbSet<customer_ReveiveTime> customer_ReveiveTime { get; set; }
+        public DbSet<customer_receive_time> customer_receive_time { get; set; }
         public DbSet<error> error { get; set; }
         public DbSet<liability> liability { get; set; }
         public DbSet<liability_credit> liability_credit { get; set; }
         public DbSet<liability_debit> liability_debit { get; set; }
-        public DbSet<material_cost> material_cost { get; set; }
+        public DbSet<material> material { get; set; }
         public DbSet<material_credit> material_credit { get; set; }
-        public DbSet<material_credit_list> material_credit_list { get; set; }
-        public DbSet<material_credit_list_old> material_credit_list_old { get; set; }
-        public DbSet<material_credit_list_return> material_credit_list_return { get; set; }
-        public DbSet<material_credit_list_return_old> material_credit_list_return_old { get; set; }
-        public DbSet<material_credit_old> material_credit_old { get; set; }
-        public DbSet<material_credit_penfit_payment> material_credit_penfit_payment { get; set; }
         public DbSet<material_credit_return> material_credit_return { get; set; }
-        public DbSet<material_credit_return_old> material_credit_return_old { get; set; }
         public DbSet<material_debit> material_debit { get; set; }
-        public DbSet<material_debit_list> material_debit_list { get; set; }
-        public DbSet<material_debit_list_old> material_debit_list_old { get; set; }
-        public DbSet<material_debit_list_return> material_debit_list_return { get; set; }
-        public DbSet<material_debit_list_return_old> material_debit_list_return_old { get; set; }
-        public DbSet<material_debit_old> material_debit_old { get; set; }
-        public DbSet<material_debit_penfit_payment> material_debit_penfit_payment { get; set; }
         public DbSet<material_debit_return> material_debit_return { get; set; }
-        public DbSet<material_debit_return_old> material_debit_return_old { get; set; }
         public DbSet<material_group> material_group { get; set; }
         public DbSet<material_maker> material_maker { get; set; }
-        public DbSet<material_maker_list> material_maker_list { get; set; }
         public DbSet<materialMaker_credit> materialMaker_credit { get; set; }
         public DbSet<materialMaker_credit_list> materialMaker_credit_list { get; set; }
         public DbSet<paper_pay> paper_pay { get; set; }
@@ -82,12 +66,18 @@ namespace Program.entity
         public DbSet<supplier> supplier { get; set; }
         public DbSet<supplier_credit> supplier_credit { get; set; }
         public DbSet<supplier_debit> supplier_debit { get; set; }
-        public DbSet<supplier_PayTime> supplier_PayTime { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public DbSet<supplier_pay_time> supplier_pay_time { get; set; }
         public DbSet<task> task { get; set; }
         public DbSet<user_loge> user_loge { get; set; }
         public DbSet<user_loge_date> user_loge_date { get; set; }
         public DbSet<user_task> user_task { get; set; }
         public DbSet<WareHouse> WareHouse { get; set; }
+        public DbSet<material_cost> material_cost { get; set; }
+        public DbSet<material_credit_list> material_credit_list { get; set; }
+        public DbSet<material_credit_list_return> material_credit_list_return { get; set; }
+        public DbSet<material_credit_penfit_payment> material_credit_penfit_payment { get; set; }
+        public DbSet<material_debit_list> material_debit_list { get; set; }
+        public DbSet<material_debit_list_return> material_debit_list_return { get; set; }
+        public DbSet<material_debit_penfit_payment> material_debit_penfit_payment { get; set; }
     }
 }

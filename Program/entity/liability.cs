@@ -16,8 +16,8 @@ namespace Program.entity
     {
         public liability()
         {
-            this.liability_debit = new HashSet<liability_debit>();
             this.liability_credit = new HashSet<liability_credit>();
+            this.liability_debit = new HashSet<liability_debit>();
         }
     
         public int الرقم { get; set; }
@@ -28,7 +28,7 @@ namespace Program.entity
         public string نوع_الإلتزام { get; set; }
         public Nullable<int> نسبة_الفائدة { get; set; }
     
-        public virtual ICollection<liability_debit> liability_debit { get; set; }
         public virtual ICollection<liability_credit> liability_credit { get; set; }
+        public virtual ICollection<liability_debit> liability_debit { get; set; }
     }
 }

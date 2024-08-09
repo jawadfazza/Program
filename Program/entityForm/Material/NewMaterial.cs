@@ -312,7 +312,7 @@ namespace Program.entityForm
 
         private void LoadData()
         {
-            using (var context = new WarehouseServerEntities())
+            using (var context = new AccountingEntities())
             {
 
                 var materials = (from material1 in context.material
@@ -850,5 +850,10 @@ namespace Program.entityForm
             materialRow = mdt.Rows[0];
         }
         #endregion
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

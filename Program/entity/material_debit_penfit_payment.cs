@@ -18,8 +18,6 @@ namespace Program.entity
         public int الفائدة { get; set; }
         public int نسبة_الفائدة { get; set; }
         public int الدفع_كل { get; set; }
-        public int عدد_الأقساط { get; set; }
-        public Nullable<int> الرعبون { get; set; }
         public int عدد_الاقساط { get; set; }
         public Nullable<int> العرابون { get; set; }
     

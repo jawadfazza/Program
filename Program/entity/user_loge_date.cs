@@ -16,8 +16,8 @@ namespace Program.entity
     {
         public int id { get; set; }
         public System.DateTime loge_date_in { get; set; }
-        public int user_id_ { get; set; }
         public Nullable<System.DateTime> loge_date_out { get; set; }
+        public int user_id_ { get; set; }
     
         public virtual user_loge user_loge { get; set; }
     }

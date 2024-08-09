@@ -12,16 +12,16 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class supplier_PayTime
+    public partial class customer_receive_time
     {
         public int الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
-        public string ملاحطات { get; set; }
+        public string ملاحظات { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> Supplier_id { get; set; }
+        public Nullable<int> customer_id { get; set; }
         public string تم_الدفع { get; set; }
     
-        public virtual supplier supplier { get; set; }
+        public virtual customer customer { get; set; }
     }
 }

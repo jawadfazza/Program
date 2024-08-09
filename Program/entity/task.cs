@@ -15,7 +15,6 @@ namespace Program.entity
     public partial class task
     {
         public int id { get; set; }
-        public string opreation { get; set; }
         public string operation { get; set; }
     }
 }

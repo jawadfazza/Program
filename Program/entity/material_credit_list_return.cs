@@ -18,17 +18,13 @@ namespace Program.entity
         public int رقم_التقرير { get; set; }
         public string اسم_المادة { get; set; }
         public string الوحدة { get; set; }
-        public int الكمية { get; set; }
-        public double السعر { get; set; }
-        public double السعر_الجمالي { get; set; }
+        public int كمية { get; set; }
+        public double سعر { get; set; }
+        public double سعر_اجمالي { get; set; }
         public string ملاحظات { get; set; }
         public Nullable<int> المستودع { get; set; }
         public string الكمية_كتابة { get; set; }
         public string حذفة { get; set; }
-        public Nullable<double> حسم_ممنوح { get; set; }
-        public int كمية { get; set; }
-        public double سعر { get; set; }
-        public double سعر_اجمالي { get; set; }
         public string اسم_ممنوح { get; set; }
     
         public virtual material material { get; set; }

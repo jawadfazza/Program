@@ -17,13 +17,11 @@ namespace Program.entity
         public supplier()
         {
             this.material_credit_return = new HashSet<material_credit_return>();
-            this.material_credit_return_old = new HashSet<material_credit_return_old>();
             this.material_debit = new HashSet<material_debit>();
-            this.material_debit_old = new HashSet<material_debit_old>();
-            this.supplier_debit = new HashSet<supplier_debit>();
-            this.supplier_credit = new HashSet<supplier_credit>();
-            this.supplier_PayTime = new HashSet<supplier_PayTime>();
             this.material_debit_return = new HashSet<material_debit_return>();
+            this.supplier_credit = new HashSet<supplier_credit>();
+            this.supplier_debit = new HashSet<supplier_debit>();
+            this.supplier_pay_time = new HashSet<supplier_pay_time>();
         }
     
         public int الرقم { get; set; }
@@ -40,12 +38,10 @@ namespace Program.entity
         public string صورة { get; set; }
     
         public virtual ICollection<material_credit_return> material_credit_return { get; set; }
-        public virtual ICollection<material_credit_return_old> material_credit_return_old { get; set; }
         public virtual ICollection<material_debit> material_debit { get; set; }
-        public virtual ICollection<material_debit_old> material_debit_old { get; set; }
-        public virtual ICollection<supplier_debit> supplier_debit { get; set; }
-        public virtual ICollection<supplier_credit> supplier_credit { get; set; }
-        public virtual ICollection<supplier_PayTime> supplier_PayTime { get; set; }
         public virtual ICollection<material_debit_return> material_debit_return { get; set; }
+        public virtual ICollection<supplier_credit> supplier_credit { get; set; }
+        public virtual ICollection<supplier_debit> supplier_debit { get; set; }
+        public virtual ICollection<supplier_pay_time> supplier_pay_time { get; set; }
     }
 }

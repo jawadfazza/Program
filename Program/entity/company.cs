@@ -24,7 +24,6 @@ namespace Program.entity
         public string web_site { get; set; }
         public byte[] logo { get; set; }
         public string active { get; set; }
-        public Nullable<System.DateTime> Block_Date { get; set; }
-        public Nullable<System.DateTime> block_Date1 { get; set; }
+        public Nullable<System.DateTime> block_Date { get; set; }
     }
 }

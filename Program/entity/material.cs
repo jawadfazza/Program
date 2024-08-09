@@ -17,15 +17,10 @@ namespace Program.entity
         public material()
         {
             this.material_cost = new HashSet<material_cost>();
-            this.material_debit_list_old = new HashSet<material_debit_list_old>();
-            this.material_debit_list_return_old = new HashSet<material_debit_list_return_old>();
-            this.material_credit_list_old = new HashSet<material_credit_list_old>();
-            this.material_debit_list_return = new HashSet<material_debit_list_return>();
-            this.material_credit_list_return_old = new HashSet<material_credit_list_return_old>();
             this.material_credit_list = new HashSet<material_credit_list>();
             this.material_credit_list_return = new HashSet<material_credit_list_return>();
-            this.material_maker_list = new HashSet<material_maker_list>();
             this.material_debit_list = new HashSet<material_debit_list>();
+            this.material_debit_list_return = new HashSet<material_debit_list_return>();
             this.materialMaker_credit_list = new HashSet<materialMaker_credit_list>();
         }
     
@@ -38,8 +33,8 @@ namespace Program.entity
         public string رمز_الطراز { get; set; }
         public Nullable<int> المجموعة { get; set; }
         public Nullable<int> الصانع { get; set; }
-        public Nullable<int> المستودع { get; set; }
         public string بالة { get; set; }
+        public Nullable<int> المستودع { get; set; }
         public string وصف_المادة { get; set; }
         public string صورة { get; set; }
         public Nullable<int> فرق_السعر { get; set; }
@@ -47,19 +42,14 @@ namespace Program.entity
         public Nullable<int> سعر_الشراء { get; set; }
         public Nullable<int> سعر_البيع { get; set; }
         public string كود_المادة { get; set; }
-        public string طريقة_حساب_الكلفة { get; set; }
         public Nullable<int> فرق_القيمة { get; set; }
+        public string طريقة_حساب_الكلفة { get; set; }
     
         public virtual ICollection<material_cost> material_cost { get; set; }
-        public virtual ICollection<material_debit_list_old> material_debit_list_old { get; set; }
-        public virtual ICollection<material_debit_list_return_old> material_debit_list_return_old { get; set; }
-        public virtual ICollection<material_credit_list_old> material_credit_list_old { get; set; }
-        public virtual ICollection<material_debit_list_return> material_debit_list_return { get; set; }
-        public virtual ICollection<material_credit_list_return_old> material_credit_list_return_old { get; set; }
         public virtual ICollection<material_credit_list> material_credit_list { get; set; }
         public virtual ICollection<material_credit_list_return> material_credit_list_return { get; set; }
-        public virtual ICollection<material_maker_list> material_maker_list { get; set; }
         public virtual ICollection<material_debit_list> material_debit_list { get; set; }
+        public virtual ICollection<material_debit_list_return> material_debit_list_return { get; set; }
         public virtual producer producer { get; set; }
         public virtual material_group material_group { get; set; }
         public virtual WareHouse WareHouse { get; set; }

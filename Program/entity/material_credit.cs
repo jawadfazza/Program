@@ -37,13 +37,12 @@ namespace Program.entity
         public string مصاريف_على_حساب { get; set; }
         public string مرحل { get; set; }
         public string اسم_الحساب { get; set; }
+        public string اسم_ممنوح { get; set; }
         public Nullable<int> سند_القبض { get; set; }
         public Nullable<int> الفائدة { get; set; }
         public Nullable<int> الدفع_كل { get; set; }
-        public Nullable<int> عدد_الأقساط { get; set; }
-        public Nullable<double> الكلفة { get; set; }
-        public string اسم_ممنوح { get; set; }
         public Nullable<int> عدد_الاقساط { get; set; }
+        public Nullable<double> الكلفة { get; set; }
     
         public virtual customer customer { get; set; }
         public virtual ICollection<material_credit_list> material_credit_list { get; set; }

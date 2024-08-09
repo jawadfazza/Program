@@ -15,10 +15,9 @@ namespace Program.entity
     public partial class user_task
     {
         public int id { get; set; }
-        public string opreation { get; set; }
-        public string active_opreation { get; set; }
-        public int user_id_ { get; set; }
         public System.DateTime date { get; set; }
+        public string opreation { get; set; }
+        public int user_id_ { get; set; }
     
         public virtual user_loge user_loge { get; set; }
     }

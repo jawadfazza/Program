@@ -26,9 +26,9 @@ namespace Program.entity
         public string الكمية_كتابة { get; set; }
         public string حذفة { get; set; }
         public Nullable<double> حسم_ممنوح { get; set; }
+        public string اسم_ممنوح { get; set; }
         public Nullable<int> سعر_الشراء { get; set; }
         public Nullable<double> الكلفة { get; set; }
-        public string اسم_ممنوح { get; set; }
     
         public virtual material material { get; set; }
         public virtual material_credit material_credit { get; set; }

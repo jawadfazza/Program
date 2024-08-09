@@ -38,8 +38,8 @@ namespace Program.entity
         public string مرحل { get; set; }
         public string طريقة_الدفع { get; set; }
         public string اسم_الحساب { get; set; }
-        public Nullable<int> سند_الدفع { get; set; }
         public string اسم_مكتب { get; set; }
+        public Nullable<int> سند_الدفع { get; set; }
     
         public virtual supplier supplier { get; set; }
         public virtual ICollection<material_debit_list> material_debit_list { get; set; }

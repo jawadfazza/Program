@@ -14,11 +14,6 @@ namespace Program.entity
     
     public partial class material_maker
     {
-        public material_maker()
-        {
-            this.material_maker_list = new HashSet<material_maker_list>();
-        }
-    
         public int الرقم { get; set; }
         public string اسم_المادة { get; set; }
         public string الوحدة { get; set; }
@@ -31,6 +26,5 @@ namespace Program.entity
     
         public virtual material_group material_group { get; set; }
         public virtual WareHouse WareHouse { get; set; }
-        public virtual ICollection<material_maker_list> material_maker_list { get; set; }
     }
 }

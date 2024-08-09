@@ -17,15 +17,11 @@ namespace Program.entity
         public int الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
-        public string إلى { get; set; }
-        public string ملاحطات { get; set; }
-        public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> paper_receive_id { get; set; }
         public string الى { get; set; }
         public string ملاحظات { get; set; }
+        public Nullable<System.DateTime> تاريخ { get; set; }
         public Nullable<int> paper_pay_id { get; set; }
     
         public virtual paper_pay paper_pay { get; set; }
-        public virtual paper_pay paper_pay1 { get; set; }
     }
 }

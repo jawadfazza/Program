@@ -16,10 +16,8 @@ namespace Program.entity
     {
         public paper_pay()
         {
-            this.paper_pay_debit = new HashSet<paper_pay_debit>();
             this.paper_pay_credit = new HashSet<paper_pay_credit>();
-            this.paper_pay_credit1 = new HashSet<paper_pay_credit>();
-            this.paper_pay_debit1 = new HashSet<paper_pay_debit>();
+            this.paper_pay_debit = new HashSet<paper_pay_debit>();
         }
     
         public int الرقم { get; set; }
@@ -30,9 +28,7 @@ namespace Program.entity
         public string الساحب { get; set; }
         public string المسحوب_عليه { get; set; }
     
-        public virtual ICollection<paper_pay_debit> paper_pay_debit { get; set; }
         public virtual ICollection<paper_pay_credit> paper_pay_credit { get; set; }
-        public virtual ICollection<paper_pay_credit> paper_pay_credit1 { get; set; }
-        public virtual ICollection<paper_pay_debit> paper_pay_debit1 { get; set; }
+        public virtual ICollection<paper_pay_debit> paper_pay_debit { get; set; }
     }
 }

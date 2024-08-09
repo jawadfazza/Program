@@ -17,12 +17,10 @@ namespace Program.entity
         public int الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
-        public string إلى { get; set; }
-        public string ملاحطات { get; set; }
-        public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> liability_id { get; set; }
         public string الى { get; set; }
         public string ملاحظات { get; set; }
+        public Nullable<System.DateTime> تاريخ { get; set; }
+        public Nullable<int> liability_id { get; set; }
     
         public virtual liability liability { get; set; }
     }

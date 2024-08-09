@@ -16,12 +16,9 @@ namespace Program.entity
     {
         public customer()
         {
-            this.customer_debit = new HashSet<customer_debit>();
             this.customer_credit = new HashSet<customer_credit>();
-            this.customer_ReveiveTime = new HashSet<customer_ReveiveTime>();
-            this.material_debit_return_old = new HashSet<material_debit_return_old>();
-            this.material_credit_old = new HashSet<material_credit_old>();
-            this.material_debit_return = new HashSet<material_debit_return>();
+            this.customer_debit = new HashSet<customer_debit>();
+            this.customer_receive_time = new HashSet<customer_receive_time>();
             this.material_credit = new HashSet<material_credit>();
         }
     
@@ -38,12 +35,9 @@ namespace Program.entity
         public string وصف_الربون { get; set; }
         public string صورة { get; set; }
     
-        public virtual ICollection<customer_debit> customer_debit { get; set; }
         public virtual ICollection<customer_credit> customer_credit { get; set; }
-        public virtual ICollection<customer_ReveiveTime> customer_ReveiveTime { get; set; }
-        public virtual ICollection<material_debit_return_old> material_debit_return_old { get; set; }
-        public virtual ICollection<material_credit_old> material_credit_old { get; set; }
-        public virtual ICollection<material_debit_return> material_debit_return { get; set; }
+        public virtual ICollection<customer_debit> customer_debit { get; set; }
+        public virtual ICollection<customer_receive_time> customer_receive_time { get; set; }
         public virtual ICollection<material_credit> material_credit { get; set; }
     }
 }

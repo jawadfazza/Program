@@ -16,8 +16,8 @@ namespace Program.entity
     {
         public paper_receive()
         {
-            this.paper_receive_debit = new HashSet<paper_receive_debit>();
             this.paper_receive_credit = new HashSet<paper_receive_credit>();
+            this.paper_receive_debit = new HashSet<paper_receive_debit>();
         }
     
         public int الرقم { get; set; }
@@ -28,7 +28,7 @@ namespace Program.entity
         public string الساحب { get; set; }
         public string المسحوب_عليه { get; set; }
     
-        public virtual ICollection<paper_receive_debit> paper_receive_debit { get; set; }
         public virtual ICollection<paper_receive_credit> paper_receive_credit { get; set; }
+        public virtual ICollection<paper_receive_debit> paper_receive_debit { get; set; }
     }
 }
