@@ -41,3 +41,11 @@ namespace Program.entity.controllar.MaterialControllarTableAdapters
     {
     }
 }
+namespace Program.entity.controllar.MaterialControllarTableAdapters
+{
+
+
+    public partial class materialTableAdapter
+    {
+    }
+}

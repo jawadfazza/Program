@@ -44,21 +44,15 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pMaterialPicture = new System.Windows.Forms.PictureBox();
-            this.bSave = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.cbSearchType = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtSearchMaterial = new System.Windows.Forms.ToolStripComboBox();
-            this.bRefreshTable = new System.Windows.Forms.ToolStripButton();
-            this.bNext = new System.Windows.Forms.ToolStripButton();
-            this.lblPage = new System.Windows.Forms.ToolStripTextBox();
-            this.pPrevious = new System.Windows.Forms.ToolStripButton();
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtPriceSale = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtPriceBuy = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbTrash = new System.Windows.Forms.CheckBox();
             this.cbWayOut = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -86,31 +80,34 @@
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtPleace = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.cbTrash = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtPriceSale = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtPriceBuy = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pMaterialPicture = new System.Windows.Forms.PictureBox();
+            this.bSave = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.cbSearchType = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txtSearchMaterial = new System.Windows.Forms.ToolStripComboBox();
+            this.bRefreshTable = new System.Windows.Forms.ToolStripButton();
+            this.bNext = new System.Windows.Forms.ToolStripButton();
+            this.lblPage = new System.Windows.Forms.ToolStripTextBox();
+            this.pPrevious = new System.Windows.Forms.ToolStripButton();
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pMaterialPicture)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -202,7 +199,7 @@
             this.dataGridViewMaterial.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewMaterial.Name = "dataGridViewMaterial";
             this.dataGridViewMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMaterial.Size = new System.Drawing.Size(893, 809);
+            this.dataGridViewMaterial.Size = new System.Drawing.Size(893, 811);
             this.dataGridViewMaterial.TabIndex = 0;
             this.dataGridViewMaterial.SelectionChanged += new System.EventHandler(this.dataGridViewMaterial_Click);
             this.dataGridViewMaterial.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridViewMaterial_KeyUp);
@@ -241,140 +238,72 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "تفاصيل المادة";
             // 
-            // pMaterialPicture
+            // groupBox3
             // 
-            this.pMaterialPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pMaterialPicture.Image = global::Program.Properties.Resources._1353695710_materials;
-            this.pMaterialPicture.Location = new System.Drawing.Point(92, 675);
-            this.pMaterialPicture.Name = "pMaterialPicture";
-            this.pMaterialPicture.Size = new System.Drawing.Size(164, 138);
-            this.pMaterialPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pMaterialPicture.TabIndex = 83;
-            this.pMaterialPicture.TabStop = false;
+            this.groupBox3.Controls.Add(this.txtPriceSale);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtPrice);
+            this.groupBox3.Controls.Add(this.txtPriceBuy);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Location = new System.Drawing.Point(3, 485);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(406, 123);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "قائمة الأسعار البيع";
             // 
-            // bSave
+            // txtPriceSale
             // 
-            this.bSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bSave.Image = global::Program.Properties.Resources.document_save;
-            this.bSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bSave.Location = new System.Drawing.Point(32, 614);
-            this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(254, 40);
-            this.bSave.TabIndex = 77;
-            this.bSave.Text = "حفظ";
-            this.bSave.UseVisualStyleBackColor = true;
-            this.bSave.Click += new System.EventHandler(this.saveToolStripButton_Click);
+            this.txtPriceSale.Location = new System.Drawing.Point(73, 88);
+            this.txtPriceSale.Name = "txtPriceSale";
+            this.txtPriceSale.Size = new System.Drawing.Size(199, 27);
+            this.txtPriceSale.TabIndex = 7;
+            this.txtPriceSale.Text = "0";
             // 
-            // groupBox1
+            // label12
             // 
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.toolStrip2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 25);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(899, 858);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "قائمة المواد";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(288, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 19);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "سعر خاص";
             // 
-            // panel2
+            // txtPrice
             // 
-            this.panel2.Controls.Add(this.dataGridViewMaterial);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 46);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 809);
-            this.panel2.TabIndex = 2;
+            this.txtPrice.Location = new System.Drawing.Point(73, 55);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(199, 27);
+            this.txtPrice.TabIndex = 6;
+            this.txtPrice.Text = "0";
             // 
-            // toolStrip2
+            // txtPriceBuy
             // 
-            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel2,
-            this.cbSearchType,
-            this.toolStripLabel1,
-            this.txtSearchMaterial,
-            this.bRefreshTable,
-            this.bNext,
-            this.lblPage,
-            this.pPrevious});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 19);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(893, 27);
-            this.toolStrip2.TabIndex = 1;
-            this.toolStrip2.Text = "toolStrip2";
+            this.txtPriceBuy.Location = new System.Drawing.Point(74, 22);
+            this.txtPriceBuy.Name = "txtPriceBuy";
+            this.txtPriceBuy.Size = new System.Drawing.Size(199, 27);
+            this.txtPriceBuy.TabIndex = 5;
+            this.txtPriceBuy.Text = "0";
             // 
-            // toolStripLabel2
+            // label7
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(93, 24);
-            this.toolStripLabel2.Text = "البحث حسب :";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(288, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 19);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "سعر الشراء";
             // 
-            // cbSearchType
+            // label5
             // 
-            this.cbSearchType.Items.AddRange(new object[] {
-            "اسم المادة",
-            "كود المادة"});
-            this.cbSearchType.Name = "cbSearchType";
-            this.cbSearchType.Size = new System.Drawing.Size(121, 27);
-            this.cbSearchType.Text = "اسم المادة";
-            this.cbSearchType.Click += new System.EventHandler(this.cbSearchType_SelectedIndexChanged);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(93, 24);
-            this.toolStripLabel1.Text = "بحث عن مادة";
-            // 
-            // txtSearchMaterial
-            // 
-            this.txtSearchMaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtSearchMaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtSearchMaterial.Name = "txtSearchMaterial";
-            this.txtSearchMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSearchMaterial.Size = new System.Drawing.Size(250, 27);
-            this.txtSearchMaterial.TextChanged += new System.EventHandler(this.txtSearchMaterial_TextChanged);
-            // 
-            // bRefreshTable
-            // 
-            this.bRefreshTable.Image = global::Program.Properties.Resources._1353000626_adept_update;
-            this.bRefreshTable.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bRefreshTable.Name = "bRefreshTable";
-            this.bRefreshTable.Size = new System.Drawing.Size(112, 24);
-            this.bRefreshTable.Text = "تحديث المواد";
-            this.bRefreshTable.Click += new System.EventHandler(this.bRefreshTable_Click);
-            // 
-            // bNext
-            // 
-            this.bNext.Image = global::Program.Properties.Resources._1354380474_resultset_last;
-            this.bNext.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(60, 24);
-            this.bNext.Text = "Next";
-            this.bNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // lblPage
-            // 
-            this.lblPage.Enabled = false;
-            this.lblPage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(75, 27);
-            this.lblPage.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pPrevious
-            // 
-            this.pPrevious.Image = global::Program.Properties.Resources._1354380473_resultset_first;
-            this.pPrevious.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pPrevious.Name = "pPrevious";
-            this.pPrevious.Size = new System.Drawing.Size(84, 24);
-            this.pPrevious.Text = "Previous";
-            this.pPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
-            this.errorProvider3.RightToLeft = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(289, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "سعر البيع";
             // 
             // groupBox4
             // 
@@ -413,6 +342,17 @@
             this.groupBox4.Size = new System.Drawing.Size(406, 462);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
+            // 
+            // cbTrash
+            // 
+            this.cbTrash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTrash.AutoSize = true;
+            this.cbTrash.Location = new System.Drawing.Point(154, 425);
+            this.cbTrash.Name = "cbTrash";
+            this.cbTrash.Size = new System.Drawing.Size(131, 23);
+            this.cbTrash.TabIndex = 111;
+            this.cbTrash.Text = "هل المادة تالفة";
+            this.cbTrash.UseVisualStyleBackColor = true;
             // 
             // cbWayOut
             // 
@@ -693,91 +633,45 @@
             // 
             // txtName
             // 
+            this.txtName.AutoCompleteCustomSource.AddRange(new string[] {
+            "CustomSource"});
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtName.Location = new System.Drawing.Point(29, 23);
             this.txtName.Name = "txtName";
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtName.Size = new System.Drawing.Size(256, 27);
+            this.txtName.StateActive.Border.Color1 = System.Drawing.Color.Peru;
+            this.txtName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtName.StateActive.Border.Rounding = 6;
             this.txtName.TabIndex = 83;
+            this.txtName.Text = "اسم المادة";
             // 
-            // cbTrash
+            // pMaterialPicture
             // 
-            this.cbTrash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTrash.AutoSize = true;
-            this.cbTrash.Location = new System.Drawing.Point(154, 425);
-            this.cbTrash.Name = "cbTrash";
-            this.cbTrash.Size = new System.Drawing.Size(131, 23);
-            this.cbTrash.TabIndex = 111;
-            this.cbTrash.Text = "هل المادة تالفة";
-            this.cbTrash.UseVisualStyleBackColor = true;
+            this.pMaterialPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pMaterialPicture.Image = global::Program.Properties.Resources._1353695710_materials;
+            this.pMaterialPicture.Location = new System.Drawing.Point(92, 675);
+            this.pMaterialPicture.Name = "pMaterialPicture";
+            this.pMaterialPicture.Size = new System.Drawing.Size(164, 138);
+            this.pMaterialPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pMaterialPicture.TabIndex = 83;
+            this.pMaterialPicture.TabStop = false;
             // 
-            // groupBox3
+            // bSave
             // 
-            this.groupBox3.Controls.Add(this.txtPriceSale);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtPrice);
-            this.groupBox3.Controls.Add(this.txtPriceBuy);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(3, 485);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(406, 123);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "قائمة الأسعار البيع";
-            // 
-            // txtPriceSale
-            // 
-            this.txtPriceSale.Location = new System.Drawing.Point(73, 88);
-            this.txtPriceSale.Name = "txtPriceSale";
-            this.txtPriceSale.Size = new System.Drawing.Size(199, 27);
-            this.txtPriceSale.TabIndex = 7;
-            this.txtPriceSale.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(288, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 19);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "سعر خاص";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(73, 55);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(199, 27);
-            this.txtPrice.TabIndex = 6;
-            this.txtPrice.Text = "0";
-            // 
-            // txtPriceBuy
-            // 
-            this.txtPriceBuy.Location = new System.Drawing.Point(74, 22);
-            this.txtPriceBuy.Name = "txtPriceBuy";
-            this.txtPriceBuy.Size = new System.Drawing.Size(199, 27);
-            this.txtPriceBuy.TabIndex = 5;
-            this.txtPriceBuy.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 19);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "سعر الشراء";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(289, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "سعر البيع";
+            this.bSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSave.Image = global::Program.Properties.Resources.document_save;
+            this.bSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSave.Location = new System.Drawing.Point(32, 614);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(254, 40);
+            this.bSave.TabIndex = 77;
+            this.bSave.Text = "حفظ";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // groupBox1
             // 
@@ -787,7 +681,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(813, 777);
+            this.groupBox1.Size = new System.Drawing.Size(899, 858);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "قائمة المواد";
@@ -798,7 +692,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 730);
+            this.panel2.Size = new System.Drawing.Size(893, 811);
             this.panel2.TabIndex = 2;
             // 
             // toolStrip2
@@ -811,11 +705,11 @@
             this.txtSearchMaterial,
             this.bRefreshTable,
             this.bNext,
-            this.txtId,
+            this.lblPage,
             this.pPrevious});
             this.toolStrip2.Location = new System.Drawing.Point(3, 19);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(807, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(893, 25);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -828,6 +722,8 @@
             // cbSearchType
             // 
             this.cbSearchType.Items.AddRange(new object[] {
+            "اسم المادة",
+            "كود المادة",
             "اسم المادة",
             "كود المادة"});
             this.cbSearchType.Name = "cbSearchType";
@@ -867,13 +763,15 @@
             this.bNext.Name = "bNext";
             this.bNext.Size = new System.Drawing.Size(23, 22);
             this.bNext.Text = "Next";
-            this.bNext.Click += new System.EventHandler(this.bNext_Click);
+            this.bNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // txtId
+            // lblPage
             // 
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(50, 25);
+            this.lblPage.Enabled = false;
+            this.lblPage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(75, 25);
+            this.lblPage.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pPrevious
             // 
@@ -883,26 +781,12 @@
             this.pPrevious.Name = "pPrevious";
             this.pPrevious.Size = new System.Drawing.Size(23, 22);
             this.pPrevious.Text = "Previous";
-            this.pPrevious.Click += new System.EventHandler(this.pPrevious_Click);
+            this.pPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // kryptonPalette1
+            // errorProvider3
             // 
-            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
-            // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "CustomSource"});
-            this.kryptonTextBox1.Location = new System.Drawing.Point(34, 19);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(255, 27);
-            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.Peru;
-            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateActive.Border.Rounding = 6;
-            this.kryptonTextBox1.TabIndex = 84;
-            this.kryptonTextBox1.Text = "اسم المادة";
+            this.errorProvider3.ContainerControl = this;
+            this.errorProvider3.RightToLeft = true;
             // 
             // NewMaterial
             // 
@@ -930,6 +814,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pMaterialPicture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -937,15 +825,6 @@
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1017,8 +896,7 @@
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtPleace;
-        private System.Windows.Forms.TextBox txtName;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtName;
     }
 }

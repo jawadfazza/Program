@@ -29,7 +29,7 @@ namespace Program.entityForm
             getMaterialNameAutocomplete();
         }
 
-        private int pageSize = 25; // Number of records per page
+        private int pageSize = 10; // Number of records per page
         private int currentPage = 1;
         private DataTable originalDataTable;
         static DataRow materialRow;
@@ -42,7 +42,7 @@ namespace Program.entityForm
 
         private void bRefreshTable_Click(object sender, EventArgs e)
         {
-            BindData();
+            LoadData();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Program.entityForm
             if (currentPage < GetTotalPages())
             {
                 currentPage++;
-                BindData();
+                LoadData();
             }
         }
 
@@ -59,7 +59,7 @@ namespace Program.entityForm
             if (currentPage > 1)
             {
                 currentPage--;
-                BindData();
+                LoadData();
             }
         }
 
@@ -309,37 +309,75 @@ namespace Program.entityForm
         #endregion
 
         #region Data Loading and Binding
+
         private void LoadData()
         {
-            materialTableAdapter mta = new materialTableAdapter();
-            originalDataTable = mta.GetDataByFillDetails();
-            BindData();
-        }
-
-        private void BindData()
-        {
-            DataTable pagedTable = GetPagedTable(originalDataTable, currentPage, pageSize);
-            dataGridViewMaterial.DataSource = pagedTable;
-            TableStyle(pagedTable.Rows.Count);
-            UpdatePageLabel();
-        }
-
-        private DataTable GetPagedTable(DataTable dataTable, int page, int pageSize)
-        {
-            DataTable pagedTable = dataTable.Clone();
-
-            var rows = dataTable.AsEnumerable()
-                                .Skip((page - 1) * pageSize)
-                                .Take(pageSize);
-
-            foreach (var row in rows)
+            using (var context = new WarehouseServerEntities())
             {
-                pagedTable.ImportRow(row);
+
+                var materials = (from material1 in context.material
+                                 join group1 in context.material_group on material1.المجموعة equals group1.رقم_المجموعة
+                                 join producer1 in context.producer on material1.الصانع equals producer1.رقم_الصانع
+                                 join warehouse1 in context.WareHouse on material1.المستودع equals warehouse1.رقم_المستودع
+                                 orderby material1.الرقم_الفني
+                                 select new
+                                 {
+                                     الرقم_الفني = material1.الرقم_الفني,
+                                     اسم_المادة = material1.اسم_المادة,
+                                     تواجد_المادة = material1.تواجد_المادة,
+                                     الوحدة = material1.الوحدة,
+                                     كمية = material1.كمية,
+                                     سعر = material1.سعر,
+                                     رمز_الطراز = material1.رمز_الطراز,
+                                     بالة = material1.بالة,
+                                     اسم_المجموعة = group1.اسم_المجموعة,
+                                     اسم_الصانع = producer1.اسم_الصانع,
+                                     اسم_المستودع = warehouse1.اسم_المستودع,
+                                     وصف_المادة = material1.وصف_المادة,
+                                     صورة = material1.صورة,
+                                     سعر_الشراء = material1.سعر_الشراء,
+                                     سعر_البيع = material1.سعر_البيع,
+                                     كود_المادة = material1.كود_المادة,
+                                     طريقة_حساب_الكلفة = material1.طريقة_حساب_الكلفة,
+                                     رقم_الصانع = producer1.رقم_الصانع,
+                                     رقم_المجموعة = group1.رقم_المجموعة,
+                                     رقم_المستودع = warehouse1.رقم_المستودع
+                                 }).Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+
+                // Convert to DataTable
+                DataTable dataTable = ConvertToDataTable(materials);
+                dataGridViewMaterial.DataSource = dataTable;
+                TableStyle(dataTable.Rows.Count);
+                UpdatePageLabel();
+            }
+        }
+
+        private DataTable ConvertToDataTable<T>(List<T> items)
+        {
+            var dataTable = new DataTable(typeof(T).Name);
+
+            // Get all the properties by using reflection
+            var properties = typeof(T).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+            foreach (var prop in properties)
+            {
+                // Defining type of data column gives us advantage of type checking at compile time
+                dataTable.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
             }
 
-            return pagedTable;
+            foreach (var item in items)
+            {
+                var values = new object[properties.Length];
+                for (int i = 0; i < properties.Length; i++)
+                {
+                    // Inserting property values to datatable rows
+                    values[i] = properties[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            return dataTable;
         }
 
+     
         private void UpdatePageLabel()
         {
             lblPage.Text = $"Page {currentPage} of {GetTotalPages()}";
@@ -349,7 +387,9 @@ namespace Program.entityForm
         {
             return (int)Math.Ceiling(originalDataTable.Rows.Count / (double)pageSize);
         }
+
         #endregion
+
 
         #region Table Styling
         private void TableStyle(int count)
@@ -623,7 +663,7 @@ namespace Program.entityForm
                     }
 
                     MessageBox.Show("تم تعديل المادة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BindData();
+                    LoadData();
                 }
                 catch (Exception ex)
                 {
