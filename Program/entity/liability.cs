@@ -16,19 +16,21 @@ namespace Program.entity
     {
         public liability()
         {
-            this.liability_credit = new HashSet<liability_credit>();
             this.liability_debit = new HashSet<liability_debit>();
+            this.liability_credit = new HashSet<liability_credit>();
         }
     
-        public int الرقم { get; set; }
-        public string الإلتزام { get; set; }
+        public System.Guid الرقم { get; set; }
+        public string الالتزام { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public System.DateTime تاريخ { get; set; }
-        public string نوع_الإلتزام { get; set; }
+        public string نوع_الالتزام { get; set; }
         public Nullable<int> نسبة_الفائدة { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
-        public virtual ICollection<liability_credit> liability_credit { get; set; }
         public virtual ICollection<liability_debit> liability_debit { get; set; }
+        public virtual ICollection<liability_credit> liability_credit { get; set; }
     }
 }

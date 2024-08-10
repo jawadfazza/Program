@@ -14,19 +14,19 @@ namespace Program.entity
     
     public partial class material_debit_list_return
     {
-        public int رقم_المادة { get; set; }
-        public int رقم_التقرير { get; set; }
+        public System.Guid الرقم { get; set; }
+        public System.Guid رقم_المادة { get; set; }
+        public System.Guid رقم_التقرير { get; set; }
         public string اسم_المادة { get; set; }
         public string الوحدة { get; set; }
-        public int الكمية { get; set; }
+        public int كمية { get; set; }
         public double السعر { get; set; }
         public double السعر_الجمالي { get; set; }
         public string ملاحظات { get; set; }
         public Nullable<int> المستودع { get; set; }
-        public string الكمية_كتابة { get; set; }
+        public string كمية_كتابة { get; set; }
         public string حذفة { get; set; }
-        public Nullable<double> حسم_مكتسب { get; set; }
-        public string اسم_مكتب { get; set; }
+        public Nullable<double> حسام_مكتسب { get; set; }
         public Nullable<int> سعر_الشراء { get; set; }
         public Nullable<double> الكلفة { get; set; }
     

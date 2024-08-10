@@ -17,13 +17,14 @@ namespace Program.entity
         public WareHouse()
         {
             this.material = new HashSet<material>();
-            this.material_maker = new HashSet<material_maker>();
+            this.materialMaker_credit = new HashSet<materialMaker_credit>();
         }
     
-        public int رقم_المستودع { get; set; }
+        public System.Guid رقم_المستودع { get; set; }
         public string اسم_المستودع { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual ICollection<material> material { get; set; }
-        public virtual ICollection<material_maker> material_maker { get; set; }
+        public virtual ICollection<materialMaker_credit> materialMaker_credit { get; set; }
     }
 }

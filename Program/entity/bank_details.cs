@@ -19,7 +19,7 @@ namespace Program.entity
             this.bank_account = new HashSet<bank_account>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public string اسم_البنك { get; set; }
         public string عنوان_البنك { get; set; }
         public string هاتف { get; set; }
@@ -27,6 +27,8 @@ namespace Program.entity
         public string البريد_الالكتروني { get; set; }
         public string الموقع_الالكتروني { get; set; }
         public string تعليق { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual ICollection<bank_account> bank_account { get; set; }
     }

@@ -12,11 +12,16 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class admin_
+    public partial class customer_ReveiveTime
     {
-        public int id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public string user_type { get; set; }
+        public int الرقم { get; set; }
+        public double الرصيد { get; set; }
+        public string الرصيد_كتابة { get; set; }
+        public string ملاحظات { get; set; }
+        public Nullable<System.DateTime> تاريخ { get; set; }
+        public Nullable<System.Guid> customer_id { get; set; }
+        public string تم_الدفع { get; set; }
+    
+        public virtual customer customer { get; set; }
     }
 }

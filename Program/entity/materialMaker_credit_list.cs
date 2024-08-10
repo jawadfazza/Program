@@ -14,16 +14,13 @@ namespace Program.entity
     
     public partial class materialMaker_credit_list
     {
-        public int الرقم { get; set; }
-        public int رقم_المادة { get; set; }
-        public int رقم_التقرير { get; set; }
-        public string اسم_المادة { get; set; }
-        public string الوحدة { get; set; }
+        public System.Guid الرقم { get; set; }
+        public System.Guid رقم_المادة { get; set; }
+        public System.Guid رقم_التقرير { get; set; }
         public int كمية { get; set; }
-        public double سعر { get; set; }
-        public double سعر_اجمالي { get; set; }
+        public double السعر { get; set; }
+        public double السعر_الجمالي { get; set; }
         public string ملاحظات { get; set; }
-        public Nullable<int> المستودع { get; set; }
         public Nullable<double> هدر { get; set; }
     
         public virtual material material { get; set; }

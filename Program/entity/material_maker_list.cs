@@ -12,16 +12,18 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class customer_receive_time
+    public partial class material_maker_list
     {
-        public int الرقم { get; set; }
-        public double الرصيد { get; set; }
-        public string الرصيد_كتابة { get; set; }
+        public System.Guid الرقم { get; set; }
+        public System.Guid رقم_المادة { get; set; }
+        public System.Guid رقم_المصنع { get; set; }
+        public int كمية { get; set; }
+        public double سعر_الشراء { get; set; }
+        public double نسبة_الهدر { get; set; }
+        public double كلفة_المادة { get; set; }
         public string ملاحظات { get; set; }
-        public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> customer_id { get; set; }
-        public string تم_الدفع { get; set; }
     
-        public virtual customer customer { get; set; }
+        public virtual material material { get; set; }
+        public virtual material_maker material_maker { get; set; }
     }
 }

@@ -117,35 +117,529 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnSave.GenerateMember" type="System.Boolean, mscorlib">
+  <metadata name="btnSave.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
-  <data name="ConfigDeleteError" xml:space="preserve">
-    <value>لم يتم العثور على التكوين.</value>
+  <data name="btnSave.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="ConfigDeleteSuccess" xml:space="preserve">
-    <value>تم حذف التكوين بنجاح!</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 15</value>
   </data>
-  <data name="ConfigSavedError" xml:space="preserve">
-    <value>خطأ في حفظ التكوين: {0}</value>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 37</value>
   </data>
-  <data name="ConfigSavedSuccess" xml:space="preserve">
-    <value>تم حفظ التكوين بنجاح!</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="ConnectionFailed" xml:space="preserve">
-    <value>فشل الاتصال: {0}</value>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>حفظ الرابط</value>
   </data>
-  <data name="ConnectionSuccess" xml:space="preserve">
-    <value>تم الاتصال بنجاح!</value>
+  <data name="btnSave.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="ErrorLoadingCurrentConfig" xml:space="preserve">
-    <value>خطأ في تحميل التكوين الحالي: {0}</value>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
   </data>
-  <data name="SelectConfigToDelete" xml:space="preserve">
-    <value>يرجى اختيار تكوين للحذف.</value>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="SelectConfigToLoad" xml:space="preserve">
-    <value>يرجى اختيار تكوين للتحميل.</value>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblDataSource.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDataSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblDataSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 93</value>
+  </data>
+  <data name="lblDataSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 18</value>
+  </data>
+  <data name="lblDataSource.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDataSource.Text" xml:space="preserve">
+    <value>مصدر البيانات</value>
+  </data>
+  <data name="&gt;&gt;lblDataSource.Name" xml:space="preserve">
+    <value>lblDataSource</value>
+  </data>
+  <data name="&gt;&gt;lblDataSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDataSource.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDataSource.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblInitialCatalog.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblInitialCatalog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblInitialCatalog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 119</value>
+  </data>
+  <data name="lblInitialCatalog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 18</value>
+  </data>
+  <data name="lblInitialCatalog.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblInitialCatalog.Text" xml:space="preserve">
+    <value>قاعدة البيانات</value>
+  </data>
+  <data name="&gt;&gt;lblInitialCatalog.Name" xml:space="preserve">
+    <value>lblInitialCatalog</value>
+  </data>
+  <data name="&gt;&gt;lblInitialCatalog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInitialCatalog.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblInitialCatalog.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblUserID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblUserID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblUserID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 145</value>
+  </data>
+  <data name="lblUserID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lblUserID.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblUserID.Text" xml:space="preserve">
+    <value>اسم المستخم</value>
+  </data>
+  <data name="&gt;&gt;lblUserID.Name" xml:space="preserve">
+    <value>lblUserID</value>
+  </data>
+  <data name="&gt;&gt;lblUserID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUserID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblUserID.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 171</value>
+  </data>
+  <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 18</value>
+  </data>
+  <data name="lblPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="&gt;&gt;lblPassword.Name" xml:space="preserve">
+    <value>lblPassword</value>
+  </data>
+  <data name="&gt;&gt;lblPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblNickname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNickname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblNickname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 197</value>
+  </data>
+  <data name="lblNickname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 18</value>
+  </data>
+  <data name="lblNickname.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblNickname.Text" xml:space="preserve">
+    <value>الاسم البدل للرابط</value>
+  </data>
+  <data name="lblNickname.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblNickname.Name" xml:space="preserve">
+    <value>lblNickname</value>
+  </data>
+  <data name="&gt;&gt;lblNickname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNickname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblNickname.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtDataSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="txtDataSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 89</value>
+  </data>
+  <data name="txtDataSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="txtDataSource.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtDataSource.Name" xml:space="preserve">
+    <value>txtDataSource</value>
+  </data>
+  <data name="&gt;&gt;txtDataSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDataSource.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtDataSource.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtInitialCatalog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="txtInitialCatalog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 115</value>
+  </data>
+  <data name="txtInitialCatalog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="txtInitialCatalog.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtInitialCatalog.Name" xml:space="preserve">
+    <value>txtInitialCatalog</value>
+  </data>
+  <data name="&gt;&gt;txtInitialCatalog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtInitialCatalog.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtInitialCatalog.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtUserID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="txtUserID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 141</value>
+  </data>
+  <data name="txtUserID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="txtUserID.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Name" xml:space="preserve">
+    <value>txtUserID</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 167</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtNickname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="txtNickname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 193</value>
+  </data>
+  <data name="txtNickname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="txtNickname.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtNickname.Name" xml:space="preserve">
+    <value>txtNickname</value>
+  </data>
+  <data name="&gt;&gt;txtNickname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNickname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtNickname.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnLoad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnLoad.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 317</value>
+  </data>
+  <data name="btnLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 38</value>
+  </data>
+  <data name="btnLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnLoad.Text" xml:space="preserve">
+    <value>تحميل الرابط</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Name" xml:space="preserve">
+    <value>btnLoad</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 15</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 37</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>حذف الرابط</value>
+  </data>
+  <data name="btnDelete.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbConfigurations.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="cmbConfigurations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 58</value>
+  </data>
+  <data name="cmbConfigurations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 26</value>
+  </data>
+  <data name="cmbConfigurations.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cmbConfigurations.Name" xml:space="preserve">
+    <value>cmbConfigurations</value>
+  </data>
+  <data name="&gt;&gt;cmbConfigurations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbConfigurations.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbConfigurations.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chkEncrypt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chkEncrypt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkEncrypt.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="chkEncrypt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="chkEncrypt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 219</value>
+  </data>
+  <data name="chkEncrypt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
+  </data>
+  <data name="chkEncrypt.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="chkEncrypt.Text" xml:space="preserve">
+    <value>البيانات مشفرة</value>
+  </data>
+  <data name="&gt;&gt;chkEncrypt.Name" xml:space="preserve">
+    <value>chkEncrypt</value>
+  </data>
+  <data name="&gt;&gt;chkEncrypt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkEncrypt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkEncrypt.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkTrustServerCertificate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chkTrustServerCertificate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkTrustServerCertificate.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="chkTrustServerCertificate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="chkTrustServerCertificate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 245</value>
+  </data>
+  <data name="chkTrustServerCertificate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="chkTrustServerCertificate.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="chkTrustServerCertificate.Text" xml:space="preserve">
+    <value>شهادة خادم</value>
+  </data>
+  <data name="chkTrustServerCertificate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;chkTrustServerCertificate.Name" xml:space="preserve">
+    <value>chkTrustServerCertificate</value>
+  </data>
+  <data name="&gt;&gt;chkTrustServerCertificate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkTrustServerCertificate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkTrustServerCertificate.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnTestConnection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnTestConnection.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnTestConnection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 273</value>
+  </data>
+  <data name="btnTestConnection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 38</value>
+  </data>
+  <data name="btnTestConnection.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnTestConnection.Text" xml:space="preserve">
+    <value>اختبار الاتصال</value>
+  </data>
+  <data name="&gt;&gt;btnTestConnection.Name" xml:space="preserve">
+    <value>btnTestConnection</value>
+  </data>
+  <data name="&gt;&gt;btnTestConnection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTestConnection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnTestConnection.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>335, 367</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>الإتصال بقاعدة البيانات</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ConfigForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

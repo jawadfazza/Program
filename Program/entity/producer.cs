@@ -19,9 +19,10 @@ namespace Program.entity
             this.material = new HashSet<material>();
         }
     
-        public int رقم_الصانع { get; set; }
+        public System.Guid رقم_الصانع { get; set; }
         public string اسم_الصانع { get; set; }
         public string رمز_النوع { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual ICollection<material> material { get; set; }
     }

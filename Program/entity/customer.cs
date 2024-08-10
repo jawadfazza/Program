@@ -16,28 +16,31 @@ namespace Program.entity
     {
         public customer()
         {
-            this.customer_credit = new HashSet<customer_credit>();
             this.customer_debit = new HashSet<customer_debit>();
-            this.customer_receive_time = new HashSet<customer_receive_time>();
+            this.customer_credit = new HashSet<customer_credit>();
+            this.customer_ReveiveTime = new HashSet<customer_ReveiveTime>();
+            this.material_debit_return = new HashSet<material_debit_return>();
             this.material_credit = new HashSet<material_credit>();
         }
     
-        public int الرقم { get; set; }
-        public string اسم_الربون { get; set; }
+        public System.Guid الرقم { get; set; }
+        public string اسم_الزبون { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
-        public string عنوان_الربون { get; set; }
+        public string عنوان_الزبون { get; set; }
         public string هاتف { get; set; }
         public string الموبايل { get; set; }
         public string البريد_الالكتروني { get; set; }
-        public string الموقع_الالكتروني { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
-        public string وصف_الربون { get; set; }
-        public string صورة { get; set; }
+        public string وصف_الزبون { get; set; }
+        public byte[] صورة { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
-        public virtual ICollection<customer_credit> customer_credit { get; set; }
         public virtual ICollection<customer_debit> customer_debit { get; set; }
-        public virtual ICollection<customer_receive_time> customer_receive_time { get; set; }
+        public virtual ICollection<customer_credit> customer_credit { get; set; }
+        public virtual ICollection<customer_ReveiveTime> customer_ReveiveTime { get; set; }
+        public virtual ICollection<material_debit_return> material_debit_return { get; set; }
         public virtual ICollection<material_credit> material_credit { get; set; }
     }
 }

@@ -12,13 +12,18 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class user_loge_date
+    public partial class action_caticory
     {
-        public int id { get; set; }
-        public System.DateTime loge_date_in { get; set; }
-        public Nullable<System.DateTime> loge_date_out { get; set; }
-        public int user_id_ { get; set; }
+        public action_caticory()
+        {
+            this.action = new HashSet<action>();
+        }
     
-        public virtual user_loge user_loge { get; set; }
+        public System.Guid ID { get; set; }
+        public string caticory { get; set; }
+        public string description { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
+    
+        public virtual ICollection<action> action { get; set; }
     }
 }

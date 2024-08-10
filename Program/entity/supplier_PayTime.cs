@@ -12,9 +12,16 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class task
+    public partial class supplier_PayTime
     {
-        public int id { get; set; }
-        public string operation { get; set; }
+        public System.Guid الرقم { get; set; }
+        public double الرصيد { get; set; }
+        public string الرصيد_كتابة { get; set; }
+        public string ملاحظات { get; set; }
+        public Nullable<System.DateTime> تاريخ { get; set; }
+        public Nullable<System.Guid> Supplier_id { get; set; }
+        public string تم_الدفع { get; set; }
+    
+        public virtual supplier supplier { get; set; }
     }
 }

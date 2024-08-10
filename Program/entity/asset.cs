@@ -20,17 +20,17 @@ namespace Program.entity
             this.asset_debit = new HashSet<asset_debit>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public string اسم_الأصل { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public System.DateTime تاريخ { get; set; }
         public string نوع_الأصل { get; set; }
         public Nullable<int> نسبة_الأهتلاك { get; set; }
-        public string نوع_الاصل { get; set; }
-        public Nullable<int> نسبة_الاهتلاك { get; set; }
         public Nullable<int> قيمة_النفاية { get; set; }
-        public Nullable<int> مجمع_الإهتلاك { get; set; }
+        public Nullable<int> مجموع_الأهتلاك { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual ICollection<asset_credit> asset_credit { get; set; }
         public virtual ICollection<asset_debit> asset_debit { get; set; }

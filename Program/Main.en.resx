@@ -117,585 +117,509 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="menuStrip1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="miDB_Connection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miDB_Connection.Text" xml:space="preserve">
-    <value>الإتصال بقاعدة البيانات</value>
+    <value>Connect to Database</value>
   </data>
   <data name="miCompanyInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miCompanyInfo.Text" xml:space="preserve">
-    <value>بيانات الشركة</value>
+    <value>Company Data</value>
   </data>
   <data name="miNewYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miNewYear.Text" xml:space="preserve">
-    <value>بداية عام جديد</value>
+    <value>Start New Year</value>
   </data>
   <data name="miUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miUser.Text" xml:space="preserve">
-    <value>المستخدمين</value>
+    <value>Users</value>
   </data>
   <data name="miBackUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miBackUp.Text" xml:space="preserve">
-    <value>إنشاء نسخة إحتياطية و إستعادتها</value>
+    <value>Create Backup and Restore</value>
   </data>
   <data name="miExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>215, 22</value>
   </data>
   <data name="miExit.Text" xml:space="preserve">
-    <value>خروج</value>
+    <value>Exit</value>
   </data>
   <data name="ملفToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 24</value>
+    <value>53, 20</value>
   </data>
   <data name="ملفToolStripMenuItem.Text" xml:space="preserve">
-    <value>ملف</value>
+    <value>File</value>
   </data>
   <data name="miNewCustumer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miNewCustumer.Text" xml:space="preserve">
-    <value> إضافة زبون</value>
+    <value>Add Customer</value>
   </data>
   <data name="miSaleCash.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miSaleCash.Text" xml:space="preserve">
-    <value>إضافة طلبية بيع بضاعة</value>
+    <value>Add Sales Order</value>
   </data>
   <data name="miFastSale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miFastSale.Text" xml:space="preserve">
-    <value> نافذة البيع السريع</value>
+    <value>Quick Sales Window</value>
   </data>
   <data name="miCustomerPayment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miCustomerPayment.Text" xml:space="preserve">
-    <value>تلقي دفعات الزبائن</value>
+    <value>Receive Customer Payments</value>
   </data>
   <data name="miReturnSales.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miReturnSales.Text" xml:space="preserve">
-    <value>ردّ بضاعة مباعة</value>
+    <value>Return Sold Goods</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 6</value>
+    <value>221, 6</value>
   </data>
   <data name="miReportCustomerAccounting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miReportCustomerAccounting.Text" xml:space="preserve">
-    <value> حساب الزبون</value>
+    <value>Customer Account</value>
   </data>
   <data name="miMaterialSale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miMaterialSale.Text" xml:space="preserve">
-    <value>بطاقة مبيعات الزبون</value>
+    <value>Customer Sales Card</value>
   </data>
   <data name="miSaleBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miSaleBills.Text" xml:space="preserve">
-    <value>فاتورة بيع مواد</value>
+    <value>Sales Invoice</value>
   </data>
   <data name="miReturnSaleBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miReturnSaleBills.Text" xml:space="preserve">
-    <value>تقرير إعادة بضاعة مباعة</value>
+    <value>Return Sold Goods Report</value>
   </data>
   <data name="miSalesBillsTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 24</value>
+    <value>222, 22</value>
   </data>
   <data name="miSalesBillsTable.Text" xml:space="preserve">
-    <value>جدول فواتير المبيعات </value>
+    <value>Sales Invoices Table</value>
   </data>
   <data name="miSalesBillsTableDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 24</value>
+    <value>222, 22</value>
   </data>
   <data name="miSalesBillsTableDetails.Text" xml:space="preserve">
-    <value>جدول فواتير المبيعات التفصيلي</value>
+    <value>Detailed Sales Invoices Table</value>
   </data>
   <data name="miSalesChartReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 24</value>
+    <value>222, 22</value>
   </data>
   <data name="miSalesChartReport.Text" xml:space="preserve">
-    <value>المخطط البياني للمبيعات</value>
+    <value>Sales Chart</value>
   </data>
   <data name="miSaleReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miSaleReport.Text" xml:space="preserve">
-    <value>تقرير المبيعات </value>
+    <value>Sales Report</value>
   </data>
   <data name="الزبائنToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
+    <value>92, 20</value>
   </data>
   <data name="الزبائنToolStripMenuItem.Text" xml:space="preserve">
-    <value>الزبائن</value>
+    <value>Customers</value>
   </data>
   <data name="miVendor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miVendor.Text" xml:space="preserve">
-    <value> إضافة مورد </value>
+    <value>Add Supplier</value>
   </data>
   <data name="miBuy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miBuy.Text" xml:space="preserve">
-    <value>إضافة طلبية شراء بضاعة</value>
+    <value>Add Purchase Order</value>
   </data>
   <data name="miFastBuy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miFastBuy.Text" xml:space="preserve">
-    <value>نافذة الشراء السريع</value>
+    <value>Quick Purchase Window</value>
   </data>
   <data name="miSupplierPayment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miSupplierPayment.Text" xml:space="preserve">
-    <value>دفع مبلغ للموردين</value>
+    <value>Pay Amount to Suppliers</value>
   </data>
   <data name="miReturnBuy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miReturnBuy.Text" xml:space="preserve">
-    <value>ردّ بضاعة مشترات</value>
+    <value>Return Purchased Goods</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 6</value>
+    <value>239, 6</value>
   </data>
   <data name="miReportSupplierAccounting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miReportSupplierAccounting.Text" xml:space="preserve">
-    <value>حساب المورد</value>
+    <value>Supplier Account</value>
   </data>
   <data name="miMaterialBuy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miMaterialBuy.Text" xml:space="preserve">
-    <value>بطاقة مشتريات المورد</value>
+    <value>Supplier Purchase Card</value>
   </data>
   <data name="miBuyList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miBuyList.Text" xml:space="preserve">
-    <value>وثيقة إدخال مواد</value>
+    <value>Material Entry Document</value>
   </data>
   <data name="miReturnBuyBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miReturnBuyBills.Text" xml:space="preserve">
-    <value>تقرير إعادة بضاعة مشترات</value>
+    <value>Return Purchased Goods Report</value>
   </data>
   <data name="miBuyReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>242, 22</value>
   </data>
   <data name="miBuyReport.Text" xml:space="preserve">
-    <value>تقرير المشتريات</value>
+    <value>Purchase Report</value>
   </data>
   <data name="miVendorList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 24</value>
+    <value>83, 20</value>
   </data>
   <data name="miVendorList.Text" xml:space="preserve">
-    <value>الموردين</value>
+    <value>Suppliers</value>
   </data>
   <data name="miPaperReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 24</value>
+    <value>217, 22</value>
   </data>
   <data name="miPaperReceived.Text" xml:space="preserve">
-    <value>سندات القبض المستحقة</value>
+    <value>Due Receipt Vouchers</value>
   </data>
   <data name="miPaperPay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 24</value>
+    <value>217, 22</value>
   </data>
   <data name="miPaperPay.Text" xml:space="preserve">
-    <value>سندات الدفع المستحقة</value>
+    <value>Due Payment Vouchers</value>
   </data>
   <data name="toolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
+    <value>214, 6</value>
   </data>
   <data name="miPaperRecieveReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 24</value>
+    <value>217, 22</value>
   </data>
   <data name="miPaperRecieveReport.Text" xml:space="preserve">
-    <value>كمبيالات القبض</value>
+    <value>Receipt Promissory Notes</value>
   </data>
   <data name="miPaperPayReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 24</value>
+    <value>217, 22</value>
   </data>
   <data name="miPaperPayReport.Text" xml:space="preserve">
-    <value>كمبيالات الدفع</value>
+    <value>Payment Promissory Notes</value>
   </data>
   <data name="سنداتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
+    <value>83, 20</value>
   </data>
   <data name="سنداتToolStripMenuItem.Text" xml:space="preserve">
-    <value>سندات</value>
+    <value>Vouchers</value>
   </data>
   <data name="miNewBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+    <value>226, 22</value>
   </data>
   <data name="miNewBox.Text" xml:space="preserve">
-    <value>إضافة صندوق نقدية</value>
+    <value>Add Cash Register</value>
   </data>
   <data name="miBoxTransfare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+    <value>226, 22</value>
   </data>
   <data name="miBoxTransfare.Text" xml:space="preserve">
-    <value>دفع أو قبض مبلغ نقدي </value>
+    <value>Pay or Receive Cash Amount</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 6</value>
+    <value>223, 6</value>
   </data>
   <data name="miBoxAccounting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+    <value>226, 22</value>
   </data>
   <data name="miBoxAccounting.Text" xml:space="preserve">
-    <value>حساب الصندوق</value>
+    <value>Cash Account</value>
   </data>
   <data name="miPayBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+    <value>226, 22</value>
   </data>
   <data name="miPayBills.Text" xml:space="preserve">
-    <value>أمر دفع نقدي </value>
+    <value>Cash Payment Order</value>
   </data>
   <data name="miReciveBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+    <value>226, 22</value>
   </data>
   <data name="miReciveBills.Text" xml:space="preserve">
-    <value>وصل أستلام نقدية</value>
+    <value>Cash Receipt</value>
   </data>
   <data name="mliBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
+    <value>106, 20</value>
   </data>
   <data name="mliBox.Text" xml:space="preserve">
-    <value>الصندوق</value>
+    <value>Cash Register</value>
   </data>
   <data name="miNewBank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="miNewBank.Text" xml:space="preserve">
-    <value> إضافة بنك</value>
-  </data>
-  <data name="miBankAccounting.AccessibleDescription" xml:space="preserve">
-    <value />
+    <value>Add Bank</value>
   </data>
   <data name="miBankAccounting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="miBankAccounting.Text" xml:space="preserve">
-    <value>إضافة حساب بنكي</value>
+    <value>Add Bank Account</value>
   </data>
   <data name="miBankTransfare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="miBankTransfare.Text" xml:space="preserve">
-    <value>سحب أو يداع مبلغ</value>
+    <value>Withdraw or Deposit Amount</value>
   </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 6</value>
+    <value>248, 6</value>
   </data>
   <data name="miBankAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="miBankAccount.Text" xml:space="preserve">
-    <value>حساب الحساب المصرفي</value>
+    <value>Calculate Bank Account</value>
   </data>
   <data name="miPayCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="miPayCheck.Text" xml:space="preserve">
-    <value> أمر صرف مبلغ</value>
+    <value>Amount Disbursement Order</value>
   </data>
   <data name="bReceiveCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>251, 22</value>
   </data>
   <data name="bReceiveCheck.Text" xml:space="preserve">
-    <value>إيداع مبلغ بحساب مصرفي </value>
+    <value>Deposit Amount in Bank Account</value>
   </data>
   <data name="البنكToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>61, 20</value>
   </data>
   <data name="البنكToolStripMenuItem.Text" xml:space="preserve">
-    <value>البنك</value>
+    <value>Bank</value>
   </data>
   <data name="miMaterilaTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miMaterilaTree.Text" xml:space="preserve">
-    <value>شجرت المواد</value>
+    <value>Material Tree</value>
   </data>
   <data name="miNewMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miNewMaterial.Text" xml:space="preserve">
-    <value>السلع و الخدمات الجديدة</value>
+    <value>New Goods and Services</value>
   </data>
   <data name="miMaterialInventory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miMaterialInventory.Text" xml:space="preserve">
-    <value>جردّ بضاعة المستودعات</value>
+    <value>Warehouse Inventory Count</value>
   </data>
   <data name="كلفةالموادالباقيةToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="كلفةالموادالباقيةToolStripMenuItem.Text" xml:space="preserve">
-    <value>كلفة المواد الباقية</value>
+    <value>Cost of Remaining Materials</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 6</value>
+    <value>221, 6</value>
   </data>
   <data name="miMaterialCard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miMaterialCard.Text" xml:space="preserve">
-    <value>بطاقة مادة</value>
+    <value>Material Card</value>
   </data>
   <data name="miReportMaterialInventory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>224, 22</value>
   </data>
   <data name="miReportMaterialInventory.Text" xml:space="preserve">
-    <value>تقرير جردّ بضاعة المستودع</value>
+    <value>Warehouse Inventory Report</value>
   </data>
   <data name="السلعوالخدماتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
+    <value>137, 20</value>
   </data>
   <data name="السلعوالخدماتToolStripMenuItem.Text" xml:space="preserve">
-    <value>السلع و الخدمات</value>
+    <value>Goods and Services</value>
   </data>
   <data name="miMaterialMaker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="miMaterialMaker.Text" xml:space="preserve">
-    <value>دليل المواد المصنعة</value>
+    <value>Manufactured Materials Guide</value>
   </data>
   <data name="miMaterialMakerList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="miMaterialMakerList.Text" xml:space="preserve">
-    <value>إضافة إحتياجات تصنع منتج</value>
+    <value>Add Product Manufacturing Requirements</value>
   </data>
   <data name="miMaterialMaker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="miMaterialMaker1.Text" xml:space="preserve">
-    <value>إجراء عملية تصنيع جديدة</value>
+    <value>Conduct New Manufacturing Operation</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 6</value>
+    <value>312, 6</value>
   </data>
   <data name="حسابإحتياجاتالتصنيعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="حسابإحتياجاتالتصنيعToolStripMenuItem.Text" xml:space="preserve">
-    <value>حساب إحتياجات التصنيع</value>
+    <value>Calculate Manufacturing Requirements</value>
   </data>
   <data name="جدولعملياتالتصنيعالمرحلToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="جدولعملياتالتصنيعالمرحلToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدول عمليات التصنيع المرحل</value>
+    <value>Transferred Manufacturing Operations Table</value>
   </data>
   <data name="جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 24</value>
+    <value>315, 22</value>
   </data>
   <data name="جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدول المواد الأولية المستخدمة للتصنيع</value>
+    <value>Table of Raw Materials Used in Manufacturing</value>
   </data>
   <data name="تصنيعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
+    <value>114, 20</value>
   </data>
   <data name="تصنيعToolStripMenuItem.Text" xml:space="preserve">
-    <value>تصنيع </value>
+    <value>Manufacturing</value>
   </data>
   <data name="miAddAsset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 24</value>
+    <value>238, 22</value>
   </data>
   <data name="miAddAsset.Text" xml:space="preserve">
-    <value>إضافة أصول أخرى</value>
+    <value>Add Other Assets</value>
   </data>
   <data name="miAddLiability.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 24</value>
+    <value>238, 22</value>
   </data>
   <data name="miAddLiability.Text" xml:space="preserve">
-    <value>إضافة إلتزامات أخرى</value>
+    <value>Add Other Liabilities</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 6</value>
+    <value>235, 6</value>
   </data>
   <data name="جدولأهتلاكالأصولToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 24</value>
+    <value>238, 22</value>
   </data>
   <data name="جدولأهتلاكالأصولToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدول أهتلاك الأصول الثابتة</value>
+    <value>Fixed Assets Depreciation Table</value>
   </data>
   <data name="miNewAssets.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>176, 20</value>
   </data>
   <data name="miNewAssets.Text" xml:space="preserve">
-    <value>أصول و إلتزامات أخرى</value>
+    <value>Other Assets and Liabilities</value>
   </data>
   <data name="miAddBonds.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 24</value>
+    <value>263, 22</value>
   </data>
   <data name="miAddBonds.Text" xml:space="preserve">
-    <value>إضافة القيود اليومية</value>
+    <value>Add Daily Entries</value>
   </data>
   <data name="miBondList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 24</value>
+    <value>263, 22</value>
   </data>
   <data name="miBondList.Text" xml:space="preserve">
-    <value>جدول القيود المختلفة المرحلة </value>
+    <value>Table of Different Transferred Entries</value>
   </data>
   <data name="miTradeAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 24</value>
+    <value>263, 22</value>
   </data>
   <data name="miTradeAccount.Text" xml:space="preserve">
-    <value>قائمة الدخل </value>
+    <value>Income Statement</value>
   </data>
   <data name="الميزانيةالعموميةToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 24</value>
+    <value>147, 22</value>
   </data>
   <data name="الميزانيةالعموميةToolStripMenuItem.Text" xml:space="preserve">
-    <value>الميزانية العمومية</value>
+    <value>Balance Sheet</value>
   </data>
   <data name="ميزانياتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 24</value>
+    <value>263, 22</value>
   </data>
   <data name="ميزانياتToolStripMenuItem.Text" xml:space="preserve">
-    <value>ميزانيات</value>
+    <value>Budgets</value>
   </data>
   <data name="جردوميزانياتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 24</value>
+    <value>97, 20</value>
   </data>
   <data name="جردوميزانياتToolStripMenuItem.Text" xml:space="preserve">
-    <value>محاسبة</value>
+    <value>Accounting</value>
   </data>
   <data name="مساعدةToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 24</value>
+    <value>182, 22</value>
   </data>
   <data name="مساعدةToolStripMenuItem1.Text" xml:space="preserve">
-    <value> عن الشركة.</value>
+    <value>About the Company</value>
   </data>
   <data name="مساعدةToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>60, 20</value>
   </data>
   <data name="مساعدةToolStripMenuItem.Text" xml:space="preserve">
-    <value>مساعدة</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>Help</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>576, 15</value>
-  </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Inherit</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1285, 28</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
-  </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Status</value>
+    <value>1205, 24</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 656</value>
-  </data>
-  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 14, 0</value>
-  </data>
-  <data name="statusStrip1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>0, 626</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1285, 22</value>
+    <value>1205, 22</value>
   </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>353, 17</value>
-  </metadata>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>466, 15</value>
-  </metadata>
   <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        IwAAAk1TRnQBSQFMAgEBGQEAAXABBQFwAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        IwAAAk1TRnQBSQFMAgEBGQEAAZwBBQGcAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAXADAAEBAQABCAYAARwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -848,23 +772,14 @@
         AeABAwIAAeABPwHwAQcB4AEDAgAB4AF/Af4BHwH5AYcCAAHgAX8E/wIAAf0D/ws=
 </value>
   </data>
-  <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>248, 17</value>
-  </metadata>
-  <data name="bCalculator.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="toolStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="bCalculator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 22</value>
+    <value>81, 22</value>
   </data>
   <data name="bCalculator.Text" xml:space="preserve">
-    <value>الحاسبة</value>
+    <value>Calculator</value>
   </data>
   <data name="cutToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -879,15 +794,6 @@
         TNAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="cutToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="cutToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="cutToolStripButton.Text" xml:space="preserve">
-    <value>C&amp;ut</value>
-  </data>
   <data name="copyToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -901,15 +807,6 @@
         wfUqyf1eP5U1ptJD/o1LzeNCsHPydtqdr6k4aiwvOHvNSya3ibU/QIdrEkvfhJislc32MfYfuV1eUGPw
         FF7bIVJVZ0N/soPK421UHGstlFvYd/hWecF/Qqf7CR0A5wwgSQA2AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="copyToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="copyToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="copyToolStripButton.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
   </data>
   <data name="pasteToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -927,15 +824,6 @@
         PdXm80/AfDokTVu+8DfPXv9XCcIPTvjvLQ8YoakAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pasteToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="pasteToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="pasteToolStripButton.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
   <data name="helpToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -951,620 +839,105 @@
         E9ew//AVxE8OItv/9O/Cf0ck8gud2vKswuxNZgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="helpToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="helpToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="helpToolStripButton.Text" xml:space="preserve">
-    <value>He&amp;lp</value>
-  </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
-  </data>
-  <data name="toolStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 2, 0</value>
+    <value>0, 24</value>
   </data>
   <data name="toolStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="toolStrip1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Inherit</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1285, 25</value>
-  </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="toolStrip1.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lvFormOption.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="lvFormOption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lvFormOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>1205, 25</value>
   </data>
   <data name="lvFormOption.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+    <value>Inherit</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvFormOption.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lvFormOption.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="lvFormOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 264</value>
-  </data>
-  <data name="lvFormOption.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="&gt;&gt;lvFormOption.Name" xml:space="preserve">
-    <value>lvFormOption</value>
-  </data>
-  <data name="&gt;&gt;lvFormOption.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lvFormOption.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lvFormOption.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="bNotification.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bNotification.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bNotification.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bNotification.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bNotification.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>261, 238</value>
   </data>
   <data name="bNotification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 264</value>
-  </data>
-  <data name="bNotification.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bNotification.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bNotification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 30</value>
-  </data>
-  <data name="bNotification.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
+    <value>0, 238</value>
   </data>
   <data name="bNotification.Text" xml:space="preserve">
-    <value>إشعارات</value>
-  </data>
-  <data name="&gt;&gt;bNotification.Name" xml:space="preserve">
-    <value>bNotification</value>
-  </data>
-  <data name="&gt;&gt;bNotification.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bNotification.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bNotification.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="bFolder.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bFolder.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bFolder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bFolder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bFolder.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Notifications</value>
   </data>
   <data name="bFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 294</value>
-  </data>
-  <data name="bFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bFolder.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
+    <value>0, 268</value>
   </data>
   <data name="bFolder.Text" xml:space="preserve">
-    <value>ملف </value>
-  </data>
-  <data name="&gt;&gt;bFolder.Name" xml:space="preserve">
-    <value>bFolder</value>
-  </data>
-  <data name="&gt;&gt;bFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bFolder.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bFolder.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="bAssets.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bAssets.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bAssets.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bAssets.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bAssets.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>File</value>
   </data>
   <data name="bAssets.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 325</value>
-  </data>
-  <data name="bAssets.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bAssets.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bAssets.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 30</value>
-  </data>
-  <data name="bAssets.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
+    <value>0, 299</value>
   </data>
   <data name="bAssets.Text" xml:space="preserve">
-    <value>أصول و إلتزامات أخرى</value>
-  </data>
-  <data name="&gt;&gt;bAssets.Name" xml:space="preserve">
-    <value>bAssets</value>
-  </data>
-  <data name="&gt;&gt;bAssets.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bAssets.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bAssets.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="bCustomer.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bCustomer.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bCustomer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bCustomer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bCustomer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Other Assets and Liabilities</value>
   </data>
   <data name="bCustomer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 355</value>
-  </data>
-  <data name="bCustomer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bCustomer.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bCustomer.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
+    <value>0, 329</value>
   </data>
   <data name="bCustomer.Text" xml:space="preserve">
-    <value>الزبائن</value>
-  </data>
-  <data name="&gt;&gt;bCustomer.Name" xml:space="preserve">
-    <value>bCustomer</value>
-  </data>
-  <data name="&gt;&gt;bCustomer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bCustomer.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bCustomer.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="bVendors.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bVendors.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bVendors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bVendors.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bVendors.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Customers</value>
   </data>
   <data name="bVendors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 386</value>
-  </data>
-  <data name="bVendors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bVendors.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bVendors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bVendors.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
+    <value>0, 360</value>
   </data>
   <data name="bVendors.Text" xml:space="preserve">
-    <value>الموردون</value>
-  </data>
-  <data name="&gt;&gt;bVendors.Name" xml:space="preserve">
-    <value>bVendors</value>
-  </data>
-  <data name="&gt;&gt;bVendors.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bVendors.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bVendors.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="bPaper.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bPaper.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bPaper.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bPaper.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bPaper.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Suppliers</value>
   </data>
   <data name="bPaper.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 417</value>
-  </data>
-  <data name="bPaper.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bPaper.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bPaper.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bPaper.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
+    <value>0, 391</value>
   </data>
   <data name="bPaper.Text" xml:space="preserve">
-    <value>سندات</value>
-  </data>
-  <data name="&gt;&gt;bPaper.Name" xml:space="preserve">
-    <value>bPaper</value>
-  </data>
-  <data name="&gt;&gt;bPaper.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bPaper.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bPaper.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="bMoneyBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bMoneyBox.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bMoneyBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bMoneyBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bMoneyBox.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Vouchers</value>
   </data>
   <data name="bMoneyBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 448</value>
-  </data>
-  <data name="bMoneyBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bMoneyBox.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bMoneyBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bMoneyBox.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
+    <value>0, 422</value>
   </data>
   <data name="bMoneyBox.Text" xml:space="preserve">
-    <value>الصندوق</value>
-  </data>
-  <data name="&gt;&gt;bMoneyBox.Name" xml:space="preserve">
-    <value>bMoneyBox</value>
-  </data>
-  <data name="&gt;&gt;bMoneyBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bMoneyBox.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bMoneyBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="bBank.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bBank.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bBank.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bBank.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bBank.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Cash Register</value>
   </data>
   <data name="bBank.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 479</value>
-  </data>
-  <data name="bBank.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bBank.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bBank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bBank.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
+    <value>0, 453</value>
   </data>
   <data name="bBank.Text" xml:space="preserve">
-    <value>البنك</value>
-  </data>
-  <data name="&gt;&gt;bBank.Name" xml:space="preserve">
-    <value>bBank</value>
-  </data>
-  <data name="&gt;&gt;bBank.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bBank.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bBank.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="bMaterial.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bMaterial.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bMaterial.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bMaterial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bMaterial.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Bank</value>
   </data>
   <data name="bMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 510</value>
-  </data>
-  <data name="bMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bMaterial.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bMaterial.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
+    <value>0, 484</value>
   </data>
   <data name="bMaterial.Text" xml:space="preserve">
-    <value>السلع و الخدمات</value>
-  </data>
-  <data name="&gt;&gt;bMaterial.Name" xml:space="preserve">
-    <value>bMaterial</value>
-  </data>
-  <data name="&gt;&gt;bMaterial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bMaterial.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bMaterial.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="bBalance.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bBalance.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bBalance.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bBalance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bBalance.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Goods and Services</value>
   </data>
   <data name="bBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 541</value>
-  </data>
-  <data name="bBalance.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bBalance.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bBalance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
+    <value>0, 515</value>
   </data>
   <data name="bBalance.Text" xml:space="preserve">
-    <value>محاسبة</value>
-  </data>
-  <data name="&gt;&gt;bBalance.Name" xml:space="preserve">
-    <value>bBalance</value>
-  </data>
-  <data name="&gt;&gt;bBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bBalance.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bBalance.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="bReport.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bReport.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="bReport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bReport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
-  </data>
-  <data name="bReport.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>Accounting</value>
   </data>
   <data name="bReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 572</value>
-  </data>
-  <data name="bReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bReport.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 31</value>
-  </data>
-  <data name="bReport.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
+    <value>0, 546</value>
   </data>
   <data name="bReport.Text" xml:space="preserve">
-    <value>التقارير</value>
-  </data>
-  <data name="&gt;&gt;bReport.Name" xml:space="preserve">
-    <value>bReport</value>
-  </data>
-  <data name="&gt;&gt;bReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bReport.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bReport.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>Reports</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1024, 53</value>
+    <value>0, 49</value>
   </data>
-  <data name="panel1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="panel1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 603</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>41</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>261, 577</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1285, 678</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>1205, 648</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3232,595 +2605,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>الشامل للمحاسبة و المستودعات</value>
-  </data>
-  <data name="&gt;&gt;ملفToolStripMenuItem.Name" xml:space="preserve">
-    <value>ملفToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ملفToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miDB_Connection.Name" xml:space="preserve">
-    <value>miDB_Connection</value>
-  </data>
-  <data name="&gt;&gt;miDB_Connection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miCompanyInfo.Name" xml:space="preserve">
-    <value>miCompanyInfo</value>
-  </data>
-  <data name="&gt;&gt;miCompanyInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewYear.Name" xml:space="preserve">
-    <value>miNewYear</value>
-  </data>
-  <data name="&gt;&gt;miNewYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miUser.Name" xml:space="preserve">
-    <value>miUser</value>
-  </data>
-  <data name="&gt;&gt;miUser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBackUp.Name" xml:space="preserve">
-    <value>miBackUp</value>
-  </data>
-  <data name="&gt;&gt;miBackUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miExit.Name" xml:space="preserve">
-    <value>miExit</value>
-  </data>
-  <data name="&gt;&gt;miExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;الزبائنToolStripMenuItem.Name" xml:space="preserve">
-    <value>الزبائنToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;الزبائنToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewCustumer.Name" xml:space="preserve">
-    <value>miNewCustumer</value>
-  </data>
-  <data name="&gt;&gt;miNewCustumer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSaleCash.Name" xml:space="preserve">
-    <value>miSaleCash</value>
-  </data>
-  <data name="&gt;&gt;miSaleCash.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miFastSale.Name" xml:space="preserve">
-    <value>miFastSale</value>
-  </data>
-  <data name="&gt;&gt;miFastSale.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miCustomerPayment.Name" xml:space="preserve">
-    <value>miCustomerPayment</value>
-  </data>
-  <data name="&gt;&gt;miCustomerPayment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReturnSales.Name" xml:space="preserve">
-    <value>miReturnSales</value>
-  </data>
-  <data name="&gt;&gt;miReturnSales.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReportCustomerAccounting.Name" xml:space="preserve">
-    <value>miReportCustomerAccounting</value>
-  </data>
-  <data name="&gt;&gt;miReportCustomerAccounting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialSale.Name" xml:space="preserve">
-    <value>miMaterialSale</value>
-  </data>
-  <data name="&gt;&gt;miMaterialSale.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSaleBills.Name" xml:space="preserve">
-    <value>miSaleBills</value>
-  </data>
-  <data name="&gt;&gt;miSaleBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReturnSaleBills.Name" xml:space="preserve">
-    <value>miReturnSaleBills</value>
-  </data>
-  <data name="&gt;&gt;miReturnSaleBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSaleReport.Name" xml:space="preserve">
-    <value>miSaleReport</value>
-  </data>
-  <data name="&gt;&gt;miSaleReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSalesBillsTable.Name" xml:space="preserve">
-    <value>miSalesBillsTable</value>
-  </data>
-  <data name="&gt;&gt;miSalesBillsTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSalesBillsTableDetails.Name" xml:space="preserve">
-    <value>miSalesBillsTableDetails</value>
-  </data>
-  <data name="&gt;&gt;miSalesBillsTableDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSalesChartReport.Name" xml:space="preserve">
-    <value>miSalesChartReport</value>
-  </data>
-  <data name="&gt;&gt;miSalesChartReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miVendorList.Name" xml:space="preserve">
-    <value>miVendorList</value>
-  </data>
-  <data name="&gt;&gt;miVendorList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miVendor.Name" xml:space="preserve">
-    <value>miVendor</value>
-  </data>
-  <data name="&gt;&gt;miVendor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBuy.Name" xml:space="preserve">
-    <value>miBuy</value>
-  </data>
-  <data name="&gt;&gt;miBuy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miFastBuy.Name" xml:space="preserve">
-    <value>miFastBuy</value>
-  </data>
-  <data name="&gt;&gt;miFastBuy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miSupplierPayment.Name" xml:space="preserve">
-    <value>miSupplierPayment</value>
-  </data>
-  <data name="&gt;&gt;miSupplierPayment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReturnBuy.Name" xml:space="preserve">
-    <value>miReturnBuy</value>
-  </data>
-  <data name="&gt;&gt;miReturnBuy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReportSupplierAccounting.Name" xml:space="preserve">
-    <value>miReportSupplierAccounting</value>
-  </data>
-  <data name="&gt;&gt;miReportSupplierAccounting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialBuy.Name" xml:space="preserve">
-    <value>miMaterialBuy</value>
-  </data>
-  <data name="&gt;&gt;miMaterialBuy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBuyList.Name" xml:space="preserve">
-    <value>miBuyList</value>
-  </data>
-  <data name="&gt;&gt;miBuyList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReturnBuyBills.Name" xml:space="preserve">
-    <value>miReturnBuyBills</value>
-  </data>
-  <data name="&gt;&gt;miReturnBuyBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBuyReport.Name" xml:space="preserve">
-    <value>miBuyReport</value>
-  </data>
-  <data name="&gt;&gt;miBuyReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;سنداتToolStripMenuItem.Name" xml:space="preserve">
-    <value>سنداتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;سنداتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPaperReceived.Name" xml:space="preserve">
-    <value>miPaperReceived</value>
-  </data>
-  <data name="&gt;&gt;miPaperReceived.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPaperPay.Name" xml:space="preserve">
-    <value>miPaperPay</value>
-  </data>
-  <data name="&gt;&gt;miPaperPay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator8.Name" xml:space="preserve">
-    <value>toolStripSeparator8</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPaperRecieveReport.Name" xml:space="preserve">
-    <value>miPaperRecieveReport</value>
-  </data>
-  <data name="&gt;&gt;miPaperRecieveReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPaperPayReport.Name" xml:space="preserve">
-    <value>miPaperPayReport</value>
-  </data>
-  <data name="&gt;&gt;miPaperPayReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mliBox.Name" xml:space="preserve">
-    <value>mliBox</value>
-  </data>
-  <data name="&gt;&gt;mliBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewBox.Name" xml:space="preserve">
-    <value>miNewBox</value>
-  </data>
-  <data name="&gt;&gt;miNewBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBoxTransfare.Name" xml:space="preserve">
-    <value>miBoxTransfare</value>
-  </data>
-  <data name="&gt;&gt;miBoxTransfare.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBoxAccounting.Name" xml:space="preserve">
-    <value>miBoxAccounting</value>
-  </data>
-  <data name="&gt;&gt;miBoxAccounting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPayBills.Name" xml:space="preserve">
-    <value>miPayBills</value>
-  </data>
-  <data name="&gt;&gt;miPayBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReciveBills.Name" xml:space="preserve">
-    <value>miReciveBills</value>
-  </data>
-  <data name="&gt;&gt;miReciveBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;البنكToolStripMenuItem.Name" xml:space="preserve">
-    <value>البنكToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;البنكToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewBank.Name" xml:space="preserve">
-    <value>miNewBank</value>
-  </data>
-  <data name="&gt;&gt;miNewBank.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBankAccounting.Name" xml:space="preserve">
-    <value>miBankAccounting</value>
-  </data>
-  <data name="&gt;&gt;miBankAccounting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBankTransfare.Name" xml:space="preserve">
-    <value>miBankTransfare</value>
-  </data>
-  <data name="&gt;&gt;miBankTransfare.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator6.Name" xml:space="preserve">
-    <value>toolStripSeparator6</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBankAccount.Name" xml:space="preserve">
-    <value>miBankAccount</value>
-  </data>
-  <data name="&gt;&gt;miBankAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miPayCheck.Name" xml:space="preserve">
-    <value>miPayCheck</value>
-  </data>
-  <data name="&gt;&gt;miPayCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bReceiveCheck.Name" xml:space="preserve">
-    <value>bReceiveCheck</value>
-  </data>
-  <data name="&gt;&gt;bReceiveCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;السلعوالخدماتToolStripMenuItem.Name" xml:space="preserve">
-    <value>السلعوالخدماتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;السلعوالخدماتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterilaTree.Name" xml:space="preserve">
-    <value>miMaterilaTree</value>
-  </data>
-  <data name="&gt;&gt;miMaterilaTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewMaterial.Name" xml:space="preserve">
-    <value>miNewMaterial</value>
-  </data>
-  <data name="&gt;&gt;miNewMaterial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialInventory.Name" xml:space="preserve">
-    <value>miMaterialInventory</value>
-  </data>
-  <data name="&gt;&gt;miMaterialInventory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;كلفةالموادالباقيةToolStripMenuItem.Name" xml:space="preserve">
-    <value>كلفةالموادالباقيةToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;كلفةالموادالباقيةToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
-    <value>toolStripSeparator5</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialCard.Name" xml:space="preserve">
-    <value>miMaterialCard</value>
-  </data>
-  <data name="&gt;&gt;miMaterialCard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miReportMaterialInventory.Name" xml:space="preserve">
-    <value>miReportMaterialInventory</value>
-  </data>
-  <data name="&gt;&gt;miReportMaterialInventory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;تصنيعToolStripMenuItem.Name" xml:space="preserve">
-    <value>تصنيعToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;تصنيعToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMaker.Name" xml:space="preserve">
-    <value>miMaterialMaker</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMaker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMakerList.Name" xml:space="preserve">
-    <value>miMaterialMakerList</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMakerList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMaker1.Name" xml:space="preserve">
-    <value>miMaterialMaker1</value>
-  </data>
-  <data name="&gt;&gt;miMaterialMaker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
-    <value>toolStripSeparator9</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;حسابإحتياجاتالتصنيعToolStripMenuItem.Name" xml:space="preserve">
-    <value>حسابإحتياجاتالتصنيعToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;حسابإحتياجاتالتصنيعToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;جدولعملياتالتصنيعالمرحلToolStripMenuItem.Name" xml:space="preserve">
-    <value>جدولعملياتالتصنيعالمرحلToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;جدولعملياتالتصنيعالمرحلToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Name" xml:space="preserve">
-    <value>جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;جدولالموادالأوليةالمستخدمةللتصنيعToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miNewAssets.Name" xml:space="preserve">
-    <value>miNewAssets</value>
-  </data>
-  <data name="&gt;&gt;miNewAssets.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miAddAsset.Name" xml:space="preserve">
-    <value>miAddAsset</value>
-  </data>
-  <data name="&gt;&gt;miAddAsset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miAddLiability.Name" xml:space="preserve">
-    <value>miAddLiability</value>
-  </data>
-  <data name="&gt;&gt;miAddLiability.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
-    <value>toolStripSeparator7</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;جدولأهتلاكالأصولToolStripMenuItem.Name" xml:space="preserve">
-    <value>جدولأهتلاكالأصولToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;جدولأهتلاكالأصولToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;جردوميزانياتToolStripMenuItem.Name" xml:space="preserve">
-    <value>جردوميزانياتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;جردوميزانياتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miAddBonds.Name" xml:space="preserve">
-    <value>miAddBonds</value>
-  </data>
-  <data name="&gt;&gt;miAddBonds.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miBondList.Name" xml:space="preserve">
-    <value>miBondList</value>
-  </data>
-  <data name="&gt;&gt;miBondList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;miTradeAccount.Name" xml:space="preserve">
-    <value>miTradeAccount</value>
-  </data>
-  <data name="&gt;&gt;miTradeAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ميزانياتToolStripMenuItem.Name" xml:space="preserve">
-    <value>ميزانياتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ميزانياتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;الميزانيةالعموميةToolStripMenuItem.Name" xml:space="preserve">
-    <value>الميزانيةالعموميةToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;الميزانيةالعموميةToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;مساعدةToolStripMenuItem.Name" xml:space="preserve">
-    <value>مساعدةToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;مساعدةToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;مساعدةToolStripMenuItem1.Name" xml:space="preserve">
-    <value>مساعدةToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;مساعدةToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
-    <value>toolStripProgressBar1</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
-    <value>printDialog1</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
-    <value>imageList1</value>
-  </data>
-  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator.Name" xml:space="preserve">
-    <value>toolStripSeparator</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bCalculator.Name" xml:space="preserve">
-    <value>bCalculator</value>
-  </data>
-  <data name="&gt;&gt;bCalculator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cutToolStripButton.Name" xml:space="preserve">
-    <value>cutToolStripButton</value>
-  </data>
-  <data name="&gt;&gt;cutToolStripButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripButton.Name" xml:space="preserve">
-    <value>copyToolStripButton</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pasteToolStripButton.Name" xml:space="preserve">
-    <value>pasteToolStripButton</value>
-  </data>
-  <data name="&gt;&gt;pasteToolStripButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;helpToolStripButton.Name" xml:space="preserve">
-    <value>helpToolStripButton</value>
-  </data>
-  <data name="&gt;&gt;helpToolStripButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;helpProvider1.Name" xml:space="preserve">
-    <value>helpProvider1</value>
-  </data>
-  <data name="&gt;&gt;helpProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Comprehensive Accounting and Warehouses</value>
   </data>
 </root>

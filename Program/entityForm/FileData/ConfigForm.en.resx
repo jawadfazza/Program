@@ -117,61 +117,153 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsb_New.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPrdPZasJAFAZgX8q+Q32N9o2kXkjphQsigoJC
-        ixa1VAWXiohG7IakbmjcNcYl5i8TCQSdGXPhgcPczHwz5xzGZrtWRN+bOM1wqo5gvAJfrIBy4w/cu8hh
-        VjyG3nDjuOcjkbTABB58cSRy9SMiiPSXhF6rTMDpedEPG0ktJfD8wQT26gEEMSAq4I3mqYCmaZCVHQZj
-        WQfst3f0Ep7CGSqw3amYzBWI/TkfcAdTZ4B60LCQt+hJK3yJEz7g8ifOAGWzhzRdo9WdofYt8QFSnzlI
-        42bLDdqDBZqtMUpC3zpgbtxPe4rq5xDZSsc6YG6c8DtCodZDsihaA4x5s1bmGI0Zkw2X8lofWHf+AdjM
-        9sNc+xBlAAAAAElFTkSuQmCC
-</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 15</value>
   </data>
-  <data name="helpToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIYSURBVDhPtVNPaxNBFO9HyEfYj1AUPHjK0eOiDeSYQg89
-        qAQPEgRxKQjBYBuRosHSXatiI6nupXaN1q5oa4tIF2s1tmGzLVHTZpuObpX+0fx8M1NYSyM5+eCxb4b5
-        /XlvZzo6/kdMLwS4U1xH+m4FfcNLGCyUMf7qM9pqvXO3kZ9qQC+uwavv4tvWHliwS/UOruZLSOsOiq9X
-        WxNx8AN7E/6PJmwH0EYBNS2T17bD4G42cWlwBuMvyodJuPLGzyYMG4imAMMC2DZEeAxI3uR7DBUiOZd5
-        dpBg+v0WHs83hDIH88M8zFkgkZVfThZNMaoZdOsDcvk3Icm9p3V8Yb+E1WhS2s6aQCfVSi9DMksWKFSN
-        IZF2sOQG6L4wFhJk7q+KgamaBHX2ylQoEwTm6naJQVFtKHEbNT/Asdj1kODybZemvSfsSyAdTjByIpVN
-        m9YEjKgmfU3U6t9xRB0ICXIPK1jxd6h3CVTinsjsqCSIqA6lJFBTNkrlKrrOGCHBxMxXWI4vBsSBkTgH
-        ONSSR3OhNQefMEUalocxaxFXbk0e/BOZkQUs+79JdR9AIF4LB/tgzXDwad3HqdP64XswOVdFX24OboPu
-        AqmomiP65slrvrdc3UCMrA8XZlvfxomXFZzvn4Lx5CPmF1ewRtOu1QPRM7fdRcr6v8B/P5Shwlv0XHyE
-        4/EbOHryGmJnR5AZet7+MbV9bS0O/AGd2vKsTr+IQwAAAABJRU5ErkJggg==
-</value>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 37</value>
   </data>
-  <metadata name="gAGroupBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>632, 17</value>
-  </metadata>
-  <metadata name="gASystemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>263, 17</value>
-  </metadata>
-  <metadata name="bD_SMCDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
-  <metadata name="gASystemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>263, 17</value>
-  </metadata>
-  <metadata name="bD_SMCDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
-  <metadata name="gA_SystemTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>448, 17</value>
-  </metadata>
-  <metadata name="gAGroupBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>632, 17</value>
-  </metadata>
-  <metadata name="gA_GroupTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>812, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>52</value>
-  </metadata>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save Link</value>
+  </data>
+  <data name="lblDataSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 89</value>
+  </data>
+  <data name="lblDataSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 18</value>
+  </data>
+  <data name="lblDataSource.Text" xml:space="preserve">
+    <value>Data Source</value>
+  </data>
+  <data name="lblInitialCatalog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 115</value>
+  </data>
+  <data name="lblInitialCatalog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 18</value>
+  </data>
+  <data name="lblInitialCatalog.Text" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="lblUserID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 141</value>
+  </data>
+  <data name="lblUserID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 18</value>
+  </data>
+  <data name="lblUserID.Text" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 167</value>
+  </data>
+  <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 18</value>
+  </data>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblNickname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 193</value>
+  </data>
+  <data name="lblNickname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 18</value>
+  </data>
+  <data name="lblNickname.Text" xml:space="preserve">
+    <value>Link Wildcard</value>
+  </data>
+  <data name="txtDataSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 89</value>
+  </data>
+  <data name="txtDataSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="txtInitialCatalog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 115</value>
+  </data>
+  <data name="txtInitialCatalog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="txtUserID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 141</value>
+  </data>
+  <data name="txtUserID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 167</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="txtNickname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 193</value>
+  </data>
+  <data name="txtNickname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="btnLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 323</value>
+  </data>
+  <data name="btnLoad.Text" xml:space="preserve">
+    <value>Download Link</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 15</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 37</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Delete Link</value>
+  </data>
+  <data name="cmbConfigurations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 58</value>
+  </data>
+  <data name="cmbConfigurations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chkEncrypt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="chkEncrypt.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="chkEncrypt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 225</value>
+  </data>
+  <data name="chkEncrypt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 22</value>
+  </data>
+  <data name="chkEncrypt.Text" xml:space="preserve">
+    <value>Data Encrypted</value>
+  </data>
+  <data name="chkTrustServerCertificate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="chkTrustServerCertificate.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="chkTrustServerCertificate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 255</value>
+  </data>
+  <data name="chkTrustServerCertificate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="chkTrustServerCertificate.Text" xml:space="preserve">
+    <value>Server Certificate</value>
+  </data>
+  <data name="btnTestConnection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 279</value>
+  </data>
+  <data name="btnTestConnection.Text" xml:space="preserve">
+    <value>Test Connection</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>380, 374</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Connect to Database</value>
+  </data>
 </root>

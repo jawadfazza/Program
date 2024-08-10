@@ -12,13 +12,16 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class user_task
+    public partial class user_permission
     {
-        public int id { get; set; }
-        public System.DateTime date { get; set; }
-        public string opreation { get; set; }
-        public int user_id_ { get; set; }
+        public System.Guid ID { get; set; }
+        public Nullable<System.Guid> action_id { get; set; }
+        public Nullable<bool> action_active { get; set; }
+        public Nullable<System.Guid> user_id { get; set; }
+        public Nullable<System.DateTime> assigned_at { get; set; }
     
-        public virtual user_loge user_loge { get; set; }
+        public virtual action action { get; set; }
+        public virtual action action1 { get; set; }
+        public virtual user_profile user_profile { get; set; }
     }
 }

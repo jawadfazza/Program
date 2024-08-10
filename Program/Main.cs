@@ -31,6 +31,8 @@ using System.Diagnostics;
 using Program.Connection;
 using ConfigUpdater;
 using ConfigForm = ConfigUpdater.ConfigForm;
+using System.Globalization;
+using System.Threading;
 
 //WIN-IS6T0MAU3LS
 namespace Program
@@ -39,6 +41,7 @@ namespace Program
     {
         public Main()
         {
+            ApplyLanguage("en");
             InitializeComponent();
         }
 
@@ -47,6 +50,16 @@ namespace Program
             bFolder_Click(sender, e);
             start();
 
+        }
+
+        private void ApplyLanguage(string cultureCode)
+        {
+            // Set the current culture and UI culture
+            CultureInfo culture = new CultureInfo(cultureCode);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+
+           
         }
 
         public void start()

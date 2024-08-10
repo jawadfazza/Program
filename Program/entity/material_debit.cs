@@ -20,7 +20,7 @@ namespace Program.entity
             this.material_debit_penfit_payment = new HashSet<material_debit_penfit_payment>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public System.DateTime تاريخ { get; set; }
         public double الرصيد { get; set; }
         public string من { get; set; }
@@ -29,17 +29,18 @@ namespace Program.entity
         public Nullable<System.DateTime> تاريخ_فاتورة_المصدر { get; set; }
         public string المصدر { get; set; }
         public string المستودع { get; set; }
-        public int المورد { get; set; }
+        public System.Guid المورد { get; set; }
         public string حذفة { get; set; }
         public string نوع_العملية { get; set; }
-        public Nullable<double> حسم_مكتسب { get; set; }
+        public Nullable<double> حسام_مكتسب { get; set; }
         public Nullable<double> مصاريف_مضافة { get; set; }
         public string مصاريف_على_حساب { get; set; }
         public string مرحل { get; set; }
         public string طريقة_الدفع { get; set; }
         public string اسم_الحساب { get; set; }
-        public string اسم_مكتب { get; set; }
         public Nullable<int> سند_الدفع { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual supplier supplier { get; set; }
         public virtual ICollection<material_debit_list> material_debit_list { get; set; }

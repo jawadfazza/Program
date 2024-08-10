@@ -14,7 +14,7 @@ namespace Program.entity
     
     public partial class company
     {
-        public int id { get; set; }
+        public System.Guid id { get; set; }
         public string name { get; set; }
         public string street { get; set; }
         public string city { get; set; }
@@ -23,7 +23,12 @@ namespace Program.entity
         public string email { get; set; }
         public string web_site { get; set; }
         public byte[] logo { get; set; }
+        public Nullable<int> FK_Currency { get; set; }
         public string active { get; set; }
         public Nullable<System.DateTime> block_Date { get; set; }
+        public Nullable<bool> MainBranch { get; set; }
+        public string code { get; set; }
+    
+        public virtual Currencies Currencies { get; set; }
     }
 }

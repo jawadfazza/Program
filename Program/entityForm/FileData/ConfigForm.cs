@@ -100,9 +100,15 @@ namespace ConfigUpdater
             try
             {
                 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var connectionString = $"Data Source={txtDataSource.Text};Initial Catalog={txtInitialCatalog.Text};User ID={txtUserID.Text};Password={txtPassword.Text};Encrypt={chkEncrypt.Checked};TrustServerCertificate={chkTrustServerCertificate.Checked};";
+                var standardConnectionString = $"Data Source={txtDataSource.Text};Initial Catalog={txtInitialCatalog.Text};User ID={txtUserID.Text};Password={txtPassword.Text};Encrypt={chkEncrypt.Checked};TrustServerCertificate={chkTrustServerCertificate.Checked};";
+                var efConnectionString = $"metadata=res://*/entity.Model.csdl|res://*/entity.Model.ssdl|res://*/entity.Model.msl;provider=System.Data.SqlClient;provider connection string=\"data source={txtDataSource.Text};initial catalog={txtInitialCatalog.Text};persist security info=True;user id={txtUserID.Text};password={txtPassword.Text};encrypt={chkEncrypt.Checked};trustservercertificate={chkTrustServerCertificate.Checked};MultipleActiveResultSets=True;App=EntityFramework\"";
 
-                config.ConnectionStrings.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString = connectionString;
+                // Update standard connection string
+                config.ConnectionStrings.ConnectionStrings["Program.Properties.Settings.WarehouseConnectionString"].ConnectionString = standardConnectionString;
+
+                // Update Entity Framework connection string
+                config.ConnectionStrings.ConnectionStrings["AccountingEntities"].ConnectionString = efConnectionString;
+
                 config.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection("connectionStrings");
 
@@ -234,6 +240,11 @@ namespace ConfigUpdater
         private void cmbConfigurations_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadSelectedConfiguration();
+        }
+
+        private void ConfigForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

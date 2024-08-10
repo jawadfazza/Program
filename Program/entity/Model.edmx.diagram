@@ -5,103 +5,116 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9b9a0fae9d824be8adb4e761358c02ac" Name="Diagram1">
-        <EntityTypeShape EntityType="AccountingModel.admin_" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.asset" Width="1.5" PointX="10.75" PointY="23.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.asset_credit" Width="1.5" PointX="13" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.asset_debit" Width="1.5" PointX="13" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.bank_account" Width="1.5" PointX="14" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.bank_credit" Width="1.5" PointX="16.25" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.bank_debit" Width="1.5" PointX="16.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.bank_details" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.bonds" Width="1.5" PointX="15.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.box" Width="1.5" PointX="18.75" PointY="17.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.box_credit" Width="1.5" PointX="21" PointY="16.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.box_debit" Width="1.5" PointX="21" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.company" Width="1.5" PointX="17.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.Country" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.customer" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.customer_credit" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.customer_debit" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.customer_receive_time" Width="1.5" PointX="3" PointY="29.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.error" Width="1.5" PointX="8.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.liability" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.liability_credit" Width="1.5" PointX="21" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.liability_debit" Width="1.5" PointX="21" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_credit" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_credit_return" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_debit" Width="1.5" PointX="6" PointY="29.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_debit_return" Width="1.5" PointX="9" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_group" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_maker" Width="1.5" PointX="6" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.materialMaker_credit" Width="1.5" PointX="6" PointY="24.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.materialMaker_credit_list" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_pay" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_pay_credit" Width="1.5" PointX="21" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_pay_debit" Width="1.5" PointX="21" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_receive" Width="1.5" PointX="13.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_receive_credit" Width="1.5" PointX="16" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.paper_receive_debit" Width="1.5" PointX="16" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.producer" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.supplier" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.supplier_credit" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.supplier_debit" Width="1.5" PointX="6" PointY="36.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.supplier_pay_time" Width="1.5" PointX="6" PointY="39.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.task" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.user_loge" Width="1.5" PointX="11.75" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.user_loge_date" Width="1.5" PointX="14" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.user_task" Width="1.5" PointX="14" PointY="11.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.WareHouse" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_cost" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_credit_list" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_credit_list_return" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_credit_penfit_payment" Width="1.5" PointX="5.25" PointY="42.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_debit_list" Width="1.5" PointX="8.25" PointY="21.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_debit_list_return" Width="1.5" PointX="11.25" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccountingModel.material_debit_penfit_payment" Width="1.5" PointX="8.25" PointY="30.875" IsExpanded="true" />
-        <AssociationConnector Association="AccountingModel.FK__asset_cre__asset__251C81ED" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__asset_deb__asset__2610A626" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__bank_acco__bank___2704CA5F" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__bank_cred__bank___27F8EE98" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__bank_debi__bank___28ED12D1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__box_credi__box_i__29E1370A" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__box_debit__box_i__2AD55B43" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__customer___custo__2BC97F7C" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__customer___custo__2CBDA3B5" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__customer___custo__2DB1C7EE" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___العمي__36470DEF" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__liability__liabi__2EA5EC27" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__liability__liabi__2F9A1060" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___الماد__3552E9B6" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__373B3228" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__39237A9A" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__3DE82FB7" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__3FD07829" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material__الصانع__308E3499" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material__المجمو__318258D2" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material__المستو__32767D0B" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__materialM__رقم_ا__336AA144" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__382F5661" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__3B0BC30C" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___المور__3BFFE745" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__3A179ED3" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___المور__3CF40B7E" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__3EDC53F0" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__41B8C09B" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___المور__42ACE4D4" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__40C49C62" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___المجم__43A1090D" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__material___المست__44952D46" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__materialM__رقم_ا__345EC57D" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__paper_pay__paper__4589517F" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__paper_pay__paper__467D75B8" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__paper_rec__paper__477199F1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__paper_rec__paper__4865BE2A" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__supplier___Suppl__4959E263" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__supplier___Suppl__4A4E069C" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__supplier___suppl__4B422AD5" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__user_loge__user___4C364F0E" ManuallyRouted="false" />
-        <AssociationConnector Association="AccountingModel.FK__user_task__user___4D2A7347" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AccountingModel.action" Width="1.5" PointX="15.75" PointY="3.125" />
+        <EntityTypeShape EntityType="AccountingModel.action_caticory" Width="1.5" PointX="13.5" PointY="3.25" />
+        <EntityTypeShape EntityType="AccountingModel.asset" Width="1.5" PointX="0.75" PointY="29.25" />
+        <EntityTypeShape EntityType="AccountingModel.asset_credit" Width="1.5" PointX="3" PointY="31.375" />
+        <EntityTypeShape EntityType="AccountingModel.asset_debit" Width="1.5" PointX="3" PointY="28.125" />
+        <EntityTypeShape EntityType="AccountingModel.audit" Width="1.5" PointX="18" PointY="8.25" />
+        <EntityTypeShape EntityType="AccountingModel.bank_account" Width="1.5" PointX="18" PointY="17.375" />
+        <EntityTypeShape EntityType="AccountingModel.bank_credit" Width="1.5" PointX="20.25" PointY="19.375" />
+        <EntityTypeShape EntityType="AccountingModel.bank_debit" Width="1.5" PointX="20.25" PointY="16.125" />
+        <EntityTypeShape EntityType="AccountingModel.bank_details" Width="1.5" PointX="15.75" PointY="17.5" />
+        <EntityTypeShape EntityType="AccountingModel.bonds" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="AccountingModel.box" Width="1.5" PointX="25.75" PointY="4.625" />
+        <EntityTypeShape EntityType="AccountingModel.box_credit" Width="1.5" PointX="28" PointY="6.375" />
+        <EntityTypeShape EntityType="AccountingModel.box_debit" Width="1.5" PointX="28" PointY="3.125" />
+        <EntityTypeShape EntityType="AccountingModel.company" Width="1.5" PointX="25" PointY="12.875" />
+        <EntityTypeShape EntityType="AccountingModel.Country" Width="1.5" PointX="2.75" PointY="2.75" />
+        <EntityTypeShape EntityType="AccountingModel.Currencies" Width="1.5" PointX="22.75" PointY="12.375" />
+        <EntityTypeShape EntityType="AccountingModel.customer" Width="1.5" PointX="8.75" PointY="4.125" />
+        <EntityTypeShape EntityType="AccountingModel.customer_credit" Width="1.5" PointX="11" PointY="38.875" />
+        <EntityTypeShape EntityType="AccountingModel.customer_debit" Width="1.5" PointX="11" PointY="10.625" />
+        <EntityTypeShape EntityType="AccountingModel.customer_ReveiveTime" Width="1.5" PointX="11" PointY="42.125" />
+        <EntityTypeShape EntityType="AccountingModel.error" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AccountingModel.ExchangeRates" Width="1.5" PointX="25" PointY="10.125" />
+        <EntityTypeShape EntityType="AccountingModel.liability" Width="1.5" PointX="20.75" PointY="24.5" />
+        <EntityTypeShape EntityType="AccountingModel.liability_credit" Width="1.5" PointX="23" PointY="26.375" />
+        <EntityTypeShape EntityType="AccountingModel.liability_debit" Width="1.5" PointX="23" PointY="23.125" />
+        <EntityTypeShape EntityType="AccountingModel.material" Width="1.5" PointX="8" PointY="17.875" />
+        <EntityTypeShape EntityType="AccountingModel.material_credit" Width="1.5" PointX="8" PointY="33.25" />
+        <EntityTypeShape EntityType="AccountingModel.material_credit_list" Width="1.5" PointX="10.25" PointY="24.25" />
+        <EntityTypeShape EntityType="AccountingModel.material_credit_penfit_payment" Width="1.5" PointX="10.25" PointY="35.125" />
+        <EntityTypeShape EntityType="AccountingModel.material_credit_return" Width="1.5" PointX="8" PointY="9.875" />
+        <EntityTypeShape EntityType="AccountingModel.material_debit" Width="1.5" PointX="8" PointY="26.5" />
+        <EntityTypeShape EntityType="AccountingModel.material_debit_list" Width="1.5" PointX="10.25" PointY="19.375" />
+        <EntityTypeShape EntityType="AccountingModel.material_debit_list_return" Width="1.5" PointX="13.25" PointY="14.25" />
+        <EntityTypeShape EntityType="AccountingModel.material_debit_penfit_payment" Width="1.5" PointX="10.25" PointY="30.125" />
+        <EntityTypeShape EntityType="AccountingModel.material_debit_return" Width="1.5" PointX="11" PointY="3.625" />
+        <EntityTypeShape EntityType="AccountingModel.material_group" Width="1.5" PointX="0.75" PointY="20.375" />
+        <EntityTypeShape EntityType="AccountingModel.material_maker" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="AccountingModel.material_maker_list" Width="1.5" PointX="13.25" PointY="23.875" />
+        <EntityTypeShape EntityType="AccountingModel.materialMaker_credit" Width="1.5" PointX="5.25" PointY="19.375" />
+        <EntityTypeShape EntityType="AccountingModel.materialMaker_credit_list" Width="1.5" PointX="13.25" PointY="19.875" />
+        <EntityTypeShape EntityType="AccountingModel.paper_pay" Width="1.5" PointX="15.75" PointY="24.5" />
+        <EntityTypeShape EntityType="AccountingModel.paper_pay_credit" Width="1.5" PointX="18" PointY="23.125" />
+        <EntityTypeShape EntityType="AccountingModel.paper_pay_debit" Width="1.5" PointX="18" PointY="26.375" />
+        <EntityTypeShape EntityType="AccountingModel.paper_receive" Width="1.5" PointX="20.75" PointY="4.5" />
+        <EntityTypeShape EntityType="AccountingModel.paper_receive_credit" Width="1.5" PointX="23" PointY="6.375" />
+        <EntityTypeShape EntityType="AccountingModel.paper_receive_debit" Width="1.5" PointX="23" PointY="3.125" />
+        <EntityTypeShape EntityType="AccountingModel.producer" Width="1.5" PointX="5.75" PointY="16" />
+        <EntityTypeShape EntityType="AccountingModel.supplier" Width="1.5" PointX="5.75" PointY="10" />
+        <EntityTypeShape EntityType="AccountingModel.supplier_credit" Width="1.5" PointX="8" PointY="0.75" />
+        <EntityTypeShape EntityType="AccountingModel.supplier_debit" Width="1.5" PointX="8" PointY="44.5" />
+        <EntityTypeShape EntityType="AccountingModel.supplier_PayTime" Width="1.5" PointX="8" PointY="41.125" />
+        <EntityTypeShape EntityType="AccountingModel.User_login_history" Width="1.5" PointX="18" PointY="12" />
+        <EntityTypeShape EntityType="AccountingModel.user_permission" Width="1.5" PointX="18" PointY="4" />
+        <EntityTypeShape EntityType="AccountingModel.user_profile" Width="1.5" PointX="15.75" PointY="6.25" />
+        <EntityTypeShape EntityType="AccountingModel.WareHouse" Width="1.5" PointX="5.75" PointY="24.75" />
+        <EntityTypeShape EntityType="AccountingModel.material_cost" Width="1.5" PointX="10.25" PointY="46.75" />
+        <EntityTypeShape EntityType="AccountingModel.material_credit_list_return" Width="1.5" PointX="10.25" PointY="14.5" />
+        <AssociationConnector Association="AccountingModel.FK__action__caticory__2354350C" />
+        <AssociationConnector Association="AccountingModel.FK__user_perm__actio__2724C5F0" />
+        <AssociationConnector Association="AccountingModel.FK__user_perm__user___290D0E62" />
+        <AssociationConnector Association="AccountingModel.FK__asset_cre__asset__68687968" />
+        <AssociationConnector Association="AccountingModel.FK__asset_deb__asset__62AFA012" />
+        <AssociationConnector Association="AccountingModel.FK__audit__user_id__2DD1C37F" />
+        <AssociationConnector Association="AccountingModel.FK__bank_acco__bank___35DCF99B" />
+        <AssociationConnector Association="AccountingModel.FK__bank_cred__bank___3B95D2F1" />
+        <AssociationConnector Association="AccountingModel.FK__bank_debi__bank___414EAC47" />
+        <AssociationConnector Association="AccountingModel.FK__box_credi__box_i__2E3BD7D3" />
+        <AssociationConnector Association="AccountingModel.FK__box_debit__box_i__2882FE7D" />
+        <AssociationConnector Association="AccountingModel.FK__company__FK_Curr__4E3E9311" />
+        <AssociationConnector Association="AccountingModel.FK_Currency" />
+        <AssociationConnector Association="AccountingModel.FK__customer___custo__11D4A34F" />
+        <AssociationConnector Association="AccountingModel.FK__customer___custo__178D7CA5" />
+        <AssociationConnector Association="AccountingModel.FK__customer___custo__1C5231C2" />
+        <AssociationConnector Association="AccountingModel.FK__material___العمي__60083D91" />
+        <AssociationConnector Association="AccountingModel.FK__material___العمي__7ABC33CD" />
+        <AssociationConnector Association="AccountingModel.FK__liability__liabi__1DD065E0" />
+        <AssociationConnector Association="AccountingModel.FK__liability__liabi__23893F36" />
+        <AssociationConnector Association="AccountingModel.FK__material___الماد__0662F0A3" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__062DE679" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__184C96B4" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__4DE98D56" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__66B53B20" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__69279377" />
+        <AssociationConnector Association="AccountingModel.FK__material__الصانع__79FD19BE" />
+        <AssociationConnector Association="AccountingModel.FK__material__المجمو__7908F585" />
+        <AssociationConnector Association="AccountingModel.FK__material__المستو__7AF13DF7" />
+        <AssociationConnector Association="AccountingModel.FK__materialM__رقم_ا__3A379A64" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__07220AB2" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__0BE6BFCF" />
+        <AssociationConnector Association="AccountingModel.FK__material___المور__119F9925" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__1940BAED" />
+        <AssociationConnector Association="AccountingModel.FK__material___المور__3CBF0154" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__4EDDB18F" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__53A266AC" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__67A95F59" />
+        <AssociationConnector Association="AccountingModel.FK__material___المجم__664B26CC" />
+        <AssociationConnector Association="AccountingModel.FK__material___رقم_ا__6A1BB7B0" />
+        <AssociationConnector Association="AccountingModel.FK__materialM__رقم_ا__3296789C" />
+        <AssociationConnector Association="AccountingModel.FK__materialM__المست__347EC10E" />
+        <AssociationConnector Association="AccountingModel.FK__materialM__رقم_ا__3B2BBE9D" />
+        <AssociationConnector Association="AccountingModel.FK__paper_pay__paper__09C96D33" />
+        <AssociationConnector Association="AccountingModel.FK__paper_pay__paper__0F824689" />
+        <AssociationConnector Association="AccountingModel.FK__paper_rec__paper__75C27486" />
+        <AssociationConnector Association="AccountingModel.FK__paper_rec__paper__7B7B4DDC" />
+        <AssociationConnector Association="AccountingModel.FK__supplier___Suppl__2C88998B" />
+        <AssociationConnector Association="AccountingModel.FK__supplier___Suppl__324172E1" />
+        <AssociationConnector Association="AccountingModel.FK__supplier___Suppl__370627FE" />
+        <AssociationConnector Association="AccountingModel.FK__User_logi__user___17E28260" />
+        <AssociationConnector Association="AccountingModel.FK__user_perm__user___2A01329B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

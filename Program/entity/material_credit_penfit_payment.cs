@@ -14,12 +14,13 @@ namespace Program.entity
     
     public partial class material_credit_penfit_payment
     {
-        public int رقم_التقرير { get; set; }
+        public System.Guid الرقم { get; set; }
+        public System.Guid رقم_التقرير { get; set; }
         public int الفائدة { get; set; }
         public int نسبة_الفائدة { get; set; }
         public int الدفع_كل { get; set; }
-        public int عدد_الاقساط { get; set; }
-        public Nullable<int> العرابون { get; set; }
+        public int عدد_الأقساط { get; set; }
+        public Nullable<int> العربون { get; set; }
     
         public virtual material_credit material_credit { get; set; }
     }

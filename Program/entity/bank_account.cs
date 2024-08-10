@@ -20,14 +20,14 @@ namespace Program.entity
             this.bank_debit = new HashSet<bank_debit>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public string اسم_الحساب { get; set; }
         public string رقم_الحساب { get; set; }
         public string نوع_الحساب { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public System.DateTime تاريخ { get; set; }
-        public Nullable<int> bank_id { get; set; }
+        public Nullable<System.Guid> bank_id { get; set; }
         public string تعليق { get; set; }
     
         public virtual bank_details bank_details { get; set; }

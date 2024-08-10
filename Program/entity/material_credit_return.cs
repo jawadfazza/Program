@@ -19,7 +19,7 @@ namespace Program.entity
             this.material_credit_list_return = new HashSet<material_credit_list_return>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public System.DateTime تاريخ_البيع { get; set; }
         public System.DateTime تاريخ_التسليم { get; set; }
         public double الرصيد { get; set; }
@@ -27,15 +27,17 @@ namespace Program.entity
         public string الى { get; set; }
         public string طريقة_الدفع { get; set; }
         public string المستودع { get; set; }
-        public int المورد { get; set; }
+        public System.Guid المورد { get; set; }
         public string حذفة { get; set; }
         public string بالة { get; set; }
         public string نوع_العملية { get; set; }
-        public string اسم_ممنوح { get; set; }
+        public Nullable<double> حسام_ممنوح { get; set; }
         public Nullable<double> مصاريف_مضافة { get; set; }
         public string مصاريف_على_حساب { get; set; }
         public string مرحل { get; set; }
         public string اسم_الحساب { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual supplier supplier { get; set; }
         public virtual ICollection<material_credit_list_return> material_credit_list_return { get; set; }

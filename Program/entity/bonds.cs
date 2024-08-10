@@ -14,13 +14,15 @@ namespace Program.entity
     
     public partial class bonds
     {
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public string من { get; set; }
-        public string إلى { get; set; }
-        public string ملاحطات { get; set; }
+        public string الى { get; set; }
+        public string ملاحظات { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
         public string مرحل { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     }
 }

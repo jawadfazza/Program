@@ -14,13 +14,13 @@ namespace Program.entity
     
     public partial class bank_debit
     {
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public string من { get; set; }
-        public string ملاحطات { get; set; }
+        public string ملاحظات { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> bank_id { get; set; }
+        public Nullable<System.Guid> bank_id { get; set; }
     
         public virtual bank_account bank_account { get; set; }
     }

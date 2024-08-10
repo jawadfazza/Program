@@ -14,13 +14,13 @@ namespace Program.entity
     
     public partial class paper_pay_credit
     {
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public string الى { get; set; }
         public string ملاحظات { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> paper_pay_id { get; set; }
+        public Nullable<System.Guid> paper_receive_id { get; set; }
     
         public virtual paper_pay paper_pay { get; set; }
     }

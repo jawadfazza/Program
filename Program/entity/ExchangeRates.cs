@@ -12,16 +12,13 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class supplier_pay_time
+    public partial class ExchangeRates
     {
-        public int الرقم { get; set; }
-        public double الرصيد { get; set; }
-        public string الرصيد_كتابة { get; set; }
-        public string ملاحظات { get; set; }
-        public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<int> supplier_id { get; set; }
-        public string تم_الدفع { get; set; }
+        public System.Guid RateID { get; set; }
+        public int CurrencyID { get; set; }
+        public decimal ExchangeRate { get; set; }
+        public System.DateTime Date { get; set; }
     
-        public virtual supplier supplier { get; set; }
+        public virtual Currencies Currencies { get; set; }
     }
 }

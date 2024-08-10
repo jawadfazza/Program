@@ -14,11 +14,12 @@ namespace Program.entity
     
     public partial class material_cost
     {
-        public Nullable<int> المادة { get; set; }
+        public Nullable<System.Guid> المادة { get; set; }
         public int سعر_الشراء { get; set; }
         public int كمية { get; set; }
         public Nullable<System.DateTime> التاريخ { get; set; }
         public Nullable<int> رقم_فاتورة_الشراء { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual material material { get; set; }
     }

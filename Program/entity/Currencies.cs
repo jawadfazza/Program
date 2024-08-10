@@ -12,19 +12,20 @@ namespace Program.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class material_group
+    public partial class Currencies
     {
-        public material_group()
+        public Currencies()
         {
-            this.material = new HashSet<material>();
-            this.material_maker = new HashSet<material_maker>();
+            this.company = new HashSet<company>();
+            this.ExchangeRates = new HashSet<ExchangeRates>();
         }
     
-        public System.Guid رقم_المجموعة { get; set; }
-        public string اسم_المجموعة { get; set; }
-        public Nullable<System.Guid> companyID { get; set; }
+        public int CurrencyID { get; set; }
+        public string CurrencyCode { get; set; }
+        public string CurrencyName { get; set; }
+        public string Symbol { get; set; }
     
-        public virtual ICollection<material> material { get; set; }
-        public virtual ICollection<material_maker> material_maker { get; set; }
+        public virtual ICollection<company> company { get; set; }
+        public virtual ICollection<ExchangeRates> ExchangeRates { get; set; }
     }
 }

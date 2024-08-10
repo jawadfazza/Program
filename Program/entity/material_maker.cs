@@ -14,17 +14,26 @@ namespace Program.entity
     
     public partial class material_maker
     {
-        public int الرقم { get; set; }
+        public material_maker()
+        {
+            this.material_maker_list = new HashSet<material_maker_list>();
+            this.materialMaker_credit = new HashSet<materialMaker_credit>();
+        }
+    
+        public System.Guid الرقم { get; set; }
         public string اسم_المادة { get; set; }
         public string الوحدة { get; set; }
         public int كمية { get; set; }
         public double الكلفة { get; set; }
         public double سعر_البيع { get; set; }
-        public Nullable<int> المجموعة { get; set; }
-        public Nullable<int> المستودع { get; set; }
-        public Nullable<int> الكلفة_المضافة { get; set; }
+        public string ملاحظات { get; set; }
+        public Nullable<System.Guid> المجموعة { get; set; }
+        public Nullable<int> كلف { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual material_group material_group { get; set; }
-        public virtual WareHouse WareHouse { get; set; }
+        public virtual ICollection<material_maker_list> material_maker_list { get; set; }
+        public virtual ICollection<materialMaker_credit> materialMaker_credit { get; set; }
     }
 }

@@ -20,11 +20,13 @@ namespace Program.entity
             this.box_debit = new HashSet<box_debit>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public string اسم_الصندوق { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public System.DateTime تاريخ { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
         public virtual ICollection<box_credit> box_credit { get; set; }
         public virtual ICollection<box_debit> box_debit { get; set; }

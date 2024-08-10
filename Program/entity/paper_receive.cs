@@ -16,19 +16,21 @@ namespace Program.entity
     {
         public paper_receive()
         {
-            this.paper_receive_credit = new HashSet<paper_receive_credit>();
             this.paper_receive_debit = new HashSet<paper_receive_debit>();
+            this.paper_receive_credit = new HashSet<paper_receive_credit>();
         }
     
-        public int الرقم { get; set; }
+        public System.Guid الرقم { get; set; }
         public double الرصيد { get; set; }
         public string الرصيد_كتابة { get; set; }
         public Nullable<System.DateTime> تاريخ { get; set; }
-        public Nullable<System.DateTime> تاريخ_الإستحقاق { get; set; }
+        public Nullable<System.DateTime> تاريخ_الاستحقاق { get; set; }
         public string الساحب { get; set; }
         public string المسحوب_عليه { get; set; }
+        public string code { get; set; }
+        public Nullable<System.Guid> companyID { get; set; }
     
-        public virtual ICollection<paper_receive_credit> paper_receive_credit { get; set; }
         public virtual ICollection<paper_receive_debit> paper_receive_debit { get; set; }
+        public virtual ICollection<paper_receive_credit> paper_receive_credit { get; set; }
     }
 }
