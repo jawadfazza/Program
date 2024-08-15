@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -3437,9 +3439,9 @@ namespace Program.BankDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BankDataSet.bankAccount_accountDataTable dataTable, int id) {
+        public virtual int Fill(BankDataSet.bankAccount_accountDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3451,9 +3453,9 @@ namespace Program.BankDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BankDataSet.bankAccount_accountDataTable GetData(int id) {
+        public virtual BankDataSet.bankAccount_accountDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BankDataSet.bankAccount_accountDataTable dataTable = new BankDataSet.bankAccount_accountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3991,9 +3993,9 @@ WHERE        (bank_credit.الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BankDataSet.bank_creditPayCheckDataTable dataTable, int id) {
+        public virtual int Fill(BankDataSet.bank_creditPayCheckDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4005,9 +4007,9 @@ WHERE        (bank_credit.الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BankDataSet.bank_creditPayCheckDataTable GetData(int id) {
+        public virtual BankDataSet.bank_creditPayCheckDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BankDataSet.bank_creditPayCheckDataTable dataTable = new BankDataSet.bank_creditPayCheckDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4171,9 +4173,9 @@ WHERE        (bank_debit.الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BankDataSet.bank_debitReciveCheckDataTable dataTable, int id) {
+        public virtual int Fill(BankDataSet.bank_debitReciveCheckDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4185,9 +4187,9 @@ WHERE        (bank_debit.الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BankDataSet.bank_debitReciveCheckDataTable GetData(int id) {
+        public virtual BankDataSet.bank_debitReciveCheckDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BankDataSet.bank_debitReciveCheckDataTable dataTable = new BankDataSet.bank_debitReciveCheckDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

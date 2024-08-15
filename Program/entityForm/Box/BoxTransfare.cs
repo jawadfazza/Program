@@ -343,7 +343,7 @@ namespace Program.entityForm.Supplier
             }
         }
 
-        static int id = 0;
+        static Guid id = 0;
         private void bAddSupplier_Click(object sender, EventArgs e)
         {
             Thread t_Table = new Thread(new ThreadStart(StartThreadTable));

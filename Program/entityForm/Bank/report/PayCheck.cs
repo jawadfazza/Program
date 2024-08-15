@@ -114,7 +114,7 @@ namespace Program.entityForm.Supplier.Report
             }
         }
 
-        private void getReport(int id)
+        private void getReport(Guid id)
         {
             try
             {

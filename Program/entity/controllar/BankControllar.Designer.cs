@@ -2983,9 +2983,9 @@ SELECT الرقم, اسم_البنك, عنوان_البنك, هاتف, المو�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BankControllar.bank_detailsDataTable dataTable, int id) {
+        public virtual int FillBy(BankControllar.bank_detailsDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2997,9 +2997,9 @@ SELECT الرقم, اسم_البنك, عنوان_البنك, هاتف, المو�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BankControllar.bank_detailsDataTable getBankById(int id) {
+        public virtual BankControllar.bank_detailsDataTable getBankById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             BankControllar.bank_detailsDataTable dataTable = new BankControllar.bank_detailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3559,9 +3559,9 @@ SELECT الرقم, اسم_الحساب, رقم_الحساب, نوع_الحساب
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BankControllar.bank_accountDataTable dataTable, int id) {
+        public virtual int FillBy(BankControllar.bank_accountDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3573,9 +3573,9 @@ SELECT الرقم, اسم_الحساب, رقم_الحساب, نوع_الحساب
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BankControllar.bank_accountDataTable getBankAccountingId(int id) {
+        public virtual BankControllar.bank_accountDataTable getBankAccountingId(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             BankControllar.bank_accountDataTable dataTable = new BankControllar.bank_accountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4136,10 +4136,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BankControllar.bank_debitDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(BankControllar.bank_debitDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4155,10 +4155,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BankControllar.bank_debitDataTable getBankAccountingPayment(global::System.Nullable<int> id) {
+        public virtual BankControllar.bank_debitDataTable getBankAccountingPayment(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4624,10 +4624,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BankControllar.bank_creditDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(BankControllar.bank_creditDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4643,10 +4643,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BankControllar.bank_creditDataTable getBankAccountingReceive(global::System.Nullable<int> id) {
+        public virtual BankControllar.bank_creditDataTable getBankAccountingReceive(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;

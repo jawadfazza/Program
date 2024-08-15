@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program.entity.controllar {
     
     
@@ -2245,9 +2247,9 @@ SELECT الرقم, الإلتزام, الرصيد, الرصيد_كتابة, تا
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(LiabilityControllar.liabilityDataTable dataTable, int id) {
+        public virtual int FillBy(LiabilityControllar.liabilityDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2259,9 +2261,9 @@ SELECT الرقم, الإلتزام, الرصيد, الرصيد_كتابة, تا
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual LiabilityControllar.liabilityDataTable getLiabilityById(int id) {
+        public virtual LiabilityControllar.liabilityDataTable getLiabilityById(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             LiabilityControllar.liabilityDataTable dataTable = new LiabilityControllar.liabilityDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

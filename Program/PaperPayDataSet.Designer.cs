@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -975,9 +977,9 @@ namespace Program.PaperPayDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PaperPayDataSet.PaperPayDataDataTable dataTable, int id) {
+        public virtual int Fill(PaperPayDataSet.PaperPayDataDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid )(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -989,9 +991,9 @@ namespace Program.PaperPayDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PaperPayDataSet.PaperPayDataDataTable GetData(int id) {
+        public virtual PaperPayDataSet.PaperPayDataDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             PaperPayDataSet.PaperPayDataDataTable dataTable = new PaperPayDataSet.PaperPayDataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

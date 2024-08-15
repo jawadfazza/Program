@@ -317,7 +317,7 @@ namespace Program.entityForm.customer
             }
         }
 
-        static int id = 0;
+        static Guid id ;
         private void bAddCustomer_Click(object sender, EventArgs e)
         {
             Console.WriteLine("id: " + txtCustomer.Text.Split('.')[1]);

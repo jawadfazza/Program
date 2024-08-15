@@ -44,7 +44,7 @@ namespace Program.entityForm.Box.report
         {
             try
             {
-                int id = Convert.ToInt32(cbBox.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbBox.Text.Split('.')[1]);
                 // TODO: This line of code loads data into the 'boxDataSet.boxAccount' table. You can move, or remove it, as needed.
                 this.boxAccountTableAdapter.Fill(this.boxDataSet.boxAccount, id);
                 // TODO: This line of code loads data into the 'boxDataSet.boxAccount_debit' table. You can move, or remove it, as needed.

@@ -301,6 +301,14 @@ namespace Program.entity.controllar {
             
             private global::System.Data.DataColumn columnblock_Date;
             
+            private global::System.Data.DataColumn columnid1;
+            
+            private global::System.Data.DataColumn columnFK_Currency;
+            
+            private global::System.Data.DataColumn columnMainBranch;
+            
+            private global::System.Data.DataColumn columncode;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public companyDataTable() {
@@ -424,6 +432,38 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id1Column {
+                get {
+                    return this.columnid1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FK_CurrencyColumn {
+                get {
+                    return this.columnFK_Currency;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MainBranchColumn {
+                get {
+                    return this.columnMainBranch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn codeColumn {
+                get {
+                    return this.columncode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +499,7 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public companyRow AddcompanyRow(string name, string street, string city, string country, string phone, string email, string web_site, byte[] logo, string active, System.DateTime block_Date) {
+            public companyRow AddcompanyRow(string name, string street, string city, string country, string phone, string email, string web_site, byte[] logo, string active, System.DateTime block_Date, System.Guid id1, int FK_Currency, bool MainBranch, string code) {
                 companyRow rowcompanyRow = ((companyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -472,7 +512,11 @@ namespace Program.entity.controllar {
                         web_site,
                         logo,
                         active,
-                        block_Date};
+                        block_Date,
+                        id1,
+                        FK_Currency,
+                        MainBranch,
+                        code};
                 rowcompanyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcompanyRow);
                 return rowcompanyRow;
@@ -513,6 +557,10 @@ namespace Program.entity.controllar {
                 this.columnlogo = base.Columns["logo"];
                 this.columnactive = base.Columns["active"];
                 this.columnblock_Date = base.Columns["block_Date"];
+                this.columnid1 = base.Columns["id1"];
+                this.columnFK_Currency = base.Columns["FK_Currency"];
+                this.columnMainBranch = base.Columns["MainBranch"];
+                this.columncode = base.Columns["code"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,8 +588,18 @@ namespace Program.entity.controllar {
                 base.Columns.Add(this.columnactive);
                 this.columnblock_Date = new global::System.Data.DataColumn("block_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnblock_Date);
+                this.columnid1 = new global::System.Data.DataColumn("id1", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid1);
+                this.columnFK_Currency = new global::System.Data.DataColumn("FK_Currency", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_Currency);
+                this.columnMainBranch = new global::System.Data.DataColumn("MainBranch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMainBranch);
+                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncode);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnid1}, false));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
@@ -563,6 +621,10 @@ namespace Program.entity.controllar {
                 this.columnweb_site.AllowDBNull = false;
                 this.columnweb_site.MaxLength = 60;
                 this.columnactive.MaxLength = 6;
+                this.columnid1.AllowDBNull = false;
+                this.columnid1.Unique = true;
+                this.columnid1.Caption = "id";
+                this.columncode.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -841,6 +903,65 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.Guid id1 {
+                get {
+                    return ((global::System.Guid)(this[this.tablecompany.id1Column]));
+                }
+                set {
+                    this[this.tablecompany.id1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int FK_Currency {
+                get {
+                    try {
+                        return ((int)(this[this.tablecompany.FK_CurrencyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_Currency\' in table \'company\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecompany.FK_CurrencyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool MainBranch {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecompany.MainBranchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MainBranch\' in table \'company\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecompany.MainBranchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string code {
+                get {
+                    try {
+                        return ((string)(this[this.tablecompany.codeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'code\' in table \'company\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecompany.codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IslogoNull() {
                 return this.IsNull(this.tablecompany.logoColumn);
             }
@@ -873,6 +994,42 @@ namespace Program.entity.controllar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setblock_DateNull() {
                 this[this.tablecompany.block_DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFK_CurrencyNull() {
+                return this.IsNull(this.tablecompany.FK_CurrencyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFK_CurrencyNull() {
+                this[this.tablecompany.FK_CurrencyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMainBranchNull() {
+                return this.IsNull(this.tablecompany.MainBranchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMainBranchNull() {
+                this[this.tablecompany.MainBranchColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscodeNull() {
+                return this.IsNull(this.tablecompany.codeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcodeNull() {
+                this[this.tablecompany.codeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1035,7 +1192,6 @@ namespace Program.entity.controllar.CompanyControllarTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "company";
-            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("street", "street");
             tableMapping.ColumnMappings.Add("city", "city");
@@ -1046,12 +1202,16 @@ namespace Program.entity.controllar.CompanyControllarTableAdapters {
             tableMapping.ColumnMappings.Add("logo", "logo");
             tableMapping.ColumnMappings.Add("active", "active");
             tableMapping.ColumnMappings.Add("block_Date", "block_Date");
+            tableMapping.ColumnMappings.Add("id", "id1");
+            tableMapping.ColumnMappings.Add("FK_Currency", "FK_Currency");
+            tableMapping.ColumnMappings.Add("MainBranch", "MainBranch");
+            tableMapping.ColumnMappings.Add("code", "code");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [company] WHERE (([id] = @Original_id) AND ([name] = @Original_name) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([phone] = @Original_phone) AND ([email] = @Original_email) AND ([web_site] = @Original_web_site) AND ((@IsNull_active = 1 AND [active] IS NULL) OR ([active] = @Original_active)) AND ((@IsNull_block_Date = 1 AND [block_Date] IS NULL) OR ([block_Date] = @Original_block_Date)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [company] WHERE (([id] = @Original_id) AND ([name] = @Original_name) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([phone] = @Original_phone) AND ([email] = @Original_email) AND ([web_site] = @Original_web_site) AND ((@IsNull_active = 1 AND [active] IS NULL) OR ([active] = @Original_active)) AND ((@IsNull_block_Date = 1 AND [block_Date] IS NULL) OR ([block_Date] = @Original_block_Date)) AND ((@IsNull_FK_Currency = 1 AND [FK_Currency] IS NULL) OR ([FK_Currency] = @Original_FK_Currency)) AND ((@IsNull_MainBranch = 1 AND [MainBranch] IS NULL) OR ([MainBranch] = @Original_MainBranch)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code] = @Original_code)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1062,11 +1222,18 @@ namespace Program.entity.controllar.CompanyControllarTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_active", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_block_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_block_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainBranch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainBranch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [company] ([name], [street], [city], [country], [phone], [email], [web_site], [logo], [active], [block_Date]) VALUES (@name, @street, @city, @country, @phone, @email, @web_site, @logo, @active, @block_Date);
-SELECT id, name, street, city, country, phone, email, web_site, logo, active, block_Date FROM company WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [company] ([id], [name], [street], [city], [country], [phone], [email], [web_site], [logo], [active], [block_Date], [FK_Currency], [MainBranch], [code]) VALUES (@id, @name, @street, @city, @country, @phone, @email, @web_site, @logo, @active, @block_Date, @FK_Currency, @MainBranch, @code);
+SELECT id, name, street, city, country, phone, email, web_site, logo, active, block_Date, FK_Currency, MainBranch, code FROM company WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@street", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "street", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1077,11 +1244,15 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@logo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@active", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@block_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainBranch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [company] SET [name] = @name, [street] = @street, [city] = @city, [country] = @country, [phone] = @phone, [email] = @email, [web_site] = @web_site, [logo] = @logo, [active] = @active, [block_Date] = @block_Date WHERE (([id] = @Original_id) AND ([name] = @Original_name) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([phone] = @Original_phone) AND ([email] = @Original_email) AND ([web_site] = @Original_web_site) AND ((@IsNull_active = 1 AND [active] IS NULL) OR ([active] = @Original_active)) AND ((@IsNull_block_Date = 1 AND [block_Date] IS NULL) OR ([block_Date] = @Original_block_Date)));
-SELECT id, name, street, city, country, phone, email, web_site, logo, active, block_Date FROM company WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [company] SET [id] = @id, [name] = @name, [street] = @street, [city] = @city, [country] = @country, [phone] = @phone, [email] = @email, [web_site] = @web_site, [logo] = @logo, [active] = @active, [block_Date] = @block_Date, [FK_Currency] = @FK_Currency, [MainBranch] = @MainBranch, [code] = @code WHERE (([id] = @Original_id) AND ([name] = @Original_name) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([phone] = @Original_phone) AND ([email] = @Original_email) AND ([web_site] = @Original_web_site) AND ((@IsNull_active = 1 AND [active] IS NULL) OR ([active] = @Original_active)) AND ((@IsNull_block_Date = 1 AND [block_Date] IS NULL) OR ([block_Date] = @Original_block_Date)) AND ((@IsNull_FK_Currency = 1 AND [FK_Currency] IS NULL) OR ([FK_Currency] = @Original_FK_Currency)) AND ((@IsNull_MainBranch = 1 AND [MainBranch] IS NULL) OR ([MainBranch] = @Original_MainBranch)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code] = @Original_code)));
+SELECT id, name, street, city, country, phone, email, web_site, logo, active, block_Date, FK_Currency, MainBranch, code FROM company WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@street", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "street", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1092,7 +1263,10 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@logo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@active", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@block_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainBranch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1103,7 +1277,12 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_active", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_block_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_block_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "block_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_Currency", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_Currency", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainBranch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainBranch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainBranch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1119,8 +1298,8 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        id, name, street, city, country, phone, email, web_site, logo, acti" +
-                "ve, block_Date\r\nFROM            company";
+            this._commandCollection[0].CommandText = "SELECT   id, name, street, city, country, phone, email, web_site, logo, active, b" +
+                "lock_Date, FK_Currency, MainBranch, code\r\nFROM         company";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -1185,8 +1364,8 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_name, string Original_city, string Original_country, string Original_phone, string Original_email, string Original_web_site, string Original_active, global::System.Nullable<global::System.DateTime> Original_block_Date) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+        public virtual int Delete(System.Guid Original_id, string Original_name, string Original_city, string Original_country, string Original_phone, string Original_email, string Original_web_site, string Original_active, global::System.Nullable<global::System.DateTime> Original_block_Date, global::System.Nullable<int> Original_FK_Currency, global::System.Nullable<bool> Original_MainBranch, string Original_code) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.Guid)(Original_id));
             if ((Original_name == null)) {
                 throw new global::System.ArgumentNullException("Original_name");
             }
@@ -1239,6 +1418,30 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
+            if ((Original_FK_Currency.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_FK_Currency.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_MainBranch.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_MainBranch.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_code == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_code));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1259,66 +1462,85 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name, string street, string city, string country, string phone, string email, string web_site, byte[] logo, string active, global::System.Nullable<global::System.DateTime> block_Date) {
+        public virtual int Insert(System.Guid id, string name, string street, string city, string country, string phone, string email, string web_site, byte[] logo, string active, global::System.Nullable<global::System.DateTime> block_Date, global::System.Nullable<int> FK_Currency, global::System.Nullable<bool> MainBranch, string code) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(name));
             }
             if ((street == null)) {
                 throw new global::System.ArgumentNullException("street");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(street));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(street));
             }
             if ((city == null)) {
                 throw new global::System.ArgumentNullException("city");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(city));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(city));
             }
             if ((country == null)) {
                 throw new global::System.ArgumentNullException("country");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(country));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(country));
             }
             if ((phone == null)) {
                 throw new global::System.ArgumentNullException("phone");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(phone));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(phone));
             }
             if ((email == null)) {
                 throw new global::System.ArgumentNullException("email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(email));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(email));
             }
             if ((web_site == null)) {
                 throw new global::System.ArgumentNullException("web_site");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(web_site));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(web_site));
             }
             if ((logo == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((byte[])(logo));
-            }
-            if ((active == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(active));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((byte[])(logo));
             }
-            if ((block_Date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(block_Date.Value));
+            if ((active == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(active));
+            }
+            if ((block_Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(block_Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((FK_Currency.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(FK_Currency.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((MainBranch.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(MainBranch.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((code == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(code));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1341,6 +1563,7 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
+                    System.Guid id, 
                     string name, 
                     string street, 
                     string city, 
@@ -1351,7 +1574,10 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
                     byte[] logo, 
                     string active, 
                     global::System.Nullable<global::System.DateTime> block_Date, 
-                    int Original_id, 
+                    global::System.Nullable<int> FK_Currency, 
+                    global::System.Nullable<bool> MainBranch, 
+                    string code, 
+                    System.Guid Original_id, 
                     string Original_name, 
                     string Original_city, 
                     string Original_country, 
@@ -1360,121 +1586,165 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
                     string Original_web_site, 
                     string Original_active, 
                     global::System.Nullable<global::System.DateTime> Original_block_Date, 
-                    int id) {
+                    global::System.Nullable<int> Original_FK_Currency, 
+                    global::System.Nullable<bool> Original_MainBranch, 
+                    string Original_code) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(name));
             }
             if ((street == null)) {
                 throw new global::System.ArgumentNullException("street");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(street));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(street));
             }
             if ((city == null)) {
                 throw new global::System.ArgumentNullException("city");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(city));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(city));
             }
             if ((country == null)) {
                 throw new global::System.ArgumentNullException("country");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(country));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(country));
             }
             if ((phone == null)) {
                 throw new global::System.ArgumentNullException("phone");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(phone));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(phone));
             }
             if ((email == null)) {
                 throw new global::System.ArgumentNullException("email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(email));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(email));
             }
             if ((web_site == null)) {
                 throw new global::System.ArgumentNullException("web_site");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(web_site));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(web_site));
             }
             if ((logo == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte[])(logo));
-            }
-            if ((active == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(active));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte[])(logo));
             }
-            if ((block_Date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(block_Date.Value));
-            }
-            else {
+            if ((active == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(active));
+            }
+            if ((block_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(block_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((FK_Currency.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(FK_Currency.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((MainBranch.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(MainBranch.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((code == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(code));
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.Guid)(Original_id));
             if ((Original_name == null)) {
                 throw new global::System.ArgumentNullException("Original_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_name));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_name));
             }
             if ((Original_city == null)) {
                 throw new global::System.ArgumentNullException("Original_city");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_city));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_city));
             }
             if ((Original_country == null)) {
                 throw new global::System.ArgumentNullException("Original_country");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_country));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_country));
             }
             if ((Original_phone == null)) {
                 throw new global::System.ArgumentNullException("Original_phone");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_phone));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_phone));
             }
             if ((Original_email == null)) {
                 throw new global::System.ArgumentNullException("Original_email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_email));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_email));
             }
             if ((Original_web_site == null)) {
                 throw new global::System.ArgumentNullException("Original_web_site");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_web_site));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_web_site));
             }
             if ((Original_active == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_active));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_active));
             }
             if ((Original_block_Date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_block_Date.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_block_Date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(id));
+            if ((Original_FK_Currency.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_FK_Currency.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_MainBranch.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((bool)(Original_MainBranch.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_code == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_code));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1506,7 +1776,10 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
                     byte[] logo, 
                     string active, 
                     global::System.Nullable<global::System.DateTime> block_Date, 
-                    int Original_id, 
+                    global::System.Nullable<int> FK_Currency, 
+                    global::System.Nullable<bool> MainBranch, 
+                    string code, 
+                    System.Guid Original_id, 
                     string Original_name, 
                     string Original_city, 
                     string Original_country, 
@@ -1514,8 +1787,11 @@ SELECT id, name, street, city, country, phone, email, web_site, logo, active, bl
                     string Original_email, 
                     string Original_web_site, 
                     string Original_active, 
-                    global::System.Nullable<global::System.DateTime> Original_block_Date) {
-            return this.Update(name, street, city, country, phone, email, web_site, logo, active, block_Date, Original_id, Original_name, Original_city, Original_country, Original_phone, Original_email, Original_web_site, Original_active, Original_block_Date, Original_id);
+                    global::System.Nullable<global::System.DateTime> Original_block_Date, 
+                    global::System.Nullable<int> Original_FK_Currency, 
+                    global::System.Nullable<bool> Original_MainBranch, 
+                    string Original_code) {
+            return this.Update(Original_id, name, street, city, country, phone, email, web_site, logo, active, block_Date, FK_Currency, MainBranch, code, Original_id, Original_name, Original_city, Original_country, Original_phone, Original_email, Original_web_site, Original_active, Original_block_Date, Original_FK_Currency, Original_MainBranch, Original_code);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

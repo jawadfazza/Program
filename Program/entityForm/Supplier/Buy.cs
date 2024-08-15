@@ -285,7 +285,7 @@ namespace Program.entityForm.customer
                         if (MessageBox.Show($"هل ترغب بتغير سعر بيع {dr["اسم_المادة"]} ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             materialTableAdapter mta = new materialTableAdapter();
-                            mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
+                            mta.UpdateBuyPrice(price, Guid.Parse(dr["الرقم_الفني"].ToString()));
                         }
                         dr["سعر_الشراء"] = price;
                     }
@@ -912,7 +912,7 @@ namespace Program.entityForm.customer
                 }
 
                 txtId.Text = cbIds.Items[indexValue].ToString();
-                int id = Convert.ToInt32(txtId.Text);
+                Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());
                 material_debitTableAdapter mcta = new material_debitTableAdapter();
                 MaterialControllar.material_debitDataTable mcdt = mcta.getMaterialDebitById(id);
 
@@ -938,7 +938,7 @@ namespace Program.entityForm.customer
                 txtMoreBills.Text = rowMaterialdDebit["مصاريف_مضافة"].ToString();
                 cbMoreBillsOption.Text = rowMaterialdDebit["مصاريف_على_حساب"].ToString();
                 isSaveBonds = Convert.ToBoolean(rowMaterialdDebit["مرحل"]);
-                idPaperPay = Convert.ToInt32(rowMaterialdDebit["سند_الدفع"]);
+                idPaperPay = Guid.Parse( rowMaterialdDebit["سند_الدفع"].ToString());
 
                 UpdateBondStatus(isSaveBonds);
 
@@ -1011,7 +1011,7 @@ namespace Program.entityForm.customer
         private void AddMaterialToGrid(DataRow dr, int rowIndex)
         {
             materialTableAdapter mta1 = new materialTableAdapter();
-            MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+            MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(dr["الرقم_الفني"].ToString()));
 
             dataGridViewMaterial.Rows[rowIndex].Cells[0].Value = dr["رقم_المادة"];
             dataGridViewMaterial.Rows[rowIndex].Cells[1].Value = dr["اسم_المادة"];
@@ -1210,13 +1210,13 @@ namespace Program.entityForm.customer
                     foreach (DataRow row in materialList)
                     {
                         materialTableAdapter mta1 = new materialTableAdapter();
-                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]));
+                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()));
 
                         mta.UpdateMaterialQuantity((Convert.ToInt32(material.Rows[0]["كمية"]) + Convert.ToInt32(row["كمية"])),
-                        Convert.ToInt32(row["الرقم_الفني"]));
+                        Guid.Parse(row["الرقم_الفني"].ToString()));
 
                     }
-                    int id = Convert.ToInt32(rowMaterialdDebit["الرقم"]);
+                    Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());
                     material_debitTableAdapter mdta = new material_debitTableAdapter();
                     material_debit_listTableAdapter mdlta = new material_debit_listTableAdapter();
                     mdlta.DeleteMaterialDebitList(id);
@@ -1267,148 +1267,164 @@ namespace Program.entityForm.customer
         {
             try
             {
-                if (rbPaperPay.Checked && (dtpPaperRecieved.Value.Date <= DateTime.Now.Date))
+                // Validate paper receipt date
+                if (rbPaperPay.Checked && dtpPaperRecieved.Value.Date <= DateTime.Now.Date)
                 {
                     MessageBox.Show("تاريخ إستحقاق ورقة القبض يجب أن لا يكون أصغر أو يساوي التاريخ اليوم", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Exit the method early if validation fails
                 }
-                else
+
+                if (!SaveBuy)
                 {
-                    if (SaveBuy)
+                    MessageBox.Show("رصيد النقدية غير كافي", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (MessageBox.Show("هل تريد حفظ التقرير ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
+                {
+                    return; // Exit if the user cancels
+                }
+
+                Guid id = Guid.NewGuid();
+                double price = totalPriceValue + totalPenfitValue - totalDiscountValue;
+
+                // Adjust price based on the bill option
+                if (cbMoreBillsOption.Text == "على الزبون")
+                {
+                    price += Convert.ToDouble(txtMoreBills.Text);
+                }
+
+                var mcta = new material_debitTableAdapter();
+                mcta.Insert(
+                    الرقم: id,
+                    تاريخ: DateTime.Now,
+                    الرصيد: price,
+                    من: $"مورد.{txtSupplier.Text}",
+                    الرصيد_كتابة: nte.changeNumericToWords(price),
+                    رقم_فاتورة_المصدر: Convert.ToInt32(txtBiles.Text),
+                    تاريخ_فاتورة_المصدر: dtpBillDate.Value,
+                    المصدر: string.Empty,
+                    المستودع: string.Empty,
+                    المورد: Guid.Parse(txtSupplier.Text.Split('.')[1]),
+                    حذفة: string.Empty,
+                    نوع_العملية: getType(),
+                    حسام_مكتسب: Convert.ToDouble(totalDiscountValue),
+                    مصاريف_مضافة: Convert.ToDouble(txtMoreBills.Text),
+                    مصاريف_على_حساب: cbMoreBillsOption.Text,
+                    مرحل: true.ToString(),
+                    طريقة_الدفع: cbTypeOperation.Text,
+                    اسم_الحساب: cbBankAccounting.Text,
+                    سند_الدفع: Convert.ToInt32(idPaperPay),
+                    code: string.Empty,
+                    companyID: null
+                );
+
+                var mclta = new material_debit_listTableAdapter();
+                var mta = new materialTableAdapter();
+
+                if (rbPaperPay.Checked)
+                {
+                    var cta = new companyTableAdapter();
+                    var company = cta.GetData().Rows[0];
+                    var prta = new paper_payTableAdapter();
+                    prta.Insert(0, string.Empty, DateTime.Now, dtpPaperRecieved.Value, txtSupplier.Text, company["name"].ToString());
+                }
+
+                if (rbAfter.Checked)
+                {
+                    int payCount = Convert.ToInt32(txtPayCount.Text);
+                    int payTime = Convert.ToInt32(txtPayTime.Text);
+                    int payValue = (int)((totalPriceValue + totalPenfitValue - totalDiscountValue - Convert.ToInt32(txtFiestCashPaymant.Text)) / payCount);
+
+                    var mcppta = new material_debit_penfit_paymentTableAdapter();
+                    int? advancePayment = string.IsNullOrWhiteSpace(txtFiestCashPaymant.Text) ? (int?)null : Convert.ToInt32(txtFiestCashPaymant.Text);
+
+                    mcppta.Insert1(
+                        id,
+                        Convert.ToInt32(totalPenfitValue),
+                        Convert.ToInt32(txtPenfitPresent.Text),
+                        payTime,
+                        payCount,
+                        Guid.NewGuid(), // or appropriate Guid
+                        advancePayment
+                    );
+
+                    var crtta = new supplier_PayTimeTableAdapter();
+                    for (int i = 1; i <= payCount; i++)
                     {
-                        if (MessageBox.Show("هل تريد حفط التقرير ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                        {
-                            material_debitTableAdapter mcta = new material_debitTableAdapter();
-
-                            double price = totalPriceValue + totalPenfitValue - totalDiscountValue;
-                            if (cbMoreBillsOption.Text == "على الزبون")
-                            {
-                                price = price + Convert.ToDouble(txtMoreBills.Text);
-                            }
-
-                            mcta.Insert(DateTime.Now,
-                            price,
-                            "مورد." + txtSupplier.Text,
-                            nte.changeNumericToWords(price),
-                            Convert.ToInt32(txtBiles.Text),
-                            dtpBillDate.Value,
-                            "",
-                            "",
+                        crtta.Insert(
+                            payValue,
+                            nte.changeNumericToWords(payValue),
+                            $"قسط مشتريات من المورد {txtSupplier.Text.Split('.')[0]}",
+                            DateTime.Now.AddDays(i * payTime),
                             Convert.ToInt32(txtSupplier.Text.Split('.')[1]),
-                            "",
-                            getType(),
-                            Convert.ToDouble(totalDiscountValue),
-                            Convert.ToDouble(txtMoreBills.Text),
-                            cbMoreBillsOption.Text,
-                            true.ToString(),
-                            cbTypeOperation.Text,
-                            cbBankAccounting.Text,
-                            Convert.ToInt32(idPaperPay));
+                            "false"
+                        );
+                    }
+                }
 
-                            int id = Convert.ToInt32(mcta.getMaxMaterialDebit());
-                            material_debit_listTableAdapter mclta = new material_debit_listTableAdapter();
-                            materialTableAdapter mta = new materialTableAdapter();
+                var mcta_cost = new material_costTableAdapter();
+                foreach (DataRow row in materialList)
+                {
+                    try
+                    {
+                        double totalValue = Convert.ToDouble(row["TotalValue"]);
+                        double discount = Convert.ToDouble(row["Discount"]);
 
-                            if (rbPaperPay.Checked)
-                            {
-                                companyTableAdapter cta = new companyTableAdapter();
-                                CompanyControllar.companyDataTable cdt = cta.GetData();
-                                DataRow company = cdt.Rows[0];
-                                paper_payTableAdapter prta = new paper_payTableAdapter();
-                                prta.Insert(0, "", DateTime.Now, dtpPaperRecieved.Value, txtSupplier.Text, company["name"].ToString());
-                            }
+                        var materialId = Guid.Parse(row["الرقم_الفني"].ToString());
+                        var reportId = Guid.NewGuid(); // or the actual report Guid
 
-                            if (rbAfter.Checked)
-                            {
-                                int payCount = Convert.ToInt32(txtPayCount.Text);
-                                int payTime = Convert.ToInt32(txtPayTime.Text);
-                                int payValue = Convert.ToInt32((totalPriceValue + totalPenfitValue - totalDiscountValue - Convert.ToInt32(txtFiestCashPaymant.Text))) / payCount;
+                        mclta.Insert1(
+                            الرقم: Guid.NewGuid(),
+                             id,
+                            reportId,
+                            row["اسم_المادة"].ToString(),
+                            row["الوحدة"].ToString(),
+                            Convert.ToInt32(row["كمية"].ToString()),
+                            Convert.ToDouble(row["سعر_الشراء"].ToString()),
+                            totalValue + discount,
+                            row["Comment"].ToString(),
+                            0,
+                            nte.changeNumericToWords(Convert.ToInt32(row["كمية"].ToString())),
+                            string.Empty,
+                            discount
+                        );
 
-                                material_debit_penfit_paymentTableAdapter mcppta = new material_debit_penfit_paymentTableAdapter();
-                                mcppta.Insert(id,
-                                    Convert.ToInt32(totalPenfitValue),
-                                    Convert.ToInt32(txtPenfitPresent.Text),
-                                    payTime,
-                                    payCount,
-                                    Convert.ToInt32(txtFiestCashPaymant.Text));
+                        mcta_cost.Insert(
+                            الرقم: Guid.NewGuid(),
+                            المادة: materialId,
+                            سعر_الشراء: Convert.ToInt32(row["سعر_الشراء"].ToString()),
+                            كمية: Convert.ToInt32(row["كمية"].ToString()),
+                            التاريخ: DateTime.Now,
+                            رقم_فاتورة_الشراء: id,
+                            companyID: null
+                        );
 
-                                supplier_PayTimeTableAdapter crtta = new supplier_PayTimeTableAdapter();
-                                for (int i = 1; i <= payCount; i++)
-                                {
-                                    crtta.Insert(payValue,
-                                        nte.changeNumericToWords(payValue),
-                                        "قسط مشتريات من المورد " + txtSupplier.Text.Split('.')[0],
-                                        DateTime.Now.AddDays(i * payTime),
-                                        Convert.ToInt32(txtSupplier.Text.Split('.')[1]),
-                                        "false");
-                                }
-                            }
-
-                            material_costTableAdapter mcta_cost = new material_costTableAdapter();
-                            foreach (DataRow row in materialList)
-                            {
-                                try
-                                {
-                                    double totalvalue = Convert.ToDouble(row["TotalValue"]);
-                                    double discount = Convert.ToDouble(row["Discount"]);
-
-                                    mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
-                                        id,
-                                        row["اسم_المادة"].ToString(),
-                                        row["الوحدة"].ToString(),
-                                        Convert.ToInt32(row["كمية"].ToString()),
-                                        Convert.ToInt32(row["سعر_الشراء"].ToString()),
-                                        totalvalue + discount,
-                                        row["Comment"].ToString(),
-                                        0,
-                                        nte.changeNumericToWords(Convert.ToInt32(row["كمية"].ToString())),
-                                        "",
-                                        discount);
-
-
-                                    mcta_cost.Insert(Convert.ToInt32(row["الرقم_الفني"]),
-                                    Convert.ToInt32(row["سعر_الشراء"].ToString()),
-                                    Convert.ToInt32(row["كمية"].ToString()),
-                                    DateTime.Now,
-                                     id);
-
-
-                                    int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
-
-                                    mta.UpdateMaterialQuantity((quantity + Convert.ToInt32(row["كمية"])),
-                                        Convert.ToInt32(row["الرقم_الفني"]));
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("لم يتم إضافة " + row["اسم_المادة"].ToString(), "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                            }
-
-                            setBond1().SaveBonds();
-                            setBond2().SaveBonds();
-                            setBond3().SaveBonds();
-                            setBond4().SaveBonds();
-                            setBond5().SaveBonds();
-                            setBond6().SaveBonds();
-                            setBond7().SaveBonds();
-
-                            getReportId();
-                            MessageBox.Show("  تم إضافة التقرير  ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            newToolStripButton_Click(sender, e);
-                            BuyBills bb = new BuyBills();
-                            bb.ShowDialog();
+                        var materialData = mta.getMaterialById(materialId);
+                        if (materialData != null && materialData.Rows.Count > 0)
+                        {
+                            int quantity = Convert.ToInt32(materialData.Rows[0]["كمية"]);
+                            mta.UpdateMaterialQuantity(quantity + Convert.ToInt32(row["كمية"]), materialId);
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("رصيد النقدية غير كافي", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        MessageBox.Show($"لم يتم إضافة {row["اسم_المادة"]}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+
+                // Save bonds
+                SaveBonds();
+
+                getReportId();
+                MessageBox.Show("تم إضافة التقرير", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                newToolStripButton_Click(sender, e);
+                var bb = new BuyBills();
+                bb.ShowDialog();
             }
             catch (Exception)
             {
                 MessageBox.Show("بعض العناصر مفقودة من بطاقة", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -1416,132 +1432,177 @@ namespace Program.entityForm.customer
         {
             try
             {
-                if (rbPaperPay.Checked && (dtpPaperRecieved.Value.Date <= DateTime.Now.Date))
+                if (rbPaperPay.Checked && dtpPaperRecieved.Value.Date <= DateTime.Now.Date)
                 {
                     MessageBox.Show("تاريخ إستحقاق ورقة القبض يجب أن لا يكون أصغر أو يساوي التاريخ اليوم", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                if (!SaveBuy)
                 {
-                    if (SaveBuy)
+                    MessageBox.Show("رصيد النقدية غير كافي", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (MessageBox.Show("هل تريد حفظ التقرير ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
+                {
+                    return;
+                }
+
+                Guid id = Guid.NewGuid();
+                double price = totalPriceValue + totalPenfitValue - totalDiscountValue;
+
+                // Adjust price based on the bill option
+                if (cbMoreBillsOption.Text == "على المورد")
+                {
+                    price += Convert.ToDouble(txtMoreBills.Text);
+                }
+
+                var mcta = new material_debitTableAdapter();
+                mcta.Insert(
+                    الرقم: id,
+                    تاريخ: DateTime.Now,
+                    الرصيد: price,
+                    من: $"مورد.{txtSupplier.Text}",
+                    الرصيد_كتابة: nte.changeNumericToWords(price),
+                    رقم_فاتورة_المصدر: Convert.ToInt32(txtBiles.Text),
+                    تاريخ_فاتورة_المصدر: dtpBillDate.Value,
+                    المصدر: string.Empty,
+                    المستودع: string.Empty,
+                    المورد: Guid.Parse(txtSupplier.Text.Split('.')[1]),
+                    حذفة: string.Empty,
+                    نوع_العملية: getType(),
+                    حسام_مكتسب: Convert.ToDouble(totalDiscountValue),
+                    مصاريف_مضافة: Convert.ToDouble(txtMoreBills.Text),
+                    مصاريف_على_حساب: cbMoreBillsOption.Text,
+                    مرحل: true.ToString(),
+                    طريقة_الدفع: cbTypeOperation.Text,
+                    اسم_الحساب: cbBankAccounting.Text,
+                    سند_الدفع: Convert.ToInt32(idPaperPay),
+                    code: string.Empty,
+                    companyID: null
+                );
+
+                var mclta = new material_debit_listTableAdapter();
+                var mta = new materialTableAdapter();
+
+                if (rbPaperPay.Checked)
+                {
+                    var cta = new companyTableAdapter();
+                    var company = cta.GetData().Rows[0];
+                    var prta = new paper_payTableAdapter();
+                    prta.Insert(0, string.Empty, DateTime.Now, dtpPaperRecieved.Value, txtSupplier.Text, company["name"].ToString());
+                }
+
+                if (rbAfter.Checked)
+                {
+                    int payCount = Convert.ToInt32(txtPayCount.Text);
+                    int payTime = Convert.ToInt32(txtPayTime.Text);
+                    int payValue = (int)((totalPriceValue + totalPenfitValue - totalDiscountValue - Convert.ToInt32(txtFiestCashPaymant.Text)) / payCount);
+
+                    var mcppta = new material_debit_penfit_paymentTableAdapter();
+                    int? advancePayment = string.IsNullOrWhiteSpace(txtFiestCashPaymant.Text) ? (int?)null : Convert.ToInt32(txtFiestCashPaymant.Text);
+
+                    mcppta.Insert1(
+                        id,
+                        Convert.ToInt32(totalPenfitValue),
+                        Convert.ToInt32(txtPenfitPresent.Text),
+                        payTime,
+                        payCount,
+                        Guid.NewGuid(), // or appropriate Guid
+                        advancePayment
+                    );
+
+                    var crtta = new supplier_PayTimeTableAdapter();
+                    for (int i = 1; i <= payCount; i++)
                     {
-                        if (MessageBox.Show("هل تريد حفط التقرير ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                        {
-                            material_debitTableAdapter mcta = new material_debitTableAdapter();
-
-                            double price = totalPriceValue + totalPenfitValue - totalDiscountValue;
-                            if (cbMoreBillsOption.Text == "على المورد")
-                            {
-                                price = price + Convert.ToDouble(txtMoreBills.Text);
-                            }
-
-                            mcta.Insert(DateTime.Now,
-                            price,
-                            "مورد." + txtSupplier.Text,
-                            nte.changeNumericToWords(price),
-                            Convert.ToInt32(txtBiles.Text),
-                            dtpBillDate.Value,
-                            "",
-                            "",
+                        crtta.Insert(
+                            payValue,
+                            nte.changeNumericToWords(payValue),
+                            $"قسط مشتريات من المورد {txtSupplier.Text.Split('.')[0]}",
+                            DateTime.Now.AddDays(i * payTime),
                             Convert.ToInt32(txtSupplier.Text.Split('.')[1]),
-                            "",
-                            getType(),
-                            Convert.ToDouble(totalDiscountValue),
-                            Convert.ToDouble(txtMoreBills.Text),
-                            cbMoreBillsOption.Text,
-                            true.ToString(),
-                            cbTypeOperation.Text,
-                            cbBankAccounting.Text,
-                            Convert.ToInt32(idPaperPay));
+                            "false"
+                        );
+                    }
+                }
 
-                            int id = Convert.ToInt32(mcta.getMaxMaterialDebit());
-                            material_debit_listTableAdapter mclta = new material_debit_listTableAdapter();
-                            materialTableAdapter mta = new materialTableAdapter();
+                var mcta_cost = new material_costTableAdapter();
+                foreach (DataRow row in materialList)
+                {
+                    try
+                    {
+                        double totalValue = Convert.ToDouble(row["TotalValue"]);
+                        double discount = Convert.ToDouble(row["Discount"]);
 
-                            if (rbPaperPay.Checked)
-                            {
-                                companyTableAdapter cta = new companyTableAdapter();
-                                CompanyControllar.companyDataTable cdt = cta.GetData();
-                                DataRow company = cdt.Rows[0];
-                                paper_payTableAdapter prta = new paper_payTableAdapter();
-                                prta.Insert(0, "", DateTime.Now, dtpPaperRecieved.Value, txtSupplier.Text, company["name"].ToString());
-                            }
+                        var materialId = Guid.Parse(row["الرقم_الفني"].ToString());
+                        var reportId = Guid.NewGuid(); // or the actual report Guid
 
-                            if (rbAfter.Checked)
-                            {
-                                int payCount = Convert.ToInt32(txtPayCount.Text);
-                                int payTime = Convert.ToInt32(txtPayTime.Text);
-                                int payValue = Convert.ToInt32((totalPriceValue + totalPenfitValue - totalDiscountValue - Convert.ToInt32(txtFiestCashPaymant.Text))) / payCount;
+                        mclta.Insert1(
+                            Guid.NewGuid(),
+                            id,
+                            reportId,
+                            row["اسم_المادة"].ToString(),
+                            row["الوحدة"].ToString(),
+                            Convert.ToInt32(row["كمية"].ToString()),
+                            Convert.ToDouble(row["سعر_الشراء"].ToString()),
+                            totalValue + discount,
+                            row["Comment"].ToString(),
+                            0,
+                            nte.changeNumericToWords(Convert.ToInt32(row["كمية"].ToString())),
+                            string.Empty,
+                            discount
+                        );
 
-                                material_debit_penfit_paymentTableAdapter mcppta = new material_debit_penfit_paymentTableAdapter();
-                                mcppta.Insert(id,
-                                    Convert.ToInt32(totalPenfitValue),
-                                    Convert.ToInt32(txtPenfitPresent.Text),
-                                    payTime,
-                                    payCount,
-                                    Convert.ToInt32(txtFiestCashPaymant.Text));
+                        mcta_cost.Insert(
+                            الرقم: Guid.NewGuid(),
+                            المادة: materialId,
+                            سعر_الشراء: Convert.ToInt32(row["سعر_الشراء"].ToString()),
+                            كمية: Convert.ToInt32(row["كمية"].ToString()),
+                            التاريخ: DateTime.Now,
+                            رقم_فاتورة_الشراء: id,
+                            companyID: null
+                        );
 
-                            }
-
-                            material_costTableAdapter mcta_cost = new material_costTableAdapter();
-                            foreach (DataRow row in materialList)
-                            {
-                                try
-                                {
-                                    double totalvalue = Convert.ToDouble(row["TotalValue"]);
-                                    double discount = Convert.ToDouble(row["Discount"]);
-
-                                    mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
-                                        id,
-                                        row["اسم_المادة"].ToString(),
-                                        row["الوحدة"].ToString(),
-                                        Convert.ToInt32(row["كمية"].ToString()),
-                                        Convert.ToInt32(row["سعر_الشراء"].ToString()),
-                                        totalvalue + discount,
-                                        row["Comment"].ToString(),
-                                        0,
-                                        nte.changeNumericToWords(Convert.ToInt32(row["كمية"].ToString())),
-                                        "",
-                                        discount);
-
-                                    mcta_cost.Insert(Convert.ToInt32(row["الرقم_الفني"]),
-                                   Convert.ToInt32(row["سعر_الشراء"].ToString()),
-                                   Convert.ToInt32(row["كمية"].ToString()),
-                                   DateTime.Now,
-                                    id);
-
-                                    int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
-
-                                    mta.UpdateMaterialQuantity((quantity + Convert.ToInt32(row["كمية"])),
-                                        Convert.ToInt32(row["الرقم_الفني"]));
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("لم يتم إضافة " + row["اسم_المادة"].ToString(), "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                            }
-
-
-
-                            getReportId();
-                            MessageBox.Show("  تم إضافة التقرير  ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            newToolStripButton_Click(sender, e);
-                            BuyBills bb = new BuyBills();
-                            bb.ShowDialog();
+                        var materialData = mta.getMaterialById(materialId);
+                        if (materialData != null && materialData.Rows.Count > 0)
+                        {
+                            int quantity = Convert.ToInt32(materialData.Rows[0]["كمية"]);
+                            mta.UpdateMaterialQuantity(quantity + Convert.ToInt32(row["كمية"]), materialId);
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("رصيد النقدية غير كافي", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show($"لم يتم إضافة {row["اسم_المادة"]}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+
+                // Save bonds
+                SaveBonds();
+
+                getReportId();
+                MessageBox.Show("تم إضافة التقرير", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                newToolStripButton_Click(sender, e);
+                var bb = new BuyBills();
+                bb.ShowDialog();
             }
             catch (Exception)
             {
-                MessageBox.Show("بعض العناصر مفقودة من بطاقة ", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("بعض العناصر مفقودة من بطاقة", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SaveBonds()
+        {
+            setBond1().SaveBonds();
+            setBond2().SaveBonds();
+            setBond3().SaveBonds();
+            setBond4().SaveBonds();
+            setBond5().SaveBonds();
+            setBond6().SaveBonds();
+            setBond7().SaveBonds();
+        }
+
 
         private void bSaveBonds_Click(object sender, EventArgs e)
         {
@@ -1606,7 +1667,7 @@ namespace Program.entityForm.customer
             }
         }
 
-        static int idPaperPay = 0;
+        static Guid idPaperPay ;
         private void rbPaperPay_CheckedChanged(object sender, EventArgs e)
         {
             pPayAfter.Hide();
@@ -1616,7 +1677,7 @@ namespace Program.entityForm.customer
             //cbTypeOperation.Text = "";
             cbBankAccounting.Text = "";
             paper_payTableAdapter prta = new paper_payTableAdapter();
-            idPaperPay = Convert.ToInt32(prta.getMaxPaperPay()) + 1;
+            idPaperPay = Guid.NewGuid();
             bAddBond_Click(sender, e);
             if (rbPaperPay.Checked)
             {

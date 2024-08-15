@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -458,7 +460,7 @@ namespace Program {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public companyReportRow FindByid(int id) {
+            public companyReportRow FindByid(Guid id) {
                 return ((companyReportRow)(this.Rows.Find(new object[] {
                             id})));
             }
@@ -676,7 +678,7 @@ namespace Program {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public Guid id {
                 get {
                     return ((int)(this[this.tablecompanyReport.idColumn]));
                 }

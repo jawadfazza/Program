@@ -2281,9 +2281,9 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(PaperPayControllar.paper_payDataTable dataTable, int id) {
+        public virtual int FillBy(PaperPayControllar.paper_payDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2295,9 +2295,9 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual PaperPayControllar.paper_payDataTable getPaperPayById(int id) {
+        public virtual PaperPayControllar.paper_payDataTable getPaperPayById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             PaperPayControllar.paper_payDataTable dataTable = new PaperPayControllar.paper_payDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

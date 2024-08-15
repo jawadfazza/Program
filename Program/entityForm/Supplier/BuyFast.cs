@@ -306,7 +306,7 @@ namespace Program.entityForm.customer
                         if (MessageBox.Show("هل ترغب بتغير سعر بيع  " + dr["اسم_المادة"] + " ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             materialTableAdapter mta = new materialTableAdapter();
-                            mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
+                            mta.UpdateBuyPrice(price, Guid.Parse(dr["الرقم_الفني"].ToString()));
                             dr["سعر_الشراء"] = price;
                         }
                         else
@@ -764,7 +764,7 @@ namespace Program.entityForm.customer
             try
             {
                 txtId.Text = cbIds.Items[indexValue].ToString();
-                int id = Convert.ToInt32(txtId.Text);
+                Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());
                 material_debitTableAdapter mcta = new material_debitTableAdapter();
                 MaterialControllar.material_debitDataTable mcdt = mcta.getMaterialDebitById(id);
                 rowMaterialdDebit = mcdt.Rows[0];
@@ -826,7 +826,7 @@ namespace Program.entityForm.customer
                 foreach (DataRow dr in mcldt)
                 {
                     materialTableAdapter mta1 = new materialTableAdapter();
-                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(dr["الرقم_الفني"].ToString()));
 
                     dataGridViewMaterial.Rows[count].Cells[0].Value = dr["رقم_المادة"];
                     dataGridViewMaterial.Rows[count].Cells[1].Value = dr["اسم_المادة"];
@@ -1016,13 +1016,13 @@ namespace Program.entityForm.customer
                     foreach (DataRow row in materialList)
                     {
                         materialTableAdapter mta1 = new materialTableAdapter();
-                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]));
+                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()));
 
                         mta.UpdateMaterialQuantity((Convert.ToInt32(material.Rows[0]["كمية"]) + Convert.ToInt32(row["كمية"])),
-                        Convert.ToInt32(row["الرقم_الفني"]));
+                        Guid.Parse(row["الرقم_الفني"].ToString()));
 
                     }
-                    int id = Convert.ToInt32(rowMaterialdDebit["الرقم"]);
+                    Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());;
                     material_debitTableAdapter mdta = new material_debitTableAdapter();
                     material_debit_listTableAdapter mdlta = new material_debit_listTableAdapter();
                     mdlta.DeleteMaterialDebitList(id);
@@ -1104,7 +1104,7 @@ namespace Program.entityForm.customer
                         cbBankAccounting.Text,
                         Convert.ToInt32(idPaperPay));
 
-                        int id = Convert.ToInt32(mcta.getMaxMaterialDebit());
+                        Guid id = Convert.ToInt32(mcta.getMaxMaterialDebit());
                         material_debit_listTableAdapter mclta = new material_debit_listTableAdapter();
                         materialTableAdapter mta = new materialTableAdapter();
 
@@ -1117,7 +1117,7 @@ namespace Program.entityForm.customer
                                 double totalvalue = Convert.ToDouble(row["TotalValue"]);
                                 double discount = Convert.ToDouble(row["Discount"]);
 
-                                mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                                mclta.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                                     id,
                                     row["اسم_المادة"].ToString(),
                                     row["الوحدة"].ToString(),
@@ -1131,16 +1131,16 @@ namespace Program.entityForm.customer
                                     discount);
 
 
-                                mcta_cost.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                                mcta_cost.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                                     Convert.ToInt32(row["سعر_الشراء"].ToString()),
                                     Convert.ToInt32(row["كمية"].ToString()),
                                     DateTime.Now,
                                      id);
 
-                                int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
+                                int quantity = Convert.ToInt32(mta.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()))[0]["كمية"]);
 
                                 mta.UpdateMaterialQuantity((quantity + Convert.ToInt32(row["كمية"])),
-                                    Convert.ToInt32(row["الرقم_الفني"]));
+                                    Guid.Parse(row["الرقم_الفني"].ToString()));
                             }
                             catch (Exception ex)
                             {
@@ -1209,7 +1209,7 @@ namespace Program.entityForm.customer
                         cbBankAccounting.Text,
                         Convert.ToInt32(idPaperPay));
 
-                        int id = Convert.ToInt32(mcta.getMaxMaterialDebit());
+                        Guid id = Convert.ToInt32(mcta.getMaxMaterialDebit());
                         material_debit_listTableAdapter mclta = new material_debit_listTableAdapter();
                         materialTableAdapter mta = new materialTableAdapter();
 
@@ -1221,7 +1221,7 @@ namespace Program.entityForm.customer
                                 double totalvalue = Convert.ToDouble(row["TotalValue"]);
                                 double discount = Convert.ToDouble(row["Discount"]);
 
-                                mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                                mclta.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                                     id,
                                     row["اسم_المادة"].ToString(),
                                     row["الوحدة"].ToString(),
@@ -1234,16 +1234,16 @@ namespace Program.entityForm.customer
                                     "",
                                     discount);
 
-                                mcta_cost.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                                mcta_cost.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                                   Convert.ToInt32(row["سعر_الشراء"].ToString()),
                                   Convert.ToInt32(row["كمية"].ToString()),
                                   DateTime.Now,
                                    id);
 
-                                int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
+                                int quantity = Convert.ToInt32(mta.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()))[0]["كمية"]);
 
                                 mta.UpdateMaterialQuantity((quantity + Convert.ToInt32(row["كمية"])),
-                                    Convert.ToInt32(row["الرقم_الفني"]));
+                                    Guid.Parse(row["الرقم_الفني"].ToString()));
                             }
                             catch (Exception ex)
                             {
@@ -1309,7 +1309,7 @@ namespace Program.entityForm.customer
             }
         }
 
-        static int idPaperPay = 0;
+        static Guid idPaperPay = 0;
         private void rbPaperPay_CheckedChanged(object sender, EventArgs e)
         {
             //pPayAfter.Hide();
@@ -1403,7 +1403,7 @@ namespace Program.entityForm.customer
                         if (MessageBox.Show("هل ترغب بتغير سعر بيع  " + dr["اسم_المادة"] + " ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                         {
                             mta = new materialTableAdapter();
-                            mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
+                            mta.UpdateBuyPrice(price, Guid.Parse(dr["الرقم_الفني"].ToString()));
                             dr["سعر_الشراء"] = price;
                         }
                         else

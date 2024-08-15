@@ -2344,9 +2344,9 @@ SELECT الرقم, اسم_الأصل, الرصيد, الرصيد_كتابة, ت�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(AssetControllar.assetDataTable dataTable, int id) {
+        public virtual int FillBy(AssetControllar.assetDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2358,9 +2358,9 @@ SELECT الرقم, اسم_الأصل, الرصيد, الرصيد_كتابة, ت�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual AssetControllar.assetDataTable getAssetById(int id) {
+        public virtual AssetControllar.assetDataTable getAssetById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             AssetControllar.assetDataTable dataTable = new AssetControllar.assetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

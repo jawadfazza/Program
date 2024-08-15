@@ -3065,9 +3065,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(MaterialMakerControllar.material_makerDataTable dataTable, int id) {
+        public virtual int FillBy1(MaterialMakerControllar.material_makerDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3079,9 +3079,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MaterialMakerControllar.material_makerDataTable getMaterialTableById(int id) {
+        public virtual MaterialMakerControllar.material_makerDataTable getMaterialTableById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             MaterialMakerControllar.material_makerDataTable dataTable = new MaterialMakerControllar.material_makerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3091,9 +3091,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy2(MaterialMakerControllar.material_makerDataTable dataTable, int id) {
+        public virtual int FillBy2(MaterialMakerControllar.material_makerDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3105,9 +3105,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MaterialMakerControllar.material_makerDataTable getMaterialById(int id) {
+        public virtual MaterialMakerControllar.material_makerDataTable getMaterialById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             MaterialMakerControllar.material_makerDataTable dataTable = new MaterialMakerControllar.material_makerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3594,9 +3594,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(MaterialMakerControllar.material_maker_listDataTable dataTable, int id) {
+        public virtual int FillBy(MaterialMakerControllar.material_maker_listDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3608,9 +3608,9 @@ SELECT الرقم, اسم_المادة, الوحدة, كمية, الكلفة, س
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MaterialMakerControllar.material_maker_listDataTable getMaterialMakerList(int id) {
+        public virtual MaterialMakerControllar.material_maker_listDataTable getMaterialMakerList(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             MaterialMakerControllar.material_maker_listDataTable dataTable = new MaterialMakerControllar.material_maker_listDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

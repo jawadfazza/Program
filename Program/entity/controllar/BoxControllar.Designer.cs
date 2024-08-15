@@ -2149,9 +2149,9 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BoxControllar.boxDataTable dataTable, int id) {
+        public virtual int FillBy(BoxControllar.boxDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2163,9 +2163,9 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BoxControllar.boxDataTable GetBoxById(int id) {
+        public virtual BoxControllar.boxDataTable GetBoxById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             BoxControllar.boxDataTable dataTable = new BoxControllar.boxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -2175,9 +2175,9 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(BoxControllar.boxDataTable dataTable, int id, System.DateTime from, System.DateTime to) {
+        public virtual int FillBy1(BoxControllar.boxDataTable dataTable, System.Guid id, System.DateTime from, System.DateTime to) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(from));
             this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(to));
             if ((this.ClearBeforeFill == true)) {
@@ -2191,9 +2191,9 @@ SELECT الرقم, اسم_الصندوق, الرصيد, الرصيد_كتابة,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BoxControllar.boxDataTable GetDataByIdDate(int id, System.DateTime from, System.DateTime to) {
+        public virtual BoxControllar.boxDataTable GetDataByIdDate(System.Guid id, System.DateTime from, System.DateTime to) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(from));
             this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(to));
             BoxControllar.boxDataTable dataTable = new BoxControllar.boxDataTable();
@@ -2589,10 +2589,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BoxControllar.box_creditDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(BoxControllar.box_creditDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -2608,10 +2608,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BoxControllar.box_creditDataTable getBoxCreditId(global::System.Nullable<int> id) {
+        public virtual BoxControllar.box_creditDataTable getBoxCreditId(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3077,10 +3077,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BoxControllar.box_debitDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(BoxControllar.box_debitDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3096,10 +3096,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual BoxControllar.box_debitDataTable getBoxDebitId(global::System.Nullable<int> id) {
+        public virtual BoxControllar.box_debitDataTable getBoxDebitId(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;

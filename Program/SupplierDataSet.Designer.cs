@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -6434,9 +6436,9 @@ namespace Program.SupplierDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.supplierAccountingDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.supplierAccountingDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6448,9 +6450,9 @@ namespace Program.SupplierDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.supplierAccountingDataTable GetData(int id) {
+        public virtual SupplierDataSet.supplierAccountingDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.supplierAccountingDataTable dataTable = new SupplierDataSet.supplierAccountingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6995,9 +6997,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.SupplierBuyDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.SupplierBuyDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7009,9 +7011,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.SupplierBuyDataTable GetData(int id) {
+        public virtual SupplierDataSet.SupplierBuyDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.SupplierBuyDataTable dataTable = new SupplierDataSet.SupplierBuyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7179,9 +7181,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.materialBills_debitDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.materialBills_debitDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7193,9 +7195,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.materialBills_debitDataTable GetData(int id) {
+        public virtual SupplierDataSet.materialBills_debitDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.materialBills_debitDataTable dataTable = new SupplierDataSet.materialBills_debitDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7362,9 +7364,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.materialBills_debit_listDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.materialBills_debit_listDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7376,9 +7378,9 @@ WHERE        (material_debit.المورد = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.materialBills_debit_listDataTable GetData(int id) {
+        public virtual SupplierDataSet.materialBills_debit_listDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.materialBills_debit_listDataTable dataTable = new SupplierDataSet.materialBills_debit_listDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7550,9 +7552,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.material_credit_return_billsDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.material_credit_return_billsDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7564,9 +7566,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.material_credit_return_billsDataTable GetData(int id) {
+        public virtual SupplierDataSet.material_credit_return_billsDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.material_credit_return_billsDataTable dataTable = new SupplierDataSet.material_credit_return_billsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7733,9 +7735,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SupplierDataSet.material_credit_list_return_billsDataTable dataTable, int id) {
+        public virtual int Fill(SupplierDataSet.material_credit_list_return_billsDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7747,9 +7749,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SupplierDataSet.material_credit_list_return_billsDataTable GetData(int id) {
+        public virtual SupplierDataSet.material_credit_list_return_billsDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             SupplierDataSet.material_credit_list_return_billsDataTable dataTable = new SupplierDataSet.material_credit_list_return_billsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

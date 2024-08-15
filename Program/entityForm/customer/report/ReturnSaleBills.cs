@@ -109,7 +109,7 @@ namespace Program.entityForm.Customer.Report
             }
         }
 
-        private void getReport(int id)
+        private void getReport(Guid id)
         {
             try
             {

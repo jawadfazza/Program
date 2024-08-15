@@ -113,7 +113,7 @@ namespace Program.entityForm.FileData
                             "true",
                             "false");
                         user_taskTableAdapter utta = new user_taskTableAdapter();
-                        int id = Convert.ToInt32(ulta.getMaxUserId());
+                        Guid id = Convert.ToInt32(ulta.getMaxUserId());
                         for (int i = 0; i < cbTask.CheckedItems.Count; i++)
                         {
                             utta.Insert(cbTask.CheckedItems[i].ToString(), "true", id);
@@ -295,7 +295,7 @@ namespace Program.entityForm.FileData
             {
                 user_logeTableAdapter ulta = new user_logeTableAdapter();
                 UserControllar.user_logeDataTable uldt = ulta.GetDataByUsername(txtUsername.Text);
-                int id = Convert.ToInt32(uldt.Rows[0]["id"]);
+                Guid id = Convert.ToInt32(uldt.Rows[0]["id"]);
                 user_id = id;
 
                 user_taskTableAdapter utta = new user_taskTableAdapter();

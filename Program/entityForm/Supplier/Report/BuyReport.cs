@@ -72,7 +72,7 @@ namespace Program.entityForm.customer.report
             try
             {
                 tabControl1.SelectedIndex = 2;
-                int id = Convert.ToInt32(dataGridViewBuy.Rows[dataGridViewBuy.CurrentRow.Index].Cells[0].Value);
+                Guid id = Convert.ToInt32(dataGridViewBuy.Rows[dataGridViewBuy.CurrentRow.Index].Cells[0].Value);
                 // TODO: This line of code loads data into the 'supplierDataSet.materialBills_debit' table. You can move, or remove it, as needed.
                 this.materialBills_debitTableAdapter.Fill(this.supplierDataSet.materialBills_debit, id);
                 // TODO: This line of code loads data into the 'supplierDataSet.materialBills_debit_list' table. You can move, or remove it, as needed.

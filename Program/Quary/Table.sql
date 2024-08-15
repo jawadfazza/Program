@@ -206,12 +206,13 @@ ALTER TABLE material ADD BoxColor VARCHAR(25);
 DROP TABLE IF EXISTS material_cost;
 
 CREATE TABLE material_cost(
+الرقم uniqueidentifier NOT NULL PRIMARY KEY ,
 المادة uniqueidentifier FOREIGN KEY REFERENCES material(الرقم_الفني),
 سعر_الشراء INT NOT NULL,
 كمية INT NOT NULL DEFAULT 0,
 التاريخ DATETIME
 );
-ALTER TABLE material_cost ADD رقم_فاتورة_الشراء INT;
+ALTER TABLE material_cost ADD رقم_فاتورة_الشراء uniqueidentifier;
 ALTER TABLE material_cost ADD companyID uniqueidentifier;
 
 

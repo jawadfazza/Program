@@ -398,7 +398,7 @@ namespace Program.entityForm.Assets
         {
             try
             {
-                int id = Convert.ToInt32(cbLiability.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbLiability.Text.Split('.')[1]);
                 liabilityTableAdapter ata = new liabilityTableAdapter();
                 dataGridViewAssets.DataSource = ata.getLiabilityById(id);
             }
@@ -455,7 +455,7 @@ namespace Program.entityForm.Assets
             }
         }
 
-        private static int idPaperPay = 0;
+        private static Guid idPaperPay = 0;
 
         private void rbCash_Validating(object sender, CancelEventArgs e)
         {

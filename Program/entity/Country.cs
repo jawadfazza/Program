@@ -14,7 +14,7 @@ namespace Program.entity
     
     public partial class Country
     {
-        public int id { get; set; }
+        public Guid id { get; set; }
         public string name { get; set; }
     }
 }

@@ -1156,7 +1156,7 @@ SELECT id, username, password, user_type, enable_delete FROM user_loge WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string username, string password, string user_type, string enable_delete, int Original_id, string Original_username, string Original_password, string Original_user_type, string Original_enable_delete, int id) {
+        public virtual int Update(string username, string password, string user_type, string enable_delete, int Original_id, string Original_username, string Original_password, string Original_user_type, string Original_enable_delete, System.Guid id) {
             if ((username == null)) {
                 throw new global::System.ArgumentNullException("username");
             }
@@ -1210,7 +1210,7 @@ SELECT id, username, password, user_type, enable_delete FROM user_loge WHERE (id
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_enable_delete));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1279,7 +1279,7 @@ SELECT id, username, password, user_type, enable_delete FROM user_loge WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateRemamber(string remamber, string username, int id) {
+        public virtual int UpdateRemamber(string remamber, string username, System.Guid id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((remamber == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -1293,7 +1293,7 @@ SELECT id, username, password, user_type, enable_delete FROM user_loge WHERE (id
             else {
                 command.Parameters[1].Value = ((string)(username));
             }
-            command.Parameters[2].Value = ((int)(id));
+            command.Parameters[2].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

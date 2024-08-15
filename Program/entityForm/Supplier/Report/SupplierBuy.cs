@@ -43,7 +43,7 @@ namespace Program.entityForm.Supplier.Report
         {
             try
             {
-                int id = Convert.ToInt32(cbSupplier.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbSupplier.Text.Split('.')[1]);
                 // TODO: This line of code loads data into the 'supplierDataSet.supplierAccounting' table. You can move, or remove it, as needed.
                 this.supplierAccountingTableAdapter.Fill(this.supplierDataSet.supplierAccounting, id);
                 // TODO: This line of code loads data into the 'supplierDataSet.SupplierBuy' table. You can move, or remove it, as needed.

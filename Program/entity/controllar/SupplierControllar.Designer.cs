@@ -3167,9 +3167,9 @@ SELECT الرقم, اسم_المورد, الرصيد, الرصيد_كتابة, �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(SupplierControllar.supplierDataTable dataTable, int id) {
+        public virtual int FillBy1(SupplierControllar.supplierDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3181,9 +3181,9 @@ SELECT الرقم, اسم_المورد, الرصيد, الرصيد_كتابة, �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SupplierControllar.supplierDataTable getSupplierById(int id) {
+        public virtual SupplierControllar.supplierDataTable getSupplierById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             SupplierControllar.supplierDataTable dataTable = new SupplierControllar.supplierDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4296,10 +4296,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(SupplierControllar.supplier_debitDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(SupplierControllar.supplier_debitDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4315,10 +4315,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SupplierControllar.supplier_debitDataTable getSupplierPayment(global::System.Nullable<int> id) {
+        public virtual SupplierControllar.supplier_debitDataTable getSupplierPayment(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4785,10 +4785,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(SupplierControllar.supplier_PayTimeDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(SupplierControllar.supplier_PayTimeDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4804,10 +4804,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SupplierControllar.supplier_PayTimeDataTable GetEarendPayment(global::System.Nullable<int> id) {
+        public virtual SupplierControllar.supplier_PayTimeDataTable GetEarendPayment(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;

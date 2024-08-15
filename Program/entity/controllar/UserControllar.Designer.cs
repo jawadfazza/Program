@@ -2064,7 +2064,7 @@ SELECT id, username, password, user_type, enable_delete, remamber FROM user_loge
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string username, string password, string user_type, string enable_delete, string remamber, int Original_id, string Original_username, string Original_password, string Original_user_type, string Original_enable_delete, string Original_remamber, int id) {
+        public virtual int Update(string username, string password, string user_type, string enable_delete, string remamber, int Original_id, string Original_username, string Original_password, string Original_user_type, string Original_enable_delete, string Original_remamber, System.Guid id) {
             if ((username == null)) {
                 throw new global::System.ArgumentNullException("username");
             }
@@ -2132,7 +2132,7 @@ SELECT id, username, password, user_type, enable_delete, remamber FROM user_loge
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_remamber));
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2460,9 +2460,9 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(UserControllar.user_taskDataTable dataTable, int id) {
+        public virtual int FillBy(UserControllar.user_taskDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2474,9 +2474,9 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual UserControllar.user_taskDataTable GetDataByUserId(int id) {
+        public virtual UserControllar.user_taskDataTable GetDataByUserId(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             UserControllar.user_taskDataTable dataTable = new UserControllar.user_taskDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -2586,7 +2586,7 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string opreation, string active_opreation, int user_id_, int Original_id, string Original_opreation, string Original_active_opreation, int Original_user_id_, int id) {
+        public virtual int Update(string opreation, string active_opreation, int user_id_, int Original_id, string Original_opreation, string Original_active_opreation, int Original_user_id_, System.Guid id) {
             if ((opreation == null)) {
                 throw new global::System.ArgumentNullException("opreation");
             }
@@ -2616,7 +2616,7 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_active_opreation));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_user_id_));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2948,7 +2948,7 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string opreation, int Original_id, string Original_opreation, int id) {
+        public virtual int Update(string opreation, int Original_id, string Original_opreation, System.Guid id) {
             if ((opreation == null)) {
                 throw new global::System.ArgumentNullException("opreation");
             }
@@ -2962,7 +2962,7 @@ SELECT id, opreation, active_opreation, user_id_ FROM user_task WHERE (id = @id)
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_opreation));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

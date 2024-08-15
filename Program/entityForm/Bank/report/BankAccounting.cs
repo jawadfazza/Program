@@ -45,7 +45,7 @@ namespace Program.entityForm.Bank.report
         {
             try
             {
-                int id = Convert.ToInt32(cbBankAccount.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbBankAccount.Text.Split('.')[1]);
                 // TODO: This line of code loads data into the 'bankDataSet.bankAccount_account' table. You can move, or remove it, as needed.
                 this.bankAccount_accountTableAdapter.Fill(this.bankDataSet.bankAccount_account,id);
                 // TODO: This line of code loads data into the 'bankDataSet.bankAccount_debit' table. You can move, or remove it, as needed.

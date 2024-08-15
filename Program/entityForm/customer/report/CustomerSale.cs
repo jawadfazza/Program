@@ -44,7 +44,7 @@ namespace Program.entityForm.customer.report
         {
             try
             {
-                int id = Convert.ToInt32(cbCustomerName.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbCustomerName.Text.Split('.')[1]);
                 // TODO: This line of code loads data into the 'customerDataSet.CustomerSale' table. You can move, or remove it, as needed.
                 this.customerSaleTableAdapter.Fill(this.customerDataSet.CustomerSale, id);
                 // TODO: This line of code loads data into the 'customerDataSet.CustomerReport' table. You can move, or remove it, as needed.

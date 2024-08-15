@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -3757,9 +3759,9 @@ namespace Program.BoxDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BoxDataSet.boxAccountDataTable dataTable, int id) {
+        public virtual int Fill(BoxDataSet.boxAccountDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3771,9 +3773,9 @@ namespace Program.BoxDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BoxDataSet.boxAccountDataTable GetData(int id) {
+        public virtual BoxDataSet.boxAccountDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BoxDataSet.boxAccountDataTable dataTable = new BoxDataSet.boxAccountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4535,9 +4537,9 @@ FROM            box INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BoxDataSet.PayBillsBoxCreditByIdDataTable dataTable, int id) {
+        public virtual int Fill(BoxDataSet.PayBillsBoxCreditByIdDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4549,9 +4551,9 @@ FROM            box INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BoxDataSet.PayBillsBoxCreditByIdDataTable GetData(int id) {
+        public virtual BoxDataSet.PayBillsBoxCreditByIdDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BoxDataSet.PayBillsBoxCreditByIdDataTable dataTable = new BoxDataSet.PayBillsBoxCreditByIdDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4712,9 +4714,9 @@ FROM            box INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BoxDataSet.ReceiveBillsBoxDebitByIdDataTable dataTable, int id) {
+        public virtual int Fill(BoxDataSet.ReceiveBillsBoxDebitByIdDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4726,9 +4728,9 @@ FROM            box INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BoxDataSet.ReceiveBillsBoxDebitByIdDataTable GetData(int id) {
+        public virtual BoxDataSet.ReceiveBillsBoxDebitByIdDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             BoxDataSet.ReceiveBillsBoxDebitByIdDataTable dataTable = new BoxDataSet.ReceiveBillsBoxDebitByIdDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

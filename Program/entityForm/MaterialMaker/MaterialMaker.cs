@@ -670,7 +670,7 @@ namespace Program.entityForm.customer
             try
             {
                 txtId.Text = cbIds.Items[indexValue].ToString();
-                int id = Convert.ToInt32(txtId.Text);
+                Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());
                 material_creditTableAdapter mcta = new material_creditTableAdapter();
                 MaterialControllar.material_creditDataTable mcdt = mcta.getMaterialCreditById(id);
                 rowMaterialdCredit = mcdt.Rows[0];
@@ -723,7 +723,7 @@ namespace Program.entityForm.customer
                 foreach (DataRow dr in mcldt)
                 {
                     materialTableAdapter mta1 = new materialTableAdapter();
-                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(dr["الرقم_الفني"].ToString()));
 
                     dataGridViewMaterial.Rows[count].Cells[0].Value = dr["رقم_المادة"];
                     dataGridViewMaterial.Rows[count].Cells[1].Value = dr["اسم_المادة"];
@@ -849,7 +849,7 @@ namespace Program.entityForm.customer
 
         private void bSaveAll_Click(object sender, EventArgs e)
         {
-            int id=0;
+            Guid id=0;
             if (SaveBuy)
             {
                 if (MessageBox.Show("هل تريد حفط التقرير ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
@@ -870,7 +870,7 @@ namespace Program.entityForm.customer
                             double totalvalue = Convert.ToDouble(row["TotalValue"]);
                             double discount = Convert.ToDouble(row["Discount"]);
 
-                            mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                            mclta.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                                 id,
                                 row["اسم_المادة"].ToString(),
                                 row["الوحدة"].ToString(),
@@ -885,10 +885,10 @@ namespace Program.entityForm.customer
                                 Convert.ToInt32(row["سعر_الشراء"].ToString()),
                                 Convert.ToDouble(row["TotalCost"].ToString()));
 
-                            int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
+                            int quantity = Convert.ToInt32(mta.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()))[0]["كمية"]);
 
                             mta.UpdateMaterialQuantity((quantity - Convert.ToInt32(row["كمية"])),
-                                Convert.ToInt32(row["الرقم_الفني"]));
+                                Guid.Parse(row["الرقم_الفني"].ToString()));
                         }
                         catch (Exception ex)
                         {

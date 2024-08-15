@@ -2283,9 +2283,9 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(PaperReceiveControllar.paper_receiveDataTable dataTable, int id) {
+        public virtual int FillBy(PaperReceiveControllar.paper_receiveDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2297,9 +2297,9 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, تاريخ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual PaperReceiveControllar.paper_receiveDataTable PaperReceiveById(int id) {
+        public virtual PaperReceiveControllar.paper_receiveDataTable PaperReceiveById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             PaperReceiveControllar.paper_receiveDataTable dataTable = new PaperReceiveControllar.paper_receiveDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

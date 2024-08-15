@@ -109,7 +109,7 @@ namespace Program.entityForm
                     if (MessageBox.Show("هل تريد اضافة المجموعة؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
 
-                        mgta.Insert(cbGroup.Items.Count + 1, cbGroup.Text);
+                        mgta.Insert(Guid.NewGuid(), cbGroup.Text);
                         getgroupList();
 
                         MessageBox.Show("تم اضافة المجموعة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,7 +137,7 @@ namespace Program.entityForm
                 {
                     if (MessageBox.Show("هل تريد اضافة المستودع؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        pta.Insert(cbWarehouse.Items.Count + 1, cbWarehouse.Text);
+                        pta.Insert(Guid.NewGuid(), cbWarehouse.Text);
                         getWarehouseList();
                         cbWarehouse.Text = "";
                         MessageBox.Show("تم اضافة المستودع", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);

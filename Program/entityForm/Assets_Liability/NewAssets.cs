@@ -497,7 +497,7 @@ namespace Program.entityForm.Assets
         {
             try
             {
-                int id = Convert.ToInt32(cbAssets.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(cbAssets.Text.Split('.')[1]);
                 assetTableAdapter ata = new assetTableAdapter();
                 dataGridViewAssets.DataSource = ata.getAssetById(id);
             }
@@ -554,7 +554,7 @@ namespace Program.entityForm.Assets
             }
         }
 
-        private static int idPaperPay = 0;
+        private static Guid idPaperPay ;
 
         private void rbPaperReceived_CheckedChanged(object sender, EventArgs e)
         {
@@ -566,7 +566,7 @@ namespace Program.entityForm.Assets
                 cbTypeOperation.Text = "";
                 cbBankAccounting.Text = "";
                 paper_payTableAdapter prta = new paper_payTableAdapter();
-                idPaperPay = Convert.ToInt32(prta.getMaxPaperPay()) + 1;
+                idPaperPay = Guid.NewGuid();
                 bAddBond_Click(sender, e);
                 if (rbPaperPay.Checked)
                 {

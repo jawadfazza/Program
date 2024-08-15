@@ -14,7 +14,7 @@ namespace Program.entityForm
     public partial class NewCustomer : Form
     {
         private DataRow customerRow;
-        private static int id = 0;
+        private static Guid id = 0;
         private int numberToCompute = 0;
         private int highestPercentageReached = 100;
 

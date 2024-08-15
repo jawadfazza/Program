@@ -399,7 +399,7 @@ namespace Program.entityForm.customer
                             {
                                 if (MessageBox.Show("هل ترغب بتغير سعر بيع  " + dr["اسم_المادة"] + " ؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                                 {
-                                    mta.UpdateBuyPrice(price, Convert.ToInt32(dr["الرقم_الفني"]));
+                                    mta.UpdateBuyPrice(price, Guid.Parse(dr["الرقم_الفني"].ToString()));
                                     dr["سعر_البيع"] = price;
                                 }
                                 else
@@ -517,14 +517,14 @@ namespace Program.entityForm.customer
         {
             if (MessageBox.Show("هل تريد حفط المادة؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                int id = Convert.ToInt32(txtMaterialMaker.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(txtMaterialMaker.Text.Split('.')[1]);
                 material_maker_listTableAdapter mclta = new material_maker_listTableAdapter();
                 
                 foreach (DataRow row in materialList)
                 {
                     try
                     {
-                        mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                        mclta.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                             id,
                             row["اسم_المادة"].ToString(),
                             row["الوحدة"].ToString(),
@@ -754,7 +754,7 @@ namespace Program.entityForm.customer
 
         private void bMaterialList_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtMaterialMaker.Text.Split('.')[1]);
+            Guid id = Convert.ToInt32(txtMaterialMaker.Text.Split('.')[1]);
             material_maker_listTableAdapter mclta = new material_maker_listTableAdapter();
             MaterialMakerControllar.material_maker_listDataTable mcldt = mclta.getMaterialMakerList(id);
 
@@ -778,7 +778,7 @@ namespace Program.entityForm.customer
             foreach (DataRow dr in mcldt)
             {
                 materialTableAdapter mta1 = new materialTableAdapter();
-                MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+                MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(dr["الرقم_الفني"].ToString()));
 
                 dataGridViewMaterial.Rows[count].Cells[0].Value = dr["رقم_المادة"];
                 dataGridViewMaterial.Rows[count].Cells[1].Value = dr["اسم_المادة"];

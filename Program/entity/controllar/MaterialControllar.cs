@@ -2,6 +2,14 @@
 {
     public partial class MaterialControllar
     {
+        partial class material_costDataTable
+        {
+        }
+
+        partial class producerDataTable
+        {
+        }
+
         partial class material_creditDataTable
         {
         }
@@ -18,7 +26,9 @@
 
 namespace Program.entity.controllar.MaterialControllarTableAdapters
 {
-  
+    partial class materialTableAdapter
+    {
+    }
 }
 
 namespace Program.entity.controllar.MaterialControllarTableAdapters

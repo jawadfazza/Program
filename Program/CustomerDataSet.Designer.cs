@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program {
     
     
@@ -7176,9 +7178,9 @@ namespace Program.CustomerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.CustomerReportDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.CustomerReportDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7190,9 +7192,9 @@ namespace Program.CustomerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.CustomerReportDataTable GetData(int id) {
+        public virtual CustomerDataSet.CustomerReportDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.CustomerReportDataTable dataTable = new CustomerDataSet.CustomerReportDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7733,9 +7735,9 @@ WHERE        (material_credit.العميل = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.CustomerSaleDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.CustomerSaleDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7747,9 +7749,9 @@ WHERE        (material_credit.العميل = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.CustomerSaleDataTable GetData(int id) {
+        public virtual CustomerDataSet.CustomerSaleDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.CustomerSaleDataTable dataTable = new CustomerDataSet.CustomerSaleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7922,9 +7924,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.materialBills_creditDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.materialBills_creditDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7936,9 +7938,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.materialBills_creditDataTable GetData(int id) {
+        public virtual CustomerDataSet.materialBills_creditDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.materialBills_creditDataTable dataTable = new CustomerDataSet.materialBills_creditDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8105,9 +8107,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.materialBills_credit_listDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.materialBills_credit_listDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8119,9 +8121,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.materialBills_credit_listDataTable GetData(int id) {
+        public virtual CustomerDataSet.materialBills_credit_listDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.materialBills_credit_listDataTable dataTable = new CustomerDataSet.materialBills_credit_listDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8295,9 +8297,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.material_debit_returnCardDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.material_debit_returnCardDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8309,9 +8311,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.material_debit_returnCardDataTable GetData(int id) {
+        public virtual CustomerDataSet.material_debit_returnCardDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.material_debit_returnCardDataTable dataTable = new CustomerDataSet.material_debit_returnCardDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8478,9 +8480,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.material_debit_list_returnCardDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.material_debit_list_returnCardDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8492,9 +8494,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.material_debit_list_returnCardDataTable GetData(int id) {
+        public virtual CustomerDataSet.material_debit_list_returnCardDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.material_debit_list_returnCardDataTable dataTable = new CustomerDataSet.material_debit_list_returnCardDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8655,9 +8657,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomerDataSet.materialBills_credit_penfit_paymentDataTable dataTable, int id) {
+        public virtual int Fill(CustomerDataSet.materialBills_credit_penfit_paymentDataTable dataTable, Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8669,9 +8671,9 @@ WHERE        (الرقم = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomerDataSet.materialBills_credit_penfit_paymentDataTable GetData(int id) {
+        public virtual CustomerDataSet.materialBills_credit_penfit_paymentDataTable GetData(Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((Guid)(id));
             CustomerDataSet.materialBills_credit_penfit_paymentDataTable dataTable = new CustomerDataSet.materialBills_credit_penfit_paymentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

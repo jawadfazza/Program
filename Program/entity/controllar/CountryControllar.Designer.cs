@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Program.entity.controllar {
     
     
@@ -381,7 +383,7 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryRow FindByid(int id) {
+            public CountryRow FindByid(Guid id) {
                 return ((CountryRow)(this.Rows.Find(new object[] {
                             id})));
             }
@@ -566,7 +568,7 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public Guid id {
                 get {
                     return ((int)(this[this.tableCountry.idColumn]));
                 }
@@ -902,7 +904,7 @@ namespace Program.entity.controllar.CountryControllarTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, int Original_id, string Original_name, int id) {
+        public virtual int Update(string name, int Original_id, string Original_name, Guid id) {
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
@@ -916,7 +918,7 @@ namespace Program.entity.controllar.CountryControllarTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_name));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

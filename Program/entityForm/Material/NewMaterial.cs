@@ -146,7 +146,7 @@ namespace Program.entityForm
                 {
                     if (MessageBox.Show("هل تريد اضافة المجموعة؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        mgta.Insert(cbGroup.Items.Count + 1, cbGroup.Text);
+                        mgta.Insert(Guid.NewGuid(), cbGroup.Text);
                         getgroupList();
                         MessageBox.Show("تم اضافة المجموعة", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cbGroup.Text = cbGroup.Items[(cbGroup.Items.Count - 1)].ToString();
@@ -172,7 +172,7 @@ namespace Program.entityForm
                 {
                     if (MessageBox.Show("هل تريد اضافة الصانع؟", "رسالة تأكيد", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        pta.Insert(cbProduct.Items.Count + 1, cbProduct.Text, "");
+                        pta.Insert(Guid.NewGuid(), cbProduct.Text, "");
                         getProdectList();
                         cbProduct.Text = "";
                         MessageBox.Show("تم اضافة الصانع", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -230,7 +230,7 @@ namespace Program.entityForm
                     {
                         openFileDialog1.ShowDialog();
                         materialTableAdapter mta = new materialTableAdapter();
-                        //int id = Convert.ToInt32(mta.getMaxId());
+                        //Guid id = Convert.ToInt32(mta.getMaxId());
                         System.IO.File.Delete(txtName.Text);
                         byte[] image;
                         FileStream fsr = new FileStream(openFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.Read);
@@ -664,7 +664,7 @@ namespace Program.entityForm
 
                     foreach (DataRow row in originalDataTable.Rows)
                     {
-                        if (Convert.ToInt32(row["الرقم_الفني"]) == Convert.ToInt32(materialRow["الرقم_الفني"]))
+                        if (Guid.Parse(row["الرقم_الفني"].ToString()) == Convert.ToInt32(materialRow["الرقم_الفني"]))
                         {
                             row["اسم_المادة"] = txtName.Text;
                             row["تواجد_المادة"] = txtPleace.Text;

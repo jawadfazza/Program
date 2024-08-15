@@ -22,7 +22,7 @@ namespace Program.entityForm.customer
     {
         private static int countMaterial = 0;
 
-        private static int idPaperReceived = 0;
+        private static Guid idPaperReceived = 0;
 
         private static string[] IsBondTrested = new string[2];
 
@@ -113,15 +113,15 @@ namespace Program.entityForm.customer
             switch (dr["طريقة_حساب_الكلفة"].ToString())
             {
                 case "FIFO":
-                    mcdtCost = mctaCost.GetDataById_Quintity_Ascending(Convert.ToInt32(dr["الرقم_الفني"]));
+                    mcdtCost = mctaCost.GetDataById_Quintity_Ascending(Guid.Parse(dr["الرقم_الفني"].ToString()));
                     priceValueBuy = CalculateCostFIFO(mcdtCost, quantity);
                     break;
                 case "LIFO":
-                    mcdtCost = mctaCost.GetDataById_quintity_Descending(Convert.ToInt32(dr["الرقم_الفني"]));
+                    mcdtCost = mctaCost.GetDataById_quintity_Descending(Guid.Parse(dr["الرقم_الفني"].ToString()));
                     priceValueBuy = CalculateCostLIFO(mcdtCost, quantity);
                     break;
                 case "AVG":
-                    dr["سعر_الشراء"] = mctaCost.GetAVG_Price(Convert.ToInt32(dr["الرقم_الفني"]));
+                    dr["سعر_الشراء"] = mctaCost.GetAVG_Price(Guid.Parse(dr["الرقم_الفني"].ToString()));
                     priceValueBuy = quantity * Convert.ToDouble(dr["سعر_الشراء"]);
                     break;
             }
@@ -370,12 +370,12 @@ namespace Program.entityForm.customer
                     foreach (DataRow row in materialList)
                     {
                         materialTableAdapter mta1 = new materialTableAdapter();
-                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]));
+                        MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()));
 
                         mta.UpdateMaterialQuantity((Convert.ToInt32(material.Rows[0]["كمية"]) + Convert.ToInt32(row["كمية"])),
-                        Convert.ToInt32(row["الرقم_الفني"]));
+                        Guid.Parse(row["الرقم_الفني"].ToString()));
                     }
-                    int id = Convert.ToInt32(rowMaterialdCredit["الرقم"]);
+                    Guid id = Convert.ToInt32(rowMaterialdCredit["الرقم"]);
                     //change
                     if (rbAfter.Checked)
                     {
@@ -591,7 +591,7 @@ namespace Program.entityForm.customer
 
                 material_credit_listTableAdapter mclta = new material_credit_listTableAdapter();
                 material_creditTableAdapter mcta = new material_creditTableAdapter();
-                mclta.Insert(Convert.ToInt32(row["الرقم_الفني"]),
+                mclta.Insert(Guid.Parse(row["الرقم_الفني"].ToString()),
                     Convert.ToInt32(mcta.getMaxMaterialCredit()),
                     row["اسم_المادة"].ToString(),
                     row["الوحدة"].ToString(),
@@ -618,8 +618,8 @@ namespace Program.entityForm.customer
         private void UpdateMaterialQuantity(DataRow row)
         {
             materialTableAdapter mta = new materialTableAdapter();
-            int quantity = Convert.ToInt32(mta.getMaterialById(Convert.ToInt32(row["الرقم_الفني"]))[0]["كمية"]);
-            mta.UpdateMaterialQuantity((quantity - Convert.ToInt32(row["كمية"])), Convert.ToInt32(row["الرقم_الفني"]));
+            int quantity = Convert.ToInt32(mta.getMaterialById(Guid.Parse(row["الرقم_الفني"].ToString()))[0]["كمية"]);
+            mta.UpdateMaterialQuantity((quantity - Convert.ToInt32(row["كمية"])), Guid.Parse(row["الرقم_الفني"].ToString()));
         }
 
         private void DeleteMaterialQuantityFromCostTable(DataRow row)
@@ -630,13 +630,13 @@ namespace Program.entityForm.customer
             switch (row["طريقة_حساب_الكلفة"].ToString())
             {
                 case "FIFO":
-                    mcdt_cost = mcta_cost.GetDataById_Quintity_Ascending(Convert.ToInt32(row["الرقم_الفني"]));
+                    mcdt_cost = mcta_cost.GetDataById_Quintity_Ascending(Guid.Parse(row["الرقم_الفني"].ToString()));
                     break;
                 case "LIFO":
-                    mcdt_cost = mcta_cost.GetDataById_quintity_Descending(Convert.ToInt32(row["الرقم_الفني"]));
+                    mcdt_cost = mcta_cost.GetDataById_quintity_Descending(Guid.Parse(row["الرقم_الفني"].ToString()));
                     break;
                 case "AVG":
-                    mcdt_cost = mcta_cost.GetDataById_Quintity_Ascending(Convert.ToInt32(row["الرقم_الفني"]));
+                    mcdt_cost = mcta_cost.GetDataById_Quintity_Ascending(Guid.Parse(row["الرقم_الفني"].ToString()));
                     break;
                 default:
                     throw new InvalidOperationException("Unknown cost calculation method.");
@@ -878,7 +878,7 @@ namespace Program.entityForm.customer
             try
             {
                 txtId.Text = cbIds.Items[indexValue].ToString();
-                int id = Convert.ToInt32(txtId.Text);
+                Guid id = Guid.Parse(rowMaterialdDebit["الرقم"].ToString());
                 material_creditTableAdapter mcta = new material_creditTableAdapter();
                 MaterialControllar.material_creditDataTable mcdt = mcta.getMaterialCreditById(id);
                 rowMaterialdCredit = mcdt.Rows[0];
@@ -962,7 +962,7 @@ namespace Program.entityForm.customer
                 foreach (DataRow dr in mcldt)
                 {
                     materialTableAdapter mta1 = new materialTableAdapter();
-                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Convert.ToInt32(dr["رقم_المادة"]));
+                    MaterialControllar.materialDataTable material = mta1.getMaterialById(Guid.Parse(dr["الرقم_الفني"].ToString()));
 
                     dataGridViewMaterial.Rows[count].Cells[0].Value = dr["رقم_المادة"];
                     dataGridViewMaterial.Rows[count].Cells[1].Value = dr["اسم_المادة"];

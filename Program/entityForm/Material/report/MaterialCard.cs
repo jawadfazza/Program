@@ -42,7 +42,7 @@ namespace Program.entityForm.Material.report
         private void bRefresh_Click(object sender, EventArgs e)
         {
           
-                int id = Convert.ToInt32(txtMaterialName.Text.Split('.')[1]);
+                Guid id = Convert.ToInt32(txtMaterialName.Text.Split('.')[1]);
                 // TODO: This line of code loads data into the 'materialDataSet.MaterialCard' table. You can move, or remove it, as needed.
                 this.materialCardTableAdapter.Fill(this.materialDataSet.MaterialCard, id);
                 // TODO: This line of code loads data into the 'materialDataSet.MaterialDebitCrad' table. You can move, or remove it, as needed.

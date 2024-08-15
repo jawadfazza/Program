@@ -36,8 +36,6 @@ namespace Program.entity.controllar {
         
         private global::System.Data.DataRelation relationFK__customer___custo__778AC167;
         
-        private global::System.Data.DataRelation relationFK__customer___custo__4EDDB18F;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -274,7 +272,6 @@ namespace Program.entity.controllar {
             }
             this.relationFK__customer___custo__71D1E811 = this.Relations["FK__customer___custo__71D1E811"];
             this.relationFK__customer___custo__778AC167 = this.Relations["FK__customer___custo__778AC167"];
-            this.relationFK__customer___custo__4EDDB18F = this.Relations["FK__customer___custo__4EDDB18F"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -301,10 +298,6 @@ namespace Program.entity.controllar {
                         this.tablecustomer.الرقمColumn}, new global::System.Data.DataColumn[] {
                         this.tablecustomer_debit.customer_idColumn}, false);
             this.Relations.Add(this.relationFK__customer___custo__778AC167);
-            this.relationFK__customer___custo__4EDDB18F = new global::System.Data.DataRelation("FK__customer___custo__4EDDB18F", new global::System.Data.DataColumn[] {
-                        this.tablecustomer.الرقمColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecustomer_ReveiveTime.customer_idColumn}, false);
-            this.Relations.Add(this.relationFK__customer___custo__4EDDB18F);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1547,13 +1540,13 @@ namespace Program.entity.controllar {
             
             private global::System.Data.DataColumn columnالرصيد_كتابة;
             
-            private global::System.Data.DataColumn columnملاحطات;
-            
             private global::System.Data.DataColumn columnتاريخ;
+            
+            private global::System.Data.DataColumn columnتم_الدفع;
             
             private global::System.Data.DataColumn columncustomer_id;
             
-            private global::System.Data.DataColumn columnتم_الدفع;
+            private global::System.Data.DataColumn columnملاحظات;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1614,17 +1607,17 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ملاحطاتColumn {
+            public global::System.Data.DataColumn تاريخColumn {
                 get {
-                    return this.columnملاحطات;
+                    return this.columnتاريخ;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn تاريخColumn {
+            public global::System.Data.DataColumn تم_الدفعColumn {
                 get {
-                    return this.columnتاريخ;
+                    return this.columnتم_الدفع;
                 }
             }
             
@@ -1638,9 +1631,9 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn تم_الدفعColumn {
+            public global::System.Data.DataColumn ملاحظاتColumn {
                 get {
-                    return this.columnتم_الدفع;
+                    return this.columnملاحظات;
                 }
             }
             
@@ -1681,19 +1674,16 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public customer_ReveiveTimeRow Addcustomer_ReveiveTimeRow(double الرصيد, string الرصيد_كتابة, string ملاحطات, System.DateTime تاريخ, customerRow parentcustomerRowByFK__customer___custo__4EDDB18F, string تم_الدفع) {
+            public customer_ReveiveTimeRow Addcustomer_ReveiveTimeRow(double الرصيد, string الرصيد_كتابة, System.DateTime تاريخ, string تم_الدفع, System.Guid customer_id, string ملاحظات) {
                 customer_ReveiveTimeRow rowcustomer_ReveiveTimeRow = ((customer_ReveiveTimeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         الرصيد,
                         الرصيد_كتابة,
-                        ملاحطات,
                         تاريخ,
-                        null,
-                        تم_الدفع};
-                if ((parentcustomerRowByFK__customer___custo__4EDDB18F != null)) {
-                    columnValuesArray[5] = parentcustomerRowByFK__customer___custo__4EDDB18F[0];
-                }
+                        تم_الدفع,
+                        customer_id,
+                        ملاحظات};
                 rowcustomer_ReveiveTimeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcustomer_ReveiveTimeRow);
                 return rowcustomer_ReveiveTimeRow;
@@ -1726,10 +1716,10 @@ namespace Program.entity.controllar {
                 this.columnالرقم = base.Columns["الرقم"];
                 this.columnالرصيد = base.Columns["الرصيد"];
                 this.columnالرصيد_كتابة = base.Columns["الرصيد_كتابة"];
-                this.columnملاحطات = base.Columns["ملاحطات"];
                 this.columnتاريخ = base.Columns["تاريخ"];
-                this.columncustomer_id = base.Columns["customer_id"];
                 this.columnتم_الدفع = base.Columns["تم_الدفع"];
+                this.columncustomer_id = base.Columns["customer_id"];
+                this.columnملاحظات = base.Columns["ملاحظات"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1741,14 +1731,14 @@ namespace Program.entity.controllar {
                 base.Columns.Add(this.columnالرصيد);
                 this.columnالرصيد_كتابة = new global::System.Data.DataColumn("الرصيد_كتابة", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnالرصيد_كتابة);
-                this.columnملاحطات = new global::System.Data.DataColumn("ملاحطات", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnملاحطات);
                 this.columnتاريخ = new global::System.Data.DataColumn("تاريخ", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnتاريخ);
-                this.columncustomer_id = new global::System.Data.DataColumn("customer_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_id);
                 this.columnتم_الدفع = new global::System.Data.DataColumn("تم_الدفع", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnتم_الدفع);
+                this.columncustomer_id = new global::System.Data.DataColumn("customer_id", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncustomer_id);
+                this.columnملاحظات = new global::System.Data.DataColumn("ملاحظات", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnملاحظات);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnالرقم}, true));
                 this.columnالرقم.AutoIncrement = true;
@@ -1760,8 +1750,8 @@ namespace Program.entity.controllar {
                 this.columnالرصيد.AllowDBNull = false;
                 this.columnالرصيد_كتابة.AllowDBNull = false;
                 this.columnالرصيد_كتابة.MaxLength = 150;
-                this.columnملاحطات.MaxLength = 2147483647;
                 this.columnتم_الدفع.MaxLength = 10;
+                this.columnملاحظات.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2191,17 +2181,6 @@ namespace Program.entity.controllar {
                     return ((customer_debitRow[])(base.GetChildRows(this.Table.ChildRelations["FK__customer___custo__778AC167"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public customer_ReveiveTimeRow[] Getcustomer_ReveiveTimeRows() {
-                if ((this.Table.ChildRelations["FK__customer___custo__4EDDB18F"] == null)) {
-                    return new customer_ReveiveTimeRow[0];
-                }
-                else {
-                    return ((customer_ReveiveTimeRow[])(base.GetChildRows(this.Table.ChildRelations["FK__customer___custo__4EDDB18F"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2595,22 +2574,6 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ملاحطات {
-                get {
-                    try {
-                        return ((string)(this[this.tablecustomer_ReveiveTime.ملاحطاتColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ملاحطات\' in table \'customer_ReveiveTime\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablecustomer_ReveiveTime.ملاحطاتColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime تاريخ {
                 get {
                     try {
@@ -2622,22 +2585,6 @@ namespace Program.entity.controllar {
                 }
                 set {
                     this[this.tablecustomer_ReveiveTime.تاريخColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int customer_id {
-                get {
-                    try {
-                        return ((int)(this[this.tablecustomer_ReveiveTime.customer_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_id\' in table \'customer_ReveiveTime\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablecustomer_ReveiveTime.customer_idColumn] = value;
                 }
             }
             
@@ -2659,25 +2606,34 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public customerRow customerRow {
+            public System.Guid customer_id {
                 get {
-                    return ((customerRow)(this.GetParentRow(this.Table.ParentRelations["FK__customer___custo__4EDDB18F"])));
+                    try {
+                        return ((global::System.Guid)(this[this.tablecustomer_ReveiveTime.customer_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'customer_id\' in table \'customer_ReveiveTime\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__customer___custo__4EDDB18F"]);
+                    this[this.tablecustomer_ReveiveTime.customer_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsملاحطاتNull() {
-                return this.IsNull(this.tablecustomer_ReveiveTime.ملاحطاتColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetملاحطاتNull() {
-                this[this.tablecustomer_ReveiveTime.ملاحطاتColumn] = global::System.Convert.DBNull;
+            public string ملاحظات {
+                get {
+                    try {
+                        return ((string)(this[this.tablecustomer_ReveiveTime.ملاحظاتColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ملاحظات\' in table \'customer_ReveiveTime\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecustomer_ReveiveTime.ملاحظاتColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2694,6 +2650,18 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isتم_الدفعNull() {
+                return this.IsNull(this.tablecustomer_ReveiveTime.تم_الدفعColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setتم_الدفعNull() {
+                this[this.tablecustomer_ReveiveTime.تم_الدفعColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscustomer_idNull() {
                 return this.IsNull(this.tablecustomer_ReveiveTime.customer_idColumn);
             }
@@ -2706,14 +2674,14 @@ namespace Program.entity.controllar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isتم_الدفعNull() {
-                return this.IsNull(this.tablecustomer_ReveiveTime.تم_الدفعColumn);
+            public bool IsملاحظاتNull() {
+                return this.IsNull(this.tablecustomer_ReveiveTime.ملاحظاتColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setتم_الدفعNull() {
-                this[this.tablecustomer_ReveiveTime.تم_الدفعColumn] = global::System.Convert.DBNull;
+            public void SetملاحظاتNull() {
+                this[this.tablecustomer_ReveiveTime.ملاحظاتColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3087,7 +3055,7 @@ SELECT الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, �
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM customer\r\nWHERE        (الرقم = @Original_الرقم)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرقم", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرقم", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT اسم_الربون, البريد_الالكتروني, الرصيد, الرصيد_كتابة, الرقم, الموبايل, المو" +
@@ -3101,7 +3069,7 @@ SELECT الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, �
                 "قع_الالكتروني, تاريخ, صورة, عنوان_الربون, هاتف, وصف_الربون FROM customer WHERE (" +
                 "الرقم = @ID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3168,9 +3136,9 @@ SELECT الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(CustomerControllar.customerDataTable dataTable, int ID) {
+        public virtual int FillBy1(CustomerControllar.customerDataTable dataTable, System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3182,9 +3150,9 @@ SELECT الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual CustomerControllar.customerDataTable getCustomerById(int ID) {
+        public virtual CustomerControllar.customerDataTable getCustomerById(System.Guid id) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id));
             CustomerControllar.customerDataTable dataTable = new CustomerControllar.customerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3602,9 +3570,9 @@ SELECT الرقم, اسم_الربون, الرصيد, الرصيد_كتابة, �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int DeleteQuery(int Original_الرقم) {
+        public virtual int DeleteQuery(System.Guid Original_الرقم) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((int)(Original_الرقم));
+            command.Parameters[0].Value = ((System.Guid)(Original_الرقم));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3851,10 +3819,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(CustomerControllar.customer_creditDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(CustomerControllar.customer_creditDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3870,10 +3838,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, إلى, ملاحطات
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual CustomerControllar.customer_creditDataTable getCustomerPayment(global::System.Nullable<int> id) {
+        public virtual CustomerControllar.customer_creditDataTable getCustomerPayment(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4681,10 +4649,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
             tableMapping.ColumnMappings.Add("الرقم", "الرقم");
             tableMapping.ColumnMappings.Add("الرصيد", "الرصيد");
             tableMapping.ColumnMappings.Add("الرصيد_كتابة", "الرصيد_كتابة");
-            tableMapping.ColumnMappings.Add("ملاحطات", "ملاحطات");
             tableMapping.ColumnMappings.Add("تاريخ", "تاريخ");
-            tableMapping.ColumnMappings.Add("customer_id", "customer_id");
             tableMapping.ColumnMappings.Add("تم_الدفع", "تم_الدفع");
+            tableMapping.ColumnMappings.Add("customer_id", "customer_id");
+            tableMapping.ColumnMappings.Add("ملاحظات", "ملاحظات");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -4696,38 +4664,38 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, من, ملاحطات, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_تاريخ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_تاريخ", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customer_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_تم_الدفع", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_تم_الدفع", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [customer_ReveiveTime] ([الرصيد], [الرصيد_كتابة], [ملاحطات], [تاريخ], [customer_id], [تم_الدفع]) VALUES (@الرصيد, @الرصيد_كتابة, @ملاحطات, @تاريخ, @customer_id, @تم_الدفع);
-SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تاريخ, customer_id, تم_الدفع FROM customer_ReveiveTime WHERE (الرقم = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [customer_ReveiveTime] ([الرصيد], [الرصيد_كتابة], [تاريخ], [customer_id], [تم_الدفع], [ملاحظات]) VALUES (@الرصيد, @الرصيد_كتابة, @تاريخ, @customer_id, @تم_الدفع, @ملاحظات);
+SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, customer_id, تم_الدفع, ملاحظات FROM customer_ReveiveTime WHERE (الرقم = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرصيد", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرصيد_كتابة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد_كتابة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ملاحطات", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ملاحطات", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تاريخ", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customer_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تم_الدفع", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ملاحظات", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ملاحظات", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [customer_ReveiveTime] SET [الرصيد] = @الرصيد, [الرصيد_كتابة] = @الرصيد_كتابة, [ملاحطات] = @ملاحطات, [تاريخ] = @تاريخ, [customer_id] = @customer_id, [تم_الدفع] = @تم_الدفع WHERE (([الرقم] = @Original_الرقم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_تاريخ = 1 AND [تاريخ] IS NULL) OR ([تاريخ] = @Original_تاريخ)) AND ((@IsNull_customer_id = 1 AND [customer_id] IS NULL) OR ([customer_id] = @Original_customer_id)) AND ((@IsNull_تم_الدفع = 1 AND [تم_الدفع] IS NULL) OR ([تم_الدفع] = @Original_تم_الدفع)));
-SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تاريخ, customer_id, تم_الدفع FROM customer_ReveiveTime WHERE (الرقم = @الرقم)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [customer_ReveiveTime] SET [الرصيد] = @الرصيد, [الرصيد_كتابة] = @الرصيد_كتابة, [تاريخ] = @تاريخ, [customer_id] = @customer_id, [تم_الدفع] = @تم_الدفع, [ملاحظات] = @ملاحظات WHERE (([الرقم] = @Original_الرقم) AND ([الرصيد] = @Original_الرصيد) AND ([الرصيد_كتابة] = @Original_الرصيد_كتابة) AND ((@IsNull_تاريخ = 1 AND [تاريخ] IS NULL) OR ([تاريخ] = @Original_تاريخ)) AND ((@IsNull_customer_id = 1 AND [customer_id] IS NULL) OR ([customer_id] = @Original_customer_id)) AND ((@IsNull_تم_الدفع = 1 AND [تم_الدفع] IS NULL) OR ([تم_الدفع] = @Original_تم_الدفع)));
+SELECT الرقم, الرصيد, الرصيد_كتابة, تاريخ, customer_id, تم_الدفع, ملاحظات FROM customer_ReveiveTime WHERE (الرقم = @الرقم)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرصيد", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرصيد_كتابة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد_كتابة", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ملاحطات", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ملاحطات", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تاريخ", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customer_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@تم_الدفع", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ملاحظات", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ملاحظات", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرقم", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرصيد", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_الرصيد_كتابة", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "الرصيد_كتابة", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_تاريخ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_تاريخ", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تاريخ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customer_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customer_id", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_تم_الدفع", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_تم_الدفع", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "تم_الدفع", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@الرقم", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4746,22 +4714,22 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تاريخ, customer_id, تم_الدفع\r" +
-                "\nFROM            customer_ReveiveTime";
+            this._commandCollection[0].CommandText = "SELECT   الرقم, الرصيد, الرصيد_كتابة, تاريخ, customer_id, تم_الدفع, ملاحظات\r\nFROM" +
+                "         customer_ReveiveTime";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تاريخ, customer_id, تم_الدفع\r" +
-                "\nFROM            customer_ReveiveTime\r\nWHERE        (customer_id = @id) AND (تم_" +
-                "الدفع <> \'true\')";
+            this._commandCollection[1].CommandText = "SELECT   customer_id, الرصيد, الرصيد_كتابة, الرقم, تاريخ, تم_الدفع, ملاحظات\r\nFROM" +
+                "         customer_ReveiveTime\r\nWHERE     (customer_id = @id) AND (تم_الدفع <> \'t" +
+                "rue\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "customer_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "UPDATE       customer_ReveiveTime\r\nSET                تم_الدفع = \'true\'\r\nWHERE   " +
                 "     (الرقم = @id);\r\n";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.UniqueIdentifier, 4, global::System.Data.ParameterDirection.Input, 0, 0, "الرقم", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4792,10 +4760,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(CustomerControllar.customer_ReveiveTimeDataTable dataTable, global::System.Nullable<int> id) {
+        public virtual int FillBy(CustomerControllar.customer_ReveiveTimeDataTable dataTable, global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4811,10 +4779,10 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual CustomerControllar.customer_ReveiveTimeDataTable GetEarnedPayment(global::System.Nullable<int> id) {
+        public virtual CustomerControllar.customer_ReveiveTimeDataTable GetEarnedPayment(global::System.Nullable<global::System.Guid> id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id.Value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4857,7 +4825,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<int> Original_customer_id, string Original_تم_الدفع) {
+        public virtual int Delete(int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<global::System.Guid> Original_customer_id, string Original_تم_الدفع) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_الرقم));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_الرصيد));
             if ((Original_الرصيد_كتابة == null)) {
@@ -4876,7 +4844,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
             }
             if ((Original_customer_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_customer_id.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.Guid)(Original_customer_id.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -4910,7 +4878,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double الرصيد, string الرصيد_كتابة, string ملاحطات, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<int> customer_id, string تم_الدفع) {
+        public virtual int Insert(double الرصيد, string الرصيد_كتابة, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<global::System.Guid> customer_id, string تم_الدفع, string ملاحظات) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((double)(الرصيد));
             if ((الرصيد_كتابة == null)) {
                 throw new global::System.ArgumentNullException("الرصيد_كتابة");
@@ -4918,29 +4886,29 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(الرصيد_كتابة));
             }
-            if ((ملاحطات == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((تاريخ.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(تاريخ.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ملاحطات));
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((تاريخ.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(تاريخ.Value));
+            if ((customer_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.Guid)(customer_id.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((customer_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(customer_id.Value));
-            }
-            else {
+            if ((تم_الدفع == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((تم_الدفع == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(تم_الدفع));
+            }
+            if ((ملاحظات == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(تم_الدفع));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ملاحظات));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4962,7 +4930,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double الرصيد, string الرصيد_كتابة, string ملاحطات, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<int> customer_id, string تم_الدفع, int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<int> Original_customer_id, string Original_تم_الدفع, int الرقم) {
+        public virtual int Update(double الرصيد, string الرصيد_كتابة, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<global::System.Guid> customer_id, string تم_الدفع, string ملاحظات, int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<global::System.Guid> Original_customer_id, string Original_تم_الدفع, int الرقم) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(الرصيد));
             if ((الرصيد_كتابة == null)) {
                 throw new global::System.ArgumentNullException("الرصيد_كتابة");
@@ -4970,29 +4938,29 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(الرصيد_كتابة));
             }
-            if ((ملاحطات == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((تاريخ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(تاريخ.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ملاحطات));
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((تاريخ.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(تاريخ.Value));
+            if ((customer_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.Guid)(customer_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((customer_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(customer_id.Value));
-            }
-            else {
+            if ((تم_الدفع == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((تم_الدفع == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(تم_الدفع));
+            }
+            if ((ملاحظات == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(تم_الدفع));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ملاحظات));
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_الرقم));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_الرصيد));
@@ -5012,7 +4980,7 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
             }
             if ((Original_customer_id.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_customer_id.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.Guid)(Original_customer_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
@@ -5047,17 +5015,17 @@ SELECT الرقم, الرصيد, الرصيد_كتابة, ملاحطات, تار
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double الرصيد, string الرصيد_كتابة, string ملاحطات, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<int> customer_id, string تم_الدفع, int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<int> Original_customer_id, string Original_تم_الدفع) {
-            return this.Update(الرصيد, الرصيد_كتابة, ملاحطات, تاريخ, customer_id, تم_الدفع, Original_الرقم, Original_الرصيد, Original_الرصيد_كتابة, Original_تاريخ, Original_customer_id, Original_تم_الدفع, Original_الرقم);
+        public virtual int Update(double الرصيد, string الرصيد_كتابة, global::System.Nullable<global::System.DateTime> تاريخ, global::System.Nullable<global::System.Guid> customer_id, string تم_الدفع, string ملاحظات, int Original_الرقم, double Original_الرصيد, string Original_الرصيد_كتابة, global::System.Nullable<global::System.DateTime> Original_تاريخ, global::System.Nullable<global::System.Guid> Original_customer_id, string Original_تم_الدفع) {
+            return this.Update(الرصيد, الرصيد_كتابة, تاريخ, customer_id, تم_الدفع, ملاحظات, Original_الرقم, Original_الرصيد, Original_الرصيد_كتابة, Original_تاريخ, Original_customer_id, Original_تم_الدفع, Original_الرقم);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateEarndPayment(int id) {
+        public virtual int UpdateEarndPayment(System.Guid id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(id));
+            command.Parameters[0].Value = ((System.Guid)(id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
